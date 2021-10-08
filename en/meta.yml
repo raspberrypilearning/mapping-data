@@ -1,0 +1,11 @@
+title: mapping-data
+hero_image: images/banner.png
+description: mapping-data description
+version: 4
+listed: false
+copyedit: false
+last_tested: "2021-10-08"
+steps:
+  - title: Introduction
+  - title: Step title
+  - title: What next?
