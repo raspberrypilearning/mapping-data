@@ -1,11 +1,22 @@
-title: mapping-data
+title: design-project-template
 hero_image: images/banner.png
-description: mapping-data description
+description: design-project-template description
 version: 4
 listed: false
 copyedit: false
-last_tested: "2021-10-08"
+last_tested: "2021-03-26"
 steps:
   - title: Introduction
-  - title: Step title
+  - title: Choose a theme
+  - title: Pick a map and markers
+  - title: Mark your data
+  - title: Make the display interactive
+  - title: Reflection
+    knowledge_quiz:
+      path: quiz1
+      version: 1
+      questions: 3
+      passing_score: 3
+  - title: Upgrade your project
+  - title: Share
   - title: What next?
