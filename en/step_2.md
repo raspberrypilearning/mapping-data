@@ -138,44 +138,6 @@ Example data: <mark>Example data goes here</mark>
 
 --- task ---
 
-Now that you have your data, make a function to load it into a variable.
-
-[[[generic-python-file-read]]]
-
---- /task ---
-
---- task ---
-
-**Test:** `print()` your loaded data out, to check it. Think about how you will need to break each line up to get the region name and the numbers you want.
-
-**Tip:** You will be moving data around a lot in the next few steps. It's a good idea to `print()` everything out. This will help you understand what your data looks like at each step. It's also good for catching bugs. You can always comment (with `#`) the `print()` lines out later.
-
---- /task ---
-
---- task ---
-
-For each region in the data you have loaded, split that region's line of data into a list.
-
---- collapse ---
----
-title: Split a text string into a list
----
-
-The `split()` function breaks a string into a list. `split(',')` makes a new list item every time it sees a comma. So:
-
-```python
-info = 'Estonia,1326535,31,42,68'
-my_list = info.split(',')
-```
-
-Would put `['Estonia', '1326535', '31', '42', '68']` into `my_list`.
-
---- /collapse ---
-
---- /task ---
-
---- task ---
-
  **Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
 
 --- /task ---
