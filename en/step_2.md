@@ -160,6 +160,7 @@ For each region in the data you have loaded, split that region's line of data in
 ---
 title: Split a text string into a list
 ---
+
 The `split()` function breaks a string into a list. `split(',')` makes a new list item every time it sees a comma. So:
 
 ```python
@@ -280,6 +281,7 @@ Creates a `pets` list that looks like this:
 title: Get items from a list
 
 ---
+
 You can get an item from a list by using its index. An items index is the number of its position in the list, starting from zero.
 
 ```python
@@ -290,7 +292,6 @@ print(pets[1])
 Would print out `dog`.
 
 --- /collapse ---
-
 
 --- /task ---
 
