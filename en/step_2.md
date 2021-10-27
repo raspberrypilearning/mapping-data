@@ -146,17 +146,93 @@ Now that you have your data, make a function to load it into a variable.
 
 --- task ---
 
-**Test:** Print your loaded data out, to check it. Think about how you will need to break each line up to get the region name and the numbers you want.
+**Test:** `print()` your loaded data out, to check it. Think about how you will need to break each line up to get the region name and the numbers you want.
+
+**Tip:** You will be moving data around a lot in the next few steps. It's a good idea to `print()` everything out. This will help you understand what your data looks like at each step. It's also good for catching bugs. You can always comment (with `#`) the `print()` lines out later.
 
 --- /task ---
 
 --- task ---
 
-Create a global empty list. You will fill this list with dictionaries of information on each region.
+For each region in the data you have loaded, split that region's line of data into a list.
 
 --- collapse ---
 ---
-title: Lists in Python
+title: Split a text string into a list
+---
+The `split()` function breaks a string into a list. `split(',')` makes a new list item every time it sees a comma. So:
+
+```python
+info = 'Estonia,1326535,31,42,68'
+my_list = info.split(',')
+```
+
+Would put `['Estonia', '1326535', '31', '42', '68']` into `my_list`.
+
+--- /collapse ---
+
+--- /task ---
+
+--- task ---
+
+Use the list you made from each region's data in the file. Create a dictionary for each region. Include the name of the region and the numbers you want to use.
+
+--- collapse ---
+---
+title: Python dictionaries
+---
+
+A dictionary in Python stores pairs of **keys** and **values**.
+
+Both keys and values can be almost any value you can store in Python. Although neither lists nor dictionaries can be keys.
+
+You can use a key to get its connected value.
+
+To make a dictionary you use curly brackets `{}`, with key: value pairs inside. A pair is a key, followed by a colon (`:`), followed by the value connected to that key. For example:
+
+```python
+person = {
+  'age': 12,
+  'height': 149.5,
+  'hair': 'brown',
+}
+```
+`age`, `height`, and `hair` are keys. You can use them to look up their values with square brackets `[]`. For example:
+
+```python
+print(person['hair'])
+```
+Will print out the value `brown`.
+--- /collapse ---
+
+--- collapse ---
+---
+title: Converting text to numbers
+---
+
+You will need to use a different function to convert text to a number, depending on the kind of number:
+
+ - `int()` is for converting whole numbers
+ - `float()` is for converting decimal numbers
+
+To use one of these functions, pass it the text string you want to convert:
+
+```python
+text_number = '12345'
+converted_number = int(text_number)
+```
+
+--- /collapse ---
+
+--- /task ---
+
+--- task ---
+
+Create a global list of regions and add each of the dictionaries to that list. This will let you work with the data in the rest of your program.
+
+--- collapse ---
+---
+title: Create a list
 ---
 
 A Python list can hold a collection of data. You can create a list using square brackets `[]`:
@@ -165,53 +241,56 @@ A Python list can hold a collection of data. You can create a list using square 
 my_list = []
 ```
 
-Items can be added to a list as it is created. You can do this by putting them inside the `[]` and separating the items with commas:
+You can add items to a list as you create it. You can do this by putting them inside the `[]` and separating the items with commas:
 
 ```python
 pets = ['cat', 'dog', 'rabbit']
 ```
 
-Items can also be added to lists after they have been created, using `append()`. For example:
+--- /collapse ---
+
+--- collapse ---
+---
+title: Add items to a list
+---
+
+You can add items to a list as you create it. You can do this by putting them inside the `[]` and separating the items with commas:
+
+```python
+pets = ['cat', 'dog', 'rabbit']
+```
+
+You also can add items to lists after they have been created, using `append()`. For example:
 
 ```python
 pets = ['cat', 'dog', 'rabbit']
 pets.append('bird')
 ```
 
-Would create a `pets` list that looked like this:
+Creates a `pets` list that looks like this:
 
 ```python
 ['cat', 'dog', 'rabbit', 'bird']
 ```
 
-
 --- /collapse ---
-
---- /task ---
-
---- task ---
-
-For each region, create a dictionary
-
 
 --- collapse ---
 ---
-title: Split a text string
----
+title: Get items from a list
 
+---
+You can get an item from a list by using its index. An items index is the number of its position in the list, starting from zero.
+
+```python
+pets = ['cat', 'dog', 'rabbit']
+print(pets[1])
+```
+
+Would print out `dog`.
 
 --- /collapse ---
 
-
---- collapse ---
----
-title: Create a dictionary
----
-
-
-
-
---- /collapse ---
 
 --- /task ---
 
