@@ -204,6 +204,7 @@ person = {
 print(person['hair'])
 ```
 Will print out the value `brown`.
+
 --- /collapse ---
 
 --- collapse ---
@@ -279,7 +280,6 @@ Creates a `pets` list that looks like this:
 --- collapse ---
 ---
 title: Get items from a list
-
 ---
 
 You can get an item from a list by using its index. An items index is the number of its position in the list, starting from zero.
