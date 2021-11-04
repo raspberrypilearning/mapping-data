@@ -1,4 +1,4 @@
-## Pick a map and markers
+## Pick a map and pins
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
@@ -192,5 +192,7 @@ filename: main.py - draw()
 --- /code ---
 
 Also, make sure you are calling `draw_pin()` after you call `image()` to create the background. If not, you're drawing the map over the pin!
+
+--- /collapse ---
 
 --- /task ---
