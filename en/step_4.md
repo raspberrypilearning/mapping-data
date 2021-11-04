@@ -130,9 +130,6 @@ To use the pin's colour to look up the information, you need to create a `global
 ---
 language: python
 filename: main.py — draw_data()
-line_numbers: false
-line_number_start: 1 
-line_highlights: 10-12
 ---
 def draw_data():
   global colours
@@ -216,7 +213,7 @@ if thing in my_dictionary:
 title: My pins are not appearing on the map
 ---
 
-
+If your pins are not appearing on the map, check that you are calling your `draw_data()` function from your `draw()` function.
 
 --- /collapse ---
 

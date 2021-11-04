@@ -5,7 +5,7 @@
 Do you have an idea of the kind of display you want to create? Use this step to choose your data and load it into dictionaries. Later, you'll use those dictionaries to build your map.
 </div>
 <div>
-![Dictionaries printed out as part of a list](images/regions_list_output.png){:width="300px"}
+![Dictionaries printed out as part of a list](images/regions_list_output.png){:width="400px"}
 </div>
 </div>
 
@@ -400,7 +400,7 @@ Would print out `dog`.
 
 --- task ---
 
-Add a line in your `setup()` function that prints `region_list` out. Like the other `print()` statements you've used, you can comment this out once you've used it for testing.
+Add a line in your `setup()` function that prints `region_list` out. Like the other `print()` statements you've used. You can comment this line out once you've used it for testing.
 
 --- /task ---
 

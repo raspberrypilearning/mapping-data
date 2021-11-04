@@ -8,13 +8,17 @@ Here are some ideas you could try:
 - Add a second data file — load another file of data and display it using different pins. Can you use some of your existing functions if you make some small changes? Do you want to use two sets of pins, or put all the data together on one pin?
 
 ### Data-sized pins: Olympic host countries
-You should view this project in full screen mode to see the whole map.
+This project has been upgraded to show larger pins for areas that have hosted the Olympic Games more often.
 
-<iframe src="https://trinket.io/embed/python/0469d3a29b" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+You should view this project in full screen mode to see the whole map. You may also need to resize the map window.
+
+<iframe src="https://trinket.io/embed/python/0469d3a29b?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 ### Filter data: Global population — rural and urban
-You should view this project in full screen mode to see the whole map.
+This projec has been upgraded to allow you to filter the data used to make the display.
 
-<iframe src="https://trinket.io/embed/python/96be05796c" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+You should view this project in full screen mode to see the whole map. You may also need to resize the map window.
+
+<iframe src="https://trinket.io/embed/python/96be05796c?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 --- save ---

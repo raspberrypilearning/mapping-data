@@ -9,20 +9,12 @@ You will:
 
 --- no-print ---
 
---- task ---
-
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 175px; flex-grow: 1">  
-
+--- task ---  
 ### Try it 
 
 View this example in full screen to see the whole map. Click on the coloured pins to see information about that region printed out. Think about the kind of data you would like to display, and how you could design an interesting shape of pin to mark it on a map.
 
-</div>
-<div>
 <iframe src="https://trinket.io/embed/python/b70e25c42a?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
-
 --- /task ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
@@ -37,7 +29,7 @@ You are going to make some design decisions about what data you want to show to 
 
 Explore these example projects to get more ideas:
 
-<mark>Gallery of pretty examples pending getting prettier maps</mark>
+<mark>Gallery of pretty examples pending getting prettier maps from design</mark>
 
 --- /task ---
 --- /no-print ---
@@ -48,7 +40,7 @@ Explore these example projects to get more ideas:
 
 You are going to make some design decisions about what data you want to show to your users, as well as what style of map and pins you will use to display that data.
 
-<mark>one image file per example</mark>
+<mark>One image file per example</mark>
 
 --- /print-only ---
 
