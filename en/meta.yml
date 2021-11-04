@@ -10,7 +10,6 @@ steps:
   - title: Choose a theme
   - title: Pick a map and markers
   - title: Mark your data
-  - title: Make the display interactive
   - title: Reflection
     knowledge_quiz:
       path: quiz1

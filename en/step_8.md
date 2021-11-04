@@ -1,23 +1,17 @@
-## Share
+## What next?
 
-If you are in a club, why not share your project with friends?
+If you are following the [More Python](https://projects.raspberrypi.org/en/raspberrypi/more-python) path, you can move on to the [Persuasive presentation](https://projects.raspberrypi.org/en/projects/persuasive-presentation) project. In this project, you will make a visual presentation of your own design, based on data you choose.
 
-You could also show your family how your project works.
+--- print-only ---
 
-If you have a Scratch account, you can share your project through Scratch. You can send a link to people you know, and the whole Scratch community will be able to find your project and try it out.
+![Persuasive presentation project](images/persuasive_presentation_project.png){:width="400px"}
 
-[[[share-scratch]]]
+--- /print-only ---
 
-Why not invite your friends to create a project? Let them know how you had fun.
+--- no-print ---
 
-If you have a Scratch account, and have shared your 'Don't fall in' project, keep an eye out for comments that others may make about your creation. Feedback is a great way to reflect on your work. Ignore any comments that are unhelpful or irrelevant.
+<iframe src="https://trinket.io/embed/python/abfbde1bf3?outputOnly=true&runOption=run" width="600" height="500"  frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
-[[[comments-feedback-scratch]]]
+--- /no-print ---
 
---- task ---
-
-Inspire the Raspberry Pi Foundation community with your project!
-
-To submit your project to our ['Don't fall in - Community'](https://scratch.mit.edu/studios/29601182){:target="_blank"} Scratch studio, please complete [this form](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}.
-
---- /task ---
+If you want to have more fun exploring Python, then you could try out any of [these projects](https://projects.raspberrypi.org/en/projects?software%5B%5D=python).

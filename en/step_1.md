@@ -1,21 +1,11 @@
 ## Introduction
 
-In this project, <mark> short project description </mark>
-
-<mark>Boxout (wherever wanted/needed) </mark>
-
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Term**</span> description of term or interesting phrase.
-</p>
-
-<mark>Objectives in language that learners will understand</mark>
+Use Python to make an interactive map that lets users learn interesting facts about the world.
 
 You will:
-+ 
-+ 
-+
-
-<mark>Image of many different examples in a strip</mark>
++ Use lists and dictionaries to store that data
++ Use functions and parameters to keep your code clean
++ Use code to quickly explore large amounts of data
 
 --- no-print ---
 
@@ -26,41 +16,29 @@ You will:
 
 ### Try it 
 
-Description of what to do or think about when looking at the example.
+View this example in full screen to see the whole map. Click on the coloured pins to see information about that region printed out. Think about the kind of data you would like to display, and how you could design an interesting shape of pin to mark it on a map.
 
 </div>
 <div>
-**Gobo watching**: [See inside](https://scratch.mit.edu/projects/495141114/editor){:target="_blank"}
-<div class="scratch-preview" style="margin-left: 15px;">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/495141114/?autostart=false" frameborder="0"></iframe>
-</div>
-
+<iframe src="https://trinket.io/embed/python/b70e25c42a?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
 --- /task ---
 
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
+<span style="color: #0faeb0">**Map Projections**</span> are the different ways of drawing the Earth on a map. It's not possible to make a 2D map that shows the true sizes and distances that exist in the 3D world. Though map-makers are getting better at it. The map in this project uses the web mercator projection — the same one used by sites like Google Maps. This projection makes places nearer the poles look bigger than they are: Greenland is a lot smaller than this map shows and, by comparison, Africa is a lot bigger.
+</p>
+
 ### Get inspiration 
 
-You are going to make some design decisions to ...
+You are going to make some design decisions about what data you want to show to your users, as well as what style of map and pins you will use to display that data.
 
 --- task ---
 
 Explore these example projects to get more ideas:
 
-**Don't eat donut**: [See inside](https://scratch.mit.edu/projects/495865093/editor){:target="_blank"}
-<div class="scratch-preview" style="margin-left: 15px;">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/495865093/?autostart=false" frameborder="0"></iframe>
-</div>
+<mark>Gallery of pretty examples pending getting prettier maps</mark>
 
-**Under the sea**: [See inside](https://scratch.mit.edu/projects/495866460/editor){:target="_blank"}
-<div class="scratch-preview" style="margin-left: 15px;">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/495866460/?autostart=false" frameborder="0"></iframe>
-</div>
-
-**Sporg**: [See inside](https://scratch.mit.edu/projects/495865892/editor){:target="_blank"}
-<div class="scratch-preview" style="margin-left: 15px;">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/495865892/?autostart=false" frameborder="0"></iframe>
-</div>
 --- /task ---
 --- /no-print ---
 
@@ -68,7 +46,7 @@ Explore these example projects to get more ideas:
 
 ### Get inspiration 
 
-You are going to make some design decisions to create your character. See inside example projects in [Scratch 1: Googly eye character - Examples](https://scratch.mit.edu/studios/29029028/){:target="_blank"} Scratch studio.
+You are going to make some design decisions about what data you want to show to your users, as well as what style of map and pins you will use to display that data.
 
 <mark>one image file per example</mark>
 
