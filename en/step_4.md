@@ -26,12 +26,12 @@ filename: main.py — draw_data()
 ---
 def draw_data():
   for region in region_list:
-    region_name = region['name']
-    region_coords = get_region_coords(region_name)
-    region_x = region_coords['x']
-    region_y = region_coords['y']
-    region_colour = color(255, 0, 0)
-    draw_pin(region_x, region_y, region_colour)
+    region_name = region['name'] # Get the name of the region
+    region_coords = get_region_coords(region_name) # Use the name to get coordinates
+    region_x = region_coords['x'] # Get the x coordinate
+    region_y = region_coords['y'] # Get the y coordinate
+    region_colour = color(255, 0, 0) # Set the pin colour
+    draw_pin(region_x, region_y, region_colour) # Draw the pin
 
 --- /code ---
 
@@ -74,7 +74,7 @@ Add a call to `draw_data()` in your `draw()` function.
 
 --- task ---
 
-**Test:** Run your program. You should see lots of pins pop up on your map!
+**Test:** Run your program. You should see lots of pins pop up on your map! Depending on the data you chose, you might see more or fewer pins than in the image below.
 
 ![A black and white map with many red dots on it](images/regions_list_output.png)
 
@@ -99,16 +99,16 @@ language: python
 filename: main.py — draw_data()
 ---
 def draw_data():
-  red_value = 255
+  red_value = 255 # Set a starting value for red
 
   for region in region_list:
     region_name = region['name']
     region_coords = get_region_coords(region_name)
     region_x = region_coords['x']
     region_y = region_coords['y']
-    region_colour = color(red_value, 0, 0)
+    region_colour = color(red_value, 0, 0) # Use the red value in the colour
     draw_pin(region_x, region_y, region_colour)
-    red_value -= 1
+    red_value -= 1 # Change the red value
 
 --- /code ---
 
@@ -132,8 +132,8 @@ language: python
 filename: main.py — draw_data()
 ---
 def draw_data():
-  global colours
-  colours = {}
+  global colours # Make colours global
+  colours = {} # Create an empty colours dictionary
   red_value = 255
 
   for region in region_list:
@@ -143,7 +143,7 @@ def draw_data():
     region_y = region_coords['y']
     region_colour = color(red_value, 0, 0)
     draw_pin(region_x, region_y, region_colour)
-    colours[region_colour] = region
+    colours[region_colour] = region # Store the region information with the pin colour as the key
     red_value -= 1
 --- /code ---
 
@@ -154,6 +154,13 @@ Now you have a dictionary to look up. You can add some code to take the colour t
 --- task ---
 
 In your `mouse_pressed()` function check if `pixel_colour` is in your `colours` dictionary. If it is, print out the interesting information from the dictionary.
+
+Remember that `colours` is a dictionary of dictionaries. You will have to get the dictionary of region information, then get the information from inside that dictionary. For example:
+
+```python
+facts = colours(pixel_colour)
+print(facts['name'])
+```
 
 --- collapse ---
 ---
@@ -184,6 +191,7 @@ Will print out the value `brown`.
 
 --- /collapse ---
 
+
 --- collapse ---
 ---
 title: Check if a key is in a dictionary
@@ -199,6 +207,12 @@ if thing in my_dictionary:
 ```
 
 --- /collapse ---
+
+--- /task ---
+
+--- task ---
+
+**Test:** Run your program. Click on a pin and check that your program correctly prints out data about that area.
 
 --- /task ---
 
@@ -223,6 +237,8 @@ title: I am getting a message about a 'KeyError'
 ---
 
 If you get a message about 'KeyError', check the spelling of your dictionary keys match when you put values in and when you read them out. Whether the letters are UPPERCASE or lowercase is important too.
+
+If the error is for the `colours` dictionary, make sure you are checking the key exists in `colours` before trying to get the value.
 
 --- /collapse ---
 

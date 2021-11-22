@@ -34,7 +34,7 @@ Think about how you want to display the data you've picked: What kind of map do 
 
 **Choose:** The started project includes several map images. Pick one you like, and load it to a `global` `map` variable in your `setup` function.
 
-<mark>When we have all the images from design (and), add a gallery here, with the file names underneath each image. Currently, there are my two: mercator.jpeg and mercator_bw.png</mark>
+<mark>When we have all the images from design, add a gallery here, with the file names underneath each image. Currently, there are my two: mercator.jpeg and mercator_bw.png</mark>
 
 --- code ---
 ---
@@ -89,7 +89,7 @@ Define a function called `draw_pin`. It should draw a pin, of your design, on th
 
  - The x coordinate for the pin
  - The y coordinate for the pin
- - The colour of the pin. This should be a `p5` `colour()`.
+ - The colour of the pin. This should be a `p5` `color()`.
 
 [[[parameters]]]
 
