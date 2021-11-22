@@ -13,8 +13,6 @@ Do you have an idea of the kind of display you want to create? Use this step to 
 
 Open a [the starter project](https://trinket.io/library/trinkets/0341332a86){:target="_blank"}. Trinket will open in another browser tab.
 
-[[[working-offline]]]
-
 --- /task ---
 
 --- task ---
@@ -128,7 +126,7 @@ title: National wealth
 
 **File name:** `gdp.csv`
 
-The gross domestic product (GDP) of a place is the measures the value, in money, of everything produced there. It can measure how rich an area is. This data is on the of GDP of countries over a year. The columns of the data are:
+The gross domestic product (GDP) of a country measures the size of its economy. Countries with larger GDPs are usually richer. The columns of the data are:
 
  - The name of the region
  - What the total GDP of that region was
@@ -150,11 +148,11 @@ title: World happiness
 
 **File name:** `happy.csv`
 
-This data is from the world happiness report. The report is a survey of the happiness of people in different countries. People were asked to score their happiness on a scale of 0–10. TThe columns of the data are:
+This data is from the world happiness report. The report is a survey of the happiness of people in different countries. People were asked to score their happiness on a scale of 0–10. The columns of the data are:
 
  - The name of a country
  - Where that country ranks in the world for average happiness
- - The average happiness scrore for a country
+ - The average happiness score for a country
 
 Here is an example of the data in this file:
 
@@ -206,6 +204,8 @@ Add a call to `load_data()` in your `setup()` function. Pass it the name of the 
 --- task ---
 
 **Test:** Run your program. Check the data that prints out. Think about how you will need to break each line up to get the region name and the numbers you want.
+
+**Debug:** You might get an error message about your filename being 'not defined'. If you do, check that you have put the name in quotes when you call the `load_data()` function. For example `load_data('pop.csv')`
 
 --- /task ---
 
@@ -323,6 +323,8 @@ converted_number = int(text_number)
 --- task ---
 
 **Test:** Run your code and check that the dictionaries it prints out look like you expect them to: a 'name' key with a text string for a value, and whatever keys and values you expect based on your code.
+
+**Debug:** If you see a message about `list index out of range`, check that you are trying to load the right number of values into your region dictionary. This may be a different number of values to the example code above. You should also use key names that match the data you chose.
 
 --- /task ---
 
@@ -450,7 +452,9 @@ If you see a message about `split` being 'not defined', check that you have incl
 title: I am getting a message that region_list is 'not defined'
 ---
 
-If you see a message about `region_list` being 'not defined', check that you have made it `global` in your `load_data()` function.
+If you see a message about `region_list` being 'not defined', check that:
+ - you have made it `global` in your `load_data()` function
+ - you have created it as an empty list — with `region_list = []` — before trying to add things to it
 
 --- /collapse ---
 

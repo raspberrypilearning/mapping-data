@@ -15,6 +15,8 @@ You will:
 View this example in full screen to see the whole map. Click on the coloured pins to see information about that region printed out. Think about the kind of data you would like to display, and how you could design an interesting shape of pin to mark it on a map.
 
 <iframe src="https://trinket.io/embed/python/b70e25c42a?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+[https://trinket.io/python/b70e25c42a](See inside the project)
 --- /task ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">

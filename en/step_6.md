@@ -14,11 +14,15 @@ You should view this project in full screen mode to see the whole map. You may a
 
 <iframe src="https://trinket.io/embed/python/0469d3a29b?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
+[See inside the project](https://trinket.io/python/0469d3a29b)
+
 ### Filter data: Global population — rural and urban
 This projec has been upgraded to allow you to filter the data used to make the display.
 
 You should view this project in full screen mode to see the whole map. You may also need to resize the map window.
 
 <iframe src="https://trinket.io/embed/python/96be05796c?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+[See inside the project](https://trinket.io/python/96be05796c)
 
 --- save ---
