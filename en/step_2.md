@@ -5,9 +5,11 @@
 Do you have an idea of the kind of display you want to create? Use this step to choose your data and load it into dictionaries. Later, you'll use those dictionaries to build your map.
 </div>
 <div>
-![Dictionaries printed out as part of a list](images/regions_list_output.png){:width="400px"}
+
 </div>
 </div>
+
+![Dictionaries printed out as part of a list](images/regions_list_output.png){:width="600px"}
 
 --- task ---
 
