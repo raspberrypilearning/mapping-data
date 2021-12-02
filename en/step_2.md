@@ -333,7 +333,7 @@ Now your `load_data()` function creates dictionaries for each region. You need t
 
 --- task ---
 
-In `load_data()`, create an empty global list called `region_list`. Add each of your dictionaries to `region_list` using `append`. This will let you work with the data in the rest of your program.
+In `load_data()`, create an empty `global` list called `region_list`. Add each of your dictionaries to `region_list` using `append`. This will let you work with the data in the rest of your program.
 
 --- collapse ---
 ---
@@ -426,6 +426,15 @@ title: My code doesn't run
 ---
 
 Check your code is properly indented. The code under the `with` should be indented, and then code under the `for` loop should be indented again.
+
+--- /collapse ---
+
+--- collapse ---
+---
+title: I am getting a message that the csv file is 'not defined'
+---
+
+Check your call to `load_data()` to be sure that the name of the file is a string.
 
 --- /collapse ---
 
