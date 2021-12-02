@@ -76,7 +76,7 @@ Add a call to `draw_data()` in your `draw()` function.
 
 **Test:** Run your program. You should see lots of pins pop up on your map! Depending on the data you chose, you might see more or fewer pins than in the image below.
 
-![A black and white map with many red dots on it](images/regions_list_output.png)
+![A black and white map with many red dots on it](images/map_many_pins.png)
 
 --- /task ---
 
