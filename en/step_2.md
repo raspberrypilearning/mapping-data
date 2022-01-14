@@ -9,7 +9,7 @@ Do you have an idea of the kind of display you want to create? Use this step to 
 </div>
 </div>
 
-![Dictionaries printed out as part of a list](images/regions_list_output.png){:width="600px"}
+![Dictionaries printed out as part of a list.](images/regions_list_output.png){:width="600px"}
 
 --- task ---
 
@@ -25,8 +25,8 @@ Before you can put your data on a map, you'll need to choose some data to displa
 **Choose:** There are a few data files included in the starter project. Read their descriptions below. Then note the name of the file you'd like to use in your display.
 
 <div style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**CSV files**</span> are **c**omma-**s**eparated **v**alues files. They contain data in rows and columns, like a table. Each line is a row, with commas separating that row's values into columns.
-![A few lines of a csv file](images/csv_sample.png){:width="200px"}
+<span style="color: #0faeb0">**CSV files**</span> are Comma-Separated Values files. They contain data in rows and columns, like a table. Each line is a row, with commas separating that row's values into columns.
+![A few lines of a csv file.](images/csv_sample.png){:width="200px"}
 </div>
 
 --- collapse ---
@@ -64,7 +64,7 @@ This data is about populations around the world. The columns of the data are:
  - How many people live in the region
  - How many people live in each square kilometre of the region
  - The average age of people in the region
- - What percentage of people in that region live in cities
+ - The percentage of people in that region who live in cities
 
 Here is an example of the data in this file:
 
@@ -87,7 +87,7 @@ This data is about carbon emissions around the world. The numbers in the file ar
 
  - The name of the region
  - How much carbon each region emits in total (in thousands of tons)
- - How much carbon each region emits, per-person that lives in that region (in tons)
+ - How much carbon each region emits, per person that lives in that region (in tons)
 
 Here is an example of the data in this file:
 
@@ -131,7 +131,7 @@ title: National wealth
 The gross domestic product (GDP) of a country measures the size of its economy. Countries with larger GDPs are usually richer. The columns of the data are:
 
  - The name of the region
- - What the total GDP of that region was
+ - The total GDP of that region
 
 Here is an example of the data in this file:
 
@@ -194,7 +194,7 @@ def load_data(file_name):
 
 Add a call to `load_data()` in your `setup()` function. Pass it the name of the data file you chose above. You can check the list below if you need a reminder of the file name.
 
- - Olympic host nations — `olypmics.csv`
+ - Olympic host nations — `olympics.csv`
  - World population — `pop.csv`
  - Carbon emissions — `carbon.csv`
  - Threatened species — `species.csv`
@@ -207,29 +207,29 @@ Add a call to `load_data()` in your `setup()` function. Pass it the name of the 
 
 **Test:** Run your program. Check the data that prints out. Think about how you will need to break each line up to get the region name and the numbers you want.
 
-**Debug:** You might get an error message about your filename being 'not defined'. If you do, check that you have put the name in quotes when you call the `load_data()` function. For example `load_data('pop.csv')`
+**Debug:** You might get an error message about your filename being 'not defined'. If you do, check that you have put the name in quotes when you call the `load_data()` function. For example, `load_data('pop.csv')`.
 
 --- /task ---
 
-Now the data is loaded. You need to get the data for each region and break it into a list, before you can load that list into a dictionary.
+Now the data is loaded, you need to get the data for each region and break it into a list. Then you can load that list into a dictionary.
 
 --- task ---
 
-Add code to your `load_data()` function that uses the `split()` function to break each line into a list. Call that list `info`.
+Add code to your `load_data()` function to use the `split()` function to break each line into a list. Call that list `info`.
 
 --- collapse ---
 ---
 title: Split a text string into a list
 ---
 
-The `split()` function breaks a string into a list. `split(',')` makes a new list item every time it sees a comma. So:
+The `split()` function breaks a string into a list. `split(',')` makes a new list item every time it sees a comma. So,
 
 ```python
 info = 'Estonia,1326535,31,42,68'
 my_list = info.split(',')
 ```
 
-Would put `['Estonia', '1326535', '31', '42', '68']` into `my_list`.
+would put `['Estonia', '1326535', '31', '42', '68']` into `my_list`.
 
 --- /collapse ---
 
@@ -283,7 +283,7 @@ Both keys and values can be almost any value you can store in Python. Although n
 
 You can use a key to get its connected value.
 
-To make a dictionary you use curly brackets `{}`, with key: value pairs inside. A pair is a key, followed by a colon (`:`), followed by the value connected to that key. For example:
+To make a dictionary you use curly brackets `{}`, with `key: value` pairs inside. A pair is a key, followed by a colon (`:`), followed by the value connected to that key. For example:
 
 ```python
 person = {
@@ -292,18 +292,18 @@ person = {
   'hair': 'brown',
 }
 ```
-`age`, `height`, and `hair` are keys. You can use them to look up their values with square brackets `[]`. For example:
+Here, `age`, `height`, and `hair` are keys. You can use them to look up their values with square brackets `[]`. For example:
 
 ```python
 print(person['hair'])
 ```
-Will print out the value `brown`.
+This will print out the value `brown`.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: Converting text to numbers
+title: Convert text to numbers
 ---
 
 You will need to use a different function to convert text to a number, depending on the kind of number:
@@ -374,7 +374,7 @@ pets = ['cat', 'dog', 'rabbit']
 pets.append('bird')
 ```
 
-Creates a `pets` list that looks like this:
+This creates a `pets` list that looks like this:
 
 ```python
 ['cat', 'dog', 'rabbit', 'bird']
@@ -394,7 +394,7 @@ pets = ['cat', 'dog', 'rabbit']
 print(pets[1])
 ```
 
-Would print out `dog`.
+This would print out `dog`.
 
 --- /collapse ---
 
@@ -404,7 +404,7 @@ Would print out `dog`.
 
 --- task ---
 
-Add a line in your `setup()` function that prints `region_list` out. Like the other `print()` statements you've used. You can comment this line out once you've used it for testing.
+Add a line in your `setup()` function that prints the `region_list` out. Like the other `print()` statements you've used, you can comment this line out once you've used it for testing.
 
 --- /task ---
 
@@ -412,7 +412,7 @@ Add a line in your `setup()` function that prints `region_list` out. Like the ot
 
 **Test:** Run your program and check that it prints out a list of dictionaries. It should look something like this.
 
-![Dictionaries printed out as part of a list](images/regions_list_output.png)
+![Dictionaries printed out as part of a list.](images/regions_list_output.png)
 
 --- /task ---
 
@@ -420,7 +420,7 @@ Add a line in your `setup()` function that prints `region_list` out. Like the ot
 
 --- task ---
 
- **Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
 
 --- collapse ---
 ---
@@ -464,8 +464,8 @@ title: I am getting a message that region_list is 'not defined'
 ---
 
 If you see a message about `region_list` being 'not defined', check that:
- - you have made it `global` in your `load_data()` function
- - you have created it as an empty list — with `region_list = []` — before trying to add things to it
+ - You have made it `global` in your `load_data()` function
+ - You have created it as an empty list — with `region_list = []` — before trying to add things to it
 
 --- /collapse ---
 
