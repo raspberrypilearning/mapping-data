@@ -3,7 +3,7 @@
 Use Python to make an interactive map that lets users learn interesting facts about the world.
 
 You will:
-+ Use lists and dictionaries to store that data
++ Use lists and dictionaries to store data
 + Use functions and parameters to keep your code clean
 + Use code to quickly explore large amounts of data
 
