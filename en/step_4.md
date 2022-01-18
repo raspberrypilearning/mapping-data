@@ -42,7 +42,7 @@ title: Python dictionaries
 
 A dictionary in Python stores pairs of **keys** and **values**.
 
-Both keys and values can be almost any value you can store in Python. Although neither lists nor dictionaries can be keys.
+Both keys and values can be almost any value you can store in Python. Although lists and dictionaries cannot be keys.
 
 You can use a key to get its connected value.
 
@@ -169,7 +169,7 @@ title: Python dictionaries
 
 A dictionary in Python stores pairs of **keys** and **values**.
 
-Both keys and values can be almost any value you can store in Python. Although neither lists nor dictionaries can be keys.
+Both keys and values can be almost any value you can store in Python. Although lists and dictionaries cannot be keys.
 
 You can use a key to get its connected value.
 
@@ -233,12 +233,12 @@ If your pins are not appearing on the map, check that you are calling your `draw
 
 --- collapse ---
 ---
-title: I am getting a message about a 'KeyError'
+title: I get a message about a 'KeyError'
 ---
 
-If you get a message about 'KeyError', check the spelling of your dictionary keys match when you put values in and when you read them out. Whether the letters are UPPER CASE or lower case is important too.
+If you get a message about 'KeyError', check that the spelling of your dictionary keys match when you put values in and when you read them out. Whether the letters are UPPER CASE or lower case is important too.
 
-If the error is for the `colours` dictionary, make sure you are checking the key exists in `colours` before trying to get the value.
+If the error is for the `colours` dictionary, make sure you check the key exists in `colours` before trying to get the value.
 
 --- /collapse ---
 
