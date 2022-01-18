@@ -13,7 +13,7 @@ Do you have an idea of the kind of display you want to create? Use this step to 
 
 --- task ---
 
-Open a [the starter project](https://trinket.io/library/trinkets/0341332a86){:target="_blank"}. Trinket will open in another browser tab.
+Open the [starter project](https://trinket.io/library/trinkets/0341332a86){:target="_blank"}. Trinket will open in another browser tab.
 
 --- /task ---
 
@@ -152,9 +152,9 @@ title: World happiness
 
 This data is from the world happiness report. The report is a survey of the happiness of people in different countries. People were asked to score their happiness on a scale of 0–10. The columns of the data are:
 
- - The name of a country
+ - The name of the country
  - Where that country ranks in the world for average happiness
- - The average happiness score for a country
+ - The average happiness score for the country
 
 Here is an example of the data in this file:
 
@@ -172,7 +172,7 @@ Iceland,3,7.504000187
 
 Now that you have picked your data, you need to load it into your program.
 
-Define a `load_data()` funciton to take a `file_name` variable. Have your function open that file and `print()` out every line in it.
+Define a `load_data()` function to take a `file_name` variable. Have your function open that file and `print()` out every line in it.
 
 [[[parameters]]]
 
@@ -207,7 +207,7 @@ Add a call to `load_data()` in your `setup()` function. Pass it the name of the 
 
 **Test:** Run your program. Check the data that prints out. Think about how you will need to break each line up to get the region name and the numbers you want.
 
-**Debug:** You might get an error message about your filename being 'not defined'. If you do, check that you have put the name in quotes when you call the `load_data()` function. For example, `load_data('pop.csv')`.
+**Debug:** You might get an error message about your file name being 'not defined'. If you do, check that you have put the name in quotes when you call the `load_data()` function. For example, `load_data('pop.csv')`.
 
 --- /task ---
 
@@ -279,7 +279,7 @@ title: Python dictionaries
 
 A dictionary in Python stores pairs of **keys** and **values**.
 
-Both keys and values can be almost any value you can store in Python. Although neither lists nor dictionaries can be keys.
+Both keys and values can be almost any value you can store in Python. Although lists and dictionaries cannot be keys.
 
 You can use a key to get its connected value.
 
@@ -308,8 +308,8 @@ title: Convert text to numbers
 
 You will need to use a different function to convert text to a number, depending on the kind of number:
 
- - `int()` is for converting whole numbers
- - `float()` is for converting decimal numbers
+ - `int()` converts whole numbers
+ - `float()` converts decimal numbers
 
 To use one of these functions, pass it the text string you want to convert:
 
@@ -387,7 +387,7 @@ This creates a `pets` list that looks like this:
 title: Get items from a list
 ---
 
-You can get an item from a list by using its index. An items index is the number of its position in the list, starting from zero.
+You can get an item from a list by using its index. An item's index is the number of its position in the list, starting from zero.
 
 ```python
 pets = ['cat', 'dog', 'rabbit']
@@ -433,7 +433,7 @@ Check your code is properly indented. The code under the `with` should be indent
 
 --- collapse ---
 ---
-title: I am getting a message that the csv file is 'not defined'
+title: I get a message that the csv file is 'not defined'
 ---
 
 Check your call to `load_data()` to be sure that the name of the file is a string.
@@ -451,7 +451,7 @@ Check that you have `','` in the `()` of `line.split()`
 
 --- collapse ---
 ---
-title: I am getting a message that split is 'not defined'
+title: I get a message that split is 'not defined'
 ---
 
 If you see a message about `split` being 'not defined', check that you have included `line.` before it.
@@ -460,7 +460,7 @@ If you see a message about `split` being 'not defined', check that you have incl
 
 --- collapse ---
 ---
-title: I am getting a message that region_list is 'not defined'
+title: I get a message that region_list is 'not defined'
 ---
 
 If you see a message about `region_list` being 'not defined', check that:
