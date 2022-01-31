@@ -13,7 +13,7 @@ Do you have an idea of the kind of display you want to create? Use this step to 
 
 --- task ---
 
-Open the [starter project](https://trinket.io/library/trinkets/0341332a86){:target="_blank"}. Trinket will open in another browser tab.
+Open the [starter project](https://trinket.io/library/trinkets/c88800b7a4){:target="_blank"}. Trinket will open in another browser tab.
 
 --- /task ---
 
@@ -331,11 +331,11 @@ converted_number = int(text_number)
 --- /task ---
 
 
-Now your `load_data()` function creates dictionaries for each region. You need to store those dictionaries somewhere the rest of your program can get them. A `global` list is a good choice.
+Now your `load_data()` function creates dictionaries for each region. You need to store those dictionaries somewhere the rest of your program can get them. A list is a good choice.
 
 --- task ---
 
-In `load_data()`, create an empty `global` list called `region_list`. Add each of your dictionaries to `region_list` using `append`. This will let you work with the data in the rest of your program.
+In `load_data()`, create an empty list called `region_list`. Add each of your dictionaries to `region_list` using `append`. This will let you work with the data in the rest of your program.
 
 --- collapse ---
 ---
