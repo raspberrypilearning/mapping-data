@@ -15,9 +15,9 @@ You will:
 
 Click on the coloured pins to see information about that region printed out. Think about the kind of data you would like to display, and how you could design an interesting shaped pin to mark it on a map.
 
-<iframe src="https://trinket.io/embed/python/507c939e3f?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://trinket.io/embed/python/ee22d7c522?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
-You may need to view this example in full screen to see the whole map. **World happiness measures:** [See inside the project.](https://trinket.io/python/507c939e3f){:target="_blank"} 
+You may need to view this example in full screen to see the whole map. **World happiness measures:** [See inside the project.](https://trinket.io/python/ee22d7c522){:target="_blank"} 
 
 
 --- /task ---
@@ -34,7 +34,7 @@ You are going to make some design decisions about what data you want to show to 
 
 Explore these example projects to get more ideas:
 
-<mark>Gallery of pretty examples pending getting prettier maps from design</mark>
+You may need to view this example in full screen to see the whole map. **World happiness measures:** [See inside the project.](https://trinket.io/python/ee22d7c522){:target="_blank"} 
 
 --- /task ---
 --- /no-print ---
@@ -45,7 +45,8 @@ Explore these example projects to get more ideas:
 
 You are going to make some design decisions about what data you want to show to your users, as well as what style of map and pins you will use to display that data.
 
-<mark>One image file per example</mark>
+<iframe src="https://trinket.io/embed/python/6c8ca6a74a" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
 
 --- /print-only ---
 
