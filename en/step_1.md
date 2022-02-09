@@ -34,7 +34,9 @@ You are going to make some design decisions about what data you want to show to 
 
 Explore these example projects to get more ideas:
 
-You may need to view this example in full screen to see the whole map. **World happiness measures:** [See inside the project.](https://trinket.io/python/ee22d7c522){:target="_blank"} 
+<iframe src="https://trinket.io/embed/python/6c8ca6a74a" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+You may need to view this example in full screen to see the whole map. **World happiness measures:** [See inside the project.](https://trinket.io/python/6c8ca6a74a){:target="_blank"} 
 
 --- /task ---
 --- /no-print ---
@@ -44,8 +46,6 @@ You may need to view this example in full screen to see the whole map. **World h
 ### Get inspiration 
 
 You are going to make some design decisions about what data you want to show to your users, as well as what style of map and pins you will use to display that data.
-
-<iframe src="https://trinket.io/embed/python/6c8ca6a74a" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 
 --- /print-only ---
