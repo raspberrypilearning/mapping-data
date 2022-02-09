@@ -31,7 +31,11 @@ def setup():
 --- task ---
 
 Think about how you want to display the data you've picked: what kind of map do you want to use? 
-+ 
++ ink_map.jpg
++ mercator.jpeg
++ mercator_bw.png
++ old_map.jpg
++ tech_map.jpg
 
 ![A list of map images available in the starter project](images/all_maps.png)
 
@@ -39,7 +43,7 @@ Think about how you want to display the data you've picked: what kind of map do 
 
 --- task ---
 
-**Choose:** The starter project includes several map images. Pick one you like, and load load the image in your `setup` function.
+**Choose:** The starter project includes several map images. Pick one you like, and load the image in your `setup` function.
 
 --- code ---
 ---
@@ -93,7 +97,21 @@ def setup():
 
 --- /task ---
 
-Now that you have a map, design some pins to show people using your display where they can click to see interesting facts about a place. Each pin will be a different colour. You will use the colour to tell which pin the user has clicked on. The pin can be any shape you want. Don't make it too big though, in some parts of the world countries are very close together!
+--- task ---
+
+**Choose:** What shape of pin will you place in each location? Your pin will need to be a single colour so that it is easy for a user to click on.
+
+You could choose a single shape, such as:
++ A circle
++ A square
++ A triangle
+
+Or you could create a pin out of multiple geometric shapes, such as:
++ A heart
++ A map pin
++ A star
+
+--- /task ---
 
 --- task ---
 
@@ -113,14 +131,14 @@ title: Colours in p5
 The `p5` `color()` function expects three numbers: one each for red, green, and blue.
 
 ```python
-sky = color(92, 204, 206) #Red = 92, Green = 204, Blue = 206
+blue = color(92, 204, 206) #Red = 92, Green = 204, Blue = 206
 ```
 
 You can use the `fill()` function to fill a shape with colour. `fill()` applies to every shape drawn after it.
 
 ```python
-grass = color(149, 212, 122)
-fill(grass)
+green = color(149, 212, 122)
+fill(green)
 rect(0, 250, 400, 150) # This shape will be filled with the colour
 ```
 
