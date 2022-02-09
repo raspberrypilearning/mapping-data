@@ -307,8 +307,8 @@ def load_data(file_name):
       # Change the dictionary to match the data you're using
       region_dict = {
         'name': info[0],
-        'happiness rank': int(info[1]),
-        'happiness score': float(info[2])
+        'happiness rank': info[1],
+        'happiness score': info[2]
       }
       print(region_dict)
 --- /code ---
@@ -339,25 +339,6 @@ Here, `age`, `height`, and `hair` are keys. You can use them to look up their va
 print(person['hair'])
 ```
 This will print out the value `brown`.
-
---- /collapse ---
-
---- collapse ---
----
-title: Convert text to numbers
----
-
-You will need to use a different function to convert text to a number, depending on the kind of number:
-
- - `int()` converts whole numbers
- - `float()` converts decimal numbers
-
-To use one of these functions, pass it the text string you want to convert:
-
-```python
-text_number = '12345'
-converted_number = int(text_number)
-```
 
 --- /collapse ---
 
