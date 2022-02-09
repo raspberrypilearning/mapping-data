@@ -11,13 +11,17 @@ Choose how you'll display the data you've selected.
 
 --- task ---
 
-Set the size of your canvas to 991 pixels wide and 768 pixels high.
+Add code to your `setup()` function to set the size of your canvas to **991** pixels wide and **768** pixels high.
 
 --- code ---
 ---
 language: python
 filename: main.py - setup()
----  
+line_numbers: false
+line_number_start: 1
+line_highlights: 2
+---
+def setup():  
   size(991, 768)
 
 --- /code ---
@@ -26,24 +30,27 @@ filename: main.py - setup()
 
 --- task ---
 
-Think about how you want to display the data you've picked: what kind of map do you want to use? What shape of pin will you place in each location?
+Think about how you want to display the data you've picked: what kind of map do you want to use? 
++ 
+
+![A list of map images available in the starter project](images/all_maps.png)
 
 --- /task ---
 
 --- task ---
 
-**Choose:** The starter project includes several map images. Pick one you like, and load it to a `global` `map` variable in your `setup` function.
-
-<mark>When we have all the images from design, add a gallery here, with the file names underneath each image. Currently, there are my two: mercator.jpeg and mercator_bw.png</mark>
+**Choose:** The starter project includes several map images. Pick one you like, and load load the image in your `setup` function.
 
 --- code ---
 ---
 language: python
 filename: main.py - setup()
+line_numbers: false
+line_number_start: 1
+line_highlights: 4
 ---
 def setup():
 # Put code to run once here
-    global map
     size(991, 768)    
     map = load_image('map.jpeg') # Replace with your image
 
@@ -53,17 +60,22 @@ def setup():
 
 --- task ---
 
-Add code to your `draw()` function to draw the map so it covers the whole canvas.
+Add code to your `setup()` function to draw the map so it covers the whole canvas.
 
 [[[p5-coordinates]]]
 
 --- code ---
 ---
 language: python
-filename: main.py - draw()
+filename: main.py - setup()
+line_numbers: false
+line_number_start: 1
+line_highlights: 5-11
 ---
-def draw():
-# Put code to run every frame here
+def setup():
+# Put code to run once here
+    size(991, 768)    
+    map = load_image('map.jpeg') # Replace with your image
   image(
       map, # The image to draw
       0, # The x of the top-left corner
