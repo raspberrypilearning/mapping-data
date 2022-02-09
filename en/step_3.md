@@ -5,19 +5,23 @@
 Choose how you'll display the data you've selected.
 </div>
 <div>
-![A map with a single pin marked in the centre](images/single_pin.png){:width="300px"}
+![A map with a single pin marked in the centre.](images/single_pin.png){:width="300px"}
 </div>
 </div>
 
 --- task ---
 
-Set the size of your canvas to 991 pixels wide and 768 pixels high.
+Add code to your `setup()` function to set the size of your canvas to **991** pixels wide and **768** pixels high.
 
 --- code ---
 ---
 language: python
 filename: main.py - setup()
----  
+line_numbers: false
+line_number_start: 1
+line_highlights: 2
+---
+def setup():  
   size(991, 768)
 
 --- /code ---
@@ -26,24 +30,27 @@ filename: main.py - setup()
 
 --- task ---
 
-Think about how you want to display the data you've picked: What kind of map do you want to use? What shape of pin will you place in each location?
+Think about how you want to display the data you've picked: what kind of map do you want to use? 
++ 
+
+![A list of map images available in the starter project](images/all_maps.png)
 
 --- /task ---
 
 --- task ---
 
-**Choose:** The started project includes several map images. Pick one you like, and load it to a `global` `map` variable in your `setup` function.
-
-<mark>When we have all the images from design, add a gallery here, with the file names underneath each image. Currently, there are my two: mercator.jpeg and mercator_bw.png</mark>
+**Choose:** The starter project includes several map images. Pick one you like, and load load the image in your `setup` function.
 
 --- code ---
 ---
 language: python
 filename: main.py - setup()
+line_numbers: false
+line_number_start: 1
+line_highlights: 4
 ---
 def setup():
 # Put code to run once here
-    global map
     size(991, 768)    
     map = load_image('map.jpeg') # Replace with your image
 
@@ -53,17 +60,22 @@ def setup():
 
 --- task ---
 
-Add code to your `draw()` function to draw the map so it covers the whole canvas.
+Add code to your `setup()` function to draw the map so it covers the whole canvas.
 
 [[[p5-coordinates]]]
 
 --- code ---
 ---
 language: python
-filename: main.py - draw()
+filename: main.py - setup()
+line_numbers: false
+line_number_start: 1
+line_highlights: 5-11
 ---
-def draw():
-# Put code to run every frame here
+def setup():
+# Put code to run once here
+    size(991, 768)    
+    map = load_image('map.jpeg') # Replace with your image
   image(
       map, # The image to draw
       0, # The x of the top-left corner
@@ -87,8 +99,8 @@ Now that you have a map, design some pins to show people using your display wher
 
 Define a function called `draw_pin`. It should draw a pin, of your design, on the map. It should take three parameters:
 
- - The x coordinate for the pin
- - The y coordinate for the pin
+ - The x coordinate for the pin.
+ - The y coordinate for the pin.
  - The colour of the pin. This should be a `p5` `color()`.
 
 [[[parameters]]]
@@ -104,7 +116,7 @@ The `p5` `color()` function expects three numbers: one each for red, green, and 
 sky = color(92, 204, 206) #Red = 92, Green = 204, Blue = 206
 ```
 
-You can use a colour to fill a shape with the `fill()` function. `fill()` changes every shape drawn after it.
+You can use the `fill()` function to fill a shape with colour. `fill()` applies to every shape drawn after it.
 
 ```python
 grass = color(149, 212, 122)
@@ -146,14 +158,14 @@ rect(0, 250, 400, 150) # This shape will have a white border
 
 --- task ---
 
- **Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
 
 --- collapse ---
 ---
 title: My map isn't loading
 ---
 
-Check the filename really carefully — remember capital letters are different to lower case letters and punctuation is important.
+Check the filename really carefully — remember capital letters are different to lower-case letters and punctuation is important.
 
 --- /collapse ---
 

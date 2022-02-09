@@ -42,11 +42,11 @@ title: Python dictionaries
 
 A dictionary in Python stores pairs of **keys** and **values**.
 
-Both keys and values can be almost any value you can store in Python. Although neither lists nor dictionaries can be keys.
+Both keys and values can be almost any value you can store in Python. Although lists and dictionaries cannot be keys.
 
 You can use a key to get its connected value.
 
-To make a dictionary you use curly brackets `{}`, with key: value pairs inside. A pair is a key, followed by a colon (`:`), followed by the value connected to that key. For example:
+To make a dictionary, you use curly brackets `{}`, with `key: value` pairs inside. A pair is a key, followed by a colon (`:`), followed by the value connected to that key. For example:
 
 ```python
 person = {
@@ -55,12 +55,12 @@ person = {
   'hair': 'brown',
 }
 ```
-`age`, `height`, and `hair` are keys. You can use them to look up their values with square brackets `[]`. For example:
+Here, `age`, `height`, and `hair` are keys. You can use them to look up their values with square brackets `[]`. For example:
 
 ```python
 print(person['hair'])
 ```
-Will print out the value `brown`.
+This will print out the value `brown`.
 
 --- /collapse ---
 
@@ -76,7 +76,7 @@ Add a call to `draw_data()` in your `draw()` function.
 
 **Test:** Run your program. You should see lots of pins pop up on your map! Depending on the data you chose, you might see more or fewer pins than in the image below.
 
-![A black and white map with many red dots on it](images/map_many_pins.png)
+![A black and white map with many red dots on it.](images/map_many_pins.png)
 
 --- /task ---
 
@@ -116,7 +116,7 @@ def draw_data():
 
 --- task ---
 
-**Test:**  Run your program and check that the pins are different colours. If you don't have many pins, it may be hard to tell. In that case, try using bigger changes between each pin.
+**Test:** Run your program and check that the pins are different colours. If you don't have many pins, it may be hard to tell. In that case, try using bigger changes between each pin.
 
 --- /task ---
 
@@ -169,11 +169,11 @@ title: Python dictionaries
 
 A dictionary in Python stores pairs of **keys** and **values**.
 
-Both keys and values can be almost any value you can store in Python. Although neither lists nor dictionaries can be keys.
+Both keys and values can be almost any value you can store in Python. Although lists and dictionaries cannot be keys.
 
 You can use a key to get its connected value.
 
-To make a dictionary you use curly brackets `{}`, with key: value pairs inside. A pair is a key, followed by a colon (`:`), followed by the value connected to that key. For example:
+To make a dictionary, you use curly brackets `{}`, with `key: value` pairs inside. A pair is a key, followed by a colon (`:`), followed by the value connected to that key. For example:
 
 ```python
 person = {
@@ -182,12 +182,12 @@ person = {
   'hair': 'brown',
 }
 ```
-`age`, `height`, and `hair` are keys. You can use them to look up their values with square brackets `[]`. For example:
+Here, `age`, `height`, and `hair` are keys. You can use them to look up their values with square brackets `[]`. For example:
 
 ```python
 print(person['hair'])
 ```
-Will print out the value `brown`.
+This will print out the value `brown`.
 
 --- /collapse ---
 
@@ -220,11 +220,11 @@ if thing in my_dictionary:
 
 --- task ---
 
- **Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
 
 --- collapse ---
 ---
-title: My pins are not appearing on the map
+title: My pins do not appear on the map
 ---
 
 If your pins are not appearing on the map, check that you are calling your `draw_data()` function from your `draw()` function.
@@ -233,12 +233,12 @@ If your pins are not appearing on the map, check that you are calling your `draw
 
 --- collapse ---
 ---
-title: I am getting a message about a 'KeyError'
+title: I get a message about a 'KeyError'
 ---
 
-If you get a message about 'KeyError', check the spelling of your dictionary keys match when you put values in and when you read them out. Whether the letters are UPPERCASE or lowercase is important too.
+If you get a message about 'KeyError', check that the spelling of your dictionary keys match when you put values in and when you read them out. Whether the letters are UPPER CASE or lower case is important too.
 
-If the error is for the `colours` dictionary, make sure you are checking the key exists in `colours` before trying to get the value.
+If the error is for the `colours` dictionary, make sure you check the key exists in `colours` before trying to get the value.
 
 --- /collapse ---
 

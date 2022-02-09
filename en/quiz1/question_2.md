@@ -19,7 +19,7 @@ def my_function():
 ```
 
   --- feedback ---
-  Not quite! This function does multiply two numbers, but they're always the same numbers. The parameters let you use the same code on different input.
+  Not quite! This function does multiply two numbers, but they're always the same numbers. The parameters let you use the same code on different inputs.
   --- /feedback ---
 
 - ( ) 
