@@ -180,14 +180,23 @@ Define a `load_data()` function to take a `file_name` variable. Have your functi
 ---
 language: python
 filename: main.py — load_data()
+line_numbers: false
+line_number_start: 1
+line_highlights: 5-8
 ---
+# Put code to run when the mouse is pressed here
+def mouse_pressed():
+  pixel_colour = color(get(mouse_x, mouse_y))
+  
 def load_data(file_name):
   with open(file_name) as f:
     for line in f:
       print(line)
+
 --- /code ---
 
 **Tip:** You will be moving data around a lot in the next few steps. It's a good idea to `print()` everything out. This will help you understand what your data looks like at each step. It's also good for catching bugs. You can comment the `print()` lines out later (with `#`).
+
 --- /task ---
 
 --- task ---
@@ -362,81 +371,56 @@ converted_number = int(text_number)
 
 --- /task ---
 
-
 Now your `load_data()` function creates dictionaries for each region. You need to store those dictionaries somewhere the rest of your program can get them. A list is a good choice.
 
 --- task ---
 
-In `load_data()`, create an empty list called `region_list`. Add each of your dictionaries to `region_list` using `append`. This will let you work with the data in the rest of your program.
+Create an empty list called `region_list`. 
 
---- collapse ---
+--- code ---
 ---
-title: Create a list
+language: python
+filename: main.py
+line_numbers: false
+line_number_start: 1
+line_highlights: 5
 ---
+#!/bin/python3
+from p5 import *
+from regions import get_region_coords
 
-A Python list can hold a collection of data. You can create a list using square brackets `[]`:
+region_list = []
+--- /code ---
 
-```python
-my_list = []
-```
+In `load_data()`, add each of your dictionaries to `region_list` using `append`. This will let you work with the data in the rest of your program.
 
-You can add items to a list as you create it. You can do this by putting them inside the `[]` and separating the items with commas:
-
-```python
-pets = ['cat', 'dog', 'rabbit']
-```
-
---- /collapse ---
-
---- collapse ---
+--- code ---
 ---
-title: Add items to a list
+language: python
+filename: main.py - load_data()
+line_numbers: false
+line_number_start: 1
+line_highlights: 10
 ---
+def load_data(file_name):
+  with open(file_name) as f:
+    for line in f:
+      info = line.split(',')
+      region_dict = {
+        'name': info[0],
+        'happiness rank': info[1],
+        'happiness score': info[2]
+      }
+      region_list.append(region_dict)
 
-You can add items to a list as you create it. You can do this by putting them inside the `[]` and separating the items with commas:
+--- /code ---
 
-```python
-pets = ['cat', 'dog', 'rabbit']
-```
-
-You also can add items to lists after they have been created, using `append()`. For example:
-
-```python
-pets = ['cat', 'dog', 'rabbit']
-pets.append('bird')
-```
-
-This creates a `pets` list that looks like this:
-
-```python
-['cat', 'dog', 'rabbit', 'bird']
-```
-
---- /collapse ---
-
---- collapse ---
----
-title: Get items from a list
----
-
-You can get an item from a list by using its index. An item's index is the number of its position in the list, starting from zero.
-
-```python
-pets = ['cat', 'dog', 'rabbit']
-print(pets[1])
-```
-
-This would print out `dog`.
-
---- /collapse ---
-
-**Tip:** You've created a list of dictionaries here. You can make lists of lists too. You can also make dictionaries that store lists, or other dictionaries, as values.
 
 --- /task ---
 
 --- task ---
 
-Add a line in your `setup()` function that prints the `region_list` out. Like the other `print()` statements you've used, you can comment this line out once you've used it for testing.
+Add a line in your `setup()` function that prints the `region_list` out. 
 
 --- /task ---
 
@@ -446,9 +430,9 @@ Add a line in your `setup()` function that prints the `region_list` out. Like th
 
 ![Dictionaries printed out as part of a list.](images/regions_list_output.png)
 
---- /task ---
+**Tip:** Like the other `print()` statements you've used, you can comment this line out once you've used it for testing and your code works as expected.
 
---- save ---
+--- /task ---
 
 --- task ---
 
@@ -502,3 +486,5 @@ If you see a message about `region_list` being 'not defined', check that:
 --- /collapse ---
 
 --- /task ---
+
+--- save ---
