@@ -47,6 +47,9 @@ You may need to view this example in full screen to see the whole map. **World h
 
 You are going to make some design decisions about what data you want to show to your users, as well as what style of map and pins you will use to display that data.
 
+![](images/tech-map-red-pins.png)
+![](images/ink-map-random-pins.png)
+
 
 --- /print-only ---
 

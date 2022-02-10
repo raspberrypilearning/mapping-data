@@ -22,7 +22,7 @@ Open the [starter project](https://trinket.io/library/trinkets/c88800b7a4){:targ
 Before you can put your data on a map, you'll need to choose some data to display.
 
 
-**Choose:** There are a few data files included in the starter project. Read their descriptions below. Then note the name of the file you'd like to use in your display.
+**Choose:** There are a few CSV files included in the starter project. Read their descriptions below. Then note the name of the file you'd like to use in your display.
 
 <div style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
 <span style="color: #0faeb0">**CSV files**</span> are Comma-Separated Values files. They contain data in rows and columns, like a table. Each line is a row, with commas separating that row's values into columns.
@@ -36,9 +36,9 @@ title: Olympic host nations
 
 **File name:** `olympics.csv`
 
-This data is a list of countries that have hosted the Olympic Summer Games. The columns of the data are:
+This data is a list of regions that have hosted the Olympic Summer Games. The columns of the data are:
 
- - The name of the country
+ - The name of the region
  - The number of times they have hosted the games
 
 Here is an example of the data in this file:
@@ -128,7 +128,7 @@ title: National wealth
 
 **File name:** `gdp.csv`
 
-The gross domestic product (GDP) of a country measures the size of its economy. Countries with larger GDPs are usually richer. The columns of the data are:
+The gross domestic product (GDP) of a region measures the size of its economy. Regions with larger GDPs are usually richer. The columns of the data are:
 
  - The name of the region
  - The total GDP of that region
@@ -150,11 +150,11 @@ title: World happiness
 
 **File name:** `happy.csv`
 
-This data is from the world happiness report. The report is a survey of the happiness of people in different countries. People were asked to score their happiness on a scale of 0–10. The columns of the data are:
+This data is from the world happiness report. The report is a survey of the happiness of people in different regions. People were asked to score their happiness on a scale of 0–10. The columns of the data are:
 
- - The name of the country
- - Where that country ranks in the world for average happiness
- - The average happiness score for the country
+ - The name of the region
+ - Where that region ranks in the world for average happiness
+ - The average happiness score for the region
 
 Here is an example of the data in this file:
 
