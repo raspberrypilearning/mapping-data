@@ -192,7 +192,6 @@ def load_data(file_name):
   with open(file_name) as f:
     for line in f:
       print(line)
-
 --- /code ---
 
 **Tip:** You will be moving data around a lot in the next few steps. It's a good idea to `print()` everything out. This will help you understand what your data looks like at each step. It's also good for catching bugs. You can comment the `print()` lines out later (with `#`).
@@ -246,6 +245,9 @@ would put `['Estonia', '1326535', '31', '42', '68']` into `my_list`.
 ---
 language: python
 filename: main.py — load_data()
+line_numbers: false
+line_number_start: 1
+line_highlights: 4-5
 ---
 def load_data(file_name):
   with open(file_name) as f:
@@ -300,6 +302,9 @@ World happiness — `happy.csv`
 ---
 language: python
 filename: main.py — load_data()
+line_numbers: false
+line_number_start: 1
+line_highlights: 6-12
 ---
 def load_data(file_name):
   with open(file_name) as f:
@@ -314,35 +319,6 @@ def load_data(file_name):
       }
       print(region_dict)
 --- /code ---
-
---- collapse ---
----
-title: Python dictionaries
----
-
-A dictionary in Python stores pairs of **keys** and **values**.
-
-Both keys and values can be almost any value you can store in Python. Although lists and dictionaries cannot be keys.
-
-You can use a key to get its connected value.
-
-To make a dictionary you use curly brackets `{}`, with `key: value` pairs inside. A pair is a key, followed by a colon (`:`), followed by the value connected to that key. For example:
-
-```python
-person = {
-  'age': 12,
-  'height': 149.5,
-  'hair': 'brown',
-}
-```
-Here, `age`, `height`, and `hair` are keys. You can use them to look up their values with square brackets `[]`. For example:
-
-```python
-print(person['hair'])
-```
-This will print out the value `brown`.
-
---- /collapse ---
 
 --- /task ---
 

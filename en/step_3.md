@@ -19,8 +19,9 @@ language: python
 filename: main.py - setup()
 line_numbers: false
 line_number_start: 1
-line_highlights: 2
+line_highlights: 3
 ---
+# Put code to run once here
 def setup():  
   size(991, 768)
 
@@ -53,10 +54,10 @@ line_numbers: false
 line_number_start: 1
 line_highlights: 4
 ---
-def setup():
 # Put code to run once here
+def setup():
   size(991, 768)    
-  map = load_image('map.jpeg') # Replace with your image
+  map = load_image('map.png') # Replace with your image
 
 --- /code ---
 
