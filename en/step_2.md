@@ -1,4 +1,4 @@
-## Choose a theme
+## Choose and load a data set
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
@@ -214,7 +214,7 @@ Add a call to `load_data()` in your `setup()` function. Pass it the name of the 
 
 --- task ---
 
-**Test:** Run your program. Check the data that prints out. Think about how you will need to break each line up to get the region name and the numbers you want.
+**Test:** Run your program. Check the data that prints out in the output area.
 
 **Debug:** You might get an error message about your file name being 'not defined'. If you do, check that you have put the name in quotes when you call the `load_data()` function. For example, `load_data('pop.csv')`.
 
@@ -260,7 +260,9 @@ Now use the list you made from each region's data to create a dictionary for eac
 
 --- task ---
 
-Add code to your `load_data()` function that converts the data you've chosen into a dictionary. Don't forget to convert any numbers from text to Python numbers. Use `print()` to check the dictionaries look like you expect.
+Add code to your `load_data()` function that converts the data you've chosen into a dictionary.  
+
+Use `print()` to check the dictionaries look like you expect.
 
 --- collapse ---
 

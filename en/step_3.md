@@ -55,8 +55,8 @@ line_highlights: 4
 ---
 def setup():
 # Put code to run once here
-    size(991, 768)    
-    map = load_image('map.jpeg') # Replace with your image
+  size(991, 768)    
+  map = load_image('map.jpeg') # Replace with your image
 
 --- /code ---
 
@@ -78,8 +78,8 @@ line_highlights: 5-11
 ---
 def setup():
 # Put code to run once here
-    size(991, 768)    
-    map = load_image('map.jpeg') # Replace with your image
+  size(991, 768)    
+  map = load_image('map.jpeg') # Replace with your image
   image(
       map, # The image to draw
       0, # The x of the top-left corner
@@ -117,11 +117,37 @@ Or you could create a pin out of multiple geometric shapes, such as:
 
 --- task ---
 
-Define a function called `draw_pin`. It should draw a pin, of your design, on the map. It should take three parameters:
+Define a function called `draw_pin`. It should draw a pin, of your own design, on the map. It should take three parameters:
 
  - The x coordinate for the pin.
  - The y coordinate for the pin.
  - The colour of the pin. This should be a `p5` `color()`.
+
+As you create your `draw_pin` function, call it to see how it appears on the screen. You should call your `draw_pin` function from the `setup()` function. 
+
+You can use the arguments shown below to place a `red` pin the middle of the screen.
+
+--- code ---
+---
+language: python
+filename: main.py - setup()
+line_numbers: false
+line_number_start: 1
+line_highlights: 12
+---
+def setup():
+# Put code to run once here
+  size(991, 768)
+  map = load_image('map.jpeg') # Replace with your image
+  image(
+    map, # The image to draw
+    0, # The x of the top-left corner
+    0, # The y of the top-left corner
+    width, # The width of the image
+    height # The height of the image
+    )
+  draw_pin(300, 300, color(255,0,0))
+--- /code ---
 
 [[[parameters]]]
 
@@ -167,14 +193,6 @@ rect(0, 250, 400, 150) # This shape will have a white border
 **Tip:** Your `draw_pin` function can make other shapes out of these basic ones.
 
 --- /task ---
-
---- task ---
-
-**Test:** Test your map by calling `draw_pin()` from `draw()`. Put the pin anywhere on the map, for now. You're just checking how it looks. Remove the pin when you're happy that the code works.
-
---- /task ---
-
---- save ---
 
 --- task ---
 
@@ -228,3 +246,5 @@ Also, make sure you are calling `draw_pin()` after you call `image()` to create 
 --- /collapse ---
 
 --- /task ---
+
+--- save ---
