@@ -15,9 +15,9 @@ You can use `get_region_coords()` to return a dictionary of the coordinates for 
 
 --- task ---
 
-Define a `draw_data()` function to put your data on the map.
+Define a `draw_data()` function to put your data on the map. At first you can just print out the region's name and its `x` and `y` coordinates.
 
-It should loop through your `region_list` and add a pin for each region. For now, make all the pins the same colour.
+It should loop through your `region_list` and print a line for each region.
 
 --- code ---
 ---
@@ -30,45 +30,64 @@ def draw_data():
     region_coords = get_region_coords(region_name) # Use the name to get coordinates
     region_x = region_coords['x'] # Get the x coordinate
     region_y = region_coords['y'] # Get the y coordinate
-    region_colour = color(255, 0, 0) # Set the pin colour
-    draw_pin(region_x, region_y, region_colour) # Draw the pin
+    print(region_name, region_x, region_y)
 
 --- /code ---
-
---- collapse ---
----
-title: Python dictionaries
----
-
-A dictionary in Python stores pairs of **keys** and **values**.
-
-Both keys and values can be almost any value you can store in Python. Although lists and dictionaries cannot be keys.
-
-You can use a key to get its connected value.
-
-To make a dictionary, you use curly brackets `{}`, with `key: value` pairs inside. A pair is a key, followed by a colon (`:`), followed by the value connected to that key. For example:
-
-```python
-person = {
-  'age': 12,
-  'height': 149.5,
-  'hair': 'brown',
-}
-```
-Here, `age`, `height`, and `hair` are keys. You can use them to look up their values with square brackets `[]`. For example:
-
-```python
-print(person['hair'])
-```
-This will print out the value `brown`.
-
---- /collapse ---
 
 --- /task ---
 
 --- task ---
 
-Add a call to `draw_data()` in your `draw()` function.
+In your `setup()` function, call `draw_data()` and then run your code to test that it works.
+
+--- code ---
+---
+language: python
+filename: main.py - setup()
+line_numbers: false
+line_number_start: 1
+line_highlights: 12
+---
+def setup():
+# Put code to run once here
+  size(991, 768)
+  map = load_image('map.jpeg') # Replace with your image
+  image(
+    map, # The image to draw
+    0, # The x of the top-left corner
+    0, # The y of the top-left corner
+    width, # The width of the image
+    height # The height of the image
+    )
+  draw_data()
+  
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Instead of printing out the name of the region, and its coordinates, you can use your `draw_pin()` function, to place your pins on the map. The code below would colour the pins red (`color(255, 0, 9)`) but you can choose a different colours to use.
+
+--- code ---
+---
+language: python
+filename: main.py — draw_data()
+line_numbers: false
+line_number_start: 1
+line_highlights: 7-9
+---
+def draw_data():
+  for region in region_list:
+    region_name = region['name'] # Get the name of the region
+    region_coords = get_region_coords(region_name) # Use the name to get coordinates
+    region_x = region_coords['x'] # Get the x coordinate
+    region_y = region_coords['y'] # Get the y coordinate
+    #print(region_name, region_x, region_y)
+    region_colour = color(255, 0, 0) # Set the pin colour
+    draw_pin(region_x, region_y, region_colour) # Draw the pin
+
+--- /code ---
 
 --- /task ---
 
@@ -86,12 +105,11 @@ Next, you need to add some code to let users click on a pin and see some informa
 
 **Choose:** Every pin needs a unique colour. But there are lots of different ways to make this happen. Here are a few suggestions, but you can create your own.
 
- - Pick one of the values for red, green, or blue, and change it by one every time your code places a pin.
- - Change more than one of the values with each pin placed.
- - Change the values by larger steps.
- - Choose the values at random. But check that they're unique before using them.
-
-Here's an example of the first idea — changing the value for red each time the code places a pin:
+--- collapse ---
+---
+title: Change the value of one colour
+---
+This example changes the value for red each time the code places a pin:
 
 --- code ---
 ---
@@ -111,6 +129,66 @@ def draw_data():
     red_value -= 1 # Change the red value
 
 --- /code ---
+
+--- /collapse ---
+
+--- collapse ---
+---
+title: Change the value of multiple colours
+---
+This example changes the red, green and blue values each time the code places a pin:
+
+--- code ---
+---
+language: python
+filename: main.py — draw_data()
+---
+def draw_data():
+  red_value = 255 # Set a starting value for red
+  blue_value = 0
+  green_value = 255
+  for region in region_list:
+    region_name = region['name']
+    region_coords = get_region_coords(region_name)
+    region_x = region_coords['x']
+    region_y = region_coords['y']
+    region_colour = color(red_value, 0, 0) # Use the red value in the colour
+    draw_pin(region_x, region_y, region_colour)
+    red_value -= 1 # Change the red value
+    green_value += 1 #Change the green value
+    blue_value -= 1 #Change the blue value 
+--- /code ---
+
+
+--- /collapse ---
+
+--- collapse ---
+---
+title: Choose random colours
+---
+
+At the top of your code, with your other imports, you will need to import `randint` from the `random` library.
+
+You can then choose a random colour for your region colours, each time around the `for` loop. There is a small chance that two or more colours might end up the same, but it is a very small chance.
+
+--- code ---
+---
+language: python
+filename: main.py — draw_data()
+---
+from random import randint
+
+def draw_data():
+  for region in region_list:
+    region_name = region['name']
+    region_coords = get_region_coords(region_name)
+    region_x = region_coords['x']
+    region_y = region_coords['y']
+    region_colour = color(randint(0,255), randint(0,255), randint(0,255)) # Select a random colour
+    draw_pin(region_x, region_y, region_colour)
+--- /code ---
+
+--- /collapse ---
 
 --- /task ---
 
