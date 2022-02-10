@@ -46,7 +46,7 @@ language: python
 filename: main.py - setup()
 line_numbers: false
 line_number_start: 1
-line_highlights: 12
+line_highlights: 13
 ---
 def setup():
 # Put code to run once here
@@ -59,6 +59,7 @@ def setup():
     width, # The width of the image
     height # The height of the image
     )
+  draw_pin(300, 300, color(255,0,0))
   draw_data()
   
 --- /code ---
@@ -157,8 +158,8 @@ def draw_data():
     red_value -= 1 # Change the red value
     green_value += 1 #Change the green value
     blue_value -= 1 #Change the blue value 
---- /code ---
 
+--- /code ---
 
 --- /collapse ---
 
@@ -186,6 +187,7 @@ def draw_data():
     region_y = region_coords['y']
     region_colour = color(randint(0,255), randint(0,255), randint(0,255)) # Select a random colour
     draw_pin(region_x, region_y, region_colour)
+
 --- /code ---
 
 --- /collapse ---
@@ -202,99 +204,135 @@ Your map has unique pins for each location, but you need to add some code to con
 
 --- task ---
 
-To use the pin's colour to look up the information, you need to create a `global` dictionary. Do this at the same time as setting the colours on the pins. Use pin colours as keys and the region dictionaries as values.
+To use the pin's colour to look up the information, you need to **create a dictionary** to store the colours and link them to the region.
 
 --- code ---
 ---
 language: python
-filename: main.py — draw_data()
+filename: main.py
+line_numbers: false
+line_number_start: 1
+line_highlights: 7
 ---
-def draw_data():
-  global colours # Make colours global
-  colours = {} # Create an empty colours dictionary
-  red_value = 255
+#!/bin/python3
+from p5 import *
+from regions import get_region_coords
+from random import randint
 
-  for region in region_list:
-    region_name = region['name']
-    region_coords = get_region_coords(region_name)
-    region_x = region_coords['x']
-    region_y = region_coords['y']
-    region_colour = color(red_value, 0, 0)
-    draw_pin(region_x, region_y, region_colour)
-    colours[region_colour] = region # Store the region information with the pin colour as the key
-    red_value -= 1
+region_list = []
+colours = {}
 --- /code ---
 
 --- /task ---
 
-Now you have a dictionary to look up. You can add some code to take the colour the user clicked and use it to print information from that dictionary.
+--- task ---
+
+As the pins are placed, the `region` can be stored in the dictionary along with the colour of the pin.
+
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: false
+line_number_start: 1
+line_highlights: 9
+---
+def draw_data():
+  red_value = 255
+  for region in region_list:
+    region_name = region['name'] # Get the name of the region
+    region_coords = get_region_coords(region_name) # Use the name to get coordinates
+    region_x = region_coords['x'] # Get the x coordinate
+    region_y = region_coords['y'] # Get the y coordinate
+    region_colour = color(i, 100, 0) # Set the pin colour
+    colours[region_colour] = region
+    draw_pin(region_x, region_y, region_colour)
+    rev_value -= 1 -= 1
+--- /code ---
+
+--- /task ---
+
+When the user clicks on a pin, the colour of the pin can be found, and then the correct region found in the dictionary.
 
 --- task ---
 
-In your `mouse_pressed()` function check if `pixel_colour` is in your `colours` dictionary. If it is, print out the interesting information from the dictionary.
+In your `mouse_pressed()` function, lookup the `pixel_colour` in the `colours` dictionary and print out the `name` of the region.
 
-Remember that `colours` is a dictionary of dictionaries. You will have to get the dictionary of region information, then get the information from inside that dictionary. For example:
+**Remember** that `colours` is a dictionary of dictionaries. You will have to get the dictionary of region information, then get the information from inside that dictionary. For example:
 
-```python
-facts = colours(pixel_colour)
-print(facts['name'])
-```
-
---- collapse ---
+--- code ---
 ---
-title: Python dictionaries
+language: python
+filename: main.py
+line_numbers: false
+line_number_start: 1
+line_highlights: 3
 ---
+def mouse_pressed():
+# Put code to run when the mouse is pressed here
+  pixel_colour = color(get(mouse_x, mouse_y))
+  facts = colours[pixel_colour]
+  print(facts['name'])
+--- /code ---
 
-A dictionary in Python stores pairs of **keys** and **values**.
+--- /task ---
 
-Both keys and values can be almost any value you can store in Python. Although lists and dictionaries cannot be keys.
+--- task ---
 
-You can use a key to get its connected value.
-
-To make a dictionary, you use curly brackets `{}`, with `key: value` pairs inside. A pair is a key, followed by a colon (`:`), followed by the value connected to that key. For example:
-
-```python
-person = {
-  'age': 12,
-  'height': 149.5,
-  'hair': 'brown',
-}
-```
-Here, `age`, `height`, and `hair` are keys. You can use them to look up their values with square brackets `[]`. For example:
-
-```python
-print(person['hair'])
-```
-This will print out the value `brown`.
-
---- /collapse ---
-
-
---- collapse ---
----
-title: Check if a key is in a dictionary
----
-
-It's useful to check if a key is in a dictionary. Trying to get the value for a key that doesn't exist causes an error.
+It's important to check if a key is in a dictionary. If you click on an area of the map, without a pin, you will receive a `KeyError`.
 
 You can check if a value is in a dictionary by using `in`:
 
-```python
-if thing in my_dictionary:
-  # Do something
-```
-
---- /collapse ---
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: false
+line_number_start: 1
+line_highlights: 3
+---
+def mouse_pressed():
+# Put code to run when the mouse is pressed here
+  pixel_colour = color(get(mouse_x, mouse_y))
+  if pixel_colour in colours:
+    facts = colours[pixel_colour]
+    print(facts['name'])
+  else:
+    print('Region not detected')
+--- /code ---
 
 --- /task ---
 
 --- task ---
 
-**Test:** Run your program. Click on a pin and check that your program correctly prints out data about that area.
+**Test:** Run your program. Click on a pin and check that your program correctly prints out data about that area. 
 
 --- /task ---
 
---- save ---
+--- task ---
+
+You can print other facts out about the region you clicked on, by adding more `print()` statements. This will depend on the data set that you used. If you used `happy.csv` for instance, you could print the following:0faeb0
+
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: false
+line_number_start: 1
+line_highlights: 7
+---
+def mouse_pressed():
+# Put code to run when the mouse is pressed here
+  pixel_colour = color(get(mouse_x, mouse_y))
+  if pixel_colour in colours:
+    facts = colours[pixel_colour]
+    print(facts['name'])
+    print(facts['happiness rank'])
+  else:
+    print('Region not detected')
+--- /code ---
+
+--- /task ---
 
 --- task ---
 
@@ -320,4 +358,17 @@ If the error is for the `colours` dictionary, make sure you check the key exists
 
 --- /collapse ---
 
+--- collapse ---
+---
+title: It keeps displaying 'Region not detected'
+---
+
+Your mouse click needs to be in the centre of your pin to make sure that it detects the correct colour.
+
+Try clicking closer to the centre of your pin. 
+
+--- /collapse ---
+
 --- /task ---
+
+--- save ---
