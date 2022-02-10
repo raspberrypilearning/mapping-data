@@ -60,6 +60,7 @@ def setup():
     height # The height of the image
     )
   draw_data()
+  
 --- /code ---
 
 --- /task ---
@@ -156,7 +157,6 @@ def draw_data():
     red_value -= 1 # Change the red value
     green_value += 1 #Change the green value
     blue_value -= 1 #Change the blue value 
-
 --- /code ---
 
 
@@ -170,6 +170,7 @@ title: Choose random colours
 At the top of your code, with your other imports, you will need to import `randint` from the `random` library.
 
 You can then choose a random colour for your region colours, each time around the `for` loop. There is a small chance that two or more colours might end up the same, but it is a very small chance.
+
 --- code ---
 ---
 language: python
@@ -185,7 +186,6 @@ def draw_data():
     region_y = region_coords['y']
     region_colour = color(randint(0,255), randint(0,255), randint(0,255)) # Select a random colour
     draw_pin(region_x, region_y, region_colour)
-
 --- /code ---
 
 --- /collapse ---
