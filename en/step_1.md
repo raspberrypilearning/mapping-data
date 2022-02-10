@@ -38,6 +38,10 @@ Explore these example projects to get more ideas:
 
 You may need to view this example in full screen to see the whole map. **World happiness measures:** [See inside the project.](https://trinket.io/python/6c8ca6a74a){:target="_blank"} 
 
+<iframe src="https://trinket.io/embed/python/a956f84136?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+You may need to view this example in full screen to see the whole map. **Carbon data:** [See inside the project.](https://trinket.io/python/a956f84136){:target="_blank"} 
+
 --- /task ---
 --- /no-print ---
 

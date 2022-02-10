@@ -26,7 +26,7 @@ filename: main.py — draw_data()
 ---
 def draw_data():
   for region in region_list:
-    region_name = region['name'] # Get the name of the region
+    region_name = region['region'] # Get the name of the region
     region_coords = get_region_coords(region_name) # Use the name to get coordinates
     region_x = region_coords['x'] # Get the x coordinate
     region_y = region_coords['y'] # Get the y coordinate
@@ -38,7 +38,7 @@ def draw_data():
 
 --- task ---
 
-In your `setup()` function, call `draw_data()` and then run your code to test that it works.
+In your `setup()` function, comment out your `draw_pin()` code and instead call `draw_data()`. 
 
 --- code ---
 ---
@@ -46,7 +46,7 @@ language: python
 filename: main.py - setup()
 line_numbers: false
 line_number_start: 1
-line_highlights: 13
+line_highlights: 12-13
 ---
 def setup():
 # Put code to run once here
@@ -59,7 +59,7 @@ def setup():
     width, # The width of the image
     height # The height of the image
     )
-  draw_pin(300, 300, color(255,0,0))
+  # draw_pin(300, 300, color(255,0,0))
   draw_data()
   
 --- /code ---
@@ -80,7 +80,7 @@ line_highlights: 7-9
 ---
 def draw_data():
   for region in region_list:
-    region_name = region['name'] # Get the name of the region
+    region_name = region['region'] # Get the name of the region
     region_coords = get_region_coords(region_name) # Use the name to get coordinates
     region_x = region_coords['x'] # Get the x coordinate
     region_y = region_coords['y'] # Get the y coordinate
@@ -116,12 +116,15 @@ This example changes the value for red each time the code places a pin:
 ---
 language: python
 filename: main.py — draw_data()
+line_numbers: false
+line_number_start: 1
+line_highlights: 2, 9, 11
 ---
 def draw_data():
   red_value = 255 # Set a starting value for red
 
   for region in region_list:
-    region_name = region['name']
+    region_name = region['region']
     region_coords = get_region_coords(region_name)
     region_x = region_coords['x']
     region_y = region_coords['y']
@@ -143,17 +146,20 @@ This example changes the red, green and blue values each time the code places a 
 ---
 language: python
 filename: main.py — draw_data()
+line_numbers: false
+line_number_start: 1
+line_highlights: 2-4, 10, 12-14
 ---
 def draw_data():
   red_value = 255 # Set a starting value for red
   blue_value = 0
   green_value = 255
   for region in region_list:
-    region_name = region['name']
+    region_name = region['region']
     region_coords = get_region_coords(region_name)
     region_x = region_coords['x']
     region_y = region_coords['y']
-    region_colour = color(red_value, 0, 0) # Use the red value in the colour
+    region_colour = color(red_value, green_value, blue_value) # Use all the colours
     draw_pin(region_x, region_y, region_colour)
     red_value -= 1 # Change the red value
     green_value += 1 #Change the green value
@@ -176,12 +182,15 @@ You can then choose a random colour for your region colours, each time around th
 ---
 language: python
 filename: main.py — draw_data()
+line_numbers: false
+line_number_start: 1
+line_highlights: 1, 9
 ---
 from random import randint
 
 def draw_data():
   for region in region_list:
-    region_name = region['name']
+    region_name = region['region']
     region_coords = get_region_coords(region_name)
     region_x = region_coords['x']
     region_y = region_coords['y']
@@ -240,7 +249,7 @@ line_highlights: 9
 def draw_data():
   red_value = 255
   for region in region_list:
-    region_name = region['name'] # Get the name of the region
+    region_name = region['region'] # Get the name of the region
     region_coords = get_region_coords(region_name) # Use the name to get coordinates
     region_x = region_coords['x'] # Get the x coordinate
     region_y = region_coords['y'] # Get the y coordinate
@@ -256,7 +265,7 @@ When the user clicks on a pin, the colour of the pin can be found, and then the 
 
 --- task ---
 
-In your `mouse_pressed()` function, lookup the `pixel_colour` in the `colours` dictionary and print out the `name` of the region.
+In your `mouse_pressed()` function, lookup the `pixel_colour` in the `colours` dictionary and print out the `region`.
 
 **Remember** that `colours` is a dictionary of dictionaries. You will have to get the dictionary of region information, then get the information from inside that dictionary. For example:
 
@@ -266,13 +275,13 @@ language: python
 filename: main.py
 line_numbers: false
 line_number_start: 1
-line_highlights: 3
+line_highlights: 4-5
 ---
 def mouse_pressed():
 # Put code to run when the mouse is pressed here
   pixel_colour = color(get(mouse_x, mouse_y))
   facts = colours[pixel_colour]
-  print(facts['name'])
+  print(facts['region'])
 --- /code ---
 
 --- /task ---
@@ -289,14 +298,14 @@ language: python
 filename: main.py
 line_numbers: false
 line_number_start: 1
-line_highlights: 3
+line_highlights: 4-8
 ---
 def mouse_pressed():
 # Put code to run when the mouse is pressed here
   pixel_colour = color(get(mouse_x, mouse_y))
   if pixel_colour in colours:
     facts = colours[pixel_colour]
-    print(facts['name'])
+    print(facts['region'])
   else:
     print('Region not detected')
 --- /code ---
@@ -311,7 +320,7 @@ def mouse_pressed():
 
 --- task ---
 
-You can print other facts out about the region you clicked on, by adding more `print()` statements. This will depend on the data set that you used. If you used `happy.csv` for instance, you could print the following:0faeb0
+You can print other facts out about the region you clicked on, by adding more `print()` statements. This will depend on the data set that you used. If you used `happy.csv` for instance, you could print the following:
 
 --- code ---
 ---
@@ -319,15 +328,16 @@ language: python
 filename: main.py
 line_numbers: false
 line_number_start: 1
-line_highlights: 7
+line_highlights: 7-8
 ---
 def mouse_pressed():
 # Put code to run when the mouse is pressed here
   pixel_colour = color(get(mouse_x, mouse_y))
   if pixel_colour in colours:
     facts = colours[pixel_colour]
-    print(facts['name'])
-    print(facts['happiness rank'])
+    print(facts['region'])
+    print(facts['happiness_rank']) # Your first data fact
+    print(facts['happiness_score']) # Your second data fact
   else:
     print('Region not detected')
 --- /code ---
