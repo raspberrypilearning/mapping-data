@@ -42,6 +42,10 @@ You may need to view this example in full screen to see the whole map. **World h
 
 You may need to view this example in full screen to see the whole map. **Carbon data:** [See inside the project.](https://trinket.io/python/a956f84136){:target="_blank"} 
 
+<iframe src="https://trinket.io/embed/python/958615975e?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+You may need to view this example in full screen to see the whole map. **GDP:** [See inside the project.](https://trinket.io/python/958615975e){:target="_blank"} 
+
 --- /task ---
 --- /no-print ---
 
