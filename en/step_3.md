@@ -111,6 +111,8 @@ Or you could create a pin out of multiple geometric shapes, such as:
 + A map pin
 + A star
 
+![A selection of pins made from geometric shapes including a square, pin, heart, circle and star.](images/pin-examples.png)
+
 --- /task ---
 
 --- task ---
