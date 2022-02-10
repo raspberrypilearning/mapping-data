@@ -7,6 +7,8 @@ You will:
 + Use functions and parameters to keep your code clean
 + Use code to quickly explore large amounts of data
 
+![Four maps with different styles. Each has a series of pins created from geometric shapes that are plotted at region coordinates.](images/map-examples.png)
+
 --- no-print ---
 
 --- task ---  
@@ -55,8 +57,10 @@ You may need to view this example in full screen to see the whole map. **GDP:** 
 
 You are going to make some design decisions about what data you want to show to your users, as well as what style of map and pins you will use to display that data.
 
-![](images/tech-map-red-pins.png)
-![](images/ink-map-random-pins.png)
+![](images/happiness-ink.png)
+![](images/happiness-tech.png)
+![](images/carbon.png)
+![](images/gdp.png)
 
 
 --- /print-only ---
