@@ -7,9 +7,9 @@ Here are some ideas you could try:
 - Filter the data — use `if` statements to only show pins on the map that meet conditions you choose. For example, only showing places where less than half the people live in cities. For an extra upgrade, let the user choose which filters to use.
 - Add a second data file — load another file of data and display it using different pins. Can you use some of your existing functions if you make some small changes? Do you want to use two sets of pins, or put all the data together on one pin?
 
-### Multicoloured pins: Population size and density. [See inside](https://trinket.io/python/b51eb6b362)
+### Multicoloured pins: Population size and carbon emissions. [See inside](https://trinket.io/python/b51eb6b362)
 
-This projects uses small multicoloured pins to show the population and population desnities of the regions.
+This projects uses small multicoloured pins and uses both the population and carbon emissions data sets.
 
 You should view this project in full screen mode to see the whole map. You may also need to resize the map window.
 
