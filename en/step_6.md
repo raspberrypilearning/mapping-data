@@ -11,7 +11,7 @@ Here are some ideas you could try:
 
 This projects uses small multicoloured pins and uses both the population and carbon emissions data sets.
 
-You should view this project in full screen mode to see the whole map. You may also need to resize the map window.
+You should use the link above, to view this project and expand into full screen mode to be able to correctly click on pins.
 
 <iframe src="https://trinket.io/embed/python/b51eb6b362" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
