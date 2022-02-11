@@ -1,6 +1,6 @@
 ## What next?
 
-If you are following the [More Python](https://projects.raspberrypi.org/en/raspberrypi/more-python) path, you can move on to the [Persuasive presentation](https://projects.raspberrypi.org/en/projects/persuasive-presentation) project. In this project, you will make a visual presentation of your own design, based on data you choose.
+If you are following the [More Python](https://projects.raspberrypi.org/en/raspberrypi/more-python) path, you can move on to the [Persuasive presentation](https://projects.raspberrypi.org/en/projects/persuasive-data-presentation) project. In this project, you will make a visual presentation of your own design, based on data you choose.
 
 --- print-only ---
 
@@ -10,7 +10,7 @@ If you are following the [More Python](https://projects.raspberrypi.org/en/raspb
 
 --- no-print ---
 
-<iframe src="https://trinket.io/embed/python/abfbde1bf3?outputOnly=true&runOption=run" width="600" height="500"  frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://trinket.io/embed/python/822033c5b6?outputOnly=true&runOption=run" width="600" height="500"  frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 --- /no-print ---
 

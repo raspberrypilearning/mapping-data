@@ -22,7 +22,8 @@ line_number_start: 1
 line_highlights: 3
 ---
 # Put code to run once here
-def setup():  
+def setup():
+  load_data('happy.csv')  
   size(991, 768)
 
 --- /code ---
@@ -32,11 +33,11 @@ def setup():
 --- task ---
 
 Think about how you want to display the data you've picked: what kind of map do you want to use? 
-+ ink_map.jpg
++ ink-map.jpg
 + mercator.jpeg
 + mercator_bw.png
-+ old_map.jpg
-+ tech_map.jpg
++ old-map.jpg
++ tech-map.jpg
 
 ![A list of map images available in the starter project](images/all_maps.png)
 
@@ -52,12 +53,13 @@ language: python
 filename: main.py - setup()
 line_numbers: false
 line_number_start: 1
-line_highlights: 4
+line_highlights: 5
 ---
 # Put code to run once here
 def setup():
+  load_data('happy.csv')  
   size(991, 768)    
-  map = load_image('map.png') # Replace with your image
+  map = load_image('mercator.jpeg') # Replace with your image
 
 --- /code ---
 
@@ -75,10 +77,11 @@ language: python
 filename: main.py - setup()
 line_numbers: false
 line_number_start: 1
-line_highlights: 5-11
+line_highlights: 6-11
 ---
 def setup():
 # Put code to run once here
+  load_data('happy.csv')  
   size(991, 768)    
   map = load_image('map.jpeg') # Replace with your image
   image(
@@ -123,6 +126,18 @@ Define a function called `draw_pin`. It should draw a pin, of your own design, o
  - The x coordinate for the pin.
  - The y coordinate for the pin.
  - The colour of the pin. This should be a `p5` `color()`.
+
+--- code ---
+---
+language: python
+filename: main.py - draw_pin()
+line_numbers: true
+line_number_start: 
+line_highlights: 
+---
+def draw_pin(x, y, colour):
+  # Put code to draw your pin here
+--- /code ---
 
 As you create your `draw_pin` function, call it to see how it appears on the screen. You should call your `draw_pin` function from the `setup()` function. 
 

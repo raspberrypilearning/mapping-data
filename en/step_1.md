@@ -7,6 +7,8 @@ You will:
 + Use functions and parameters to keep your code clean
 + Use code to quickly explore large amounts of data
 
+![Four maps with different styles. Each has a series of pins created from geometric shapes that are plotted at region coordinates.](images/map-examples.png)
+
 --- no-print ---
 
 --- task ---  
@@ -38,6 +40,14 @@ Explore these example projects to get more ideas:
 
 You may need to view this example in full screen to see the whole map. **World happiness measures:** [See inside the project.](https://trinket.io/python/6c8ca6a74a){:target="_blank"} 
 
+<iframe src="https://trinket.io/embed/python/a956f84136?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+You may need to view this example in full screen to see the whole map. **Carbon data:** [See inside the project.](https://trinket.io/python/a956f84136){:target="_blank"} 
+
+<iframe src="https://trinket.io/embed/python/958615975e?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+You may need to view this example in full screen to see the whole map. **GDP:** [See inside the project.](https://trinket.io/python/958615975e){:target="_blank"} 
+
 --- /task ---
 --- /no-print ---
 
@@ -47,8 +57,10 @@ You may need to view this example in full screen to see the whole map. **World h
 
 You are going to make some design decisions about what data you want to show to your users, as well as what style of map and pins you will use to display that data.
 
-![](images/tech-map-red-pins.png)
-![](images/ink-map-random-pins.png)
+![](images/happiness-ink.png)
+![](images/happiness-tech.png)
+![](images/carbon.png)
+![](images/gdp.png)
 
 
 --- /print-only ---

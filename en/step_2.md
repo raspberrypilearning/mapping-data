@@ -370,10 +370,10 @@ def load_data(file_name):
         'happiness rank': info[1],
         'happiness score': info[2]
       }
+      #print(region_dict)
       region_list.append(region_dict)
 
 --- /code ---
-
 
 --- /task ---
 
@@ -385,7 +385,7 @@ Add a line in your `setup()` function that prints the `region_list` out.
 
 --- task ---
 
-**Test:** Run your program and check that it prints out a list of dictionaries. It should look something like this.
+**Test:** Run your program and check that it prints out a list of dictionaries. It should look something like this:
 
 ![Dictionaries printed out as part of a list.](images/regions_list_output.png)
 
