@@ -7,7 +7,7 @@ Here are some ideas you could try:
 - Filter the data — use `if` statements to only show pins on the map that meet conditions you choose. For example, only showing places where less than half the people live in cities. For an extra upgrade, let the user choose which filters to use.
 - Add a second data file — load another file of data and display it using different pins. Can you use some of your existing functions if you make some small changes? Do you want to use two sets of pins, or put all the data together on one pin?
 
-### Multicoloured pins: Population size and carbon emissions. [See inside](https://trinket.io/python/b51eb6b362)
+### Multicoloured pins: Population size and carbon emissions ([see inside](https://trinket.io/python/b51eb6b362))
 
 This projects uses small multicoloured pins and uses both the population and carbon emissions data sets.
 
@@ -16,14 +16,14 @@ You should use the link above, to view this project and expand into full screen 
 <iframe src="https://trinket.io/embed/python/b51eb6b362" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 
-### Data-sized pins: Olympic host countries: [See inside](https://trinket.io/python/42df9879d7)
+### Data-sized pins: Olympic host countries ([see inside](https://trinket.io/python/42df9879d7))
 This project has been upgraded to show larger pins for areas that have hosted the Olympic Games more often.
 
 You should view this project in full screen mode to see the whole map. You may also need to resize the map window.
 
 <iframe src="https://trinket.io/embed/python/42df9879d7?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
-### Filter data: Global population — rural and urban: [See inside](https://trinket.io/python/afcdf3fdea)
+### Filter data: Global population — rural and urban ([see inside](https://trinket.io/python/afcdf3fdea))
 This project has been upgraded to allow you to filter the data used to make the display.
 
 You should view this project in full screen mode to see the whole map. You may also need to resize the map window.
