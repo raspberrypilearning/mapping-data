@@ -1,6 +1,6 @@
 ## Upgrade your project
 
-If you have time you can upgrade to your project. 
+If you have time you can upgrade your project. 
 
 Here are some ideas you could try:
 - Use pins to display data — change the size or shape of the pin based on some value in the region's data. You can combine changes in shape and size to show even more.
@@ -11,7 +11,7 @@ Here are some ideas you could try:
 
 This projects uses small multicoloured pins and uses both the population and carbon emissions data sets.
 
-You should use the link above, to view this project and expand into full screen mode to be able to correctly click on pins.
+You should use the link above to view this project. Expand it into full screen mode to be able to see and correctly click on pins.
 
 <iframe src="https://trinket.io/embed/python/b51eb6b362" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
