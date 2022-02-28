@@ -256,7 +256,7 @@ def draw_data():
     region_colour = color(i, 100, 0) # Set the pin colour
     colours[region_colour] = region
     draw_pin(region_x, region_y, region_colour)
-    rev_value -= 1 -= 1
+    red_value -= 1
 --- /code ---
 
 --- /task ---
