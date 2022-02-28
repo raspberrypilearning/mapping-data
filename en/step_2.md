@@ -272,26 +272,31 @@ Use `print()` to check the dictionaries look like you expect.
 title: Field names for the csv files
 ---
 
-Olympic host nations — `olympics.csv`
+Olympic host nations — `olympics.csv`   
    - The name of the region
-   - number of times they have hosted the games
-World population — `pop.csv`
+   - The number of times they have hosted the games   
+
+World population — `pop.csv`   
    - The name of the region
    - How many people live in the region
    - How many people live in each square kilometre of the region
    - The average age of people in the region
-   - The percentage of people in that region who live in cities
-Carbon emissions — `carbon.csv`
+   - The percentage of people in that region who live in cities   
+
+Carbon emissions — `carbon.csv`   
   - The name of the region
   - How much carbon each region emits in total (in thousands of tons)
   - How much carbon each region emits, per person that lives in that region (in tons)
-Threatened species — `species.csv`
+
+Threatened species — `species.csv`   
   - The name of the region
   - The number of threatened species in that region
+
 National wealth — `gdp.csv`
  - The name of the region
  - The total GDP of that region
-World happiness — `happy.csv`
+
+World happiness — `happy.csv`   
   - The name of the region
   - Happiness rank
   - Happiness score
