@@ -68,7 +68,7 @@ def setup():
 
 --- task ---
 
-Instead of printing out the name of the region, and its coordinates, you can use your `draw_pin()` function, to place your pins on the map. The code below would colour the pins red (`color(255, 0, 9)`) but you can choose a different colours to use.
+Instead of printing out the name of the region, and its coordinates, you can use your `draw_pin()` function to place your pins on the map. The code below colours the pins red (`color(255, 0, 9)`), but you can choose a different colour.
 
 --- code ---
 ---
@@ -140,7 +140,7 @@ def draw_data():
 ---
 title: Change the value of multiple colours
 ---
-This example changes the red, green and blue values each time the code places a pin:
+This example changes the red, green, and blue values each time the code places a pin:
 
 --- code ---
 ---
@@ -162,8 +162,8 @@ def draw_data():
     region_colour = color(red_value, green_value, blue_value) # Use all the colours
     draw_pin(region_x, region_y, region_colour)
     red_value -= 1 # Change the red value
-    green_value += 1 #Change the green value
-    blue_value -= 1 #Change the blue value 
+    green_value += 1 # Change the green value
+    blue_value -= 1 # Change the blue value 
 
 --- /code ---
 
@@ -176,7 +176,7 @@ title: Choose random colours
 
 At the top of your code, with your other imports, you will need to import `randint` from the `random` library.
 
-You can then choose a random colour for your region colours, each time around the `for` loop. There is a small chance that two or more colours might end up the same, but it is a very small chance.
+You can then choose a random colour for your region colours; a different colour will be picked each time the `for` loop is executed. There is a small chance that two or more colours might end up the same, but it is a very small chance.
 
 --- code ---
 ---
@@ -256,12 +256,12 @@ def draw_data():
     region_colour = color(i, 100, 0) # Set the pin colour
     colours[region_colour] = region
     draw_pin(region_x, region_y, region_colour)
-    rev_value -= 1 -= 1
+    red_value -= 1
 --- /code ---
 
 --- /task ---
 
-When the user clicks on a pin, the colour of the pin can be found, and then the correct region found in the dictionary.
+When the user clicks on a pin, the colour of the pin is retrieved, and then the corresponding region is found in the dictionary.
 
 --- task ---
 
@@ -288,7 +288,7 @@ def mouse_pressed():
 
 --- task ---
 
-It's important to check if a key is in a dictionary. If you click on an area of the map, without a pin, you will receive a `KeyError`.
+It's important to check if a key is in a dictionary. If you click on an area of the map without a pin, you will receive a `KeyError`.
 
 You can check if a value is in a dictionary by using `in`:
 
@@ -320,7 +320,7 @@ def mouse_pressed():
 
 --- task ---
 
-You can print other facts out about the region you clicked on, by adding more `print()` statements. This will depend on the data set that you used. If you used `happy.csv` for instance, you could print the following:
+You can print out other facts about the region you clicked on by adding more `print()` statements. This will depend on the data set that you used. If you used `happy.csv` for instance, you could print the following:
 
 --- code ---
 ---
