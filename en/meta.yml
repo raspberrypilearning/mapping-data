@@ -9,7 +9,9 @@ steps:
   - title: Introduction
   - title: Choose and load a data set
   - title: Pick a map and pins
+    completion: engaged
   - title: Mark your data
+    completion: internal
   - title: Reflection
     knowledge_quiz:
       path: quiz1
@@ -17,5 +19,6 @@ steps:
       questions: 3
       passing_score: 3
   - title: Upgrade your project
+    completion: external
   - title: Share
   - title: What next?
