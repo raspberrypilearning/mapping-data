@@ -2,8 +2,8 @@ title: Mapping data
 hero_image: images/banner.png
 description: Use Python to make an interactive map that lets users learn interesting facts about the world
 version: 4
-listed: false
-copyedit: false
+listed: true
+copyedit: true
 last_tested: "2021-03-26"
 steps:
   - title: Introduction
