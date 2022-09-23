@@ -1,4 +1,4 @@
-## Introduction
+## You will make
 
 Use Python to make an interactive map that lets users learn interesting facts about the world.
 
@@ -13,7 +13,7 @@ You will:
 
 --- task ---  
 
-### Try it 
+### Play ▶️
 
 Click on the coloured pins to see information about that region printed out. Think about the kind of data you would like to display, and how you could design an interesting shaped pin to mark it on a map.
 
@@ -28,7 +28,7 @@ You may need to view this example in full screen to see the whole map. **World h
 <span style="color: #0faeb0">**Map projections**</span> are the different ways of drawing the Earth on a map. It's not possible to make a 2D map that shows the true sizes and distances that exist in the 3D world, although map-makers are getting better at it. The map in this project uses the web mercator projection — the same one used by sites like Google Maps. This projection makes places nearer the poles look bigger than they are: Greenland is a lot smaller than this map shows and, by comparison, Africa is a lot bigger.
 </p>
 
-### Get inspiration 
+### Get ideas 💭
 
 You are going to make some design decisions about what data you want to show to your users, as well as what style of map and pins you will use to display that data.
 
@@ -53,7 +53,7 @@ You may need to view this example in full screen to see the whole map. **GDP:** 
 
 --- print-only ---
 
-### Get inspiration 
+### Get ideas 💭
 
 You are going to make some design decisions about what data you want to show to your users, as well as what style of map and pins you will use to display that data.
 
