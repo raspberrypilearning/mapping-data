@@ -394,9 +394,7 @@ If you see a message about `split` being 'not defined', check that you have incl
 title: I get a message that region_list is 'not defined'
 ---
 
-If you see a message about `region_list` being 'not defined', check that:
- - You have made it `global` in your `load_data()` function
- - You have created it as an empty list — with `region_list = []` — before trying to add things to it
+If you see a message about `region_list` being 'not defined', check that you have created it as an empty list — with `region_list = []` — before trying to add things to it
 
 --- /collapse ---
 
