@@ -33,11 +33,11 @@ def setup():
 --- task ---
 
 Think about how you want to display the data you've picked: what kind of map do you want to use? 
-+ ink-map.jpg
-+ mercator.jpeg
++ ink-map.png
++ mercator.png
 + mercator_bw.png
-+ old-map.jpg
-+ tech-map.jpg
++ old-map.png
++ tech-map.png
 
 ![A list of map images available in the starter project](images/all_maps.png)
 
@@ -59,7 +59,7 @@ line_highlights: 5
 def setup():
   load_data('happy.csv')  
   size(991, 768)    
-  map = load_image('mercator.jpeg') # Replace with your image
+  map = load_image('mercator.png') # Replace with your image
 
 --- /code ---
 
@@ -83,7 +83,7 @@ def setup():
 # Put code to run once here
   load_data('happy.csv')  
   size(991, 768)    
-  map = load_image('map.jpeg') # Replace with your image
+  map = load_image('map.png') # Replace with your image
   image(
       map, # The image to draw
       0, # The x of the top-left corner
@@ -154,7 +154,7 @@ line_highlights: 12
 def setup():
 # Put code to run once here
   size(991, 768)
-  map = load_image('map.jpeg') # Replace with your image
+  map = load_image('map.png') # Replace with your image
   image(
     map, # The image to draw
     0, # The x of the top-left corner
