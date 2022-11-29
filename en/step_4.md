@@ -51,7 +51,7 @@ line_highlights: 12-13
 def setup():
 # Put code to run once here
   size(991, 768)
-  map = load_image('map.jpeg') # Replace with your image
+  map = load_image('map.png') # Replace with your image
   image(
     map, # The image to draw
     0, # The x of the top-left corner
