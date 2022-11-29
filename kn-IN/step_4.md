@@ -24,7 +24,7 @@ It should loop through your `region_list` and print a line for each region.
 language: python
 filename: main.py — draw_data()
 ---
-def draw_data(): for region in region_list: region_name = region['region'] # Get the name of the region region_coords = get_region_coords(region_name) # Use the name to get coordinates region_x = region_coords['x'] # Get the x coordinate region_y = region_coords['y'] # Get the y coordinate print(region_name, region_x, region_y)
+def draw_data(): for region in region_list: region_name = region['name'] # Get the name of the region region_coords = get_region_coords(region_name) # Use the name to get coordinates region_x = region_coords['x'] # Get the x coordinate region_y = region_coords['y'] # Get the y coordinate print(region_name, region_x, region_y)
 
 --- /code ---
 
@@ -56,7 +56,7 @@ Instead of printing out the name of the region, and its coordinates, you can use
 language: python filename: main.py — draw_data() line_numbers: false line_number_start: 1
 line_highlights: 7-9
 ---
-def draw_data(): for region in region_list: region_name = region['region'] # Get the name of the region region_coords = get_region_coords(region_name) # Use the name to get coordinates region_x = region_coords['x'] # Get the x coordinate region_y = region_coords['y'] # Get the y coordinate #print(region_name, region_x, region_y) region_colour = color(255, 0, 0) # Set the pin colour draw_pin(region_x, region_y, region_colour) # Draw the pin
+def draw_data(): for region in region_list: region_name = region['name'] # Get the name of the region region_coords = get_region_coords(region_name) # Use the name to get coordinates region_x = region_coords['x'] # Get the x coordinate region_y = region_coords['y'] # Get the y coordinate #print(region_name, region_x, region_y) region_colour = color(255, 0, 0) # Set the pin colour draw_pin(region_x, region_y, region_colour) # Draw the pin
 
 --- /code ---
 
@@ -89,7 +89,7 @@ line_highlights: 2, 9, 11
 ---
 def draw_data(): red_value = 255 # Set a starting value for red
 
-  for region in region_list: region_name = region['region'] region_coords = get_region_coords(region_name) region_x = region_coords['x'] region_y = region_coords['y'] region_colour = color(red_value, 0, 0) # Use the red value in the colour draw_pin(region_x, region_y, region_colour) red_value -= 1 # Change the red value
+  for region in region_list: region_name = region['name'] region_coords = get_region_coords(region_name) region_x = region_coords['x'] region_y = region_coords['y'] region_colour = color(red_value, 0, 0) # Use the red value in the colour draw_pin(region_x, region_y, region_colour) red_value -= 1 # Change the red value
 
 --- /code ---
 
@@ -106,7 +106,7 @@ This example changes the red, green, and blue values each time the code places a
 language: python filename: main.py — draw_data() line_numbers: false line_number_start: 1
 line_highlights: 2-4, 10, 12-14
 ---
-def draw_data(): red_value = 255 # Set a starting value for red blue_value = 0 green_value = 255 for region in region_list: region_name = region['region'] region_coords = get_region_coords(region_name) region_x = region_coords['x'] region_y = region_coords['y'] region_colour = color(red_value, green_value, blue_value) # Use all the colours draw_pin(region_x, region_y, region_colour) red_value -= 1 # Change the red value green_value += 1 # Change the green value blue_value -= 1 # Change the blue value
+def draw_data(): red_value = 255 # Set a starting value for red blue_value = 0 green_value = 255 for region in region_list: region_name = region['name'] region_coords = get_region_coords(region_name) region_x = region_coords['x'] region_y = region_coords['y'] region_colour = color(red_value, green_value, blue_value) # Use all the colours draw_pin(region_x, region_y, region_colour) red_value -= 1 # Change the red value green_value += 1 # Change the green value blue_value -= 1 # Change the blue value
 
 --- /code ---
 
@@ -128,7 +128,7 @@ line_highlights: 1, 9
 ---
 from random import randint
 
-def draw_data(): for region in region_list: region_name = region['region'] region_coords = get_region_coords(region_name) region_x = region_coords['x'] region_y = region_coords['y'] region_colour = color(randint(0,255), randint(0,255), randint(0,255)) # Select a random colour draw_pin(region_x, region_y, region_colour)
+def draw_data(): for region in region_list: region_name = region['name'] region_coords = get_region_coords(region_name) region_x = region_coords['x'] region_y = region_coords['y'] region_colour = color(randint(0,255), randint(0,255), randint(0,255)) # Select a random colour draw_pin(region_x, region_y, region_colour)
 
 --- /code ---
 
@@ -169,7 +169,7 @@ As the pins are placed, the `region` can be stored in the dictionary along with 
 language: python filename: main.py line_numbers: false line_number_start: 1
 line_highlights: 9
 ---
-def draw_data(): red_value = 255 for region in region_list: region_name = region['region'] # Get the name of the region region_coords = get_region_coords(region_name) # Use the name to get coordinates region_x = region_coords['x'] # Get the x coordinate region_y = region_coords['y'] # Get the y coordinate region_colour = color(i, 100, 0) # Set the pin colour colours[region_colour] = region draw_pin(region_x, region_y, region_colour) red_value -= 1 --- /code ---
+def draw_data(): red_value = 255 for region in region_list: region_name = region['name'] # Get the name of the region region_coords = get_region_coords(region_name) # Use the name to get coordinates region_x = region_coords['x'] # Get the x coordinate region_y = region_coords['y'] # Get the y coordinate region_colour = color(i, 100, 0) # Set the pin colour colours[region_colour] = region draw_pin(region_x, region_y, region_colour) red_value -= 1 --- /code ---
 
 --- /task ---
 
