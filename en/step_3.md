@@ -53,8 +53,8 @@ Think about how you want to display the data you've picked: what kind of map do 
 language: python
 filename: main.py - setup()
 line_numbers: false
-line_number_start: 1
-line_highlights: 6
+line_number_start: 
+line_highlights: 5
 ---
 # Put code to run once here
 def setup():
@@ -77,8 +77,8 @@ Add code to your `setup()` function to draw the map so it covers the whole canva
 language: python
 filename: main.py - setup()
 line_numbers: false
-line_number_start: 1
-line_highlights: 6-11
+line_number_start: 
+line_highlights: 6-12
 ---
 def setup():
     # Put code to run once here
@@ -149,7 +149,7 @@ You can use the arguments shown below to place a `red` pin the middle of the scr
 language: python
 filename: main.py - setup()
 line_numbers: false
-line_number_start: 1
+line_number_start: 
 line_highlights: 12
 ---
 def setup():
