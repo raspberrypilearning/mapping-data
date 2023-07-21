@@ -26,7 +26,7 @@ filename: main.py — draw_data()
 ---
 def draw_data():
     for region in region_list:
-        region_name = region['name'] # Get the name of the region
+        region_name = region['region'] # Get the name of the region
         region_coords = get_region_coords(region_name) # Use the name to get coordinates
         region_x = region_coords['x'] # Get the x coordinate
         region_y = region_coords['y'] # Get the y coordinate
@@ -80,7 +80,7 @@ line_highlights: 7-9
 ---
 def draw_data():
     for region in region_list:
-        region_name = region['name'] # Get the name of the region
+        region_name = region['region'] # Get the name of the region
         region_coords = get_region_coords(region_name) # Use the name to get coordinates
         region_x = region_coords['x'] # Get the x coordinate
         region_y = region_coords['y'] # Get the y coordinate
@@ -155,7 +155,7 @@ def draw_data():
     blue_value = 0
     green_value = 255
     for region in region_list:
-        region_name = region['name']
+        region_name = region['region']
         region_coords = get_region_coords(region_name)
         region_x = region_coords['x']
         region_y = region_coords['y']
@@ -251,11 +251,11 @@ line_highlights: 9
 def draw_data():
     red_value = 255
     for region in region_list:
-        region_name = region['name'] # Get the name of the region
+        region_name = region['region'] # Get the name of the region
         region_coords = get_region_coords(region_name) # Use the name to get coordinates
         region_x = region_coords['x'] # Get the x coordinate
         region_y = region_coords['y'] # Get the y coordinate
-        region_colour = Color(i, 100, 0) # Set the pin colour
+        region_colour = Color(red_value, 100, 0) # Set the pin colour
         colours[region_colour.hex] = region
         draw_pin(region_x, region_y, region_colour)
         red_value -= 1

@@ -232,13 +232,13 @@ title: My map is the wrong size
 Check the inputs that control the width and height of the image:
 
 ```python
-  image(
-      map,  # The image to draw
-      0,  # The x of the top-left corner
-      0,  # The y of the top-left corner
-      width,  # The width of the image
-      height  # The height of the image
-      )
+    image(
+        map,  # The image to draw
+        0,  # The x of the top-left corner
+        0,  # The y of the top-left corner
+        width,  # The width of the image
+        height  # The height of the image
+    )
 ```
 
 --- /collapse ---
