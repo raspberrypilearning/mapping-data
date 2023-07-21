@@ -183,16 +183,16 @@ language: python
 filename: main.py — load_data()
 line_numbers: true
 line_number_start: 13
-line_highlights: 16-19
+line_highlights: 17-20
 ---
 # Put code to run when the mouse is pressed here
 def mouse_pressed():
-  pixel_colour = Color(get(mouse_x, mouse_y)).hex
-  
+    pixel_colour = Color(get(mouse_x, mouse_y)).hex
+
 def load_data(file_name):
-  with open(file_name) as f:
-    for line in f:
-      print(line)
+    with open(file_name) as f:
+        for line in f:
+            print(line)
 --- /code ---
 
 **Tip:** You will be moving data around a lot in the next few steps. It's a good idea to `print()` everything out. This will help you understand what your data looks like at each step. It's also good for catching bugs. You can comment the `print()` lines out later (with `#`).
@@ -248,13 +248,13 @@ language: python
 filename: main.py — load_data()
 line_numbers: false
 line_number_start: 1
-line_highlights: 4-5
+line_highlights: 5-6
 ---
 def load_data(file_name):
-  with open(file_name) as f:
-    for line in f:
-      #print(line)
-      info = line.split(',')
+    with open(file_name) as f:
+        for line in f:
+            #print(line)
+            info = line.split(',')
 --- /code ---
 
 --- /task ---
@@ -310,20 +310,20 @@ language: python
 filename: main.py — load_data()
 line_numbers: false
 line_number_start: 1
-line_highlights: 6-12
+line_highlights: 7-13
 ---
 def load_data(file_name):
-  with open(file_name) as f:
-    for line in f:
-      #print(line)
-      info = line.split(',')
-      # Change the dictionary to match the data you're using
-      region_dict = {
-        'name': info[0],
-        'happiness rank': info[1],
-        'happiness score': info[2]
-      }
-      print(region_dict)
+    with open(file_name) as f:
+        for line in f:
+            #print(line)
+            info = line.split(',')
+            # Change the dictionary to match the data you're using
+            region_dict = {
+                'region': info[0],
+                'happiness rank': info[1],
+                'happiness score': info[2]
+            }
+            print(region_dict)
 --- /code ---
 
 --- /task ---
@@ -348,7 +348,7 @@ language: python
 filename: main.py
 line_numbers: false
 line_number_start: 1
-line_highlights: 5
+line_highlights: 6
 ---
 #!/bin/python3
 from p5 import *
@@ -365,20 +365,19 @@ language: python
 filename: main.py - load_data()
 line_numbers: false
 line_number_start: 1
-line_highlights: 10
+line_highlights: 11
 ---
 def load_data(file_name):
-  with open(file_name) as f:
-    for line in f:
-      #print(line)
-      info = line.split(',')
-      region_dict = {
-        'name': info[0],
-        'happiness rank': info[1],
-        'happiness score': info[2]
-      }
-      #print(region_dict)
-      region_list.append(region_dict)
+    with open(file_name) as f:
+        for line in f:
+            info = line.split(',')
+            region_dict = {
+                'region': info[0],
+                'happiness rank': info[1],
+                'happiness score': info[2]
+            }
+            #print(region_dict)
+            region_list.append(region_dict)
 
 --- /code ---
 

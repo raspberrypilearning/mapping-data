@@ -23,8 +23,9 @@ line_highlights: 3
 ---
 # Put code to run once here
 def setup():
-  load_data('happy.csv')  
-  size(991, 768)
+    size(991, 768)
+    load_data('happy.csv')  
+    
 
 --- /code ---
 
@@ -53,13 +54,13 @@ language: python
 filename: main.py - setup()
 line_numbers: false
 line_number_start: 1
-line_highlights: 5
+line_highlights: 6
 ---
 # Put code to run once here
 def setup():
-  load_data('happy.csv')  
-  size(991, 768)    
-  map = load_image('mercator.png')  # Replace with your image
+    load_data('happy.csv')  
+    size(991, 768)    
+    map = load_image('mercator.png') # Replace with your image
 
 --- /code ---
 
@@ -80,17 +81,17 @@ line_number_start: 1
 line_highlights: 6-11
 ---
 def setup():
-# Put code to run once here
-  load_data('happy.csv')  
-  size(991, 768)    
-  map = load_image('map.png')  # Replace with your image
-  image(
-      map,  # The image to draw
-      0,  # The x of the top-left corner
-      0,  # The y of the top-left corner
-      width,  # The width of the image
-      height  # The height of the image
-      )
+    # Put code to run once here
+    size(991, 768)   
+    load_data('happy.csv')  
+    map = load_image('map.png') # Replace with your image
+    image(
+        map, # The image to draw
+        0, # The x of the top-left corner
+        0, # The y of the top-left corner
+        width, # The width of the image
+        height # The height of the image
+    )
 --- /code ---
 
 --- /task ---
@@ -136,7 +137,7 @@ line_number_start:
 line_highlights: 
 ---
 def draw_pin(x, y, colour):
-  # Put code to draw your pin here
+    # Put code to draw your pin here
 --- /code ---
 
 As you create your `draw_pin` function, call it to see how it appears on the screen. You should call your `draw_pin` function from the `setup()` function. 
@@ -152,17 +153,17 @@ line_number_start: 1
 line_highlights: 12
 ---
 def setup():
-# Put code to run once here
-  size(991, 768)
-  map = load_image('map.png')  # Replace with your image
-  image(
-    map,  # The image to draw
-    0,  # The x of the top-left corner
-    0,  # The y of the top-left corner
-    width,  # The width of the image
-    height  # The height of the image
+    # Put code to run once here
+    size(991, 768)
+    map = load_image('map.png') # Replace with your image
+    image(
+        map, # The image to draw
+        0, # The x of the top-left corner
+        0, # The y of the top-left corner
+        width, # The width of the image
+        height # The height of the image
     )
-  draw_pin(300, 300, Color(255,0,0))
+    draw_pin(300, 300, Color(255,0,0))
 --- /code ---
 
 [[[parameters]]]
@@ -175,7 +176,7 @@ title: Colours in p5
 The `p5` `Color()` function expects three numbers: one each for red, green, and blue.
 
 ```python
-blue = Color(92, 204, 206)  # Red = 92, Green = 204, Blue = 206
+blue = Color(92, 204, 206) #Red = 92, Green = 204, Blue = 206
 ```
 
 You can use the `fill()` function to fill a shape with colour. `fill()` applies to every shape drawn after it.
@@ -254,7 +255,7 @@ Make sure that you have called the `draw_pin()` function in your `draw()` functi
 language: python
 filename: main.py - draw()
 ---
-  draw_pin(width/2, height/2, Color(255,0,0))
+    draw_pin(width/2, height/2, Color(255,0,0))
 --- /code ---
 
 Also, make sure you are calling `draw_pin()` after you call `image()` to create the background. If not, you're drawing the map over the pin!
