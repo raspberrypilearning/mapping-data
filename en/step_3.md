@@ -18,7 +18,7 @@ Add code to your `setup()` function to set the size of your canvas to **991** pi
 language: python
 filename: main.py - setup()
 line_numbers: false
-line_number_start: 1
+line_number_start: 
 line_highlights: 3
 ---
 # Put code to run once here
