@@ -60,7 +60,7 @@ line_highlights: 5
 def setup():
     load_data('happy.csv')  
     size(991, 768)    
-    map = load_image('mercator.png') # Replace with your image
+    map = load_image('mercator.png')  # Replace with your image
 
 --- /code ---
 
@@ -86,11 +86,11 @@ def setup():
     load_data('happy.csv')  
     map = load_image('map.png') # Replace with your image
     image(
-        map, # The image to draw
-        0, # The x of the top-left corner
-        0, # The y of the top-left corner
-        width, # The width of the image
-        height # The height of the image
+        map,  # The image to draw
+        0,  # The x of the top-left corner
+        0,  # The y of the top-left corner
+        width,  # The width of the image
+        height  # The height of the image
     )
 --- /code ---
 
@@ -155,13 +155,13 @@ line_highlights: 12
 def setup():
     # Put code to run once here
     size(991, 768)
-    map = load_image('map.png') # Replace with your image
+    map = load_image('map.png')  # Replace with your image
     image(
-        map, # The image to draw
-        0, # The x of the top-left corner
-        0, # The y of the top-left corner
-        width, # The width of the image
-        height # The height of the image
+        map,  # The image to draw
+        0,  # The x of the top-left corner
+        0,  # The y of the top-left corner
+        width,  # The width of the image
+        height  # The height of the image
     )
     draw_pin(300, 300, Color(255,0,0))
 --- /code ---

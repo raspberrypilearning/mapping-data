@@ -338,8 +338,8 @@ def mouse_pressed():
     if pixel_colour in colours:
         facts = colours[pixel_colour]
         print(facts['region'])
-        print(facts['happiness_rank']) # Your first data fact
-        print(facts['happiness_score']) # Your second data fact
+        print(facts['happiness_rank'])  # Your first data fact
+        print(facts['happiness_score'])  # Your second data fact
     else:
         print('Region not detected')
 s--- /code ---

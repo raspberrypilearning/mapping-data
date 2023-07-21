@@ -14,7 +14,7 @@ This project uses small multicoloured square pins and uses the population data s
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/mapping-data-population" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 
-You can find the Population density project [here](https://editor.raspberrypi.org/en/projects/mapping-data-population){:target="_blank"}
+You can find the Population density project [here](https://editor.raspberrypi.org/en/projects/mapping-data-population){:target="_blank"}.
 
 ### Data-sized pins: Olympic host countries
 
@@ -24,7 +24,7 @@ This project has been upgraded to show larger pins for areas that have hosted th
 </iframe>
 
 You can find the Olympic host countries project [here](https://editor.raspberrypi.org/en/projects/mapping-data-olympics
-){:target="_blank"}
+){:target="_blank"}.
 
 
 ### Filter data: Global population — rural and urban
@@ -34,6 +34,6 @@ This project has been upgraded to allow you to choose the data used to make the 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/urban-rural-population" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 
-You can find the Global population — rural and urban project [here](https://editor.raspberrypi.org/en/projects/urban-rural-population){:target="_blank"}
+You can find the Global population — rural and urban project [here](https://editor.raspberrypi.org/en/projects/urban-rural-population){:target="_blank"}.
 
 --- save ---
