@@ -46,22 +46,19 @@ Think about how you want to display the data you've picked: what kind of map do 
 
 --- task ---
 
-**Choose:** The starter project includes five map images. Pick one you like, and load the image in your `setup` function.
+**Choose:** The starter project includes five map images. Pick one you like, and load the image in a `preload` function.
 
---- code ---
+---- code ---
 ---
 language: python
-filename: main.py - setup()
+filename: main.py
 line_numbers: false
 line_number_start: 
-line_highlights: 5
+line_highlights: 
 ---
-# Put code to run once here
-def setup():
-    load_data('happy.csv')  
-    size(991, 768)    
-    map = load_image('mercator.png')  # Replace with your image
-
+def preload():
+    global map
+    map = load_image('mercator.jpeg')
 --- /code ---
 
 --- /task ---
@@ -84,7 +81,6 @@ def setup():
     # Put code to run once here
     size(991, 768)   
     load_data('happy.csv')  
-    map = load_image('map.png') # Replace with your image
     image(
         map,  # The image to draw
         0,  # The x of the top-left corner
@@ -155,7 +151,6 @@ line_highlights: 12
 def setup():
     # Put code to run once here
     size(991, 768)
-    map = load_image('map.png')  # Replace with your image
     image(
         map,  # The image to draw
         0,  # The x of the top-left corner
