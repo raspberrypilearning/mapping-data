@@ -48,7 +48,7 @@ Think about how you want to display the data you've picked: what kind of map do 
 
 **Choose:** The starter project includes five map images. Pick one you like, and load the image in a `preload` function.
 
----- code ---
+--- code ---
 ---
 language: python
 filename: main.py
@@ -59,6 +59,7 @@ line_highlights:
 def preload():
     global map
     map = load_image('mercator.jpeg')
+
 --- /code ---
 
 --- /task ---
