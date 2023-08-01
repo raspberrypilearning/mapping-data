@@ -201,7 +201,7 @@ def load_data(file_name):
 
 --- task ---
 
-Add a call to `load_data()` in your `setup()` function. Pass it the name of the data file you chose above. You can check the list below if you need a reminder of the file name.
+Add a call to `load_data()` in your `setup()` function, you can delete the `pass` that is already in there. Pass it the name of the data file you chose above. You can check the list below if you need a reminder of the file name.
 
  - Olympic host nations — `olympics.csv`
  - World population — `pop.csv`
@@ -247,7 +247,7 @@ would put `['Estonia', '1326535', '31', '42', '68']` into `my_list`.
 language: python
 filename: main.py — load_data()
 line_numbers: false
-line_number_start: 1
+line_number_start: 
 line_highlights: 5-6
 ---
 def load_data(file_name):
@@ -309,7 +309,7 @@ World happiness — `happy.csv`
 language: python
 filename: main.py — load_data()
 line_numbers: false
-line_number_start: 1
+line_number_start: 
 line_highlights: 7-13
 ---
 def load_data(file_name):
@@ -347,7 +347,7 @@ Create an empty list called `region_list`.
 language: python
 filename: main.py
 line_numbers: false
-line_number_start: 1
+line_number_start: 
 line_highlights: 6
 ---
 #!/bin/python3
@@ -364,7 +364,7 @@ In `load_data()`, add each of your dictionaries to `region_list` using `append`.
 language: python
 filename: main.py - load_data()
 line_numbers: false
-line_number_start: 1
+line_number_start: 
 line_highlights: 11
 ---
 def load_data(file_name):

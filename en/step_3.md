@@ -54,7 +54,7 @@ language: python
 filename: main.py
 line_numbers: false
 line_number_start: 
-line_highlights: 
+line_highlights: 3
 ---
 def preload():
     global map
@@ -76,7 +76,7 @@ language: python
 filename: main.py - setup()
 line_numbers: false
 line_number_start: 
-line_highlights: 6-12
+line_highlights: 5-12
 ---
 def setup():
     # Put code to run once here
@@ -129,7 +129,7 @@ Define a function called `draw_pin`. It should draw a pin, of your own design, o
 ---
 language: python
 filename: main.py - draw_pin()
-line_numbers: true
+line_numbers: 
 line_number_start: 
 line_highlights: 
 ---
@@ -147,7 +147,7 @@ language: python
 filename: main.py - setup()
 line_numbers: false
 line_number_start: 
-line_highlights: 12
+line_highlights: 11
 ---
 def setup():
     # Put code to run once here

@@ -5,7 +5,7 @@
 Display your data on the map, and make it interactive.
 </div>
 <div>
-![A map with many pins. Information appears in the text output for some pins.](images/interaction.gif){:width="300px"}
+![A map with many pins. Information appears in the text output for some pins.](images/map_many_pins.png){:width="300px"}
 </div>
 </div>
 
@@ -45,7 +45,7 @@ In your `setup()` function, comment out your `draw_pin()` code and instead call 
 language: python
 filename: main.py - setup()
 line_numbers: false
-line_number_start: 1
+line_number_start: 
 line_highlights: 12-13
 ---
 def setup():
@@ -74,7 +74,7 @@ Instead of printing out the name of the region, and its coordinates, you can use
 language: python
 filename: main.py — draw_data()
 line_numbers: false
-line_number_start: 1
+line_number_start: 
 line_highlights: 7-9
 ---
 def draw_data():
@@ -116,7 +116,7 @@ This example changes the value for red each time the code places a pin:
 language: python
 filename: main.py — draw_data()
 line_numbers: false
-line_number_start: 1
+line_number_start: 
 line_highlights: 2, 9, 11
 ---
 def draw_data():
@@ -146,7 +146,7 @@ This example changes the red, green, and blue values each time the code places a
 language: python
 filename: main.py — draw_data()
 line_numbers: false
-line_number_start: 1
+line_number_start: 
 line_highlights: 2-4, 10, 12-14
 ---
 def draw_data():
@@ -184,7 +184,7 @@ You can then choose a random colour for your region colours; a different colour 
 language: python
 filename: main.py — draw_data()
 line_numbers: false
-line_number_start: 1
+line_number_start:
 line_highlights: 1, 9
 ---
 from random import randint
@@ -221,7 +221,7 @@ To use the pin's colour to look up the information, you need to **create a dicti
 language: python
 filename: main.py
 line_numbers: false
-line_number_start: 1
+line_number_start: 
 line_highlights: 7
 ---
 #!/bin/python3
@@ -244,7 +244,7 @@ As the pins are placed, the `region` can be stored in the dictionary along with 
 language: python
 filename: main.py
 line_numbers: false
-line_number_start: 1
+line_number_start: 
 line_highlights: 9
 ---
 def draw_data():
@@ -275,7 +275,7 @@ In your `mouse_pressed()` function, lookup the `pixel_colour` in the `colours` d
 language: python
 filename: main.py
 line_numbers: false
-line_number_start: 1
+line_number_start: 
 line_highlights: 4-5
 ---
 def mouse_pressed():
@@ -298,7 +298,7 @@ You can check if a value is in a dictionary by using `in`:
 language: python
 filename: main.py
 line_numbers: false
-line_number_start: 1
+line_number_start: 
 line_highlights: 4-8
 ---
 def mouse_pressed():
@@ -328,7 +328,7 @@ You can print out other facts about the region you clicked on by adding more `pr
 language: python
 filename: main.py
 line_numbers: false
-line_number_start: 1
+line_number_start: 
 line_highlights: 7-8
 ---
 def mouse_pressed():
