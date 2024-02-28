@@ -13,14 +13,15 @@ Do you have an idea of the kind of display you want to create? Use this step to 
 
 --- task ---
 
-Open the [starter project](https://trinket.io/library/trinkets/c88800b7a4){:target="_blank"}. Trinket will open in another browser tab.
+Open the [Mapping Data starter project](https://editor.raspberrypi.org/en/projects/mapping-data-starter){:target="_blank"} project. The code editor will open in another browser tab.
+
+If you have a Raspberry Pi account, you can click on the **Save** button to save a copy to your **Projects**.
 
 --- /task ---
 
 --- task ---
 
 Before you can put your data on a map, you'll need to choose some data to display.
-
 
 **Choose:** There are a few CSV files included in the starter project. Read their descriptions below. Then note the name of the file you'd like to use in your display.
 
@@ -178,11 +179,11 @@ Define a `load_data()` function to take a `file_name` variable. Have your functi
 
 --- code ---
 ---
-language: python filename: main.py — load_data() line_numbers: false line_number_start: 1
-line_highlights: 5-8
+language: python filename: main.py — load_data() line_numbers: true line_number_start: 13
+line_highlights: 17-20
 ---
 # Put code to run when the mouse is pressed here
-def mouse_pressed(): pixel_colour = color(get(mouse_x, mouse_y))
+def mouse_pressed(): pixel_colour = Color(get(mouse_x, mouse_y)).hex
 
 def load_data(file_name): with open(file_name) as f: for line in f: print(line) --- /code ---
 
@@ -192,7 +193,7 @@ def load_data(file_name): with open(file_name) as f: for line in f: print(line) 
 
 --- task ---
 
-Add a call to `load_data()` in your `setup()` function. Pass it the name of the data file you chose above. You can check the list below if you need a reminder of the file name.
+Add a call to `load_data()` in your `setup()` function, you can delete the `pass` that is already in there. Pass it the name of the data file you chose above. You can check the list below if you need a reminder of the file name.
 
  - Olympic host nations — `olympics.csv`
  - World population — `pop.csv`
@@ -235,8 +236,8 @@ would put `['Estonia', '1326535', '31', '42', '68']` into `my_list`.
 
 --- code ---
 ---
-language: python filename: main.py — load_data() line_numbers: false line_number_start: 1
-line_highlights: 4-5
+language: python filename: main.py — load_data() line_numbers: false line_number_start:
+line_highlights: 5-6
 ---
 def load_data(file_name): with open(file_name) as f: for line in f: #print(line) info = line.split(',') --- /code ---
 
@@ -289,10 +290,10 @@ World happiness — `happy.csv`
 
 --- code ---
 ---
-language: python filename: main.py — load_data() line_numbers: false line_number_start: 1
-line_highlights: 6-12
+language: python filename: main.py — load_data() line_numbers: false line_number_start:
+line_highlights: 7-13
 ---
-def load_data(file_name): with open(file_name) as f: for line in f: #print(line) info = line.split(',') # Change the dictionary to match the data you're using region_dict = { 'name': info[0], 'happiness rank': info[1], 'happiness score': info[2] } print(region_dict) --- /code ---
+def load_data(file_name): with open(file_name) as f: for line in f: #print(line) info = line.split(',') # Change the dictionary to match the data you're using region_dict = { 'region': info[0], 'happiness rank': info[1], 'happiness score': info[2] } print(region_dict) --- /code ---
 
 --- /task ---
 
@@ -312,8 +313,8 @@ Create an empty list called `region_list`.
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: false line_number_start: 1
-line_highlights: 5
+language: python filename: main.py line_numbers: false line_number_start:
+line_highlights: 6
 ---
 # !/bin/python3
 from p5 import * from regions import get_region_coords
@@ -324,10 +325,10 @@ In `load_data()`, add each of your dictionaries to `region_list` using `append`.
 
 --- code ---
 ---
-language: python filename: main.py - load_data() line_numbers: false line_number_start: 1
-line_highlights: 10
+language: python filename: main.py - load_data() line_numbers: false line_number_start:
+line_highlights: 11
 ---
-def load_data(file_name): with open(file_name) as f: for line in f: info = line.split(',') region_dict = { 'name': info[0], 'happiness rank': info[1], 'happiness score': info[2] } #print(region_dict) region_list.append(region_dict)
+def load_data(file_name): with open(file_name) as f: for line in f: info = line.split(',') region_dict = { 'region': info[0], 'happiness rank': info[1], 'happiness score': info[2] } #print(region_dict) region_list.append(region_dict)
 
 --- /code ---
 
