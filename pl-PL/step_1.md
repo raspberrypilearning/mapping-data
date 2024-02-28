@@ -15,12 +15,13 @@ You will:
 
 ### Play ▶️
 
+Run this example.
+
 Click on the coloured pins to see information about that region printed out. Think about the kind of data you would like to display, and how you could design an interesting shaped pin to mark it on a map.
 
-<iframe src="https://trinket.io/embed/python/ee22d7c522?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-
-You may need to view this example in full screen to see the whole map. **World happiness measures:** [See inside the project.](https://trinket.io/python/ee22d7c522){:target="_blank"}
-
+**World happiness measures:**:
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/world-happiness-measures" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe> You can find the World happiness measures project [here](https://editor.raspberrypi.org/en/projects/world-happiness-measures){:target="_blank"}
 
 --- /task ---
 
@@ -36,19 +37,21 @@ You are going to make some design decisions about what data you want to show to 
 
 Explore these example projects to get more ideas:
 
-<iframe src="https://trinket.io/embed/python/6c8ca6a74a?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+**Ink world happiness:**:
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/ink-world-happiness" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe> You can find the Ink world happiness project [here](https://editor.raspberrypi.org/en/projects/ink-world-happiness){:target="_blank"}
 
-You may need to view this example in full screen to see the whole map. **World happiness measures:** [See inside the project.](https://trinket.io/python/6c8ca6a74a){:target="_blank"} 
+**World carbon data:**:
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/world-carbon-data" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe> You can find the World carbon data project [here](https://editor.raspberrypi.org/en/projects/world-carbon-data){:target="_blank"}
 
-<iframe src="https://trinket.io/embed/python/a956f84136?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+**GDP:**:
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/mapping-data-gdp" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe> You can find the GDP project [here](https://editor.raspberrypi.org/en/projects/mapping-data-gdp){:target="_blank"}
 
-You may need to view this example in full screen to see the whole map. **Carbon data:** [See inside the project.](https://trinket.io/python/a956f84136){:target="_blank"} 
+--- /task ---
 
-<iframe src="https://trinket.io/embed/python/958615975e?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-
-You may need to view this example in full screen to see the whole map. **GDP:** [See inside the project.](https://trinket.io/python/958615975e){:target="_blank"}
-
---- /task --- --- /no-print ---
+--- /no-print ---
 
 --- print-only ---
 
@@ -56,8 +59,11 @@ You may need to view this example in full screen to see the whole map. **GDP:** 
 
 You are going to make some design decisions about what data you want to show to your users, as well as what style of map and pins you will use to display that data.
 
-![](images/happiness-ink.png) ![](images/happiness-tech.png) ![](images/carbon.png) ![](images/gdp.png)
-
+![World happiness measures](images/happiness-tech.png){:width="300px"}
+You can find the World happiness measures project here https://editor.raspberrypi.org/en/projects/world-happiness-measures ![Ink world happiness](images/happiness-ink.png){:width="300px"}
+You can find the Ink world happiness project here https://editor.raspberrypi.org/en/projects/ink-world-happiness ![World carbon data example](images/carbon.png){:width="300px"}
+You can find the World carbon data project here https://editor.raspberrypi.org/en/projects/world-carbon-data ![GDP](images/gdp.png){:width="300px"}
+You can find the GDP project here https://editor.raspberrypi.org/en/projects/mapping-data-gdp
 
 --- /print-only ---
 
