@@ -5,7 +5,7 @@
 Display your data on the map, and make it interactive.
 </div>
 <div>
-![A map with many pins. Information appears in the text output for some pins.](images/interaction.gif){:width="300px"}
+![A map with many pins. Information appears in the text output for some pins.](images/map_many_pins.png){:width="300px"}
 </div>
 </div>
 
@@ -24,7 +24,7 @@ It should loop through your `region_list` and print a line for each region.
 language: python
 filename: main.py — draw_data()
 ---
-def draw_data(): for region in region_list: region_name = region['name'] # Get the name of the region region_coords = get_region_coords(region_name) # Use the name to get coordinates region_x = region_coords['x'] # Get the x coordinate region_y = region_coords['y'] # Get the y coordinate print(region_name, region_x, region_y)
+def draw_data(): for region in region_list: region_name = region['region'] # Get the name of the region region_coords = get_region_coords(region_name) # Use the name to get coordinates region_x = region_coords['x'] # Get the x coordinate region_y = region_coords['y'] # Get the y coordinate print(region_name, region_x, region_y)
 
 --- /code ---
 
@@ -36,12 +36,10 @@ In your `setup()` function, comment out your `draw_pin()` code and instead call 
 
 --- code ---
 ---
-language: python filename: main.py - setup() line_numbers: false line_number_start: 1
+language: python filename: main.py - setup() line_numbers: false line_number_start:
 line_highlights: 12-13
 ---
-def setup():
-# Put code to run once here
-  size(991, 768) map = load_image('map.jpeg') # Replace with your image image( map, # The image to draw 0, # The x of the top-left corner 0, # The y of the top-left corner width, # The width of the image height # The height of the image ) # draw_pin(300, 300, color(255,0,0)) draw_data()
+def setup(): # Put code to run once here size(991, 768) image( map, # The image to draw 0, # The x of the top-left corner 0, # The y of the top-left corner width, # The width of the image height # The height of the image ) # draw_pin(300, 300, Color(255,0,0)) draw_data()
 
 --- /code ---
 
@@ -49,14 +47,14 @@ def setup():
 
 --- task ---
 
-Instead of printing out the name of the region, and its coordinates, you can use your `draw_pin()` function to place your pins on the map. The code below colours the pins red (`color(255, 0, 9)`), but you can choose a different colour.
+Instead of printing out the name of the region, and its coordinates, you can use your `draw_pin()` function to place your pins on the map. The code below colours the pins red (`Color(255, 0, 9)`), but you can choose a different colour.
 
 --- code ---
 ---
-language: python filename: main.py — draw_data() line_numbers: false line_number_start: 1
+language: python filename: main.py — draw_data() line_numbers: false line_number_start:
 line_highlights: 7-9
 ---
-def draw_data(): for region in region_list: region_name = region['name'] # Get the name of the region region_coords = get_region_coords(region_name) # Use the name to get coordinates region_x = region_coords['x'] # Get the x coordinate region_y = region_coords['y'] # Get the y coordinate #print(region_name, region_x, region_y) region_colour = color(255, 0, 0) # Set the pin colour draw_pin(region_x, region_y, region_colour) # Draw the pin
+def draw_data(): for region in region_list: region_name = region['region'] # Get the name of the region region_coords = get_region_coords(region_name) # Use the name to get coordinates region_x = region_coords['x'] # Get the x coordinate region_y = region_coords['y'] # Get the y coordinate #print(region_name, region_x, region_y) region_colour = Color(255, 0, 0) # Set the pin colour draw_pin(region_x, region_y, region_colour) # Draw the pin
 
 --- /code ---
 
@@ -84,12 +82,19 @@ This example changes the value for red each time the code places a pin:
 
 --- code ---
 ---
-language: python filename: main.py — draw_data() line_numbers: false line_number_start: 1
+language: python filename: main.py — draw_data() line_numbers: false line_number_start:
 line_highlights: 2, 9, 11
 ---
 def draw_data(): red_value = 255 # Set a starting value for red
 
-  for region in region_list: region_name = region['name'] region_coords = get_region_coords(region_name) region_x = region_coords['x'] region_y = region_coords['y'] region_colour = color(red_value, 0, 0) # Use the red value in the colour draw_pin(region_x, region_y, region_colour) red_value -= 1 # Change the red value
+    for region in region_list:
+        region_name = region['name']
+        region_coords = get_region_coords(region_name)
+        region_x = region_coords['x']
+        region_y = region_coords['y']
+        region_colour = Color(red_value, 0, 0) # Use the red value in the colour
+        draw_pin(region_x, region_y, region_colour)
+        red_value -= 1 # Change the red value
 
 --- /code ---
 
@@ -103,10 +108,10 @@ This example changes the red, green, and blue values each time the code places a
 
 --- code ---
 ---
-language: python filename: main.py — draw_data() line_numbers: false line_number_start: 1
+language: python filename: main.py — draw_data() line_numbers: false line_number_start:
 line_highlights: 2-4, 10, 12-14
 ---
-def draw_data(): red_value = 255 # Set a starting value for red blue_value = 0 green_value = 255 for region in region_list: region_name = region['name'] region_coords = get_region_coords(region_name) region_x = region_coords['x'] region_y = region_coords['y'] region_colour = color(red_value, green_value, blue_value) # Use all the colours draw_pin(region_x, region_y, region_colour) red_value -= 1 # Change the red value green_value += 1 # Change the green value blue_value -= 1 # Change the blue value
+def draw_data(): red_value = 255 # Set a starting value for red blue_value = 0 green_value = 255 for region in region_list: region_name = region['region'] region_coords = get_region_coords(region_name) region_x = region_coords['x'] region_y = region_coords['y'] region_colour = Color(red_value, green_value, blue_value) # Use all the colours draw_pin(region_x, region_y, region_colour) red_value -= 1 # Change the red value green_value += 1 # Change the green value blue_value -= 1 # Change the blue value
 
 --- /code ---
 
@@ -121,14 +126,16 @@ At the top of your code, with your other imports, you will need to import `randi
 
 You can then choose a random colour for your region colours; a different colour will be picked each time the `for` loop is executed. There is a small chance that two or more colours might end up the same, but it is a very small chance.
 
+**Warning:** A new colour will be chosen each time the map draws so your pins will flash.
+
 --- code ---
 ---
-language: python filename: main.py — draw_data() line_numbers: false line_number_start: 1
+language: python filename: main.py — draw_data() line_numbers: false line_number_start:
 line_highlights: 1, 9
 ---
 from random import randint
 
-def draw_data(): for region in region_list: region_name = region['name'] region_coords = get_region_coords(region_name) region_x = region_coords['x'] region_y = region_coords['y'] region_colour = color(randint(0,255), randint(0,255), randint(0,255)) # Select a random colour draw_pin(region_x, region_y, region_colour)
+def draw_data(): for region in region_list: region_name = region['name'] region_coords = get_region_coords(region_name) region_x = region_coords['x'] region_y = region_coords['y'] region_colour = Color(randint(0,255), randint(0,255), randint(0,255)) # Select a random colour draw_pin(region_x, region_y, region_colour)
 
 --- /code ---
 
@@ -150,7 +157,7 @@ To use the pin's colour to look up the information, you need to **create a dicti
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: false line_number_start: 1
+language: python filename: main.py line_numbers: false line_number_start:
 line_highlights: 7
 ---
 # !/bin/python3
@@ -166,14 +173,14 @@ As the pins are placed, the `region` can be stored in the dictionary along with 
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: false line_number_start: 1
+language: python filename: main.py line_numbers: false line_number_start:
 line_highlights: 9
 ---
-def draw_data(): red_value = 255 for region in region_list: region_name = region['name'] # Get the name of the region region_coords = get_region_coords(region_name) # Use the name to get coordinates region_x = region_coords['x'] # Get the x coordinate region_y = region_coords['y'] # Get the y coordinate region_colour = color(i, 100, 0) # Set the pin colour colours[region_colour] = region draw_pin(region_x, region_y, region_colour) red_value -= 1 --- /code ---
+def draw_data(): red_value = 255 for region in region_list: region_name = region['region'] # Get the name of the region region_coords = get_region_coords(region_name) # Use the name to get coordinates region_x = region_coords['x'] # Get the x coordinate region_y = region_coords['y'] # Get the y coordinate region_colour = Color(red_value, 100, 0) # Set the pin colour colours[region_colour.hex] = region draw_pin(region_x, region_y, region_colour) red_value -= 1 --- /code ---
 
 --- /task ---
 
-When the user clicks on a pin, the colour of the pin is retrieved, and then the corresponding region is found in the dictionary.
+When the user clicks on a pin, the hex colour value of the pin is retrieved, and then the corresponding region is found in the dictionary.
 
 --- task ---
 
@@ -183,12 +190,10 @@ In your `mouse_pressed()` function, lookup the `pixel_colour` in the `colours` d
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: false line_number_start: 1
+language: python filename: main.py line_numbers: false line_number_start:
 line_highlights: 4-5
 ---
-def mouse_pressed():
-# Put code to run when the mouse is pressed here
-  pixel_colour = color(get(mouse_x, mouse_y)) facts = colours[pixel_colour] print(facts['region']) --- /code ---
+def mouse_pressed(): # Put code to run when the mouse is pressed here pixel_colour = Color(get(mouse_x, mouse_y)).hex facts = colours[pixel_colour] print(facts['region']) --- /code ---
 
 --- /task ---
 
@@ -200,12 +205,10 @@ You can check if a value is in a dictionary by using `in`:
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: false line_number_start: 1
+language: python filename: main.py line_numbers: false line_number_start:
 line_highlights: 4-8
 ---
-def mouse_pressed():
-# Put code to run when the mouse is pressed here
-  pixel_colour = color(get(mouse_x, mouse_y)) if pixel_colour in colours: facts = colours[pixel_colour] print(facts['region']) else: print('Region not detected') --- /code ---
+def mouse_pressed(): # Put code to run when the mouse is pressed here pixel_colour = Color(get(mouse_x, mouse_y)).hex if pixel_colour in colours: facts = colours[pixel_colour] print(facts['region']) else: print('Region not detected') --- /code ---
 
 --- /task ---
 
@@ -221,12 +224,10 @@ You can print out other facts about the region you clicked on by adding more `pr
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: false line_number_start: 1
+language: python filename: main.py line_numbers: false line_number_start:
 line_highlights: 7-8
 ---
-def mouse_pressed():
-# Put code to run when the mouse is pressed here
-  pixel_colour = color(get(mouse_x, mouse_y)) if pixel_colour in colours: facts = colours[pixel_colour] print(facts['region']) print(facts['happiness_rank']) # Your first data fact print(facts['happiness_score']) # Your second data fact else: print('Region not detected') --- /code ---
+def mouse_pressed(): # Put code to run when the mouse is pressed here pixel_colour = Color(get(mouse_x, mouse_y)).hex if pixel_colour in colours: facts = colours[pixel_colour] print(facts['region']) print(facts['happiness_rank'])  # Your first data fact print(facts['happiness_score'])  # Your second data fact else: print('Region not detected') s--- /code ---
 
 --- /task ---
 
