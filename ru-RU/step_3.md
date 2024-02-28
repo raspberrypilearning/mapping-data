@@ -15,12 +15,12 @@ Add code to your `setup()` function to set the size of your canvas to **991** pi
 
 --- code ---
 ---
-language: python filename: main.py - setup() line_numbers: false line_number_start: 1
+language: python filename: main.py - setup() line_numbers: false line_number_start:
 line_highlights: 3
 ---
 # Put code to run once here
-def setup(): load_data('happy.csv')  
-size(991, 768)
+def setup(): size(991, 768) load_data('happy.csv')
+
 
 --- /code ---
 
@@ -29,11 +29,11 @@ size(991, 768)
 --- task ---
 
 Think about how you want to display the data you've picked: what kind of map do you want to use?
-+ ink-map.png
-+ mercator.png
++ ink-map.jpg
++ mercator.jpeg
 + mercator_bw.png
-+ old-map.png
-+ tech-map.png
++ old-map.jpg
++ computer-map.jpg
 
 ![A list of map images available in the starter project](images/all_maps.png)
 
@@ -41,17 +41,14 @@ Think about how you want to display the data you've picked: what kind of map do 
 
 --- task ---
 
-**Choose:** The starter project includes several map images. Pick one you like, and load the image in your `setup` function.
+**Choose:** The starter project includes five map images. Pick one you like, and load the image in a `preload` function.
 
 --- code ---
 ---
-language: python filename: main.py - setup() line_numbers: false line_number_start: 1
-line_highlights: 5
+language: python filename: main.py line_numbers: false line_number_start:
+line_highlights: 3
 ---
-# Put code to run once here
-def setup(): load_data('happy.csv')  
-size(991, 768)    
-map = load_image('mercator.png') # Replace with your image
+def preload(): global map map = load_image('mercator.jpeg')
 
 --- /code ---
 
@@ -65,20 +62,18 @@ Add code to your `setup()` function to draw the map so it covers the whole canva
 
 --- code ---
 ---
-language: python filename: main.py - setup() line_numbers: false line_number_start: 1
-line_highlights: 6-11
+language: python filename: main.py - setup() line_numbers: false line_number_start:
+line_highlights: 5-12
 ---
-def setup():
-# Put code to run once here
-  load_data('happy.csv')  
-size(991, 768)    
-map = load_image('map.png') # Replace with your image image( map, # The image to draw 0, # The x of the top-left corner 0, # The y of the top-left corner width, # The width of the image height # The height of the image ) --- /code ---
+def setup(): # Put code to run once here size(991, 768)   
+load_data('happy.csv')  
+image( map,  # The image to draw 0,  # The x of the top-left corner 0,  # The y of the top-left corner width,  # The width of the image height  # The height of the image ) --- /code ---
 
 --- /task ---
 
 --- task ---
 
-**Test:** Run your program and look at your map! You will probably need to switch to the fullscreen view to see the whole map.
+**Test:** Run your program and look at your map!
 
 --- /task ---
 
@@ -106,11 +101,11 @@ Define a function called `draw_pin`. It should draw a pin, of your own design, o
 
  - The x coordinate for the pin.
  - The y coordinate for the pin.
- - The colour of the pin. This should be a `p5` `color()`.
+ - The colour of the pin. This should be a `p5` `Color()`.
 
 --- code ---
 ---
-language: python filename: main.py - draw_pin() line_numbers: true line_number_start:
+language: python filename: main.py - draw_pin() line_numbers: line_number_start:
 line_highlights:
 ---
 def draw_pin(x, y, colour): # Put code to draw your pin here --- /code ---
@@ -121,12 +116,10 @@ You can use the arguments shown below to place a `red` pin the middle of the scr
 
 --- code ---
 ---
-language: python filename: main.py - setup() line_numbers: false line_number_start: 1
-line_highlights: 12
+language: python filename: main.py - setup() line_numbers: false line_number_start:
+line_highlights: 11
 ---
-def setup():
-# Put code to run once here
-  size(991, 768) map = load_image('map.png') # Replace with your image image( map, # The image to draw 0, # The x of the top-left corner 0, # The y of the top-left corner width, # The width of the image height # The height of the image ) draw_pin(300, 300, color(255,0,0)) --- /code ---
+def setup(): # Put code to run once here size(991, 768) image( map,  # The image to draw 0,  # The x of the top-left corner 0,  # The y of the top-left corner width,  # The width of the image height  # The height of the image ) draw_pin(300, 300, Color(255,0,0)) --- /code ---
 
 [[[parameters]]]
 
@@ -135,18 +128,18 @@ def setup():
 title: Colours in p5
 ---
 
-The `p5` `color()` function expects three numbers: one each for red, green, and blue.
+The `p5` `Color()` function expects three numbers: one each for red, green, and blue.
 
 ```python
-blue = color(92, 204, 206) #Red = 92, Green = 204, Blue = 206
+blue = Color(92, 204, 206) #Red = 92, Green = 204, Blue = 206
 ```
 
 You can use the `fill()` function to fill a shape with colour. `fill()` applies to every shape drawn after it.
 
 ```python
-green = color(149, 212, 122)
+green = Color(149, 212, 122)
 fill(green)
-rect(0, 250, 400, 150) # This shape will be filled with the colour
+rect(0, 250, 400, 150)  # This shape will be filled with the colour
 ```
 
 To remove fills completely, call `no_fill()` before drawing your shape(s).
@@ -154,9 +147,9 @@ To remove fills completely, call `no_fill()` before drawing your shape(s).
 You can set a colour for the border around a shape with the `stroke()` function:
 
 ```python
-white = color(255, 255, 255)
+white = Color(255, 255, 255)
 stroke(white)
-rect(0, 250, 400, 150) # This shape will have a white border
+rect(0, 250, 400, 150)  # This shape will have a white border
 ```
 
 --- /collapse ---
@@ -194,13 +187,13 @@ title: My map is the wrong size
 Check the inputs that control the width and height of the image:
 
 ```python
-  image(
-      map, # The image to draw
-      0, # The x of the top-left corner
-      0, # The y of the top-left corner
-      width, # The width of the image
-      height # The height of the image
-      )
+    image(
+        map,  # The image to draw
+        0,  # The x of the top-left corner
+        0,  # The y of the top-left corner
+        width,  # The width of the image
+        height  # The height of the image
+    )
 ```
 
 --- /collapse ---
@@ -217,7 +210,9 @@ Make sure that you have called the `draw_pin()` function in your `draw()` functi
 language: python
 filename: main.py - draw()
 ---
-  draw_pin(width/2, height/2, color(255,0,0)) --- /code ---
+
+    draw_pin(width/2, height/2, Color(255,0,0))
+--- /code ---
 
 Also, make sure you are calling `draw_pin()` after you call `image()` to create the background. If not, you're drawing the map over the pin!
 
