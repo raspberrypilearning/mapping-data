@@ -105,3 +105,11 @@ dogs_count
 my_function
 
 result
+
+name
+
+capital
+
+latitude
+
+longitude
