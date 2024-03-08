@@ -20,6 +20,8 @@ Denmark
 
 Iceland
 
+Estonia
+
 pixel_colour
 
 load_data
