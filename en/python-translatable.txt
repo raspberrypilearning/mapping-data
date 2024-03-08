@@ -20,8 +20,6 @@ Denmark
 
 Iceland
 
-Estonia
-
 pixel_colour
 
 load_data
@@ -36,13 +34,17 @@ info
 
 region_dict
 
-name
+region
 
 happiness rank
 
 happiness score
 
+get_region_coords
+
 region_list
+
+preload
 
 map
 
@@ -58,8 +60,6 @@ colour
 
 draw_data
 
-region
-
 region_name
 
 region_coords
@@ -68,9 +68,9 @@ region_x
 
 region_y
 
-red_value
-
 region_colour
+
+red_value
 
 blue_value
 
@@ -80,11 +80,17 @@ facts
 
 Region not detected
 
+happiness_rank
+
+happiness_score
+
 pets
 
 pet
 
 cat
+
+count
 
 dog
 
