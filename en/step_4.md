@@ -354,7 +354,7 @@ s--- /code ---
 title: My pins do not appear on the map
 ---
 
-If your pins are not appearing on the map, check that you are calling your `draw_data()` function from your `draw()` function.
+If your pins are not appearing on the map, check that you are calling your `draw_data()` function from your `setup()` function.
 
 --- /collapse ---
 
