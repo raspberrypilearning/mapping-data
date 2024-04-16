@@ -2,77 +2,77 @@
 from p5 import *
 from regions import get_region_coords
 
-def load_data(file_name):
-    global region_list
-    region_list = []
+def charge_donnees(nom_fichier):
+    global liste_regions
+    liste_regions = []
 
-    with open(file_name) as f:
-        for line in f:
-            #print(line)
-            info = line.split(',')
-            # Change the dictionary to match the data you're using
-            region_dict = {
-                'name': info[0],
-                'host_count': int(info[1])
+    with open(nom_fichier) as f:
+        for ligne in f:
+            #print(ligne)
+            info = ligne.split(',')
+            # Modifie le dictionnaire pour qu'il corresponde aux données que tu utilises
+            dico_regions = {
+                'nom': info[0],
+                'pays_hote' : int(info[1])
             }
-            #print(region_dict)
-            region_list.append(region_dict)
+            #print(dico_regions)
+            liste_regions.append(dico_regions)
 
 
 def preload():
-    global map
-    map = load_image('mercator.jpeg')
+    global carte
+    carte = load_image('mercator.jpeg')
 
 
-def draw_pin(x, y, colour, host_count):
+def dessine_epingle(x, y, couleur, pays_hote):
     no_stroke()
-    fill(colour)
-    size = 7 + 3 * host_count
-    ellipse(x, y, size, size)
+    fill(couleur)
+    taille = 7 + 3 * pays_hote
+    ellipse(x, y, taille, taille)
 
 
-def draw_data():
-    global colours
-    colours = {}
-    blue_value = 255
+def dessine_donnees():
+    global couleurs
+    couleurs = {}
+    valeur_bleu = 255
 
-    for region in region_list:
-        region_name = region['name']
-        region_coords = get_region_coords(region_name)
-        region_x = region_coords['x']
-        region_y = region_coords['y']
-        host_count = region['host_count']
-        region_colour = Color(0, 0, blue_value)
-        draw_pin(region_x, region_y, region_colour, host_count)
-        colours[region_colour.hex] = region
-        blue_value -= 1
+    for region in liste_regions:
+        nom_region = region['nom']
+        coords_region = get_region_coords(nom_region)
+        region_x = coords_region['x']
+        region_y = coords_region['y']
+        pays_hote = region['pays_hote']
+        couleur_region = Color(0, 0, valeur_bleu)
+        dessine_epingle(region_x, region_y, couleur_region, pays_hote)
+        couleurs[couleur_region.hex] = region
+        valeur_bleu -= 1
   
   
 def setup():
-    # Put code to run once here
+    # Mets le code à exécuter une seule fois ici
     size(991, 768)
-    load_data('olympics.csv')
+    charge_donnees('olympics.csv')
     image(
-        map,  # The image to draw
-        0,  # The x of the top-left corner
-        0,  # The y of the top-left corner
-        width,  # The width of the image
-        height  # The height of the image
+        carte,  # L'image à dessiner
+        0,  # Le x du coin supérieur gauche
+        0,  # Le y du coin supérieur gauche
+        width,  # La largeur de l'image
+        height  # La hauteur de l'image
     )
     no_stroke()
-    draw_data()
+    dessine_donnees()
 
   
 def mouse_pressed():
-    # Put code to run when the mouse is pressed here
-    pixel_colour = Color(get(mouse_x, mouse_y)).hex
+    # Place ici le code à exécuter lorsque la souris est cliquée
+    couleur_pixel = Color(get(mouse_x, mouse_y)).hex
 
-    if pixel_colour in colours:
-        info = colours[pixel_colour]
-        print(info['region'])
-        if info['host_count'] == 1:
-            print('Hosted the games once.')
+    if couleur_pixel in couleurs:
+        info = couleurs[couleur_pixel]
+        print(info['nom'])
+        if info['pays_hote'] == 1:
+            print('A hébergé les jeux une seule fois.')
         else:
-            print('Hosted the games '+str(info['host_count'])+ ' times.')
+            print('A hébergé les jeux '+str(info['pays_hote'])+ ' fois.')
 
 run()
