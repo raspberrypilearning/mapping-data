@@ -2,10 +2,10 @@
 --- question ---
 
 ---
-legend: Question 2 of 3
+legend: Question 2 sur 3
 ---
 
-You used functions with parameters to load your data and create your map pins. Which of these functions would accept two numbers as parameters, multiply them, and print the result?
+Tu as utilisé des fonctions avec des paramètres pour charger tes données et créer tes repères de carte. Laquelle de ces fonctions accepterait deux nombres comme paramètres, les multiplierait et imprimerait le résultat ?
 
 --- choices ---
 
@@ -18,7 +18,7 @@ def my_function():
   print(result)
 ```
 
-  --- feedback --- Not quite! This function does multiply two numbers, but they're always the same numbers. The parameters let you use the same code on different inputs. --- /feedback ---
+  --- feedback --- Pas tout à fait ! Cette fonction multiplie deux nombres, mais ce sont toujours les mêmes nombres. Les paramètres te permettent d'utiliser le même code sur différentes entrées. --- /feedback ---
 
 - ( )
 ```python
@@ -26,7 +26,7 @@ def my_function(a, b):
   print(10)
 ```
 
-  --- feedback --- Not exactly. This function does accept two parameters, but it doesn't use them for anything. The function prints `10` no matter what input it receives. --- /feedback ---
+  --- feedback --- Pas exactement. Cette fonction accepte deux paramètres, mais elle ne les utilise pas. La fonction affiche `10` peu importe la saisie qu'elle reçoit. --- /feedback ---
 
 - ( )
 ```python
@@ -35,7 +35,7 @@ def my_function():
   print(result)
 ```
 
-  --- feedback --- Close. This function does work with `a` and `b` as though they are parameters. But they're never actually set as parameters to the function. --- /feedback ---
+  --- feedback --- Tu es proche. Cette fonction fonctionne avec `a` et `b` comme s'il s'agissait de paramètres. Mais ils ne sont jamais réellement définis comme paramètres de la fonction. --- /feedback ---
 
 - (x)
 ```python
@@ -44,7 +44,7 @@ def my_function(a, b):
   print(result)
 ```
 
-  --- feedback --- That's right! This function takes `a` and `b` as parameters, multiplies them, and prints out the result. --- /feedback ---
+  --- feedback --- C'est correct ! Cette fonction prend `a` et `b` comme paramètres, les multiplie et imprime le résultat. --- /feedback ---
 
 --- /choices ---
 
