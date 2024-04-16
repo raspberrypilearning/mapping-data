@@ -2,92 +2,92 @@
 from p5 import *
 from regions import get_region_coords
 
-def load_data(file_name):
-    global region_list
-    region_list = []
+def charge_donnees(nom_fichier):
+    global liste_regions
+    liste_regions = []
 
-    with open(file_name) as f:
-        for line in f:
-            #print(line)
-            info = line.split(',')
-            # Change the dictionary to match the data you're using
-            region_dict = {
+    with open(nom_fichier) as f:
+        for ligne in f:
+            #print(ligne)
+            info = ligne.split(',')
+            # Modifie le dictionnaire pour qu'il corresponde aux données que tu utilises
+            dico_regions = {
                 'region': info[0],
                 'population': int(info[1]),
-                'population density': float(info[2]),
-                'median age': float(info[3]),
-                'percentage urban': float(info[4])
+                'densite population': float(info[2]),
+                'age moyen': float(info[3]),
+                'pourcentage urbain': float(info[4])
             }
-            #print(region_dict)
-            region_list.append(region_dict)
+            #print(dico_regions)
+            liste_regions.append(dico_regions)
 
-def draw_pin(x, y, colour):
+def dessine_epingle(x, y, couleur):
     no_stroke()
-    fill(colour)
+    fill(couleur)
     rect(x, y, 7, 7)
 
 
-def draw_data():
-    global colours
-    colours = {}
-    red_value = 255
-    for region in region_list:
-        if answer == 'u' and region['percentage urban'] >= 50.0:
-            region_name = region['region']
-            region_coords = get_region_coords(region_name)
-            region_x = region_coords['x']
-            region_y = region_coords['y']
-            region_colour = Color(red_value, 255, 0)
-            draw_pin(region_x, region_y, region_colour)
-            colours[region_colour.hex] = region
-            red_value -= 1
-        elif answer == 'r' and region['percentage urban'] < 50.0:
-            region_name = region['region']
-            region_coords = get_region_coords(region_name)
-            region_x = region_coords['x']
-            region_y = region_coords['y']
-            region_colour = Color(red_value, 255, 0)
-            draw_pin(region_x, region_y, region_colour)
-            colours[region_colour.hex] = region
-            red_value -= 1
+def dessine_donnees():
+    global couleurs
+    couleurs = {}
+    valeur_rouge = 255
+    for region in liste_regions:
+        if reponse == 'u' and region['pourcentage urbain'] >= 50.0:
+            nom_region = region['region']
+            coords_region = get_region_coords(nom_region)
+            region_x = coords_region['x']
+            region_y = coords_region['y']
+            couleur_region = Color(valeur_rouge, 255, 0)
+            dessine_epingle(region_x, region_y, couleur_region)
+            couleurs[couleur_region.hex] = region
+            valeur_rouge -= 1
+        elif reponse == 'r' and region['pourcentage urbain'] < 50.0:
+            nom_region = region['region']
+            coords_region = get_region_coords(nom_region)
+            region_x = coords_region['x']
+            region_y = coords_region['y']
+            couleur_region = Color(valeur_rouge, 255, 0)
+            dessine_epingle(region_x, region_y, couleur_region)
+            couleurs[couleur_region.hex] = region
+            valeur_rouge -= 1
   
 
 def preload():
-    global map
-    map = load_image('mercator_bw.png')
+    global carte
+    carte = load_image('mercator_bw.png')
 
 
 def setup():
-    # Put code to run once here
+    # Mets le code à exécuter une seule fois ici
     size(991, 768)
-    load_data('pop.csv')
+    charge_donnees('pop.csv')
     image(
-        map,  # The image to draw
-        0,  # The x of the top-left corner
-        0,  # The y of the top-left corner
-        width,  # The width of the image
-        height  # The height of the image
+        carte,  # L'image à dessiner
+        0,  # Le x du coin supérieur gauche
+        0,  # Le y du coin supérieur gauche
+        width,  # La largeur de l'image
+        height  # La hauteur de l'image
     )
     no_stroke()
-    draw_data()
+    dessine_donnees()
   
   
 def mouse_pressed():
-    # Put code to run when the mouse is pressed here
-    pixel_colour = Color(get(mouse_x, mouse_y)).hex
+    # Place ici le code à exécuter lorsque la souris est cliquée
+    couleur_pixel = Color(get(mouse_x, mouse_y)).hex
 
-    if pixel_colour in colours:
-        info = colours[pixel_colour]
+    if couleur_pixel in couleurs:
+        info = couleurs[couleur_pixel]
         print(info['region'])
         print('Population: ', str(info['population']))
-        print('Population density: ', str(info['population density']))
-        print('Average age: ', str(info['median age']))
-        print('Percentage urban: ', str(info['percentage urban']))
+        print('Densité de population: ', str(info['densite population']))
+        print('Age moyen: ', str(info['age median']))
+        print('Pourcentage urbain: ', str(info['pourcentage urbain']))
 
-answer = None
+reponse = None
 
-while answer not in ['u', 'r']:
-    answer = input('Please enter u to see places that are mostly urban, or r to see places that are mostly rural: ')
+while reponse not in ['u', 'r']:
+    reponse = input('Veuillez saisir u pour voir les endroits qui sont principalement urbains, ou r pour voir les endroits qui sont principalement ruraux: ')
 
 
 run()
