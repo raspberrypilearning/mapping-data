@@ -240,7 +240,7 @@ def mouse_pressed(): # Put code to run when the mouse is pressed here pixel_colo
 title: Mes épingles n'apparaissent pas sur la carte
 ---
 
-If your pins are not appearing on the map, check that you are calling your `draw_data()` function from your `setup()` function.
+Si tes épingles n'apparaissent pas sur la carte, vérifie que tu appelles bien ta fonction `dessine_donnees()` depuis ta fonction `setup()`.
 
 --- /collapse ---
 
