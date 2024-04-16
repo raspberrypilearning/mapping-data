@@ -1,38 +1,38 @@
-## Upgrade your project
+## Améliorer ton projet
 
-If you have time you can upgrade your project.
+Si tu as le temps, tu peux perfectionner ton projet.
 
-Here are some ideas you could try:
-- Use pins to display data — change the size or shape of the pin based on some value in the region's data. You can combine changes in shape and size to show even more.
-- Filter the data — use `if` statements to only show pins on the map that meet conditions you choose. For example, only showing places where less than half the people live in cities. For an extra upgrade, let the user choose which filters to use.
-- Add a second data file — create another file of data and display it using different pins. Can you use some of your existing functions if you make some small changes? Do you want to use two sets of pins, or put all the data together on one pin?
+Voici quelques idées que tu pourrais essayer:
+- Utiliser des épingles pour afficher les données - modifie la taille ou la forme de l'épingle en fonction d'une valeur des données de la région. Tu peux combiner des changements de forme et de taille pour afficher encore plus d'informations.
+- Filtrer les données - utilise des instructions `if` pour n'afficher que les épingles sur la carte qui satisfont aux conditions que tu choisis. Par exemple, ne montrer que les endroits où moins de la moitié des personnes vivent dans les villes. Pour une amélioration supplémentaire, laisse l'utilisateur choisir les filtres à utiliser.
+- Ajouter un deuxième fichier de données - crée un autre fichier de données et affiche-le à l'aide d'épingles différentes. Peux-tu utiliser certaines de tes fonctions existantes en y apportant de légères modifications ? Souhaites-tu utiliser deux jeux d'épingles ou regrouper toutes les données sur une seule épingle ?
 
-### Multicoloured pins: Population density
+### Épingles multicolores : Densité de population
 
-This project uses small multicoloured square pins and uses the population data set.
+Ce projet utilise de petites épingles carrées multicolores et utilise le jeu de données population.
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/mapping-data-population" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 
-You can find the Population density project [here](https://editor.raspberrypi.org/en/projects/mapping-data-population){:target="_blank"}.
+Tu peux trouver le projet sur la densité de population [ici](https://editor.raspberrypi.org/en/projects/mapping-data-population){:target="_blank"}.
 
-### Data-sized pins: Olympic host countries
+### Taille des épingles selon une donnée : pays hôtes des Jeux olympiques
 
-This project has been upgraded to show larger pins for areas that have hosted the Olympic Games more often.
+Ce projet a été amélioré afin d'afficher des épingles plus grandes pour les régions qui ont accueilli les Jeux olympiques plus souvent.
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/mapping-data-olympics" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 
-You can find the Olympic host countries project [here](https://editor.raspberrypi.org/en/projects/mapping-data-olympics){:target="_blank"}.
+Tu peux trouver le projet des pays hôtes des Jeux olympiques [ici](https://editor.raspberrypi.org/en/projects/mapping-data-olympics){:target="_blank"}.
 
 
-### Filter data: Global population — rural and urban
+### Filtrer les données : Population mondiale – rurale et urbaine
 
-This project has been upgraded to allow you to choose the data used to make the display.
+Ce projet a été amélioré afin de te permettre de choisir les données utilisées pour réaliser l'affichage.
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/urban-rural-population" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 
-You can find the Global population — rural and urban project [here](https://editor.raspberrypi.org/en/projects/urban-rural-population){:target="_blank"}.
+Tu peux trouver le projet Population mondiale - rurale et urbaine [ici](https://editor.raspberrypi.org/en/projects/urban-rural-population){:target="_blank"}.
 
 --- save ---
