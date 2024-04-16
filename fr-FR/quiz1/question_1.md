@@ -1,18 +1,18 @@
-## Quick quiz
+## Questionnaire rapide
 
-Answer the three questions. There are hints to guide you to the correct answer.
+Réponds aux trois questions. Il y a des indices pour te guider vers la bonne réponse.
 
-When you have answered each question, click on **Check my answer**.
+Lorsque tu as répondu à chaque question, clique sur **Vérifier ma réponse**.
 
-Have fun!
+Amuse-toi bien !
 
 --- question ---
 
 ---
-legend: Question 1 of 3
+legend: Question 1 sur 3
 ---
 
-In this project you stored your data in dictionaries and lists, including a list of dictionaries. If you had this list of dictionaries, which code would you use to `print()` the count of dogs?
+Dans ce projet, tu as stocké tes données dans des dictionnaires et des listes, y compris une liste de dictionnaires. Si tu avais cette liste de dictionnaires, quel code utiliserais-tu pour `print()` le nombre de chiens ?
 
 ```python
 pets = [
@@ -40,7 +40,7 @@ dogs_count = dogs['count']
 print(dogs_count)
 ```
 
-  --- feedback --- Correct! This will print the count of dogs out. --- /feedback ---
+  --- feedback --- Correct ! Cela affichera le nombre de chiens. --- /feedback ---
 
 - ( )
 ```python
@@ -49,7 +49,7 @@ dogs_count = dogs['count']
 print(dogs_count)
 ```
 
-  --- feedback --- Not quite! List indexes start at `0`, not `1`. --- /feedback ---
+  --- feedback --- Non, pas tout à fait ! Les index de liste commencent à `0`, et pas à `1`. --- /feedback ---
 
 - ( )
 ```python
@@ -58,7 +58,7 @@ dogs_count = dogs['count']
 print(dogs_count)
 ```
 
-  --- feedback --- Not exactly, `pets` is a list and numbers, called indexes, are used to select items from a list. --- /feedback ---
+  --- feedback --- Pas exactement, `pets` est une liste et les nombres, appelés index, sont utilisés pour sélectionner les éléments dans une liste. --- /feedback ---
 
 - ( )
 ```python
@@ -67,7 +67,7 @@ dogs_count = dogs['pet']
 print(dogs_count)
 ```
 
-  --- feedback --- Close! This is the wrong key, but in the right dictionary. --- /feedback ---
+  --- feedback --- Tu es proche ! C'est la mauvaise clé, mais dans le bon dictionnaire. --- /feedback ---
 
 --- /choices ---
 
