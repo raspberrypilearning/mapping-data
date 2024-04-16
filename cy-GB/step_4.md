@@ -240,7 +240,7 @@ def mouse_pressed(): # Put code to run when the mouse is pressed here pixel_colo
 title: My pins do not appear on the map
 ---
 
-If your pins are not appearing on the map, check that you are calling your `draw_data()` function from your `draw()` function.
+If your pins are not appearing on the map, check that you are calling your `draw_data()` function from your `setup()` function.
 
 --- /collapse ---
 
