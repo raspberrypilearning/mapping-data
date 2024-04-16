@@ -2,77 +2,77 @@
 from p5 import *
 from regions import get_region_coords
 
-region_list = []
-colours = {}
+liste_regions = []
+couleurs = {}
 
 
 def preload():
-    global map
-    map = load_image('old-map.jpg')  # Replace with your image
+    global carte
+    carte = load_image('old-map.jpg')  # Remplace par ton image
 
 
-def draw_pin(x, y, colour):
-    fill(colour)
-    ellipse(x, y, 10, 10)  # x, y, width, height
+def dessine_epingle(x, y, couleur):
+    fill(couleur)
+    ellipse(x, y, 10, 10)  # x, y, largeur, hauteur
 
 
-def draw_data():
+def dessine_donnees():
 
-    red_value = 255  # Set a starting value for red
+    valeur_rouge = 255  # Définis une valeur de départ pour le rouge
 
-    for region in region_list:
-        region_name = region['region']  # Get the name of the region
-        # Use the name to get coordinates
-        region_coords = get_region_coords(region_name)
-        region_x = region_coords['x']  # Get the x coordinate
-        region_y = region_coords['y']  # Get the y coordinate
-        # print(region_name, region_x, region_y)
-        region_colour = Color(red_value, 0, 0)  # Set the pin colour
-        colours[region_colour.hex] = region
-        draw_pin(region_x, region_y, region_colour)  # Draw the pin
-        red_value -= 1  # Change the red value
+    for region in liste_regions:
+        nom_region = region['region']  # Récupère le nom de la région
+        # Utilise le nom pour obtenir les coordonnées
+        coords_region = get_region_coords(nom_region)
+        region_x = coords_region['x']  # Récupère la coordonnée x
+        region_y = coords_region['y']  # Récupère la coordonnée y
+        # print(nom_region, region_x, region_y)
+        couleur_region = Color(valeur_rouge, 0, 0)  # Définis la couleur de l'épingle
+        couleurs[couleur_region.hex] = region
+        dessine_epingle(region_x, region_y, couleur_region)  # Dessine l'épingle
+        valeur_rouge -= 1  # Change la valeur rouge
 
-# Put code to run once here
+# Mets le code à exécuter une seule fois ici
 
 
 def setup():
     size(991, 768)
-    load_data('gdp.csv')
+    charge_donnees('gdp.csv')
     image(
-        map,  # The image to draw
-        0,  # The x of the top-left corner
-        0,  # The y of the top-left corner
-        width,  # The width of the image
-        height  # The height of the image
+        carte,  # L'image à dessiner
+        0,  # Le x du coin supérieur gauche
+        0,  # Le y du coin supérieur gauche
+        width,  # La largeur de l'image
+        height  # La hauteur de l'image
     )
-    draw_pin(300, 300, Color(255, 0, 0))
-    draw_data()
+    dessine_epingle(300, 300, Color(255, 0, 0))
+    dessine_donnees()
 
 
-# Put code to run when the mouse is pressed here
+# Place ici le code à exécuter lorsque la souris est cliquée
 def mouse_pressed():
-    pixel_colour = Color(get(mouse_x, mouse_y)).hex
-    if pixel_colour in colours:
-        facts = colours[pixel_colour]
-        print(facts['region'])
-        print(facts['gdp'])
+    couleur_pixel = Color(get(mouse_x, mouse_y)).hex
+    if couleur_pixel in couleurs:
+        faits = couleurs[couleur_pixel]
+        print(faits['region'])
+        print(faits['pib'])
     else:
-        print('Region not detected')
+        print('Région non détectée')
 
 
-def load_data(file_name):
-    with open(file_name) as f:
-        for line in f:
-            # print(line)
-            info = line.split(',')
-            # Change the dictionary to match the data you're using
-            region_dict = {
+def charge_donnees(nom_fichier):
+    with open(nom_fichier) as f:
+        for ligne in f:
+            # print(ligne)
+            info = ligne.split(',')
+            # Modifie le dictionnaire pour qu'il corresponde aux données que tu utilises
+            dico_regions = {
                 'region': info[0],
-                'gdp': info[1]
+                'pib': info[1]
             }
-            # print(region_dict)
-            region_list.append(region_dict)
-            # print(region_list)
+            # print(dico_regions)
+            liste_regions.append(dico_regions)
+            # print(liste_regions)
 
 
 run()
