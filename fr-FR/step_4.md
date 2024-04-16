@@ -1,23 +1,23 @@
-## Mark your data
+## Marque tes données
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Display your data on the map, and make it interactive.
+Affiche tes données sur la carte et rends-la interactive.
 </div>
 <div>
-![A map with many pins. Information appears in the text output for some pins.](images/map_many_pins.png){:width="300px"}
+![Une carte avec de nombreuses épingles. Des informations apparaissent dans la sortie textuelle pour certaines épingles.](images/map_many_pins.png){:width="300px"}
 </div>
 </div>
 
-Before you can put pins on the map for each place you have data about, you need to know where those places are. The starter project includes code to give you those locations.
+Avant de pouvoir mettre des épingles sur la carte pour chaque endroit où tu as des données, tu dois savoir où se trouvent ces endroits. Le projet de départ comprend du code pour te fournir ces emplacements.
 
-You can use `get_region_coords()` to return a dictionary of the coordinates for a region. For example `get_region_coords('Japan')` will return `{'x': 880.151122422, 'y': 278.639809465}`.
+Tu peux utiliser `get_region_coords()` pour retourner un dictionnaire des coordonnées pour une région. Par exemple `get_region_coords('Japan')` retournera `{'x': 880.151122422, 'y': 278.639809465}`.
 
 --- task ---
 
-Define a `draw_data()` function to put your data on the map. At first you can just print out the region's name and its `x` and `y` coordinates.
+Définis une fonction `dessine_donnees()` pour placer tes données sur la carte. Au début, tu peux simplement afficher le nom de la région et ses coordonnées `x` et `y`.
 
-It should loop through your `region_list` and print a line for each region.
+Elle devrait parcourir ta liste de régions `liste_regions` et imprimer une ligne pour chaque région.
 
 --- code ---
 ---
@@ -32,7 +32,7 @@ def draw_data(): for region in region_list: region_name = region['region'] # Ge
 
 --- task ---
 
-In your `setup()` function, comment out your `draw_pin()` code and instead call `draw_data()`.
+Dans ta fonction `setup()` commente ton code `dessine_epingle()` et à la place appelle `dessine_donnees()`.
 
 --- code ---
 ---
@@ -47,7 +47,7 @@ def setup(): # Put code to run once here size(991, 768) image( map, # The image 
 
 --- task ---
 
-Instead of printing out the name of the region, and its coordinates, you can use your `draw_pin()` function to place your pins on the map. The code below colours the pins red (`Color(255, 0, 9)`), but you can choose a different colour.
+Au lieu d'imprimer le nom de la région et ses coordonnées, tu peux utiliser ta fonction `dessine_epingle()` pour placer tes épingles sur la carte. Le code ci-dessous colore les épingles en rouge (`Color(255, 0, 9)`), mais tu peux choisir une couleur différente.
 
 --- code ---
 ---
@@ -62,23 +62,23 @@ def draw_data(): for region in region_list: region_name = region['region'] # Ge
 
 --- task ---
 
-**Test:** Run your program. You should see lots of pins pop up on your map! Depending on the data you chose, you might see more or fewer pins than in the image below.
+**Test :** Exécute ton programme. Tu devrais voir beaucoup d'épingles apparaître sur ta carte ! Selon les données que tu as choisies, tu pourrais voir plus ou moins d'épingles que dans l'image ci-dessous.
 
-![A black and white map with many red dots on it.](images/map_many_pins.png)
+![Une carte en noir et blanc avec de nombreux points rouges dessus.](images/map_many_pins.png)
 
 --- /task ---
 
-Next, you need to add some code to let users click on a pin and see some information printed out. To do this, each pin needs to be a different colour, and you need a way to match those colours to the right data.
+Ensuite, tu dois ajouter du code pour permettre aux utilisateurs de cliquer sur une épingle et voir des informations affichées. Pour cela, chaque épingle doit être d'une couleur différente, et tu as besoin d'un moyen d'associer ces couleurs aux bonnes données.
 
 --- task ---
 
-**Choose:** Every pin needs a unique colour. But there are lots of different ways to make this happen. Here are a few suggestions, but you can create your own.
+**Choisis:** Chaque épingle a besoin d'une couleur unique. Mais il existe de nombreuses façons différentes de le faire. Voici quelques suggestions, mais tu peux créer les tiennes.
 
 --- collapse ---
 ---
-title: Change the value of one colour
+title: Changer la valeur d'une couleur
 ---
-This example changes the value for red each time the code places a pin:
+Cet exemple modifie la valeur du rouge à chaque fois que le code place une épingle :
 
 --- code ---
 ---
@@ -102,9 +102,9 @@ def draw_data(): red_value = 255 # Set a starting value for red
 
 --- collapse ---
 ---
-title: Change the value of multiple colours
+title : Modifier la valeur de plusieurs couleurs
 ---
-This example changes the red, green, and blue values each time the code places a pin:
+Cet exemple modifie les valeurs du rouge, du vert et du bleu à chaque fois que le code place une épingle :
 
 --- code ---
 ---
@@ -119,14 +119,14 @@ def draw_data(): red_value = 255 # Set a starting value for red blue_value = 0 g
 
 --- collapse ---
 ---
-title: Choose random colours
+title: Choisir des couleurs aléatoires
 ---
 
-At the top of your code, with your other imports, you will need to import `randint` from the `random` library.
+Au début de ton code, avec tes autres imports, tu devras importer `randint` depuis la bibliothèque `random`.
 
-You can then choose a random colour for your region colours; a different colour will be picked each time the `for` loop is executed. There is a small chance that two or more colours might end up the same, but it is a very small chance.
+Tu peux alors choisir une couleur aléatoire pour les couleurs de tes régions ; une couleur différente sera choisie à chaque fois que la boucle `for` est exécutée. Il y a une petite chance que deux couleurs ou plus finissent par être les mêmes, mais c'est une très petite chance.
 
-**Warning:** A new colour will be chosen each time the map draws so your pins will flash.
+**Avertissement :** Une nouvelle couleur sera choisie à chaque fois que la carte se dessine, donc tes épingles clignoteront.
 
 --- code ---
 ---
@@ -145,15 +145,15 @@ def draw_data(): for region in region_list: region_name = region['name'] region_
 
 --- task ---
 
-**Test:** Run your program and check that the pins are different colours. If you don't have many pins, it may be hard to tell. In that case, try using bigger changes between each pin.
+**Test :** Exécute ton programme et vérifie que les épingles sont de couleurs différentes. Si tu n'as pas beaucoup d'épingles, cela pourrait être difficile à remarquer. Dans ce cas, essaie d'utiliser des changements plus importants entre chaque épingle.
 
 --- /task ---
 
-Your map has unique pins for each location, but you need to add some code to connect those pins to the information you want to show your users.
+Ta carte a des épingles uniques pour chaque emplacement, mais tu dois ajouter du code pour relier ces épingles aux informations que tu veux montrer à tes utilisateurs.
 
 --- task ---
 
-To use the pin's colour to look up the information, you need to **create a dictionary** to store the colours and link them to the region.
+Pour utiliser la couleur de l'épingle pour rechercher les informations, tu dois **créer un dictionnaire** pour stocker les couleurs et les relier à la région.
 
 --- code ---
 ---
@@ -169,7 +169,7 @@ region_list = [] colours = {} --- /code ---
 
 --- task ---
 
-As the pins are placed, the `region` can be stored in the dictionary along with the colour of the pin.
+Au fur et à mesure que les épingles sont placées, la `region` peut être stockée dans le dictionnaire avec la couleur de l'épingle.
 
 --- code ---
 ---
@@ -180,13 +180,13 @@ def draw_data(): red_value = 255 for region in region_list: region_name = region
 
 --- /task ---
 
-When the user clicks on a pin, the hex colour value of the pin is retrieved, and then the corresponding region is found in the dictionary.
+Lorsque l'utilisateur clique sur une épingle, la valeur hexadécimale de la couleur de l'épingle est récupérée, puis la région correspondante est trouvée dans le dictionnaire.
 
 --- task ---
 
-In your `mouse_pressed()` function, lookup the `pixel_colour` in the `colours` dictionary and print out the `region`.
+Dans ta fonction `mouse_pressed()`, recherche la `couleur_pixel` dans le dictionnaire `couleurs` et imprime la `region`.
 
-**Remember** that `colours` is a dictionary of dictionaries. You will have to get the dictionary of region information, then get the information from inside that dictionary. For example:
+**Souviens-toi** que `couleurs` est un dictionnaire de dictionnaires. Tu devras obtenir le dictionnaire d'informations sur la région, puis obtenir les informations à l'intérieur de ce dictionnaire. Par exemple :
 
 --- code ---
 ---
@@ -199,9 +199,9 @@ def mouse_pressed(): # Put code to run when the mouse is pressed here pixel_colo
 
 --- task ---
 
-It's important to check if a key is in a dictionary. If you click on an area of the map without a pin, you will receive a `KeyError`.
+Il est important de vérifier si une clé est dans un dictionnaire. Si tu cliques sur une zone de la carte sans épingle, tu recevras une `KeyError`.
 
-You can check if a value is in a dictionary by using `in`:
+Tu peux vérifier si une valeur est dans un dictionnaire en utilisant `in`:
 
 --- code ---
 ---
@@ -214,13 +214,13 @@ def mouse_pressed(): # Put code to run when the mouse is pressed here pixel_colo
 
 --- task ---
 
-**Test:** Run your program. Click on a pin and check that your program correctly prints out data about that area.
+**Test :** Exécute ton programme. Clique sur une épingle et vérifie que ton programme imprime correctement les données sur cette zone.
 
 --- /task ---
 
 --- task ---
 
-You can print out other facts about the region you clicked on by adding more `print()` statements. This will depend on the data set that you used. If you used `happy.csv` for instance, you could print the following:
+Tu peux afficher d'autres faits sur la région sur laquelle tu as cliqué en ajoutant plus d'instructions `print()`. Cela dépendra du jeu de données que tu as utilisé. Si tu as utilisé `happy.csv` par exemple, tu pourras imprimer les éléments suivants :
 
 --- code ---
 ---
@@ -233,36 +233,36 @@ def mouse_pressed(): # Put code to run when the mouse is pressed here pixel_colo
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Débogage :** Tu pourrais trouver des bogues dans ton projet que tu dois corriger. Voici quelques bogues courants.
 
 --- collapse ---
 ---
-title: My pins do not appear on the map
+title: Mes épingles n'apparaissent pas sur la carte
 ---
 
-If your pins are not appearing on the map, check that you are calling your `draw_data()` function from your `draw()` function.
+If your pins are not appearing on the map, check that you are calling your `draw_data()` function from your `setup()` function.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: I get a message about a 'KeyError'
+title: Je reçois un message concernant une 'KeyError'
 ---
 
-If you get a message about 'KeyError', check that the spelling of your dictionary keys match when you put values in and when you read them out. Whether the letters are UPPER CASE or lower case is important too.
+Si tu reçois un message concernant une 'KeyError', vérifie que l'orthographe des clés de ton dictionnaire correspond lorsque tu y mets des valeurs et lorsque tu les lis. Que les lettres soient EN MAJUSCULES ou en minuscules est également important.
 
-If the error is for the `colours` dictionary, make sure you check the key exists in `colours` before trying to get the value.
+Si l'erreur concerne le dictionnaire `couleurs`, assure-toi de vérifier que la clé existe dans `couleurs` avant d'essayer d'obtenir la valeur.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: It keeps displaying 'Region not detected'
+title: Il affiche toujours 'Région non détectée'
 ---
 
-Your mouse click needs to be in the centre of your pin to make sure that it detects the correct colour.
+Ton clic de souris doit être au centre de ton épingle pour t'assurer qu'il détecte la bonne couleur.
 
-Try clicking closer to the centre of your pin.
+Essaie de cliquer plus près du centre de ton épingle.
 
 --- /collapse ---
 
