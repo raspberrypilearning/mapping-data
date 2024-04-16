@@ -2,82 +2,82 @@
 from p5 import *
 from regions import get_region_coords
 
-region_list = []
-colours = {}
+liste_regions = []
+couleurs = {}
 
 
 def preload():
-    global map
-    map = load_image('mercator_bw.png')
+    global carte
+    carte = load_image('mercator_bw.png')
 
-# Put code to run once here
+# Mets le code à exécuter une seule fois ici
 
 
 def setup():
     size(991, 768)
-    load_data('carbon.csv')
-    print(region_list)
+    charge_donnees('carbon.csv')
+    print(liste_regions)
     image(
-        map,  # The image to draw
-        0,  # The x of the top-left corner
-        0,  # The y of the top-left corner
-        width,  # The width of the image
-        height  # The height of the image
+        carte,  # L'image à dessiner
+        0,  # Le x du coin supérieur gauche
+        0,  # Le y du coin supérieur gauche
+        width,  # La largeur de l'image
+        height  # La hauteur de l'image
     )
-    draw_data()
+    dessine_donnees()
 
 
-def draw_pin(x, y, colour):
+def dessine_epingle(x, y, couleur):
     no_stroke()
-    fill(colour)
+    fill(couleur)
     triangle(x-10, y-5, x, y+10, x+10, y-5)
     triangle(x-10, y+5, x, y-10, x+10, y+5)
 
 
-def draw_data():
-    red_value = 255  # Set a starting value for red
-    blue_value = 0
-    green_value = 255
-    for region in region_list:
-        region_name = region['region']  # Get the name of the region
-        # Use the name to get coordinates
-        region_coords = get_region_coords(region_name)
-        region_x = region_coords['x']  # Get the x coordinate
-        region_y = region_coords['y']  # Get the y coordinate
-        # print(region_name, region_x, region_y)
-        # Use the red value in the colour
-        region_colour = Color(red_value, green_value, blue_value)
-        colours[region_colour.hex] = region
-        draw_pin(region_x, region_y, region_colour)  # Draw the pin
-        red_value -= 1  # Change the red value
-        green_value += 1  # Change the green value
-        blue_value -= 1  # Change the blue value
+def dessine_donnees():
+    valeur_rouge = 255  # Définis une valeur de départ pour le rouge
+    valeur_bleu = 0
+    valeur_vert = 255
+    for region in liste_regions:
+        nom_region = region['region']  # Récupère le nom de la région
+        # Utilise le nom pour obtenir les coordonnées
+        coords_region = get_region_coords(nom_region)
+        region_x = coords_region['x']  # Récupère la coordonnée x
+        region_y = coords_region['y']  # Récupère la coordonnée y
+        # print(nom_region, region_x, region_y)
+        # Utilise la valeur rouge dans la couleur
+        couleur_region = Color(valeur_rouge, valeur_vert, valeur_bleu)
+        couleurs[couleur_region.hex] = region
+        dessine_epingle(region_x, region_y, couleur_region)  # Dessine l'épingle
+        valeur_rouge -= 1  # Change la valeur rouge
+        valeur_vert += 1  # Changer la valeur verte
+        valeur_bleu -= 1  # Change la valeur bleue
 
 
-# Put code to run when the mouse is pressed here
+# Place ici le code à exécuter lorsque la souris est cliquée
 def mouse_pressed():
-    # Put code to run when the mouse is pressed here
-    pixel_colour = Color(get(mouse_x, mouse_y)).hex
-    if pixel_colour in colours:
-        facts = colours[pixel_colour]
-        print(facts['region'])
-        print(facts['total carbon'])
-        print(facts['carbon per person'])
+    # Place ici le code à exécuter lorsque la souris est cliquée
+    couleur_pixel = Color(get(mouse_x, mouse_y)).hex
+    if couleur_pixel in couleurs:
+        faits = couleurs[couleur_pixel]
+        print(faits['region'])
+        print(faits['total carbone'])
+        print(faits['carbone par personne'])
     else:
-        print('Region not detected')
+        print('Région non détectée')
 
 
-def load_data(file_name):
-    with open(file_name) as f:
-        for line in f:
-            # print(line)
-            info = line.split(',')
-            region_dict = {
+def charge_donnees(nom_fichier):
+    with open(nom_fichier) as f:
+        for ligne in f:
+            # print(ligne)
+            info = ligne.split(',')
+            dico_regions = {
                 'region': info[0],
-                'total carbon': info[1],
-                'carbon per person': info[2]
+                'total carbone': info[1],
+                'carbone par personne': info[2]
             }
-            region_list.append(region_dict)
+            liste_regions.append(dico_regions)
 
 
 run()
