@@ -1,47 +1,47 @@
-Put code to run when the mouse is pressed here
+Place ici le code à exécuter lorsque la souris est cliquée
 
-Change the dictionary to match the data you're using
+Modifie le dictionnaire pour qu'il corresponde aux données que tu utilises
 
-Put code to run once here
+Mettre le code à exécuter une fois ici
 
-Replace with your image
+Remplace par ton image
 
-The image to draw
+L'image à dessiner
 
-The x of the top-left corner
+Le x du coin supérieur gauche
 
-The y of the top-left corner
+Le y du coin supérieur gauche
 
-The width of the image
+La largeur de l'image
 
-The height of the image
+La hauteur de l'image
 
-Put code to draw your pin here
+Place le code pour dessiner ton épingle ici
 
-Get the name of the region
+Obtenir le nom de la région
 
-Use the name to get coordinates
+Utilise le nom pour obtenir les coordonnées
 
-Get the x coordinate
+Récupère la coordonnée x
 
-Get the y coordinate
+Récupère la coordonnée y
 
-Set the pin colour
+Définir la couleur de la broche
 
-Draw the pin
+Dessiner l'épingle
 
-Set a starting value for red
+Définir une valeur de départ pour le rouge
 
-Use the red value in the colour
+Utilise la valeur rouge dans la couleur
 
-Change the red value
+Change la valeur du rouge
 
-Change the green value
+Change la valeur du vert
 
-Change the blue value
+Change la valeur du bleu
 
-Select a random colour
+Sélectionne une couleur aléatoire
 
-Your first data fact
+Ton premier fait de données
 
-Your second data fact
+Ton deuxième fait de données
