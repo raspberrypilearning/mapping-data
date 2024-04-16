@@ -1516,17 +1516,17 @@ regions = {
   }
 }
 
-def convert_lat_long(latitude, longitude, map_width, map_height):
+def convert_lat_long(latitude, longitude, largeur_carte, hauteur_carte):
   
-  false_easting = 180
-  radius = map_width / (2 * pi)
+  fausse_ordonnee = 180
+  rayon = largeur_carte / (2 * pi)
   latitude = radians(latitude)
-  longitude = radians(longitude + false_easting)
+  longitude = radians(longitude + fausse_ordonnee)
   
-  x_coord = longitude * radius
+  x_coord = longitude * rayon
   
-  y_dist_from_equator = radius * log(tan(pi / 4 + latitude / 2))
-  y_coord = map_height / 2 - y_dist_from_equator
+  y_dist_depuis_equateur = rayon * log(tan(pi / 4 + latitude / 2))
+  y_coord = hauteur_carte / 2 - y_dist_depuis_equateur
   
   coords = {'x': x_coord, 'y': y_coord}
   
@@ -1537,12 +1537,12 @@ def get_available_regions():
   return regions.keys()
 
 
-def get_region_coords(region, map_width=991, map_height=768):
+def get_region_coords(region, largeur_carte=991, hauteur_carte=768):
   coords = None
   
   try:
-    lookup = regions[region]
-    coords = convert_lat_long(lookup['latitude'], lookup['longitude'], map_width, map_height)
+    recherche = regions[region]
+    coords = convert_lat_long(recherche['latitude'], recherche['longitude'], largeur_carte, hauteur_carte)
     return coords
   except KeyError:
-    print('Region not recognised: ', region)
+    print('Région non reconnue: ', region)
