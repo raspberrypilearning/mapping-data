@@ -1,17 +1,17 @@
-## Pick a map and pins
+## Choisir une carte et des épingles
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Choose how you'll display the data you've selected.
+Choisis comment tu vas afficher les données que tu as choisies.
 </div>
 <div>
-![A map with a single pin marked in the centre.](images/single_pin.png){:width="300px"}
+![Une carte avec une seule épingle marquée au centre.](images/single_pin.png){:width="300px"}
 </div>
 </div>
 
 --- task ---
 
-Add code to your `setup()` function to set the size of your canvas to **991** pixels wide and **768** pixels high.
+Ajoute du code dans ta fonction `setup()` pour régler la taille de ton canevas à **991** pixels de large et **768** pixels de haut.
 
 --- code ---
 ---
@@ -28,20 +28,20 @@ def setup(): size(991, 768) load_data('happy.csv')
 
 --- task ---
 
-Think about how you want to display the data you've picked: what kind of map do you want to use?
+Réfléchis à la façon dont tu veux afficher les données que tu as choisies : quel type de carte veux-tu utiliser ?
 + ink-map.jpg
 + mercator.jpeg
 + mercator_bw.png
 + old-map.jpg
 + computer-map.jpg
 
-![A list of map images available in the starter project](images/all_maps.png)
+![Une liste d'images de cartes disponibles dans le projet de départ](images/all_maps.png)
 
 --- /task ---
 
 --- task ---
 
-**Choose:** The starter project includes five map images. Pick one you like, and load the image in a `preload` function.
+**Choisis :** Le projet de départ inclut cinq images de carte. Choisis celle que tu aimes, et charge l'image dans une fonction `preload`.
 
 --- code ---
 ---
@@ -56,7 +56,7 @@ def preload(): global map map = load_image('mercator.jpeg')
 
 --- task ---
 
-Add code to your `setup()` function to draw the map so it covers the whole canvas.
+Ajoute du code à ta fonction `setup()` pour dessiner la carte de manière à ce qu'elle couvre tout le canevas.
 
 [[[p5-coordinates]]]
 
@@ -73,35 +73,35 @@ image( map,  # The image to draw 0,  # The x of the top-left corner 0,  # The y 
 
 --- task ---
 
-**Test:** Run your program and look at your map!
+**Test:** Exécute ton programme et regarde ta carte !
 
 --- /task ---
 
 --- task ---
 
-**Choose:** What shape of pin will you place in each location? Your pin will need to be a single colour so that it is easy for a user to click on.
+**Choisis :** Quelle forme d'épingle vas-tu placer à chaque emplacement ? Ton épingle devra être d'une seule couleur pour qu'il soit facile pour un utilisateur de cliquer dessus.
 
-You could choose a single shape, such as:
-+ A circle
-+ A square
-+ A triangle
+Tu pourrais choisir une forme unique, comme :
++ Un cercle
++ Un carré
++ Un triangle
 
-Or you could create a pin out of multiple geometric shapes, such as:
-+ A heart
-+ A map pin
-+ A star
+Ou tu pourrais créer une épingle à partir de plusieurs formes géométriques, comme :
++ Un cœur
++ Une épingle de carte
++ Une étoile
 
-![A selection of pins made from geometric shapes including a square, pin, heart, circle and star.](images/pin-examples.png)
+![Une sélection d'épingles faites à partir de formes géométriques incluant un carré, une épingle, un cœur, un cercle et une étoile.](images/pin-examples.png)
 
 --- /task ---
 
 --- task ---
 
-Define a function called `draw_pin`. It should draw a pin, of your own design, on the map. It should take three parameters:
+Définis une fonction appelée `dessine_epingle`. Elle devrait dessiner une épingle, de ta propre conception, sur la carte. Elle devrait prendre trois paramètres :
 
- - The x coordinate for the pin.
- - The y coordinate for the pin.
- - The colour of the pin. This should be a `p5` `Color()`.
+ - La coordonnée x de l'épingle.
+ - La coordonnée y de l'épingle.
+ - La couleur de l'épingle. Ce devrait être une `Color()` `p5`.
 
 --- code ---
 ---
@@ -110,9 +110,9 @@ line_highlights:
 ---
 def draw_pin(x, y, colour): # Put code to draw your pin here --- /code ---
 
-As you create your `draw_pin` function, call it to see how it appears on the screen. You should call your `draw_pin` function from the `setup()` function.
+Une fois créée, appelle ta fonction `dessine_epingle` pour voir comment elle apparaît à l'écran. Tu devrais appeler ta fonction `dessine_epingle` depuis la fonction `setup()`.
 
-You can use the arguments shown below to place a `red` pin the middle of the screen.
+Tu peux utiliser les arguments montrés ci-dessous pour placer une épingle `rouge` au milieu de l'écran.
 
 --- code ---
 ---
@@ -125,31 +125,31 @@ def setup(): # Put code to run once here size(991, 768) image( map,  # The image
 
 --- collapse ---
 ---
-title: Colours in p5
+title: Couleurs en p5
 ---
 
-The `p5` `Color()` function expects three numbers: one each for red, green, and blue.
+La fonction `p5` `Color()` attend trois nombres : un pour le rouge, un pour le vert et un pour le bleu.
 
 ```python
-blue = Color(92, 204, 206) #Red = 92, Green = 204, Blue = 206
+bleu = Color(92, 204, 206) #Rouge = 92, Vert = 204, Bleu = 206
 ```
 
-You can use the `fill()` function to fill a shape with colour. `fill()` applies to every shape drawn after it.
+Tu peux utiliser la fonction `fill()` pour remplir une forme avec de la couleur. `fill()` s'applique à chaque forme dessinée après elle.
 
 ```python
-green = Color(149, 212, 122)
-fill(green)
-rect(0, 250, 400, 150)  # This shape will be filled with the colour
+vert = Color(149, 212, 122)
+fill(vert)
+rect(0, 250, 400, 150)  # Cette forme sera remplie avec la couleur
 ```
 
-To remove fills completely, call `no_fill()` before drawing your shape(s).
+Pour enlever complètement les remplissages, appelle `no_fill()` avant de dessiner ta ou tes forme(s).
 
-You can set a colour for the border around a shape with the `stroke()` function:
+Tu peux définir une couleur pour le bord autour d'une forme avec la fonction `stroke()`:
 
 ```python
-white = Color(255, 255, 255)
-stroke(white)
-rect(0, 250, 400, 150)  # This shape will have a white border
+blanc = Color(255, 255, 255)
+stroke(blanc)
+rect(0, 250, 400, 150)  # Cette forme aura un bord blanc
 ```
 
 --- /collapse ---
@@ -162,37 +162,37 @@ rect(0, 250, 400, 150)  # This shape will have a white border
 
 [[[processing-python-triangle]]]
 
-**Tip:** Your `draw_pin` function can make other shapes out of these basic ones.
+**Astuce:** Ta fonction `dessine_epingle` peut créer d'autres formes à partir de ces formes de base.
 
 --- /task ---
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Débogage :** Tu pourrais trouver des bogues dans ton projet que tu dois corriger. Voici quelques bogues courants.
 
 --- collapse ---
 ---
-title: My map isn't loading
+title : Ma carte ne se charge pas
 ---
 
-Check the filename really carefully — remember capital letters are different to lower-case letters and punctuation is important.
+Vérifie le nom du fichier très attentivement — rappelle-toi que les lettres majuscules sont différentes des lettres minuscules et que la ponctuation est importante.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: My map is the wrong size
+title: Ma carte n'a pas la bonne taille
 ---
 
-Check the inputs that control the width and height of the image:
+Vérifie les paramètres qui contrôlent la largeur et la hauteur de l'image:
 
 ```python
     image(
-        map,  # The image to draw
-        0,  # The x of the top-left corner
-        0,  # The y of the top-left corner
-        width,  # The width of the image
-        height  # The height of the image
+        carte,  # L'image à dessiner
+        0,  # Le x du coin supérieur gauche
+        0,  # Le y du coin supérieur gauche
+        width,  # La largeur de l'image
+        height  # La hauteur de l'image
     )
 ```
 
@@ -200,10 +200,10 @@ Check the inputs that control the width and height of the image:
 
 --- collapse ---
 ---
-title: My pin isn't appearing
+title: Mon épingle n'apparaît pas
 ---
 
-Make sure that you have called the `draw_pin()` function in your `draw()` function, and passed it the values it needs. For example:
+Assure-toi que tu as appelé la fonction `dessine_epingle()` dans ta fonction `dessine_donnees()`, et que tu lui as passé les valeurs dont elle a besoin. Par exemple :
 
 --- code ---
 ---
@@ -214,7 +214,7 @@ filename: main.py - draw()
     draw_pin(width/2, height/2, Color(255,0,0))
 --- /code ---
 
-Also, make sure you are calling `draw_pin()` after you call `image()` to create the background. If not, you're drawing the map over the pin!
+De plus, assure-toi que tu appelles `dessine_epingle()` après avoir appelé `image()` pour créer l'arrière-plan. Sinon, tu dessines la carte par-dessus l'épingle !
 
 --- /collapse ---
 
