@@ -3,71 +3,71 @@ from p5 import *
 from regions import get_region_coords
 from random import randint, seed
 
-region_list = []
-colours = {}
+liste_regions = []
+couleurs = {}
 
 
 def preload():
-    global map
-    map = load_image('ink_map.jpg')
+    global carte
+    carte= load_image('ink_map.jpg')
 
 
 def setup():
-    # Put code to run once here
+    # Mets le code à exécuter une seule fois ici
     size(991, 768)
-    load_data('happy.csv')
+    charge_donnees('happy.csv')
     image(
-        map,  # The image to draw
-        0,  # The x of the top-left corner
-        0,  # The y of the top-left corner
-        width,  # The width of the image
-        height  # The height of the image
+        carte,  # L'image à dessiner
+        0,  # Le x du coin supérieur gauche
+        0,  # Le y du coin supérieur gauche
+        width,  # La largeur de l'image
+        height  # La hauteur de l'image
     )
-    draw_data()
+    dessine_donnees()
 
 
 def mouse_pressed():
-    # Put code to run when the mouse is pressed here
-    pixel_colour = Color(get(mouse_x, mouse_y)).hex
+    # Place ici le code à exécuter lorsque la souris est cliquée
+    couleur_pixel = Color(get(mouse_x, mouse_y)).hex
     try:
-        facts = colours[pixel_colour]
-        print(facts['name'])
-        print(facts['happiness rank'])
+        faits = couleurs[couleur_pixel]
+        print(faits['nom'])
+        print(faits['rang du bonheur'])
     except KeyError:
-        print('Click on a pin')
+        print('Clique sur une épingle')
 
 
-def load_data(file_name):
-    with open(file_name) as f:
-        for line in f:
-            # print(line)
-            info = line.split(',')
-            region_dict = {
-                'name': info[0],
-                'happiness rank': int(info[1]),
-                'happiness score': float(info[2])
+def charge_donnees(nom_fichier):
+    with open(nom_fichier) as f:
+        for ligne in f:
+            # print(ligne)
+            info = ligne.split(',')
+            dico_regions = {
+                'nom': info[0],
+                'rang du bonheur': int(info[1]),
+                'score du bonheur': float(info[2])
             }
-            # print(region_dict)
-            region_list.append(region_dict)
+            # print(dico_regions)
+            liste_regions.append(dico_regions)
 
 
-def draw_pin(x, y, colour):
-    fill(colour)
+def dessine_epingle(x, y, couleur):
+    fill(couleur)
     ellipse(x, y, 10, 10)
 
 
-def draw_data():
+def dessine_donnees():
     seed(10)
-    for region in region_list:
-        region_name = region['name']  # Get the name of the region
-        # Use the name to get coordinates
-        region_coords = get_region_coords(region_name)
-        region_x = region_coords['x']  # Get the x coordinate
-        region_y = region_coords['y']  # Get the y coordinate
-        region_colour = Color(randint(0, 255), randint(
-            0, 255), randint(0, 255))  # Set the pin colour
-        colours[region_colour.hex] = region
-        draw_pin(region_x, region_y, region_colour)
+    for region in liste_regions:
+        nom_region = region['nom']  # Récupère le nom de la région
+        # Utilise le nom pour obtenir les coordonnées
+        coords_region = get_region_coords(nom_region)
+        region_x = coords_region['x']  # Récupère la coordonnée x
+        region_y = coords_region['y']  # Récupère la coordonnée y
+        couleur_region = Color(randint(0, 255), randint(
+            0, 255), randint(0, 255))  # Définis la couleur de l'épingle
+        couleurs[couleur_region.hex] = region
+        dessine_epingle(region_x, region_y, couleur_region)
 
 
 run()
