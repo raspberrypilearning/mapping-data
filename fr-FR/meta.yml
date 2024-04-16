@@ -1,30 +1,30 @@
 ---
-title: Mapping data
+title: Cartographier des données
 hero_image: images/banner.png
 description:
-  - Use Python to make an interactive map that lets users learn interesting
-  - facts about the world
-meta_title: Python coding projects for kids and teens | Mapping data
-meta_description: Learn Python with the Raspberry Pi Foundation's coding projects for kids and teens. Use Python to make a map and learn interesting facts about the world.
+  - Utiliser Python pour créer une carte interactive qui permet aux utilisateurs d'apprendre des choses intéressantes
+  - faits sur le monde
+meta_title: Projets de codage Python pour enfants et adolescents | Cartographier des données
+meta_description: Apprends le langage Python avec les projets de codage de la Raspberry Pi Foundation pour les enfants et les adolescents. Utilise Python pour dessiner une carte et apprendre des faits intéressants sur le monde.
 version: 4
 listed: true
 copyedit: true
 last_tested: "2021-03-26"
 steps:
   - 
-    title: You will make
+    title: Ce que tu vas faire
   - 
-    title: Choose and load a data set
+    title: Choisir et charger un jeu de données
   - 
-    title: Pick a map and pins
+    title: Choisir une carte et des épingles
     completion:
       - engaged
   - 
-    title: Mark your data
+    title: Marquer tes données
     completion:
       - internal
   - 
-    title: Quick quiz
+    title: Questionnaire rapide
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -33,8 +33,8 @@ steps:
     completion:
       - external
   - 
-    title: Upgrade your project
+    title: Améliorer ton projet
   - 
-    title: Share
+    title: Partager
   - 
-    title: What next?
+    title: Et ensuite ?
