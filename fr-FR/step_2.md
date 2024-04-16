@@ -1,73 +1,73 @@
-## Choose and load a data set
+## Choisir et charger un jeu de données
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Do you have an idea of the kind of display you want to create? Use this step to choose your data and load it into dictionaries. Later, you'll use those dictionaries to build your map.
+As-tu une idée du type d'affichage que tu veux créer ? Utilise cette étape pour choisir tes données et les charger dans des dictionnaires. Plus tard, tu utiliseras ces dictionnaires pour créer ta carte.
 </div>
 <div>
 
 </div>
 </div>
 
-![Dictionaries printed out as part of a list.](images/regions_list_output.png){:width="600px"}
+![Dictionnaires imprimés sous forme de liste.](images/regions_list_output.png){:width="600px"}
 
 --- task ---
 
-Open the [Mapping Data starter project](https://editor.raspberrypi.org/en/projects/mapping-data-starter){:target="_blank"} project. The code editor will open in another browser tab.
+Ouvre le projet [Projet de démarrage Cartographier des données](https://editor.raspberrypi.org/en/projects/mapping-data-starter){:target="_blank"}. Le Code Editor s'ouvrira dans un autre onglet du navigateur.
 
-If you have a Raspberry Pi account, you can click on the **Save** button to save a copy to your **Projects**.
+Si tu as un compte Raspberry Pi, tu peux cliquer sur le bouton **Enregistrer** pour enregistrer une copie dans tes **Projets**.
 
 --- /task ---
 
 --- task ---
 
-Before you can put your data on a map, you'll need to choose some data to display.
+Avant de pouvoir placer tes données sur une carte, tu devras choisir les données à afficher.
 
-**Choose:** There are a few CSV files included in the starter project. Read their descriptions below. Then note the name of the file you'd like to use in your display.
+**Choisis :** Quelques fichiers CSV sont inclus dans le projet de démarrage. Lis leurs descriptions ci-dessous. Note ensuite le nom du fichier que tu souhaites utiliser dans ton affichage.
 
 <div style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**CSV files**</span> are Comma-Separated Values files. They contain data in rows and columns, like a table. Each line is a row, with commas separating that row's values into columns.
-![A few lines of a csv file.](images/csv_sample.png){:width="200px"}
+<span style="color: #0faeb0">**Les fichiers CSV**</span> sont des fichiers de valeurs séparées par des virgules. Ils contiennent des données en lignes et en colonnes, comme un tableau. Chaque ligne est un enregistrement, avec des virgules séparant les valeurs de cette ligne en colonnes.
+![Quelques lignes d'un fichier csv.](images/csv_sample.png){:width="200px"}
 </div>
 
 --- collapse ---
 ---
-title: Olympic host nations
+title: Pays d'accueil des Jeux olympiques
 ---
 
-**File name:** `olympics.csv`
+**Nom du fichier :** `olympics.csv`
 
-This data is a list of regions that have hosted the Olympic Summer Games. The columns of the data are:
+Ces données sont une liste des régions qui ont accueilli les Jeux Olympiques d'été. Les colonnes des données sont :
 
- - The name of the region
- - The number of times they have hosted the games
+ - Le nom de la région
+ - Le nombre de fois qu'ils ont accueilli les jeux
 
-Here is an example of the data in this file:
+Voici un exemple des données de ce fichier :
 
 ```
-United States,4
-United Kingdom,3
-Greece,3
+États-Unis,4
+Royaume-Uni,3
+Grèce,3
 ```
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: World population
+title: Population mondiale
 ---
 
-**File name:** `pop.csv`
+**Nom du fichier :** `pop.csv`
 
-This data is about populations around the world. The columns of the data are:
+Ces données concernent les populations du monde entier. Les colonnes des données sont :
 
- - The name of the region
- - How many people live in the region
- - How many people live in each square kilometre of the region
- - The average age of people in the region
- - The percentage of people in that region who live in cities
+ - Le nom de la région
+ - Combien de personnes vivent dans la région
+ - Combien de personnes vivent dans chaque kilomètre carré de la région
+ - L'âge moyen des habitants de la région
+ - Le pourcentage de personnes dans cette région qui vivent dans des villes
 
-Here is an example of the data in this file:
+Voici un exemple des données de ce fichier :
 
 ```
 Afghanistan,38928346,60,18,25
@@ -79,18 +79,18 @@ Algeria,43851044,18,29,73
 
 --- collapse ---
 ---
-title: Carbon emissions
+title: Émissions de carbone
 ---
 
-**File name:** `carbon.csv`
+**Nom du fichier :** `carbon.csv`
 
-This data is about carbon emissions around the world. The numbers in the file are for a single year. The columns of the data are:
+Ces données concernent les émissions de carbone dans le monde. Les chiffres du dossier concernent une seule année. Les colonnes des données sont :
 
- - The name of the region
- - How much carbon each region emits in total (in thousands of tons)
- - How much carbon each region emits, per person that lives in that region (in tons)
+ - Le nom de la région
+ - Quelle quantité de carbone chaque région émet-elle au total (en milliers de tonnes)
+ - Quantité de carbone émise par chaque région, par personne vivant dans cette région (en tonnes)
 
-Here is an example of the data in this file:
+Voici un exemple des données de ce fichier :
 
 ```
 Albania,4342.011,1.511
@@ -102,39 +102,39 @@ Angola,18021.394,0.605
 
 --- collapse ---
 ---
-title: Threatened species
+title: Espèces menacées
 ---
 
-**File name:** `species.csv`
+**Nom du fichier :** `species.csv`
 
-This data is about the number of plant and animal species that are under threat in each region. The columns of the data are:
+Ces données concernent le nombre d’espèces végétales et animales menacées dans chaque région. Les colonnes des données sont :
 
- - The name of the region
- - The number of threatened species in that region
+ - Le nom de la région
+ - Le nombre d'espèces menacées dans cette région
 
-Here is an example of the data in this file:
+Voici un exemple des données de ce fichier :
 
 ```
 Afghanistan,42
-Albania,130
-Algeria,135
+Albanie,130
+Algérie,135
 ```
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: National wealth
+title: Richesse nationale
 ---
 
-**File name:** `gdp.csv`
+**Nom du fichier :** `gdp.csv`
 
-The gross domestic product (GDP) of a region measures the size of its economy. Regions with larger GDPs are usually richer. The columns of the data are:
+Le produit intérieur brut (PIB) d'une région mesure la taille de son économie. Les régions avec des PIB plus élevés sont généralement plus riches. Les colonnes des données sont :
 
- - The name of the region
- - The total GDP of that region
+ - Le nom de la région
+ - Le PIB total de cette région
 
-Here is an example of the data in this file:
+Voici un exemple des données de ce fichier :
 
 ```
 Aruba,3056424581
@@ -146,18 +146,18 @@ Angola,1.22124E+11
 
 --- collapse ---
 ---
-title: World happiness
+title: Le niveau de bonheur mondial
 ---
 
-**File name:** `happy.csv`
+**Nom du fichier :** `happy.csv`
 
-This data is from the world happiness report. The report is a survey of the happiness of people in different regions. People were asked to score their happiness on a scale of 0–10. The columns of the data are:
+Ces données proviennent du rapport sur le bonheur dans le monde. Le rapport est une enquête sur le bonheur des habitants de différentes régions. Il a été demandé aux gens d’évaluer leur bonheur sur une échelle de 0 à 10. Les colonnes des données sont :
 
- - The name of the region
- - Where that region ranks in the world for average happiness
- - The average happiness score for the region
+ - Le nom de la région
+ - Classement de la région dans le monde pour le bonheur moyen
+ - Le score de bonheur moyen de la région
 
-Here is an example of the data in this file:
+Voici un exemple des données de ce fichier :
 
 ```
 Norway,1,7.537000179
@@ -171,9 +171,9 @@ Iceland,3,7.504000187
 
 --- task ---
 
-Now that you have picked your data, you need to load it into your program.
+Maintenant que tu as sélectionné tes données, tu dois les charger dans ton programme.
 
-Define a `load_data()` function to take a `file_name` variable. Have your function open that file and `print()` out every line in it.
+Définis une fonction `charge_donnees()` qui accepte une variable `nom_fichier`. Ta fonction doit ouvrir ce fichier et `print()` chaque ligne qu'il contient.
 
 [[[parameters]]]
 
@@ -187,50 +187,50 @@ def mouse_pressed(): pixel_colour = Color(get(mouse_x, mouse_y)).hex
 
 def load_data(file_name): with open(file_name) as f: for line in f: print(line) --- /code ---
 
-**Tip:** You will be moving data around a lot in the next few steps. It's a good idea to `print()` everything out. This will help you understand what your data looks like at each step. It's also good for catching bugs. You can comment the `print()` lines out later (with `#`).
+**Astuce :** Tu vas déplacer beaucoup de données dans les prochaines étapes. C'est une bonne idée de `print()` tout. Cela t'aidera à comprendre à quoi ressemblent tes données à chaque étape. C'est aussi un bon moyen de repérer les bogues. Tu peux mettre le `print()` en commentaire par la suite (avec `#`).
 
 --- /task ---
 
 --- task ---
 
-Add a call to `load_data()` in your `setup()` function, you can delete the `pass` that is already in there. Pass it the name of the data file you chose above. You can check the list below if you need a reminder of the file name.
+Ajoute un appel à `charge_donnees()` dans ta fonction `setup()`, tu pourras supprimer l'instruction `pass` qui y est déjà. Passe-lui le nom du fichier de données que tu as choisi ci-dessus. Tu peux consulter la liste ci-dessous si tu as besoin d'un rappel du nom du fichier.
 
- - Olympic host nations — `olympics.csv`
- - World population — `pop.csv`
- - Carbon emissions — `carbon.csv`
- - Threatened species — `species.csv`
- - National wealth — `gdp.csv`
- - World happiness — `happy.csv`
+ - Pays d'accueil des jeux olympiques — `olympics.csv`
+ - Population mondiale — `pop.csv`
+ - Émissions de carbone — `carbon.csv`
+ - Espèces menacées — `species.csv`
+ - Richesse nationale — `gdp.csv`
+ - Niveau de bonheur mondial — `happy.csv`
 
 --- /task ---
 
 --- task ---
 
-**Test:** Run your program. Check the data that prints out in the output area.
+**Test :** Exécute ton programme. Vérifie les données affichées dans la zone de sortie.
 
-**Debug:** You might get an error message about your file name being 'not defined'. If you do, check that you have put the name in quotes when you call the `load_data()` function. For example, `load_data('pop.csv')`.
+**Débogage :** Tu pourrais recevoir un message d'erreur indiquant que le nom de ton fichier est 'non défini'. Si c'est le cas, vérifie que tu as mis le nom entre guillemets lorsque tu appelles la fonction `charge_donnees()`. Par exemple, `charge_donnees('pop.csv')`.
 
 --- /task ---
 
-Now the data is loaded, you need to get the data for each region and break it into a list. Then you can load that list into a dictionary.
+Maintenant que les données sont chargées, tu dois récupérer les données de chaque région et les répartir dans une liste. Tu peux ensuite charger cette liste dans un dictionnaire.
 
 --- task ---
 
-Add code to your `load_data()` function to use the `split()` function to break each line into a list. Call that list `info`.
+Ajoute du code à ta fonction `charge_donnees()` pour utiliser la fonction `split()` afin de diviser chaque ligne en une liste. Appelle cette liste `info`.
 
 --- collapse ---
 ---
-title: Split a text string into a list
+title: Diviser une chaîne de caractères en une liste
 ---
 
-The `split()` function breaks a string into a list. `split(',')` makes a new list item every time it sees a comma. So,
+La fonction `split()` divise une chaîne de caractères en une liste. `split(',')` crée un nouvel élément de liste à chaque fois qu'il voit une virgule. Donc,
 
 ```python
 info = 'Estonia,1326535,31,42,68'
 my_list = info.split(',')
 ```
 
-would put `['Estonia', '1326535', '31', '42', '68']` into `my_list`.
+mettrait `['Estonia', '1326535', '31', '42', '68']` dans `my_list`.
 
 --- /collapse ---
 
@@ -243,48 +243,48 @@ def load_data(file_name): with open(file_name) as f: for line in f: #print(line)
 
 --- /task ---
 
-Now use the list you made from each region's data to create a dictionary for each region. Include the name of the region and the numbers you want to use in your display.
+Utilise maintenant la liste que tu as créée à partir des données de chaque région pour créer un dictionnaire pour chaque région. Indique le nom de la région et les valeurs que tu souhaites utiliser dans ton affichage.
 
 --- task ---
 
-Add code to your `load_data()` function that converts the data you've chosen into a dictionary.
+Ajoute du code à ta fonction `charge_donnees()` pour convertir les données que tu as choisies en un dictionnaire.
 
-Use `print()` to check the dictionaries look like you expect.
+Utilise la fonction `print()` pour vérifier que les dictionnaires ressemblent à ce que tu attendais.
 
 --- collapse ---
 
 ---
-title: Field names for the csv files
+title: Noms des champs pour les fichiers csv
 ---
 
-Olympic host nations — `olympics.csv`
-   - The name of the region
-   - The number of times they have hosted the games
+Pays d'accueil des jeux olympiques — `olympics.csv`
+   - Le nom de la région
+   - Le nombre de fois qu'ils ont accueilli les jeux
 
-World population — `pop.csv`
-   - The name of the region
-   - How many people live in the region
-   - How many people live in each square kilometre of the region
-   - The average age of people in the region
-   - The percentage of people in that region who live in cities
+Population mondiale — `pop.csv`
+   - Le nom de la région
+   - Combien de personnes vivent dans la région
+   - Combien de personnes vivent dans chaque kilomètre carré de la région
+   - L'âge moyen des habitants de la région
+   - Le pourcentage de personnes dans cette région qui vivent dans des villes
 
-Carbon emissions — `carbon.csv`
-  - The name of the region
-  - How much carbon each region emits in total (in thousands of tons)
-  - How much carbon each region emits, per person that lives in that region (in tons)
+Émissions de carbone — `carbon.csv`
+  - Le nom de la région
+  - Quelle quantité de carbone chaque région émet-elle au total (en milliers de tonnes)
+  - Quantité de carbone émise par chaque région, par personne vivant dans cette région (en tonnes)
 
-Threatened species — `species.csv`
-  - The name of the region
-  - The number of threatened species in that region
+Espèces menacées — `species.csv`
+  - Le nom de la région
+  - Le nombre d'espèces menacées dans cette région
 
-National wealth — `gdp.csv`
- - The name of the region
- - The total GDP of that region
+Richesse nationale — `gdp.csv`
+ - Le nom de la région
+ - Le PIB total de cette région
 
-World happiness — `happy.csv`
-  - The name of the region
-  - Happiness rank
-  - Happiness score
+Niveau de bonheur mondial — `happy.csv`
+  - Le nom de la région
+  - Classement du bonheur
+  - Score de bonheur
 
 --- /collapse ---
 
@@ -299,17 +299,17 @@ def load_data(file_name): with open(file_name) as f: for line in f: #print(line)
 
 --- task ---
 
-**Test:** Run your code and check that the dictionaries it prints out look like you expect them to: a 'name' key with a text string for a value, and whatever keys and values you expect based on your code.
+**Test:** Exécute ton code et vérifie que les dictionnaires qu'il imprime ressemblent à ce que tu attendais : une clé 'nom' avec une chaîne de texte comme valeur, et toutes clés et valeurs que tu attendais en fonction de ton code.
 
-**Debug:** If you see a message about `list index out of range`, check that you are trying to load the right number of values into your region dictionary. This may be a different number of values to the example code above. You should also use key names that match the data you chose.
+**Débogage :** Si tu vois un message concernant `list index out of range`, vérifie que tu essaies de charger le bon nombre de valeurs dans ton dictionnaire de région. Il peut s'agir d'un nombre de valeurs différent de celui de l'exemple de code ci-dessus. Tu dois également utiliser des noms de clés qui correspondent aux données que tu as choisies.
 
 --- /task ---
 
-Now your `load_data()` function creates dictionaries for each region. You need to store those dictionaries somewhere the rest of your program can get them. A list is a good choice.
+Maintenant, ta fonction `charge_donnees()` crée des dictionnaires pour chaque région. Tu dois stocker ces dictionnaires dans un endroit où le reste de ton programme peut les obtenir. Une liste est un bon choix.
 
 --- task ---
 
-Create an empty list called `region_list`.
+Crée une liste vide appelée `liste_regions`.
 
 --- code ---
 ---
@@ -321,7 +321,7 @@ from p5 import * from regions import get_region_coords
 
 region_list = [] --- /code ---
 
-In `load_data()`, add each of your dictionaries to `region_list` using `append`. This will let you work with the data in the rest of your program.
+Dans `charge_donnees()`, ajoute chacun de tes dictionnaires à `liste_regions` en utilisant `append`. Cela te permettra de travailler avec les données dans le reste de ton programme.
 
 --- code ---
 ---
@@ -336,66 +336,66 @@ def load_data(file_name): with open(file_name) as f: for line in f: info = line.
 
 --- task ---
 
-Add a line in your `setup()` function that prints the `region_list` out.
+Ajoute une ligne dans ta fonction `setup()` qui imprime la `liste_regions`.
 
 --- /task ---
 
 --- task ---
 
-**Test:** Run your program and check that it prints out a list of dictionaries. It should look something like this:
+**Test :** Exécute ton programme et vérifie qu'il imprime une liste de dictionnaires. Ça devrait ressembler à ceci :
 
-![Dictionaries printed out as part of a list.](images/regions_list_output.png)
+![Dictionnaires imprimés sous forme de liste.](images/regions_list_output.png)
 
-**Tip:** Like the other `print()` statements you've used, you can comment this line out once you've used it for testing and your code works as expected.
+**Astuce :** Comme pour les autres instructions `print()` que tu as utilisées, tu peux commenter cette ligne une fois que tu l'as utilisée pour tester et que ton code fonctionne comme prévu.
 
 --- /task ---
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Débogage :** il est possible que tu trouves des bogues dans ton projet que tu dois corriger. Voici quelques bogues courants.
 
 --- collapse ---
 ---
-title: My code doesn't run
+title: Mon code ne s'exécute pas
 ---
 
-Check your code is properly indented. The code under the `with` should be indented, and then code under the `for` loop should be indented again.
+Vérifie que ton code est correctement indenté. Le code dans la boucle `with` doit être indenté, et le code sous la boucle `for` doit être indenté également.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: I get a message that the csv file is 'not defined'
+title: Je reçois un message indiquant que le fichier csv est 'non défini.'
 ---
 
-Check your call to `load_data()` to be sure that the name of the file is a string.
+Vérifie ton appel à `charge_donnees()` pour être sûr que le nom du fichier est une chaîne.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: My info list just has one big item in it
+title : Ma liste info ne contient qu'un seul gros élément
 ---
 
-Check that you have `','` in the `()` of `line.split()`
+Vérifie que tu as `','` dans les `()` de `ligne.split()`
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: I get a message that split is 'not defined'
+title: Je reçois un message selon lequel split est 'non défini'
 ---
 
-If you see a message about `split` being 'not defined', check that you have included `line.` before it.
+Si tu reçois un message selon lequel `split` est 'non défini', vérifie que tu as bien inclus `ligne.` avant celui-ci.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: I get a message that region_list is 'not defined'
+title: Je reçois un message selon lequel liste_regions est 'non défini'
 ---
 
-If you see a message about `region_list` being 'not defined', check that you have created it as an empty list — with `region_list = []` — before trying to add things to it
+Si tu reçois un message selon lequel `liste_regions` est 'non defini', vérifie que tu l'as créée comme liste vide — avec `liste_regions = []` — avant d'essayer d'y ajouter des valeurs
 
 --- /collapse ---
 
