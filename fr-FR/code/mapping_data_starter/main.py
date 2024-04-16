@@ -2,14 +2,14 @@
 from p5 import *
 from regions import get_region_coords
 
-# Put code to run once here
+# Mets le code à exécuter une seule fois ici
 
 
 def setup():
     pass
 
 
-# Put code to run when the mouse is pressed here
+# Place ici le code à exécuter lorsque la souris est cliquée
 def mouse_pressed():
     pixel_colour = Color(get(mouse_x, mouse_y)).hex
 
