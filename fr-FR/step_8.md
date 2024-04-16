@@ -1,10 +1,10 @@
-## What next?
+## Et ensuite ?
 
-If you are following the [More Python](https://projects.raspberrypi.org/en/raspberrypi/more-python) path, you can move on to the [Persuasive presentation](https://projects.raspberrypi.org/en/projects/persuasive-data-presentation) project. In this project, you will make a visual presentation of your own design, based on data you choose.
+Si tu suis le chemin [Plus de Python](https://projects.raspberrypi.org/en/raspberrypi/more-python), tu peux passer au projet [Présentation persuasive](https://projects.raspberrypi.org/en/projects/persuasive-data-presentation). Dans ce projet, tu feras une présentation visuelle de ta propre conception, basée sur les données que tu choisiras.
 
 --- print-only ---
 
-![Persuasive presentation project](images/persuasive_presentation_project.png){:width="400px"}
+![Projet de présentation convaincante](images/persuasive_presentation_project.png){:width="400px"}
 
 --- /print-only ---
 
@@ -15,4 +15,4 @@ If you are following the [More Python](https://projects.raspberrypi.org/en/raspb
 
 --- /no-print ---
 
-If you want to have more fun exploring Python, then you could try out any of [these projects](https://projects.raspberrypi.org/en/projects?software%5B%5D=python).
+Si tu veux t'amuser davantage en explorant Python, tu peux essayer l'un de [ces projets](https://projects.raspberrypi.org/en/projects?software%5B%5D=python).
