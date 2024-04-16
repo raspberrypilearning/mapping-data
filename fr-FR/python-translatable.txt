@@ -1,54 +1,54 @@
-United States
+États-Unis
 
-United Kingdom
+Royaume-Uni
 
-Greece
+Grèce
 
 Afghanistan
 
-Albania
+Albanie
 
-Algeria
+Algérie
 
 Angola
 
 Aruba
 
-Norway
+Norvège
 
-Denmark
+Danemark
 
-Iceland
+Islande
 
-Estonia
+Estonie
 
-pixel_colour
+couleur_pixel
 
-load_data
+charge_donnees
 
-file_name
+nom_fichier
 
-line
+ligne
 
 my_list
 
 info
 
-region_dict
+dico_regions
 
 region
 
-happiness rank
+rang de bonheur
 
-happiness score
+classement du bonheur
 
 get_region_coords
 
-region_list
+liste_regions
 
 preload
 
-map
+carte
 
 image
 
@@ -56,13 +56,13 @@ width
 
 height
 
-draw_pin
+dessine_epingle
 
-colour
+couleur
 
-draw_data
+dessine_donnees
 
-region_name
+nom_region
 
 region_coords
 
@@ -70,45 +70,45 @@ region_x
 
 region_y
 
-region_colour
+couleur_region
 
-red_value
+valeur_rouge
 
-blue_value
+valeur_bleu
 
-green_value
+valeur_vert
 
-facts
+faits
 
-Region not detected
+Région non détectée
 
-happiness_rank
+classement_bonheur
 
-happiness_score
+score_bonheur
 
-pets
+animaux
 
-pet
+animal
 
-cat
+chat
 
-count
+nombre
 
-dog
+chien
 
-rabbit
+lapin
 
-dogs
+chiens
 
-dogs_count
+nombre_de_chiens
 
-my_function
+ma_fonction
 
-result
+resultat
 
-name
+nom
 
-capital
+capitale
 
 latitude
 
