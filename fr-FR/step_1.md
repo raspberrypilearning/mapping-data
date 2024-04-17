@@ -19,7 +19,7 @@ Exécute cet exemple.
 
 Clique sur les épingles colorées pour imprimer les informations relatives à cette région. Réfléchis au type de données que tu aimerais afficher et à la manière dont tu pourrais concevoir une épingle de forme intéressante pour les afficher sur une carte.
 
-**Mesures du bonheur dans le monde:**:
+**World happiness measures**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/world-happiness-measures" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe> Tu peux trouver le projet de mesures du bonheur dans le monde [ici](https://editor.raspberrypi.org/en/projects/world-happiness-measures){:target="_blank"}
 
@@ -37,15 +37,15 @@ Tu vas devoir prendre des décisions concernant les données que tu souhaites mo
 
 Explore ces exemples de projets pour obtenir plus d'idées :
 
-**Cartographie de la mesure du bonheur dans le monde :**
+**Ink world happiness**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/ink-world-happiness" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe> Tu peux trouver le projet Cartographie de la mesure du bonheur dans le monde [ici](https://editor.raspberrypi.org/en/projects/ink-world-happiness){:target="_blank"}
 
-**Données mondiales sur le carbone :**
+**World carbon data**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/world-carbon-data" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe> Tu peux trouver le projet Données mondiales sur le carbone [ici](https://editor.raspberrypi.org/en/projects/world-carbon-data){:target="_blank"}
 
-**PIB :**
+**GDP**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/mapping-data-gdp" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe> Tu peux trouver le projet PIB [ici](https://editor.raspberrypi.org/en/projects/mapping-data-gdp){:target="_blank"}
 
