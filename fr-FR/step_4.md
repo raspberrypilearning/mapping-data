@@ -127,7 +127,7 @@ def dessine_donnees():
         region_coords = get_region_coords(nom_region)
         region_x = region_coords['x']
         region_y = region_coords['y']
-        region_colour = Color(valeur_rouge, 0, 0) # Utilise la valeur rouge dans la couleur
+        couleur_region = Color(valeur_rouge, 0, 0) # Utilise la valeur rouge dans la couleur
         dessine_epingle(region_x, region_y, couleur_region)
         valeur_rouge -= 1 # Change la valeur du rouge
 

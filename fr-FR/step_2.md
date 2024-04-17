@@ -238,7 +238,7 @@ info = 'Estonie,1326535,31,42,68'
 ma_liste = info.split(',')
 ```
 
-mettrait `['Estonie', '1326535', '31', '42', '68']` dans `my_list`.
+mettrait `['Estonie', '1326535', '31', '42', '68']` dans `ma_liste`.
 
 --- /collapse ---
 
