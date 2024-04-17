@@ -1,0 +1,47 @@
+Put code to run when the mouse is pressed here
+
+Change the dictionary to match the data you're using
+
+Put code to run once here
+
+Replace with your image
+
+The image to draw
+
+The x of the top-left corner
+
+The y of the top-left corner
+
+The width of the image
+
+The height of the image
+
+Put code to draw your pin here
+
+Get the name of the region
+
+Use the name to get coordinates
+
+Get the x coordinate
+
+Get the y coordinate
+
+Set the pin colour
+
+Draw the pin
+
+Set a starting value for red
+
+Use the red value in the colour
+
+Change the red value
+
+Change the green value
+
+Change the blue value
+
+Select a random colour
+
+Your first data fact
+
+Your second data fact

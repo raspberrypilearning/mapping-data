@@ -1,0 +1,47 @@
+Place ici le code à exécuter lorsque la souris est cliquée
+
+Modifie le dictionnaire pour qu'il corresponde aux données que tu utilises
+
+Mettre le code à exécuter une fois ici
+
+Remplace par ton image
+
+L'image à dessiner
+
+Le x du coin supérieur gauche
+
+Le y du coin supérieur gauche
+
+La largeur de l'image
+
+La hauteur de l'image
+
+Place le code pour dessiner ton épingle ici
+
+Obtenir le nom de la région
+
+Utilise le nom pour obtenir les coordonnées
+
+Récupère la coordonnée x
+
+Récupère la coordonnée y
+
+Définir la couleur de l'épingle
+
+Dessiner l'épingle
+
+Définir une valeur de départ pour le rouge
+
+Utilise la valeur rouge dans la couleur
+
+Change la valeur du rouge
+
+Change la valeur du vert
+
+Change la valeur du bleu
+
+Sélectionne une couleur aléatoire
+
+Ton premier fait de données
+
+Ton deuxième fait de données
