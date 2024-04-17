@@ -1,0 +1,31 @@
+---
+title: Cartographier des données
+hero_image: images/banner.png
+description:
+  Utiliser Python pour créer une carte interactive qui permet aux utilisateurs d'apprendre des choses intéressantes faits sur le monde
+meta_title: Projets de codage Python pour enfants et adolescents | Cartographier des données
+meta_description: Apprends le langage Python avec les projets de codage de la Raspberry Pi Foundation pour les enfants et les adolescents. Utilise Python pour dessiner une carte et apprendre des faits intéressants sur le monde.
+version: 4
+listed: true
+copyedit: true
+last_tested: "2021-03-26"
+steps:
+  - title: Ce que tu vas faire
+  - title: Choisir et charger un jeu de données
+  - title: Choisir une carte et des épingles
+    completion:
+      - engaged
+  - title: Marquer tes données
+    completion:
+      - internal
+  - title: Questionnaire rapide
+    knowledge_quiz:
+      path: quiz1
+      version: 1
+      questions: 3
+      passing_score: 3
+    completion:
+      - external
+  - title: Améliorer ton projet
+  - title: Partager
+  - title: Et ensuite ?

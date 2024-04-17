@@ -1,0 +1,3 @@
+name: "Cartographier des données : PIB"
+identifier: "mapping-data-gdp"
+type: 'python'

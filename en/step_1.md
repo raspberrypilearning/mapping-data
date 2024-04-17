@@ -19,7 +19,7 @@ Run this example.
 
 Click on the coloured pins to see information about that region printed out. Think about the kind of data you would like to display, and how you could design an interesting shaped pin to mark it on a map.
 
-**World happiness measures:**:
+**World happiness measures**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/world-happiness-measures" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 You can find the World happiness measures project [here](https://editor.raspberrypi.org/en/projects/world-happiness-measures){:target="_blank"}
@@ -38,17 +38,17 @@ You are going to make some design decisions about what data you want to show to 
 
 Explore these example projects to get more ideas:
 
-**Ink world happiness:**:
+**Ink world happiness**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/ink-world-happiness" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 You can find the Ink world happiness project [here](https://editor.raspberrypi.org/en/projects/ink-world-happiness){:target="_blank"}
 
-**World carbon data:**:
+**World carbon data**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/world-carbon-data" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 You can find the World carbon data project [here](https://editor.raspberrypi.org/en/projects/world-carbon-data){:target="_blank"}
 
-**GDP:**:
+**GDP**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/mapping-data-gdp" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 You can find the GDP project [here](https://editor.raspberrypi.org/en/projects/mapping-data-gdp){:target="_blank"}
