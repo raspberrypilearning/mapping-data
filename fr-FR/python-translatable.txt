@@ -30,7 +30,7 @@ nom_fichier
 
 ligne
 
-my_list
+ma_liste
 
 info
 
