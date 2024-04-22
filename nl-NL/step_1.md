@@ -1,53 +1,53 @@
-## You will make
+## Wat ga je maken
 
-Use Python to make an interactive map that lets users learn interesting facts about the world.
+Gebruik Python om een interactieve kaart te maken waarmee gebruikers interessante feiten over de wereld leren.
 
-You will:
-+ Use lists and dictionaries to store data
-+ Use functions and parameters to keep your code clean
-+ Use code to quickly explore large amounts of data
+Je gaat:
++ Lijsten en dictionaries gebruiken om data op te slaan
++ Functies en parameters gebruiken om je code overzichtelijk te houden
++ Code gebruiken om snel grote hoeveelheden data te verkennen
 
-![Four maps with different styles. Each has a series of pins created from geometric shapes that are plotted at region coordinates.](images/map-examples.png)
+![Vier kaarten met verschillende stijlen. Elk heeft een reeks spelden, gemaakt van geometrische vormen die zijn uitgezet op regiocoördinaten.](images/map-examples.png)
 
 --- no-print ---
 
 --- task ---
 
-### Play ▶️
+### Afspelen ▶️
 
-Run this example.
+Voer dit voorbeeld uit.
 
-Click on the coloured pins to see information about that region printed out. Think about the kind of data you would like to display, and how you could design an interesting shaped pin to mark it on a map.
+Klik op de gekleurde spelden om informatie over dat gebied te zien. Denk aan het soort gegevens dat je wilt weergeven, en hoe je een interessante speld kunt ontwerpen om deze op een kaart te markeren.
 
-**World happiness measures**:
+**Wereld geluksmetingen**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/world-happiness-measures" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> You can find the World happiness measures project [here](https://editor.raspberrypi.org/en/projects/world-happiness-measures){:target="_blank"}
+</iframe> Je kunt het Wereld geluksmetingen project [hier](https://editor.raspberrypi.org/en/projects/world-happiness-measures){:target="_ blank"} vinden
 
 --- /task ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Map projections**</span> are the different ways of drawing the Earth on a map. It's not possible to make a 2D map that shows the true sizes and distances that exist in the 3D world, although map-makers are getting better at it. The map in this project uses the web mercator projection — the same one used by sites like Google Maps. This projection makes places nearer the poles look bigger than they are: Greenland is a lot smaller than this map shows and, by comparison, Africa is a lot bigger.
+<span style="color: #0faeb0">**Kaartprojecties**</span> zijn de verschillende manieren om de aarde op een kaart te tekenen. Het is niet mogelijk om een 2D-kaart te maken die de werkelijke afmetingen en afstanden weergeeft die in de 3D-wereld bestaan, hoewel kaartenmakers er steeds beter in worden. De kaart in dit project maakt gebruik van de web mercator projectie, dezelfde die wordt gebruikt door sites als Google Maps. Door deze projectie lijken plaatsen dichter bij de polen groter dan ze zijn: Groenland is een stuk kleiner dan deze kaart laat zien en, ter vergelijking, Afrika is een stuk groter.
 </p>
 
-### Get ideas 💭
+### Ideeën opdoen 💭
 
-You are going to make some design decisions about what data you want to show to your users, as well as what style of map and pins you will use to display that data.
+Je gaat enkele ontwerpbesluiten nemen over welke gegevens je wilt laten zien aan jouw gebruikers, en ook welke stijl van kaart en spelden je zal gebruiken om die gegevens weer te geven.
 
 --- task ---
 
-Explore these example projects to get more ideas:
+Bekijk deze voorbeeldprojecten om meer ideeën op te doen:
 
-**Ink world happiness**:
+**Ink wereld geluk:**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/ink-world-happiness" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> You can find the Ink world happiness project [here](https://editor.raspberrypi.org/en/projects/ink-world-happiness){:target="_blank"}
+</iframe> Je kunt het Ink Wereld geluk-project[ hier vinden](https://editor.raspberrypi.org/en/projects/ink-world-happiness){:target="_blank"}
 
-**World carbon data**:
+**Wereldkoolstofgegevens:**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/world-carbon-data" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> You can find the World carbon data project [here](https://editor.raspberrypi.org/en/projects/world-carbon-data){:target="_blank"}
+</iframe> Je kunt het Wereld koolstof data project [hier vinden](https://editor.raspberrypi.org/en/projects/world-carbon-data){:target="_ blank"}
 
 **GDP**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/mapping-data-gdp" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> You can find the GDP project [here](https://editor.raspberrypi.org/en/projects/mapping-data-gdp){:target="_blank"}
+</iframe> Je kunt het BBP-project [hier vinden](https://editor.raspberrypi.org/en/projects/mapping-data-gdp){:target="_blank"}
 
 --- /task ---
 
@@ -55,15 +55,15 @@ Explore these example projects to get more ideas:
 
 --- print-only ---
 
-### Get ideas 💭
+### Ideeën opdoen 💭
 
-You are going to make some design decisions about what data you want to show to your users, as well as what style of map and pins you will use to display that data.
+Je gaat enkele ontwerpbesluiten nemen over welke gegevens je wilt laten zien aan jouw gebruikers, en ook welke stijl van kaart en spelden je zal gebruiken om die gegevens weer te geven.
 
-![World happiness measures](images/happiness-tech.png){:width="300px"}
-You can find the World happiness measures project here https://editor.raspberrypi.org/en/projects/world-happiness-measures ![Ink world happiness](images/happiness-ink.png){:width="300px"}
-You can find the Ink world happiness project here https://editor.raspberrypi.org/en/projects/ink-world-happiness ![World carbon data example](images/carbon.png){:width="300px"}
-You can find the World carbon data project here https://editor.raspberrypi.org/en/projects/world-carbon-data ![GDP](images/gdp.png){:width="300px"}
-You can find the GDP project here https://editor.raspberrypi.org/en/projects/mapping-data-gdp
+![Metingen van geluk in de wereld](images/happiness-tech.png){:width="300px"}
+Je kunt de Wereld geluk meting project hier vinden https://editor.raspberrypi. rg/en/projects/world-happiness-measures ![Ink world happiness](images/happiness-ink.png){:width="300px"}
+Je kunt het Ink wereld geluk project hier vinden https://editor.raspberrypi. rg/en/projects/ink-world-happiness ![World carbon data example](images/carbon.png){:width="300px"}
+Je kunt het Wereld CO2 data project hier vinden https://editor.raspberrypi. rg/en/projects/world-carbon-data ![GDP](images/gdp.png){:width="300px"}
+Je kunt het BBP project hier vinden https://editor.raspberrypi.org/en/projects/mapping-data-gdp
 
 --- /print-only ---
 
