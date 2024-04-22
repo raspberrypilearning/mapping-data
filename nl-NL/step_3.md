@@ -1,17 +1,17 @@
-## Pick a map and pins
+## Kies een kaart en spelden
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Choose how you'll display the data you've selected.
+Kies hoe je de gegevens wilt weergeven die je hebt geselecteerd.
 </div>
 <div>
-![A map with a single pin marked in the centre.](images/single_pin.png){:width="300px"}
+![Een kaart met één enkele pin gemarkeerd in het midden.](images/single_pin.png){:width="300px"}
 </div>
 </div>
 
 --- task ---
 
-Add code to your `setup()` function to set the size of your canvas to **991** pixels wide and **768** pixels high.
+Voeg code toe aan je `setup()` functie om de grootte van je canvas in te stellen op **991** pixels breed en **768** pixels hoog.
 
 --- code ---
 ---
@@ -28,20 +28,20 @@ def setup(): size(991, 768) load_data('happy.csv')
 
 --- task ---
 
-Think about how you want to display the data you've picked: what kind of map do you want to use?
+Denk na over hoe je de gegevens die je hebt gekozen wilt weergeven: wat voor kaart wil je gebruiken?
 + ink-map.jpg
 + mercator.jpeg
 + mercator_bw.png
 + old-map.jpg
 + computer-map.jpg
 
-![A list of map images available in the starter project](images/all_maps.png)
+![Een lijst met kaartafbeeldingen die beschikbaar zijn in het startproject](images/all_maps.png)
 
 --- /task ---
 
 --- task ---
 
-**Choose:** The starter project includes five map images. Pick one you like, and load the image in a `preload` function.
+**Kies:** Het startproject bevat vijf kaartafbeeldingen. Kies er een die je leuk vindt en laad de afbeelding in een `preload` functie.
 
 --- code ---
 ---
@@ -56,7 +56,7 @@ def preload(): global map map = load_image('mercator.jpeg')
 
 --- task ---
 
-Add code to your `setup()` function to draw the map so it covers the whole canvas.
+Voeg code toe aan je `setup()` functie om de kaart zo te tekenen dat deze het hele canvas bedekt.
 
 [[[p5-coordinates]]]
 
@@ -73,35 +73,35 @@ image( map,  # The image to draw 0,  # The x of the top-left corner 0,  # The y 
 
 --- task ---
 
-**Test:** Run your program and look at your map!
+**Test:** Voer je programma uit en kijk naar je kaart!
+
+---/task---
+
+--- task ---
+
+**Kies:** Welke speld ga je op elke locatie plaatsen? Je speld moet één kleur hebben zodat een gebruiker er gemakkelijk op kan klikken.
+
+Je kunt één vorm kiezen, zoals:
++ Een cirkel
++ Een vierkant
++ Een driehoek
+
+Of je kunt een speld maken uit meerdere geometrische vormen, zoals:
++ Een hart
++ Een kaart speld
++ Een ster
+
+![Een selectie van spelden gemaakt van geometrische vormen, waaronder een vierkant, spin, hart, cirkel en ster.](images/pin-examples.png)
 
 --- /task ---
 
 --- task ---
 
-**Choose:** What shape of pin will you place in each location? Your pin will need to be a single colour so that it is easy for a user to click on.
+Definieer een functie met de naam `teken_speld`. Deze zou een speld, naar eigen ontwerp, moeten tekenen op de kaart. Er moeten drie parameters zijn:
 
-You could choose a single shape, such as:
-+ A circle
-+ A square
-+ A triangle
-
-Or you could create a pin out of multiple geometric shapes, such as:
-+ A heart
-+ A map pin
-+ A star
-
-![A selection of pins made from geometric shapes including a square, pin, heart, circle and star.](images/pin-examples.png)
-
---- /task ---
-
---- task ---
-
-Define a function called `draw_pin`. It should draw a pin, of your own design, on the map. It should take three parameters:
-
- - The x coordinate for the pin.
- - The y coordinate for the pin.
- - The colour of the pin. This should be a `p5` `Color()`.
+ - De x-coördinaat voor de speld.
+ - De y-coördinaat voor de speld.
+ - De kleur van de speld. Dit moet een `p5` `Color()`zijn.
 
 --- code ---
 ---
@@ -110,9 +110,9 @@ line_highlights:
 ---
 def draw_pin(x, y, colour): # Put code to draw your pin here --- /code ---
 
-As you create your `draw_pin` function, call it to see how it appears on the screen. You should call your `draw_pin` function from the `setup()` function.
+Terwijl je jouw `teken_speld` functie maakt, roep deze aan om te zien hoe deze op het scherm verschijnt. Je moet de functie `teken_speld` aanroepen vanuit de functie `setup()`.
 
-You can use the arguments shown below to place a `red` pin the middle of the screen.
+Je kunt de hieronder weergegeven argumenten gebruiken om een `rode` speld in het midden van het scherm te plaatsen.
 
 --- code ---
 ---
@@ -125,31 +125,31 @@ def setup(): # Put code to run once here size(991, 768) image( map,  # The image
 
 --- collapse ---
 ---
-title: Colours in p5
+title: Kleuren in p5
 ---
 
-The `p5` `Color()` function expects three numbers: one each for red, green, and blue.
+De functie `p5` `Color()` verwacht drie getallen: één voor rood, groen en blauw.
 
 ```python
-blue = Color(92, 204, 206) #Red = 92, Green = 204, Blue = 206
+blauw = Color(92, 204, 206) #Rood = 92, Groen = 204, Blauw = 206
 ```
 
-You can use the `fill()` function to fill a shape with colour. `fill()` applies to every shape drawn after it.
+Je kunt de functie `fill()` gebruiken om een vorm met kleur te vullen. `fill()` is van toepassing op elke vorm die erna wordt getekend.
 
 ```python
-green = Color(149, 212, 122)
-fill(green)
-rect(0, 250, 400, 150)  # This shape will be filled with the colour
+groen = Color(149, 212, 122)
+fill(groen)
+rect(0, 250, 400, 150) # Deze vorm wordt gevuld met de kleur
 ```
 
-To remove fills completely, call `no_fill()` before drawing your shape(s).
+Om ervoor te zorgen dat fill ongedaan wordt gemaakt, roep je `no_fill()` aan voordat je jouw vorm(en) tekent.
 
-You can set a colour for the border around a shape with the `stroke()` function:
+Je kunt ook een kleur instellen voor de rand rond een vorm met de functie `stroke()`:
 
 ```python
-white = Color(255, 255, 255)
-stroke(white)
-rect(0, 250, 400, 150)  # This shape will have a white border
+wit = Color(255, 255, 255)
+stroke(wit)
+rect(0, 250, 400, 150) # Deze vorm heeft een witte rand
 ```
 
 --- /collapse ---
@@ -162,37 +162,37 @@ rect(0, 250, 400, 150)  # This shape will have a white border
 
 [[[processing-python-triangle]]]
 
-**Tip:** Your `draw_pin` function can make other shapes out of these basic ones.
+**Tip:** Je `teken_speld` functie kan andere vormen maken van deze basisvormen.
 
 --- /task ---
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Fouten opsporen:** Mogelijk vind je enkele fouten in jouw project die je moet oplossen. Hier zijn enkele veelvoorkomende fouten.
 
 --- collapse ---
 ---
-title: My map isn't loading
+title: Mijn kaart laadt niet
 ---
 
-Check the filename really carefully — remember capital letters are different to lower-case letters and punctuation is important.
+Controleer de bestandsnaam zorgvuldig - vergeet niet dat hoofdletters verschillen van kleine letters en leestekens belangrijk zijn.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: My map is the wrong size
+titel: Mijn kaart heeft het verkeerde formaat
 ---
 
-Check the inputs that control the width and height of the image:
+Controleer de invoer die de breedte en hoogte van de afbeelding bepaalt:
 
 ```python
     image(
-        map,  # The image to draw
-        0,  # The x of the top-left corner
-        0,  # The y of the top-left corner
-        width,  # The width of the image
-        height  # The height of the image
+        map,  # De afbeelding die wordt getekend
+        0,  # De x van de linkerbovenhoek
+        0,  # De y van de linkerbovenhoek
+        width,  # De breedte van de afbeelding
+        height  # De hoogte van de afbeelding
     )
 ```
 
@@ -200,10 +200,10 @@ Check the inputs that control the width and height of the image:
 
 --- collapse ---
 ---
-title: My pin isn't appearing
+title: Mijn speld verschijnt niet
 ---
 
-Make sure that you have called the `draw_pin()` function in your `draw()` function, and passed it the values it needs. For example:
+Zorg ervoor dat je de functie `teken_speld()` in je functie `draw()` hebt aangeroepen en de benodigde waarden hebt doorgegeven. Bijvoorbeeld:
 
 --- code ---
 ---
@@ -214,7 +214,7 @@ filename: main.py - draw()
     draw_pin(width/2, height/2, Color(255,0,0))
 --- /code ---
 
-Also, make sure you are calling `draw_pin()` after you call `image()` to create the background. If not, you're drawing the map over the pin!
+Zorg er ook voor dat je `teken_speld()` aanroept nadat je `image()` hebt aangeroepen om de achtergrond te maken. Zo niet, dan teken je de kaart over de speld!
 
 --- /collapse ---
 
