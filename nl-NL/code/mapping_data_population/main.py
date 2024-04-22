@@ -1,71 +1,71 @@
 #!/bin/python3
 from p5 import *
-from regions import get_region_coords
+from regions import haal_regio_coördinaten
 from random import randint
 
-region_list = []
-colours = {}
+regio_lijst = []
+kleuren = {}
 
 def preload():
-    global map
-    map = load_image('mercator_bw.png')
+    wereldkaart
+    kaart = load_image('mercator_bw.png')
 
 
-# Put code to run once here
+# Zet de code om eenmalig uit te voeren hier onder
 def setup():
     size(991, 768)
-    load_data('pop.csv')
+    load_data ('pop.csv')
     image(
-        map,  # The image to draw
-        0,  # The x of the top-left corner
-        0,  # The y of the top-left corner
-        width,  # The width of the image
-        height  # The height of the image
+        kaart, # De afbeelding om te tekenen
+        0, # De x van de linkerbovenhoek
+        0, # De y van de linker bovenhoek
+        width, # De breedte van de afbeelding
+        height # De hoogte van de afbeelding
     )
-    draw_pin(300, 300, Color(255, 0, 0))
-    draw_data()
+    teken_speld(300, 300, Color(255, 0, 0))
+    teken_gegevens()
 
 
-def draw_pin(x_coord, y_coord, colour):
+def teken_pin(x_coord, y_coord, kleur):
     no_stroke()
-    fill(colour)
+    fill(kleur)
     rect(x_coord, y_coord, 10, 10)
 
-def load_data(file_name):
+def laad_gegevens(file_name):
     with open(file_name) as f:
         for line in f:
             info = line.split(',')
-            region_dict = {
-                'region': info[0],
-                'population': info[1],
-                'population density': info[2]
+            regio_dict = {
+                'regio': info[0],
+                'bevolking': info[1],
+                'bevolkingsdichtheid': info[2]
             }
-            region_list.append(region_dict)
+            regio_lijst.append(regio_dict)
 
-def draw_data():
-    green_value = 255
-    for region in region_list:
-        region_name = region['region']  # Get the name of the region
-        region_coords = get_region_coords(region_name)  # Use the name to get coordinates
-        region_x = region_coords['x']  # Get the x coordinate
-        region_y = region_coords['y']  # Get the y coordinate
-        #print(region_name, region_x, region_y)
-        region_colour = Color(0, green_value, 0)  # Set the pin colour
-        colours[region_colour.hex] = region
-        draw_pin(region_x, region_y, region_colour)
-        green_value -= 1
+def teken_gegevens():
+    groen_waarde = 255
+    for regio in regio_lijst:
+        regio_naam = regio['regio'] # Haal de naam op van de regio
+        region_coords = haal_regio_coördinaten(regio_name) # Gebruik de naam om coördinaten op te halen
+        regio_x = regio_coördinaten['x'] # Haal de x-coördinaat op
+        regio_y = regio_coördinaten['y'] # Haal de y-coördinaat op
+        #print(regio_naam, regio_x, regio_y)
+        regio_kleur = Color(0, groen_waarde, 0) # Stel de speldkleur in
+        kleuren[regio_kleur.hex] = regio
+        teken_speld(regio_x, regio_y, regio_kleur)
+        groen_waarde -= 1
     
-# Put code to run when the mouse is pressed here
-def mouse_pressed():
-    pixel_colour = Color(get(mouse_x, mouse_y)).hex
+# Zet code hier die moet worden uitgevoerd wanneer de muis wordt ingedrukt
+def muis_ingedrukt():
+    pixel_kleur = Color(get(mouse_x, mouse_y)).hex
     
-    if pixel_colour in colours:
-        facts = colours[pixel_colour]
-        print('Name: ', facts['region'])
-        print('Population: ', facts['population'])
-        print('Population density', facts['population density'])
+    if pixel_kleur in kleuren:
+        feiten = kleuren[pixel_kleur]
+        print('Naam: ', feiten['regio'])
+        print('Bevolking: ', feiten['bevolking'])
+        print('Bevolkingsdichtheid', feiten['bevolkingsdichtheid'])
     else:
-        print('Region not detected')
+        print('Regio niet gedetecteerd')
 
 
 run()
