@@ -2,10 +2,10 @@
 --- question ---
 
 ---
-legend: Question 2 of 3
+legend: Vraag 2 van 3
 ---
 
-You used functions with parameters to load your data and create your map pins. Which of these functions would accept two numbers as parameters, multiply them, and print the result?
+Je hebt functies met parameters gebruikt om jouw gegevens te laden en je kaartspelden te maken. Welke van deze functies zou twee getallen als parameters accepteren, deze vermenigvuldigen en het resultaat afdrukken?
 
 --- choices ---
 
@@ -18,7 +18,7 @@ def my_function():
   print(result)
 ```
 
-  --- feedback --- Not quite! This function does multiply two numbers, but they're always the same numbers. The parameters let you use the same code on different inputs. --- /feedback ---
+  --- feedback --- Niet helemaal! Deze functie vermenigvuldigt wel twee getallen, maar het zijn altijd dezelfde getallen. De parameters laten je dezelfde code gebruiken op verschillende inputs. --- /feedback ---
 
 - ( )
 ```python
@@ -26,7 +26,7 @@ def my_function(a, b):
   print(10)
 ```
 
-  --- feedback --- Not exactly. This function does accept two parameters, but it doesn't use them for anything. The function prints `10` no matter what input it receives. --- /feedback ---
+  --- feedback --- Niet helemaal. Deze functie accepteert twee parameters, maar gebruikt ze nergens voor. De functie drukt `10` af, ongeacht welke invoer deze ontvangt. --- /feedback ---
 
 - ( )
 ```python
@@ -35,7 +35,7 @@ def my_function():
   print(result)
 ```
 
-  --- feedback --- Close. This function does work with `a` and `b` as though they are parameters. But they're never actually set as parameters to the function. --- /feedback ---
+  --- feedback --- Bijna. Deze functie werkt met `a` en `b` alsof het parameters zijn. Maar ze worden nooit daadwerkelijk ingesteld als parameters voor de functie. --- /feedback ---
 
 - (x)
 ```python
@@ -44,7 +44,7 @@ def my_function(a, b):
   print(result)
 ```
 
-  --- feedback --- That's right! This function takes `a` and `b` as parameters, multiplies them, and prints out the result. --- /feedback ---
+  --- feedback --- Dat klopt! Deze functie neemt `a` en `b` als parameters, vermenigvuldigt deze en drukt het resultaat af. --- /feedback ---
 
 --- /choices ---
 
