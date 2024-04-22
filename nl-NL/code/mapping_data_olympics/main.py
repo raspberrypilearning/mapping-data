@@ -1,78 +1,78 @@
 #!/bin/python3
 from p5 import *
-from regions import get_region_coords
+from regions import haal_regio_coördinaten
 
-def load_data(file_name):
-    global region_list
-    region_list = []
+def laad_gegevens(file_name):
+    global regio_lijst
+    regio_lijst = []
 
     with open(file_name) as f:
         for line in f:
             #print(line)
             info = line.split(',')
-            # Change the dictionary to match the data you're using
-            region_dict = {
-                'name': info[0],
-                'host_count': int(info[1])
+            # Wijzig de dictionary zodat deze overeenkomt met de gegevens die je gebruikt
+            regio_dict = {
+                'naam': info[0],
+                'organisator_aantal': int(info[1])
             }
-            #print(region_dict)
-            region_list.append(region_dict)
+            #print(regio_dict)
+            regio_lijst.append(regio_dict)
 
 
 def preload():
-    global map
-    map = load_image('mercator.jpeg')
+    wereldkaart
+    kaart = load_image('mercator.jpeg')
 
 
-def draw_pin(x, y, colour, host_count):
+def teken_speld(x, y, kleur, organisator_aantal):
     no_stroke()
-    fill(colour)
-    size = 7 + 3 * host_count
-    ellipse(x, y, size, size)
+    fill(kleur)
+    grootte = 7 + 3 * organisator_aantal
+    ellipse(x, y, grootte, grootte)
 
 
-def draw_data():
-    global colours
-    colours = {}
-    blue_value = 255
+def teken_gegevens():
+    wereld kleuren
+    kleuren = {}
+    blauw_waarde = 255
 
-    for region in region_list:
-        region_name = region['name']
-        region_coords = get_region_coords(region_name)
-        region_x = region_coords['x']
-        region_y = region_coords['y']
-        host_count = region['host_count']
-        region_colour = Color(0, 0, blue_value)
-        draw_pin(region_x, region_y, region_colour, host_count)
-        colours[region_colour.hex] = region
-        blue_value -= 1
+    for regio in regio_lijst:
+        regionaam = regio['naam']
+        regio_coördinaten = haal_regio_coördinaten(regio_naam)
+        regio_x = regio_coördinaten['x']
+        regio_y = regio_coördinaten['y']
+        organisator_aantal = regio['organisator_aantal']
+        regio_kleur = Color(0, 0, blauw_waarde)
+        teken_speld(regio_x, regio_y, regio_kleur, organisator_aantal)
+        kleuren[regio_kleur.hex] = regio
+        blauw_waarde -= 1
   
   
 def setup():
-    # Put code to run once here
+    # Zet de code om eenmalig uit te voeren hier onder
     size(991, 768)
-    load_data('olympics.csv')
+    load_data ('olympics.csv')
     image(
-        map,  # The image to draw
-        0,  # The x of the top-left corner
-        0,  # The y of the top-left corner
-        width,  # The width of the image
-        height  # The height of the image
+        kaart, # De afbeelding om te tekenen
+        0, # De x van de linkerbovenhoek
+        0, # De y van de linker bovenhoek
+        width, # De breedte van de afbeelding
+        height # De hoogte van de afbeelding
     )
     no_stroke()
-    draw_data()
+    teken_gegevens()
 
   
-def mouse_pressed():
-    # Put code to run when the mouse is pressed here
-    pixel_colour = Color(get(mouse_x, mouse_y)).hex
+def muis_ingedrukt():
+    # Zet code hier die moet worden uitgevoerd wanneer de muis wordt ingedrukt
+    pixel_kleur = Color(get(mouse_x, mouse_y)).hex
 
-    if pixel_colour in colours:
-        info = colours[pixel_colour]
-        print(info['region'])
-        if info['host_count'] == 1:
-            print('Hosted the games once.')
+    if pixel_kleur in kleuren:
+        info = kleuren[pixel_kleur]
+        print(info['regio'])
+        if info['organisator_aantal'] == 1:
+            print('Heeft de Spelen één keer georganiseerd.')
         else:
-            print('Hosted the games '+str(info['host_count'])+ ' times.')
+            print('Heeft de games '+str(info['organisator_aantal'])+ ' keer georganiseerd.')
 
 run()
