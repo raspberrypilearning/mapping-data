@@ -1,7 +1,7 @@
 #!/bin/python3
 from math import radians, pi, log, tan
 
-regions = {
+regio's = {
   'Abkhazia': {
     'name': 'Abkhazia',
     'capital': 'Sukhumi',
@@ -1516,33 +1516,33 @@ regions = {
   }
 }
 
-def convert_lat_long(latitude, longitude, map_width, map_height):
+def convert_bre_leng(breedtegraad, lengtegraad, kaartbreedte, kaarthoogte):
   
   false_easting = 180
-  radius = map_width / (2 * pi)
-  latitude = radians(latitude)
-  longitude = radians(longitude + false_easting)
+  straal = kaartbreedte / (2 * pi)
+  breedtegraad = radians(breedtegraad)
+  lengtegraad = radians (lengtegraad + false_easting)
   
-  x_coord = longitude * radius
+  x_coord = lengtegraad * straal
   
-  y_dist_from_equator = radius * log(tan(pi / 4 + latitude / 2))
-  y_coord = map_height / 2 - y_dist_from_equator
+  y_afst_van_evenaar = straal * log(tan(pi / 4 + breedtegraad / 2))
+  y_coord = kaart_hoogte / 2 - y_afst_van_evenaar
   
-  coords = {'x': x_coord, 'y': y_coord}
+  coördinaten = {'x': x_coord, 'y': y_coord}
   
-  return coords
+  return coördinaten
 
 
 def get_available_regions():
-  return regions.keys()
+  retourneer regions.keys()
 
 
-def get_region_coords(region, map_width=991, map_height=768):
-  coords = None
+def haal_regio_coördinaten(regio, map_width=991, map_height=768):
+  coördinaten = None
   
   try:
-    lookup = regions[region]
-    coords = convert_lat_long(lookup['latitude'], lookup['longitude'], map_width, map_height)
-    return coords
+    lookup =regio's[region]
+    coördinaten = convert_bre_leng(lookup['breedtegraad'], zoeken['lengtegraaed'], kaart_breedte, kaart_hoogte)
+    return coördinaten
   except KeyError:
-    print('Region not recognised: ', region)
+    print('Regio niet herkend: ', regio)
