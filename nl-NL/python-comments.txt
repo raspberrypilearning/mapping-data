@@ -1,47 +1,47 @@
-Put code to run when the mouse is pressed here
+Zet code hier die moet worden uitgevoerd wanneer de muis wordt ingedrukt
 
-Change the dictionary to match the data you're using
+Wijzig de dictionary zodat deze overeenkomt met de gegevens die je gebruikt
 
-Put code to run once here
+Zet de code om eenmalig uit te voeren hieronder
 
-Replace with your image
+Vervang door jouw afbeelding
 
-The image to draw
+De afbeelding die wordt getekend
 
-The x of the top-left corner
+De x van de linkerbovenhoek
 
-The y of the top-left corner
+De y van de linkerbovenhoek
 
-The width of the image
+De breedte van de afbeelding
 
-The height of the image
+De hoogte van de afbeelding
 
-Put code to draw your pin here
+Plaats hier code om je speld te tekenen
 
-Get the name of the region
+Haal de naam van de regio op
 
-Use the name to get coordinates
+Gebruik de naam om coördinaten te krijgen
 
-Get the x coordinate
+Verkrijg het x-coördinaat
 
-Get the y coordinate
+Verkrijg het y-coördinaat
 
-Set the pin colour
+Stel de speld kleur in
 
-Draw the pin
+Teken de speld
 
-Set a starting value for red
+Stel een startwaarde voor rood in
 
-Use the red value in the colour
+Gebruik de rode waarde in de kleur
 
-Change the red value
+Wijzig de roodwaarde
 
-Change the green value
+Wijzig de groenwaarde
 
-Change the blue value
+Wijzig de blauwwaarde
 
-Select a random colour
+Selecteer een willekeurige kleur
 
-Your first data fact
+Je eerste data feit
 
-Your second data fact
+Je tweede data feit
