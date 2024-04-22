@@ -1,78 +1,78 @@
 #!/bin/python3
 from p5 import *
-from regions import get_region_coords
+from regions import haal_regio_coördinaten
 
-region_list = []
-colours = {}
+regio_lijst = []
+kleuren = {}
 
 
 def preload():
-    global map
-    map = load_image('old-map.jpg')  # Replace with your image
+    wereldkaart
+    kaart = load_image('old-map.jpg') # Vervang door je afbeelding
 
 
-def draw_pin(x, y, colour):
-    fill(colour)
-    ellipse(x, y, 10, 10)  # x, y, width, height
+def teken_speld(x, y, kleur):
+    fill(kleur)
+    ellipse(x, y, 10, 10) # x, y, breedte, hoogte
 
 
-def draw_data():
+def teken_gegevens():
 
-    red_value = 255  # Set a starting value for red
+    rood_waarde =255 #Stel een startwaarde voor rood in
 
-    for region in region_list:
-        region_name = region['region']  # Get the name of the region
-        # Use the name to get coordinates
-        region_coords = get_region_coords(region_name)
-        region_x = region_coords['x']  # Get the x coordinate
-        region_y = region_coords['y']  # Get the y coordinate
-        # print(region_name, region_x, region_y)
-        region_colour = Color(red_value, 0, 0)  # Set the pin colour
-        colours[region_colour.hex] = region
-        draw_pin(region_x, region_y, region_colour)  # Draw the pin
-        red_value -= 1  # Change the red value
+    for regio in regio_lijst:
+        regio_naam = regio['regio'] # Haal de naam op van de regio
+        # Gebruik de naam om coördinaten te krijgen
+        regio_coördinaten = haal_regio_coördinaten(regio_naam)
+        regio_x = regio_coördinaten['x'] # Haal de x-coördinaat op
+        regio_y = regio_coördinaten['y'] # Haal de y-coördinaat op
+        # print(regio_naam, regio_x, regio_y)
+        regio_kleur = Color(rood_waarde, 0, 0) # Stel de speldkleur in
+        kleuren[regio_kleur.hex] = regio
+        teken_speld(regio_x, regio_y, region_kleur) # Teken de speld
+        rood_waarde -= 1 # Wijzig de roodwaarde
 
-# Put code to run once here
+# Zet de code om eenmalig uit te voeren hier onder
 
 
 def setup():
     size(991, 768)
-    load_data('gdp.csv')
+    load_data ('gdp.csv')
     image(
-        map,  # The image to draw
-        0,  # The x of the top-left corner
-        0,  # The y of the top-left corner
-        width,  # The width of the image
-        height  # The height of the image
+        kaart, # De afbeelding om te tekenen
+        0, # De x van de linkerbovenhoek
+        0, # De y van de linker bovenhoek
+        width, # De breedte van de afbeelding
+        height # De hoogte van de afbeelding
     )
-    draw_pin(300, 300, Color(255, 0, 0))
-    draw_data()
+    teken_speld(300,300, Color(255,0,0))
+    teken_gegevens()
 
 
-# Put code to run when the mouse is pressed here
-def mouse_pressed():
-    pixel_colour = Color(get(mouse_x, mouse_y)).hex
-    if pixel_colour in colours:
-        facts = colours[pixel_colour]
-        print(facts['region'])
-        print(facts['gdp'])
+# Zet code hier die moet worden uitgevoerd wanneer de muis wordt ingedrukt
+def muis_ingedrukt():
+    pixel_kleur = Color(get(mouse_x, mouse_y)).hex
+    if pixel_kleur in kleuren:
+        feiten = kleuren[pixel_kleur]
+        print(feiten['regio'])
+        print(feiten['bbp'])
     else:
-        print('Region not detected')
+        print('Regio niet gedetecteerd')
 
 
-def load_data(file_name):
+def laad_gegevens(file_name):
     with open(file_name) as f:
         for line in f:
             # print(line)
             info = line.split(',')
-            # Change the dictionary to match the data you're using
-            region_dict = {
-                'region': info[0],
-                'gdp': info[1]
+            # Wijzig de dictionary zodat deze overeenkomt met de gegevens die je gebruikt
+            regio_dict = {
+                'regio': info[0],
+                'bbp': info[1]
             }
-            # print(region_dict)
-            region_list.append(region_dict)
-            # print(region_list)
+            # print(regio_dict)
+            regio_lijst.append(regio_dict)
+            # print(regio_lijst)
 
 
 run()
