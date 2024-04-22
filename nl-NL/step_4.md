@@ -1,23 +1,23 @@
-## Mark your data
+## Je gegevens markeren
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Display your data on the map, and make it interactive.
+Toon je gegevens op de kaart en maak deze interactief.
 </div>
 <div>
-![A map with many pins. Information appears in the text output for some pins.](images/map_many_pins.png){:width="300px"}
+![Een kaart met veel spelden. Informatie wordt weergegeven in de tekstuitvoer voor sommige spelden.](images/map_many_pins.png){:width="300px"}
 </div>
 </div>
 
-Before you can put pins on the map for each place you have data about, you need to know where those places are. The starter project includes code to give you those locations.
+Voordat je spelden op de kaart kunt zetten voor elke plaats die je gegevens hebt, moet je weten waar die plaatsen zijn. Het startersproject bevat code om je deze locaties te geven.
 
-You can use `get_region_coords()` to return a dictionary of the coordinates for a region. For example `get_region_coords('Japan')` will return `{'x': 880.151122422, 'y': 278.639809465}`.
+Je kunt de `haal_regio_coördinaten()` functie gebruiken om een dictionary met de coördinaten voor een regio terug te geven. Bijvoorbeeld `haal_regio_coördinaten('Japan')` zal `{'x': 880.151122422, 'y': 278.639809465}` retourneren.
 
 --- task ---
 
-Define a `draw_data()` function to put your data on the map. At first you can just print out the region's name and its `x` and `y` coordinates.
+Definieer een `teken_data()` functie om je gegevens op de kaart te plaatsen. Eerst kun je gewoon de naam van de regio en de `x` en `y` coördinaten afdrukken.
 
-It should loop through your `region_list` and print a line for each region.
+Het zou door je `regio_lijst` moeten lopen en een lijn voor elke regio moeten afdrukken.
 
 --- code ---
 ---
@@ -32,7 +32,7 @@ def draw_data(): for region in region_list: region_name = region['region'] # Ge
 
 --- task ---
 
-In your `setup()` function, comment out your `draw_pin()` code and instead call `draw_data()`.
+Maak in je `setup()` functie een comment van je `teken_speld()` code en roep in plaats daarvan `teken_data()` aan.
 
 --- code ---
 ---
@@ -47,7 +47,7 @@ def setup(): # Put code to run once here size(991, 768) image( map, # The image 
 
 --- task ---
 
-Instead of printing out the name of the region, and its coordinates, you can use your `draw_pin()` function to place your pins on the map. The code below colours the pins red (`Color(255, 0, 9)`), but you can choose a different colour.
+In plaats van de naam van de regio en de coördinaten af te drukken, je kan je `teken_speld()` functie gebruiken om je spelden op de kaart te plaatsen. De onderstaande code geeft de spelden een rode kleur (`Color(255, 0, 9)`), maar je kunt ook een andere kleur kiezen.
 
 --- code ---
 ---
@@ -62,23 +62,23 @@ def draw_data(): for region in region_list: region_name = region['region'] # Ge
 
 --- task ---
 
-**Test:** Run your program. You should see lots of pins pop up on your map! Depending on the data you chose, you might see more or fewer pins than in the image below.
+**Test:** Voer je programma uit. Er zouden veel spelden op je kaart moeten verschijnen! Afhankelijk van de gegevens die je hebt gekozen, zie je mogelijk meer of minder spelden dan in de onderstaande afbeelding.
 
-![A black and white map with many red dots on it.](images/map_many_pins.png)
+![Een zwart wit kaart met veel rode stippen erop.](images/map_many_pins.png)
 
 --- /task ---
 
-Next, you need to add some code to let users click on a pin and see some information printed out. To do this, each pin needs to be a different colour, and you need a way to match those colours to the right data.
+Vervolgens moet je wat code toevoegen om gebruikers op een speld te laten klikken en wat informatie te zien krijgen. Om dit te doen, moet elke speld een andere kleur hebben, en je hebt een manier nodig om die kleuren aan de juiste gegevens te koppelen.
 
 --- task ---
 
-**Choose:** Every pin needs a unique colour. But there are lots of different ways to make this happen. Here are a few suggestions, but you can create your own.
+**Kies:** Elke speld heeft een unieke kleur nodig. Maar er zijn veel verschillende manieren om dit mogelijk te maken. Hier zijn een paar suggesties, maar je kunt er zelf een maken.
 
 --- collapse ---
 ---
-title: Change the value of one colour
+title: Wijzig de waarde van één kleur
 ---
-This example changes the value for red each time the code places a pin:
+Dit voorbeeld verandert de waarde voor het rood wanneer de code een speld plaatst:
 
 --- code ---
 ---
@@ -102,9 +102,9 @@ def draw_data(): red_value = 255 # Set a starting value for red
 
 --- collapse ---
 ---
-title: Change the value of multiple colours
+title: Wijzig de waarde van meerdere kleuren
 ---
-This example changes the red, green, and blue values each time the code places a pin:
+In dit voorbeeld worden de rode, groene en blauwe waarden gewijzigd telkens wanneer de code een speld plaatst:
 
 --- code ---
 ---
@@ -119,14 +119,14 @@ def draw_data(): red_value = 255 # Set a starting value for red blue_value = 0 g
 
 --- collapse ---
 ---
-title: Choose random colours
+title: Kies willekeurige kleuren
 ---
 
-At the top of your code, with your other imports, you will need to import `randint` from the `random` library.
+Bovenaan je code, bij je andere imports moet je ook `randint` importeren uit de `random` library.
 
-You can then choose a random colour for your region colours; a different colour will be picked each time the `for` loop is executed. There is a small chance that two or more colours might end up the same, but it is a very small chance.
+Je kunt dan een willekeurige kleur kiezen voor jouw regio kleuren; een andere kleur zal worden gekozen telkens wanneer de `for` lus wordt uitgevoerd. Er is een kans dat twee of meer kleuren hetzelfde zijn, maar deze kans is zeer klein.
 
-**Warning:** A new colour will be chosen each time the map draws so your pins will flash.
+**Waarschuwing:** Elke keer dat de kaart wordt getekend, wordt er een nieuwe kleur gekozen, zodat je spelden gaan knipperen.
 
 --- code ---
 ---
@@ -145,15 +145,15 @@ def draw_data(): for region in region_list: region_name = region['name'] region_
 
 --- task ---
 
-**Test:** Run your program and check that the pins are different colours. If you don't have many pins, it may be hard to tell. In that case, try using bigger changes between each pin.
+**Test:** Voer je programma uit en controleer of de spelden verschillende kleuren hebben. Als je niet veel spelden hebt, kan het moeilijk te achterhalen zijn. Probeer in dat geval grotere veranderingen tussen elke speld te gebruiken.
 
 --- /task ---
 
-Your map has unique pins for each location, but you need to add some code to connect those pins to the information you want to show your users.
+Je kaart heeft unieke spelden voor elke locatie, maar je moet wat code toevoegen om deze spelden te koppelen aan de informatie die je gebruikers wilt laten zien.
 
 --- task ---
 
-To use the pin's colour to look up the information, you need to **create a dictionary** to store the colours and link them to the region.
+Om de kleur van de pin te gebruiken om de informatie op te zoeken, moet je **een dictionary maken** om de kleuren op te slaan en deze aan de regio te koppelen.
 
 --- code ---
 ---
@@ -169,7 +169,7 @@ region_list = [] colours = {} --- /code ---
 
 --- task ---
 
-As the pins are placed, the `region` can be stored in the dictionary along with the colour of the pin.
+Terwijl de spelden worden geplaatst, kan de `regio` samen met de kleur van de spelden in de dictionary worden opgeslagen.
 
 --- code ---
 ---
@@ -180,13 +180,13 @@ def draw_data(): red_value = 255 for region in region_list: region_name = region
 
 --- /task ---
 
-When the user clicks on a pin, the hex colour value of the pin is retrieved, and then the corresponding region is found in the dictionary.
+Wanneer de gebruiker op een speld klikt, wordt de hexadecimale kleurwaarde van de speld opgehaald en vervolgens wordt de overeenkomstige regio in de dictionary gezocht.
 
 --- task ---
 
-In your `mouse_pressed()` function, lookup the `pixel_colour` in the `colours` dictionary and print out the `region`.
+In je `muis_geklikt()` functie zoek je de `pixel_kleur` in de `kleuren` dictionary en print de `regio`.
 
-**Remember** that `colours` is a dictionary of dictionaries. You will have to get the dictionary of region information, then get the information from inside that dictionary. For example:
+**Onthoud** dat `kleuren` een dictionary met dictionaries is. Je moet de dictionary van regionale informatie krijgen en dan de informatie uit deze dictionary ophalen. Bijvoorbeeld:
 
 --- code ---
 ---
@@ -199,9 +199,9 @@ def mouse_pressed(): # Put code to run when the mouse is pressed here pixel_colo
 
 --- task ---
 
-It's important to check if a key is in a dictionary. If you click on an area of the map without a pin, you will receive a `KeyError`.
+Het is belangrijk om te controleren of een sleutel in een dictionary staat. Als je op een gebied zonder speld op de kaart klikt, ontvang je een `KeyError`.
 
-You can check if a value is in a dictionary by using `in`:
+Je kunt controleren of een waarde in een dictionary staat door `in` te gebruiken:
 
 --- code ---
 ---
@@ -214,13 +214,13 @@ def mouse_pressed(): # Put code to run when the mouse is pressed here pixel_colo
 
 --- task ---
 
-**Test:** Run your program. Click on a pin and check that your program correctly prints out data about that area.
+**Test:** Voer je programma uit. Klik op een speld en controleer of jouw programma de gegevens over dat gebied correct afdrukt.
 
 --- /task ---
 
 --- task ---
 
-You can print out other facts about the region you clicked on by adding more `print()` statements. This will depend on the data set that you used. If you used `happy.csv` for instance, you could print the following:
+Je kunt andere feiten printen over de regio waarop je hebt geklikt door meer `print()` opdrachten toe te voegen. Dit is afhankelijk van de dataset die je gebruikt. Als je bijvoorbeeld `happy.csv` hebt gebruikt, kun je het volgende afdrukken:
 
 --- code ---
 ---
@@ -233,36 +233,36 @@ def mouse_pressed(): # Put code to run when the mouse is pressed here pixel_colo
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Fouten opsporen:** Mogelijk vind je enkele fouten in jouw project die je moet oplossen. Hier zijn enkele veelvoorkomende fouten.
 
 --- collapse ---
 ---
-title: My pins do not appear on the map
+title: Mijn spelden verschijnen niet op de kaart
 ---
 
-If your pins are not appearing on the map, check that you are calling your `draw_data()` function from your `setup()` function.
+Als je spelden niet op de kaart verschijnen, controleer dan of je je `teken_data()` functie aanroept vanuit je `setup()` functie.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: I get a message about a 'KeyError'
+title: Ik krijg een melding over een 'KeyError'
 ---
 
-If you get a message about 'KeyError', check that the spelling of your dictionary keys match when you put values in and when you read them out. Whether the letters are UPPER CASE or lower case is important too.
+Als je een bericht over 'KeyError' krijgt controleer of de spelling van je dictionary sleutels overeenstemt met waardes wanneer je ze uitleest. Of de letters HOOFDLETTERS of kleine letters zijn, is ook belangrijk.
 
-If the error is for the `colours` dictionary, make sure you check the key exists in `colours` before trying to get the value.
+Als de fout betrekking heeft op het dictionary `kleuren`, controleer dan of de sleutel bestaat in `kleuren` voordat je probeert de waarde op te halen.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: It keeps displaying 'Region not detected'
+title: Er wordt steeds 'Regio niet gedetecteerd' weergegeven
 ---
 
-Your mouse click needs to be in the centre of your pin to make sure that it detects the correct colour.
+Je muisklik moet in het midden van je speld staan om ervoor te zorgen dat de juiste kleur wordt gedetecteerd.
 
-Try clicking closer to the centre of your pin.
+Probeer dichter bij het midden van je speld te klikken.
 
 --- /collapse ---
 
