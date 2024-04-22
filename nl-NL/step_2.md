@@ -9,7 +9,7 @@ Heb je een idee van het soort weergave dat je wilt maken? Gebruik deze stap om j
 </div>
 </div>
 
-![Dictionaries printed out as part of a list.](images/regions_list_output.png){:width="600px"}
+![Dictionaries afgedrukt als onderdeel van een lijst.](images/regions_list_output.png){:width="600px"}
 
 --- task ---
 
@@ -344,7 +344,7 @@ Voeg een regel toe in je `setup()` functie die de `regio_lijst` afdrukt.
 
 **Test:** Voer je programma uit en controleer of het een lijst met dictionaries afdrukt. Het zou er ongeveer zo uit moeten zien:
 
-![Dictionaries printed out as part of a list.](images/regions_list_output.png)
+![Dictionaries afgedrukt als onderdeel van een lijst.](images/regions_list_output.png)
 
 **Tip:** Net als de andere `print()` -instructies die je hebt gebruikt, kun je deze regel veranderen in een comment zodra je hem hebt gebruikt voor testen en je code werkt zoals verwacht.
 
@@ -352,50 +352,50 @@ Voeg een regel toe in je `setup()` functie die de `regio_lijst` afdrukt.
 
 --- task ---
 
-**Fouten opsporen:** Mogelijk vind je enkele fouten in jouw project die je moet oplossen. Here are some common bugs.
+**Fouten opsporen:** Mogelijk vind je enkele fouten in jouw project die je moet oplossen. Hier zijn enkele veelvoorkomende fouten.
 
 --- collapse ---
 ---
-title: My code doesn't run
+title: Mijn code wordt niet uitgevoerd
 ---
 
-Check your code is properly indented. The code under the `with` should be indented, and then code under the `for` loop should be indented again.
+Controleer of je code correct ingesprongen is. De code onder de `with` moet worden ingesprongen, en vervolgens moet de `for` lus opnieuw worden ingesprongen.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: I get a message that the csv file is 'not defined'
+title: Ik krijg een melding dat het csv-bestand 'not defined (niet gedefinieerd)' is
 ---
 
-Check your call to `load_data()` to be sure that the name of the file is a string.
+Controleer je aanroep van `laad_data()` om er zeker van te zijn dat de naam van het bestand een string is.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: My info list just has one big item in it
+title: Mijn info lijst bevat slechts één groot item
 ---
 
-Check that you have `','` in the `()` of `line.split()`
+Controleer of je `','` hebt in de `()` van `line.split()`
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: I get a message that split is 'not defined'
+title: Ik krijg de melding dat de split 'not defined (niet gedefinieerd)' is
 ---
 
-If you see a message about `split` being 'not defined', check that you have included `line.` before it.
+Als je een bericht ziet dat `split` 'niet gedefinieerd' is, controleer dan of je `line.` ervoor hebt gezet.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: I get a message that region_list is 'not defined'
+title: Ik krijg een bericht dat regio_lijst 'not defined (niet gedefinieerd)' is
 ---
 
-If you see a message about `region_list` being 'not defined', check that you have created it as an empty list — with `region_list = []` — before trying to add things to it
+Als je een bericht ziet dat `regio_lijst` 'niet gedefinieerd' is, controleer dan of je deze als lege lijst hebt aangemaakt — met `regio_ljist = []` — voordat je er dingen aan probeert toe te voegen
 
 --- /collapse ---
 
