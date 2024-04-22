@@ -1,18 +1,18 @@
-## Quick quiz
+## Snelle quiz
 
-Answer the three questions. There are hints to guide you to the correct answer.
+Beantwoord de drie vragen. Er zijn tips om je naar het juiste antwoord te leiden.
 
-When you have answered each question, click on **Check my answer**.
+Klik na het beantwoorden van elke vraag op **Controleer mijn antwoord**.
 
-Have fun!
+Veel plezier!
 
 --- question ---
 
 ---
-legend: Question 1 of 3
+legend: Vraag 1 van 3
 ---
 
-In this project you stored your data in dictionaries and lists, including a list of dictionaries. If you had this list of dictionaries, which code would you use to `print()` the count of dogs?
+In dit project heb je je gegevens opgeslagen in dictionaries en lijsten, inclusief een lijst met dictionaries. Als je deze lijst met dictionaries had, welke code zou je gebruiken om het aantal honden af te drukken (`print()`)?
 
 ```python
 pets = [
@@ -40,7 +40,7 @@ dogs_count = dogs['count']
 print(dogs_count)
 ```
 
-  --- feedback --- Correct! This will print the count of dogs out. --- /feedback ---
+  --- feedback --- Klopt! Hiermee wordt het aantal honden afgedrukt. --- /feedback ---
 
 - ( )
 ```python
@@ -49,7 +49,7 @@ dogs_count = dogs['count']
 print(dogs_count)
 ```
 
-  --- feedback --- Not quite! List indexes start at `0`, not `1`. --- /feedback ---
+  --- feedback --- Niet helemaal! Lijstindexen beginnen bij `0`, niet bij `1`. --- /feedback ---
 
 - ( )
 ```python
@@ -58,7 +58,7 @@ dogs_count = dogs['count']
 print(dogs_count)
 ```
 
-  --- feedback --- Not exactly, `pets` is a list and numbers, called indexes, are used to select items from a list. --- /feedback ---
+  --- feedback --- Niet precies, `huisdieren` is een lijst en getallen, (genaamd indexen) genoemd, worden gebruikt om items uit een lijst te selecteren. --- /feedback ---
 
 - ( )
 ```python
@@ -67,7 +67,7 @@ dogs_count = dogs['pet']
 print(dogs_count)
 ```
 
-  --- feedback --- Close! This is the wrong key, but in the right dictionary. --- /feedback ---
+  --- feedback --- Bijna! Dit is de verkeerde sleutel, maar in de juiste dictionary. --- /feedback ---
 
 --- /choices ---
 
