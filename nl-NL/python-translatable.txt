@@ -1,115 +1,115 @@
-United States
+Verenigde Staten
 
-United Kingdom
+Verenigd Koninkrijk
 
-Greece
+Griekenland
 
 Afghanistan
 
-Albania
+Albanië
 
-Algeria
+Algerije
 
 Angola
 
 Aruba
 
-Norway
+Noorwegen
 
-Denmark
+Denemarken
 
-Iceland
+IJsland
 
-Estonia
+Estland
 
-pixel_colour
+pixel_kleur
 
-load_data
+laad_gegevens
 
-file_name
+bestand_naam
 
-line
+lijn
 
-my_list
+mijn_lijst
 
 info
 
-region_dict
+regio_dict
 
-region
+regio
 
-happiness rank
+ranking geluk
 
-happiness score
+geluksscore
 
-get_region_coords
+haal_regio_coördinaten
 
-region_list
+regio_lijst
 
-preload
+voorafladen
 
-map
+kaart
 
-image
+afbeelding
 
-width
+breedte
 
-height
+hoogte
 
-draw_pin
+teken_speld
 
-colour
+kleur
 
-draw_data
+teken_gegevens
 
-region_name
+regio_naam
 
-region_coords
+regio_coördinaten
 
-region_x
+regio_x
 
-region_y
+regio_y
 
-region_colour
+regio_kleur
 
-red_value
+rood_waarde
 
-blue_value
+blauw_waarde
 
-green_value
+groen_waarde
 
-facts
+feiten
 
-Region not detected
+Regio niet gedetecteerd
 
-happiness_rank
+rangorde_geluk
 
-happiness_score
+geluk_score
 
-pets
+huisdieren
 
-pet
+huisdier
 
-cat
+kat
 
-count
+aantal
 
-dog
+hond
 
-rabbit
+konijn
 
-dogs
+honden
 
-dogs_count
+honden_aantal
 
-my_function
+mijn_functie
 
-result
+resultaat
 
-name
+naam
 
-capital
+hoofdstad
 
-latitude
+breedtegraad
 
-longitude
+lengtegraad
