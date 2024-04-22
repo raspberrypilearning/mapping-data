@@ -1,38 +1,38 @@
-## Upgrade your project
+## Verbeter je project
 
-If you have time you can upgrade your project.
+Als je tijd hebt, kun je jouw project verbeteren.
 
-Here are some ideas you could try:
-- Use pins to display data — change the size or shape of the pin based on some value in the region's data. You can combine changes in shape and size to show even more.
-- Filter the data — use `if` statements to only show pins on the map that meet conditions you choose. For example, only showing places where less than half the people live in cities. For an extra upgrade, let the user choose which filters to use.
-- Add a second data file — create another file of data and display it using different pins. Can you use some of your existing functions if you make some small changes? Do you want to use two sets of pins, or put all the data together on one pin?
+Hier zijn een paar andere ideeën die je zou kunnen proberen:
+- Gebruik spelden om gegevens weer te geven: verander de grootte of vorm van de speld op basis van een bepaalde waarde in de gegevens van de regio. Je kunt veranderingen in vorm en grootte combineren om nog meer te laten zien.
+- Filter de gegevens: gebruik `if` -instructies om alleen pinnen op de kaart weer te geven die voldoen aan de door jou gekozen voorwaarden. Zo kun je bijvoorbeeld alleen plaatsen tonen waar minder dan de helft van de mensen in steden woont. Voor een extra verbetering, laat de gebruiker zelf kiezen welke filters hij wil gebruiken.
+- Voeg een tweede gegevensbestand toe: maak nog een gegevensbestand en geef dit weer met verschillende spelden. Kun je enkele van je bestaande functies gebruiken als je enkele kleine wijzigingen aanbrengt? Wil je twee sets spelden gebruiken, of alle gegevens samenvoegen op één speld?
 
-### Multicoloured pins: Population density
+### Veelkleurige spelden: Bevolkingsdichtheid
 
-This project uses small multicoloured square pins and uses the population data set.
+Dit project maakt gebruik van kleine veelkleurige vierkante spelden en maakt gebruik van de populatiedataset.
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/mapping-data-population" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 
-You can find the Population density project [here](https://editor.raspberrypi.org/en/projects/mapping-data-population){:target="_blank"}.
+Je kunt het Bevolkingsdichtheidsproject [hier](https://editor.raspberrypi.org/en/projects/mapping-data-population){:target="_blank"} vinden.
 
-### Data-sized pins: Olympic host countries
+### Spelden op dataformaat: Olympische gastlanden
 
-This project has been upgraded to show larger pins for areas that have hosted the Olympic Games more often.
+Dit project is geüpgraded om grotere spelden weer te geven voor gebieden waar vaker de Olympische Spelen hebben plaatsgevonden.
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/mapping-data-olympics" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 
-You can find the Olympic host countries project [here](https://editor.raspberrypi.org/en/projects/mapping-data-olympics){:target="_blank"}.
+Je kunt het Olympische gastlandenproject [hier](https://editor.raspberrypi.org/en/projects/mapping-data-olympics){:target="_blank"} vinden.
 
 
-### Filter data: Global population — rural and urban
+### Gegevens filteren: Wereldbevolking – landelijk en stedelijk
 
-This project has been upgraded to allow you to choose the data used to make the display.
+Dit project is geüpgraded zodat je de gegevens kunt kiezen die worden gebruikt om de weergave te maken.
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/urban-rural-population" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 
-You can find the Global population — rural and urban project [here](https://editor.raspberrypi.org/en/projects/urban-rural-population){:target="_blank"}.
+Je kunt het project Wereldbevolking — plattelands- en stadsontwikkeling [hier](https://editor.raspberrypi.org/en/projects/urban-rural-population){:target="_blank"} vinden.
 
 --- save ---
