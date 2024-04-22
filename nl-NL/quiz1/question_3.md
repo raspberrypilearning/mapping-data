@@ -2,29 +2,29 @@
 --- question ---
 
 ---
-legend: Question 3 of 3
+legend: Vraag 3 van 3
 ---
 
-Alex works for an organisation with offices all over the world. They often have to make displays like the one you created to share important data with their team. Why would it be a good idea for Alex to use code to do this work?
+Alex werkt voor een organisatie met kantoren over de hele wereld. Ze moeten vaak presentaties maken zoals degene die jij hebt gemaakt om belangrijke gegevens met hun team te delen. Waarom zou het voor Alex een goed idee zijn om code te gebruiken om dit werk te doen?
 
 --- choices ---
 
-- ( ) It will look better
+- ( ) Het zal er beter uitzien
 
 
-  --- feedback --- Maybe, but beautiful displays can still be created on paper, or in graphics software. --- /feedback ---
+  --- feedback --- Misschien, maar er kunnen nog steeds prachtige presentaties worden gemaakt op papier of in grafische software. --- /feedback ---
 
-- ( ) There will be no mistakes
+- ( ) Er zullen geen fouten zijn
 
-  --- feedback --- It's true computer programs do exactly what they're told. But the programmer can still make mistakes when giving the program its instructions. That's where bugs come from! --- /feedback ---
+  --- feedback --- Het is waar dat computerprogramma's precies doen wat hen wordt opgedragen. Maar de programmeur kan nog steeds fouten maken bij het geven van instructies aan het programma. Dat is waar bugs (fouten) vandaan komen! --- /feedback ---
 
-- (x) Changing and updating data will be much faster
+- (x) Het wijzigen en bijwerken van gegevens zal veel sneller gaan
 
-  --- feedback --- Correct. Because the code can be made up of functions with parameters, Alex only has to change what they pass in as their parameters to change the output. --- /feedback ---
+  --- feedback --- Klopt. Omdat de code kan bestaan uit functies met parameters, hoeft Alex alleen de parameters te wijzigen die ze doorgeven om de uitvoer te wijzigen. --- /feedback ---
 
-- ( ) Coding is the future
+- ( ) Coderen is de toekomst
 
-  --- feedback --- That might be true, but that doesn't automatically make it better! --- /feedback ---
+  --- feedback --- Dat kan waar zijn, maar dat maakt het niet automatisch beter! --- /feedback ---
 
 --- /choices ---
 
