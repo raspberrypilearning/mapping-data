@@ -1,8 +1,8 @@
-## Choose and load a data set
+## Kies en laad een dataset
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Do you have an idea of the kind of display you want to create? Use this step to choose your data and load it into dictionaries. Later, you'll use those dictionaries to build your map.
+Heb je een idee van het soort weergave dat je wilt maken? Gebruik deze stap om je gegevens te kiezen en deze in dictionaries te laden. Later gebruik je die dictionaries om je kaart te maken.
 </div>
 <div>
 
@@ -13,61 +13,61 @@ Do you have an idea of the kind of display you want to create? Use this step to 
 
 --- task ---
 
-Open the [Mapping Data starter project](https://editor.raspberrypi.org/en/projects/mapping-data-starter){:target="_blank"} project. The code editor will open in another browser tab.
+Open het [Mapping Data starter project](https://editor.raspberrypi.org/en/projects/mapping-data-starter){:target="_ blank"} project. De code-editor wordt geopend in een ander browsertabblad.
 
-If you have a Raspberry Pi account, you can click on the **Save** button to save a copy to your **Projects**.
+Als je een Raspberry Pi-account hebt, kun je op de **Save** knop klikken om een kopie op te slaan in je **Projects**.
 
 --- /task ---
 
 --- task ---
 
-Before you can put your data on a map, you'll need to choose some data to display.
+Voordat je jouw gegevens op een kaart kunt zetten, moet je enkele gegevens kiezen om weer te geven.
 
-**Choose:** There are a few CSV files included in the starter project. Read their descriptions below. Then note the name of the file you'd like to use in your display.
+**Kies:** Er zijn een paar CSV-bestanden opgenomen in het startproject. Lees hieronder hun beschrijvingen. Noteer de naam van het bestand dat je wilt gebruiken in jouw weergave.
 
 <div style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**CSV files**</span> are Comma-Separated Values files. They contain data in rows and columns, like a table. Each line is a row, with commas separating that row's values into columns.
-![A few lines of a csv file.](images/csv_sample.png){:width="200px"}
+<span style="color: #0faeb0">**CSV-bestanden**</span> zijn bestanden met door komma's gescheiden waarden. Ze bevatten gegevens in rijen en kolommen, zoals een tabel. Elke regel is een rij, waarbij komma's de waarden van die rij in kolommen scheiden.
+![Een paar regels van een csv-bestand.](images/csv_sample.png){:width="200px"}
 </div>
 
 --- collapse ---
 ---
-title: Olympic host nations
+title: Olympische gastlanden
 ---
 
-**File name:** `olympics.csv`
+**Bestandsnaam:** `olympics.csv`
 
-This data is a list of regions that have hosted the Olympic Summer Games. The columns of the data are:
+Deze gegevens zijn een lijst met regio's waar de Olympische Zomerspelen hebben plaatsgevonden. De kolommen met gegevens zijn:
 
- - The name of the region
- - The number of times they have hosted the games
+ - De naam van de regio
+ - Het aantal keren dat ze de Spelen hebben georganiseerd
 
-Here is an example of the data in this file:
+Hier is een voorbeeld van de gegevens in dit bestand:
 
 ```
-United States,4
-United Kingdom,3
-Greece,3
+Verenigde Staten,4
+Verenigd Koninkrijk,3
+Griekenland,3
 ```
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: World population
+title: Wereldbevolking
 ---
 
-**File name:** `pop.csv`
+**Bestandsnaam:** `pop.csv`
 
-This data is about populations around the world. The columns of the data are:
+Deze gegevens gaan over aantal inwoners over de hele wereld. De kolommen met gegevens zijn:
 
- - The name of the region
- - How many people live in the region
- - How many people live in each square kilometre of the region
- - The average age of people in the region
- - The percentage of people in that region who live in cities
+ - De naam van de regio
+ - Hoeveel mensen in de regio wonen
+ - Hoeveel mensen wonen op elke vierkante kilometer van de regio
+ - De gemiddelde leeftijd van mensen in de regio
+ - Het percentage mensen in die regio dat in steden woont
 
-Here is an example of the data in this file:
+Hier is een voorbeeld van de gegevens in dit bestand:
 
 ```
 Afghanistan,38928346,60,18,25
@@ -79,18 +79,18 @@ Algeria,43851044,18,29,73
 
 --- collapse ---
 ---
-title: Carbon emissions
+title: koolstof emissies
 ---
 
-**File name:** `carbon.csv`
+**Bestandsnaam:** `carbon.csv`
 
-This data is about carbon emissions around the world. The numbers in the file are for a single year. The columns of the data are:
+Deze gegevens gaan over de Co2-uitstoot over de hele wereld. De cijfers in het bestand zijn voor één jaar. De kolommen met gegevens zijn:
 
- - The name of the region
- - How much carbon each region emits in total (in thousands of tons)
- - How much carbon each region emits, per person that lives in that region (in tons)
+ - De naam van de regio
+ - Hoeveel koolstof elke regio in totaal uitstoot (in duizenden tonnen)
+ - Hoeveel koolstof elke regio uitstoot, per persoon die in die regio woont (in ton)
 
-Here is an example of the data in this file:
+Hier is een voorbeeld van de gegevens in dit bestand:
 
 ```
 Albania,4342.011,1.511
@@ -102,39 +102,39 @@ Angola,18021.394,0.605
 
 --- collapse ---
 ---
-title: Threatened species
+title: bedreigde soorten
 ---
 
-**File name:** `species.csv`
+**Bestandsnaam:** `species.csv`
 
-This data is about the number of plant and animal species that are under threat in each region. The columns of the data are:
+Deze gegevens gaan over het aantal planten- en diersoorten dat in elke regio wordt bedreigd. De kolommen met gegevens zijn:
 
- - The name of the region
- - The number of threatened species in that region
+ - De naam van de regio
+ - Het aantal bedreigde soorten in die regio
 
-Here is an example of the data in this file:
+Hier is een voorbeeld van de gegevens in dit bestand:
 
 ```
 Afghanistan,42
-Albania,130
-Algeria,135
+Albanië,130
+Algerije,135
 ```
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: National wealth
+title: Nationale rijkdom
 ---
 
-**File name:** `gdp.csv`
+**Bestandsnaam:** `gdp.csv`
 
-The gross domestic product (GDP) of a region measures the size of its economy. Regions with larger GDPs are usually richer. The columns of the data are:
+Het bruto binnenlands product (BBP) van een regio meet de omvang van zijn economie. Regio's met een groter BBP zijn doorgaans rijker. De kolommen met gegevens zijn:
 
- - The name of the region
- - The total GDP of that region
+ - De naam van de regio
+ - Het totale BBP van die regio
 
-Here is an example of the data in this file:
+Hier is een voorbeeld van de gegevens in dit bestand:
 
 ```
 Aruba,3056424581
@@ -146,18 +146,18 @@ Angola,1.22124E+11
 
 --- collapse ---
 ---
-title: World happiness
+title: Wereldgeluk
 ---
 
-**File name:** `happy.csv`
+**Bestandsnaam:** `happy.csv`
 
-This data is from the world happiness report. The report is a survey of the happiness of people in different regions. People were asked to score their happiness on a scale of 0–10. The columns of the data are:
+Deze gegevens komen uit het World Happiness Report. Het rapport is een onderzoek naar het geluk van mensen in verschillende regio’s. Mensen werd gevraagd hun geluk een score te geven op een schaal van 0 tot 10. De kolommen met gegevens zijn:
 
- - The name of the region
- - Where that region ranks in the world for average happiness
- - The average happiness score for the region
+ - De naam van de regio
+ - Waar die regio in de wereld scoort op het gebied van gemiddeld geluk
+ - De gemiddelde geluksscore voor de regio
 
-Here is an example of the data in this file:
+Hier is een voorbeeld van de gegevens in dit bestand:
 
 ```
 Norway,1,7.537000179
@@ -171,9 +171,9 @@ Iceland,3,7.504000187
 
 --- task ---
 
-Now that you have picked your data, you need to load it into your program.
+Nu je je gegevens hebt geselecteerd, moet je ze in je programma laden.
 
-Define a `load_data()` function to take a `file_name` variable. Have your function open that file and `print()` out every line in it.
+Definieer een `laad_data()` functie om een `bestandsnaam` variabele te nemen. Laat je functie dat bestand openen en `print()` elke regel erin.
 
 [[[parameters]]]
 
@@ -187,50 +187,50 @@ def mouse_pressed(): pixel_colour = Color(get(mouse_x, mouse_y)).hex
 
 def load_data(file_name): with open(file_name) as f: for line in f: print(line) --- /code ---
 
-**Tip:** You will be moving data around a lot in the next few steps. It's a good idea to `print()` everything out. This will help you understand what your data looks like at each step. It's also good for catching bugs. You can comment the `print()` lines out later (with `#`).
+**Tip:** Je gaat in de komende paar stappen veel data verplaatsen. Het is een goed idee om `print()` te gebruiken. Dit helpt je te begrijpen hoe je data eruit ziet bij elke stap. Het is ook goed voor het opsporen van fouten. Je kunt deze `print` regels later uitschakelen via een comment (met `#`).
 
 --- /task ---
 
 --- task ---
 
-Add a call to `load_data()` in your `setup()` function, you can delete the `pass` that is already in there. Pass it the name of the data file you chose above. You can check the list below if you need a reminder of the file name.
+Voeg een aanroep toe aan `laad_data()` in je `setup()` functie, je kunt de `pass` verwijderen die er al inzit. Geef de naam door van het data bestand dat je hierboven hebt gekozen. Je kunt de onderstaande lijst checken als je een herinnering van de bestandsnaam nodig hebt.
 
- - Olympic host nations — `olympics.csv`
- - World population — `pop.csv`
- - Carbon emissions — `carbon.csv`
- - Threatened species — `species.csv`
- - National wealth — `gdp.csv`
- - World happiness — `happy.csv`
+ - Olympische gastlanden — `olympics.csv`
+ - Wereldbevolking — `pop.csv`
+ - Koolstofemissies — `carbon.csv`
+ - Bedreigde soorten — `species.csv`
+ - Nationale rijkdom — `bbp.csv`
+ - Wereldgeluk — `happy.csv`
 
 --- /task ---
 
 --- task ---
 
-**Test:** Run your program. Check the data that prints out in the output area.
+**Test:** Voer je programma uit. Controleer de gegevens die worden afgedrukt in het uitvoergebied.
 
-**Debug:** You might get an error message about your file name being 'not defined'. If you do, check that you have put the name in quotes when you call the `load_data()` function. For example, `load_data('pop.csv')`.
+**Fouten opsporen:** Je kunt een foutmelding krijgen dat je bestandsnaam 'not defined (niet gedefinieerd)' is. Als dit het geval is, controleer dan of je de naam tussen aanhalingstekens hebt geplaatst wanneer je de functie `laad_data()` aanroept. Bijvoorbeeld `laad_data('pop.csv')`.
 
 --- /task ---
 
-Now the data is loaded, you need to get the data for each region and break it into a list. Then you can load that list into a dictionary.
+Nu de gegevens zijn geladen, moet je de gegevens voor elke regio ophalen en deze in een lijst opdelen. Dan kun je die lijst in een dictionary laden.
 
 --- task ---
 
-Add code to your `load_data()` function to use the `split()` function to break each line into a list. Call that list `info`.
+Voeg code toe aan de functie `laad_data()` om de functie `split()` te gebruiken om elke regel in een lijst op te splitsen. Noem die lijst `info`.
 
 --- collapse ---
 ---
-title: Split a text string into a list
+title: Splits een tekenreeks in een lijst
 ---
 
-The `split()` function breaks a string into a list. `split(',')` makes a new list item every time it sees a comma. So,
+De functie `split()` verdeelt een tekenreeks in een lijst. `split(',')` maakt een nieuw lijstitem telkens wanneer het een komma ziet. Dus,
 
 ```python
 info = 'Estonia,1326535,31,42,68'
 my_list = info.split(',')
 ```
 
-would put `['Estonia', '1326535', '31', '42', '68']` into `my_list`.
+zou `['Estland', '1326535', '31', '42', '68']` in `mijn_lijst` plaatsen.
 
 --- /collapse ---
 
@@ -243,48 +243,48 @@ def load_data(file_name): with open(file_name) as f: for line in f: #print(line)
 
 --- /task ---
 
-Now use the list you made from each region's data to create a dictionary for each region. Include the name of the region and the numbers you want to use in your display.
+Gebruik nu de lijst die je hebt gemaakt van de data van elke regio om een dictionary te maken voor elke regio. Voeg de naam van de regio en de getallen die je wilt gebruiken in jouw weergave toe.
 
 --- task ---
 
-Add code to your `load_data()` function that converts the data you've chosen into a dictionary.
+Voeg code toe aan je `laad_data()` functie die de door jou gekozen gegevens omzet in een dictionary.
 
-Use `print()` to check the dictionaries look like you expect.
+Gebruik `print()` om te controleren of de dictionaries er uitzien zoals je verwacht.
 
 --- collapse ---
 
 ---
-title: Field names for the csv files
+title: Veld namen voor de csv-bestanden
 ---
 
-Olympic host nations — `olympics.csv`
-   - The name of the region
-   - The number of times they have hosted the games
+Olympische gastlanden — `olympics.csv`
+   - De naam van de regio
+   - Het aantal keren dat ze de Spelen hebben georganiseerd
 
-World population — `pop.csv`
-   - The name of the region
-   - How many people live in the region
-   - How many people live in each square kilometre of the region
-   - The average age of people in the region
-   - The percentage of people in that region who live in cities
+Wereldbevolking — `pop.csv`
+   - De naam van de regio
+   - Hoeveel mensen in de regio wonen
+   - Hoeveel mensen wonen op elke vierkante kilometer van de regio
+   - De gemiddelde leeftijd van mensen in de regio
+   - Het percentage mensen in die regio dat in steden woont
 
-Carbon emissions — `carbon.csv`
-  - The name of the region
-  - How much carbon each region emits in total (in thousands of tons)
-  - How much carbon each region emits, per person that lives in that region (in tons)
+Koolstofemissies — `carbon.csv`
+  - De naam van de regio
+  - Hoeveel koolstof elke regio in totaal uitstoot (in duizenden tonnen)
+  - Hoeveel koolstof elke regio uitstoot, per persoon die in die regio woont (in ton)
 
-Threatened species — `species.csv`
-  - The name of the region
-  - The number of threatened species in that region
+Bedreigde soorten — `species.csv`
+  - De naam van de regio
+  - Het aantal bedreigde soorten in die regio
 
-National wealth — `gdp.csv`
- - The name of the region
- - The total GDP of that region
+Nationale rijkdom - `gdp.csv`
+ - De naam van de regio
+ - Het totale BBP van die regio
 
-World happiness — `happy.csv`
-  - The name of the region
-  - Happiness rank
-  - Happiness score
+Wereldgeluk — `happy.csv`
+  - De naam van de regio
+  - Ranking geluk
+  - Geluksscore
 
 --- /collapse ---
 
@@ -299,17 +299,17 @@ def load_data(file_name): with open(file_name) as f: for line in f: #print(line)
 
 --- task ---
 
-**Test:** Run your code and check that the dictionaries it prints out look like you expect them to: a 'name' key with a text string for a value, and whatever keys and values you expect based on your code.
+**Test:** Voer je code uit en controleer of de dictionaries die worden afgedrukt er uitzien zoals je verwacht: een 'naam'-sleutel met een tekenreeks voor een waarde, en welke sleutels en waarden je ook verwacht op basis van je code.
 
-**Debug:** If you see a message about `list index out of range`, check that you are trying to load the right number of values into your region dictionary. This may be a different number of values to the example code above. You should also use key names that match the data you chose.
+**Fouten oplossen:** Als je een bericht ziet over `list index out of range (lijst index buiten bereik)`, controleer dan of je het juiste aantal waarden in jouw regio dictionary probeert te laden. Dit kan een ander aantal waarden zijn dan de bovenstaande voorbeeldcode. Je moet ook sleutelnamen gebruiken die overeenkomen met de gegevens die je hebt gekozen.
 
 --- /task ---
 
-Now your `load_data()` function creates dictionaries for each region. You need to store those dictionaries somewhere the rest of your program can get them. A list is a good choice.
+Nu maakt je `laad_data()` functie een dictionary voor elke regio. Je moet die dictionaries ergens opslaan waar de rest van je programma ze kan ophalen. Een lijst is een goede keuze.
 
 --- task ---
 
-Create an empty list called `region_list`.
+Maak een lege lijst genaamd `regio_lijst`.
 
 --- code ---
 ---
@@ -321,7 +321,7 @@ from p5 import * from regions import get_region_coords
 
 region_list = [] --- /code ---
 
-In `load_data()`, add each of your dictionaries to `region_list` using `append`. This will let you work with the data in the rest of your program.
+Voeg in `laad_data()`al je dictionaries toe aan `regio_lijst` met behulp van `append`. Hiermee kun je in de rest van je programma werken met de gegevens.
 
 --- code ---
 ---
@@ -336,23 +336,23 @@ def load_data(file_name): with open(file_name) as f: for line in f: info = line.
 
 --- task ---
 
-Add a line in your `setup()` function that prints the `region_list` out.
+Voeg een regel toe in je `setup()` functie die de `regio_lijst` afdrukt.
 
 --- /task ---
 
 --- task ---
 
-**Test:** Run your program and check that it prints out a list of dictionaries. It should look something like this:
+**Test:** Voer je programma uit en controleer of het een lijst met dictionaries afdrukt. Het zou er ongeveer zo uit moeten zien:
 
 ![Dictionaries printed out as part of a list.](images/regions_list_output.png)
 
-**Tip:** Like the other `print()` statements you've used, you can comment this line out once you've used it for testing and your code works as expected.
+**Tip:** Net als de andere `print()` -instructies die je hebt gebruikt, kun je deze regel veranderen in een comment zodra je hem hebt gebruikt voor testen en je code werkt zoals verwacht.
 
 --- /task ---
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Fouten opsporen:** Mogelijk vind je enkele fouten in jouw project die je moet oplossen. Here are some common bugs.
 
 --- collapse ---
 ---
