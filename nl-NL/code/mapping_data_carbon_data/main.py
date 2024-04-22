@@ -1,83 +1,83 @@
 #!/bin/python3
 from p5 import *
-from regions import get_region_coords
+from regions import haal_regio_coördinaten
 
-region_list = []
-colours = {}
+regio_lijst = []
+kleuren = {}
 
 
 def preload():
-    global map
-    map = load_image('mercator_bw.png')
+    wereldkaart
+    kaart = load_image('mercator_bw.png')
 
-# Put code to run once here
+# Zet de code om eenmalig uit te voeren hier onder
 
 
 def setup():
     size(991, 768)
-    load_data('carbon.csv')
-    print(region_list)
+    load_data ('carbon.csv')
+    print(regio_lijst)
     image(
-        map,  # The image to draw
-        0,  # The x of the top-left corner
-        0,  # The y of the top-left corner
-        width,  # The width of the image
-        height  # The height of the image
+        kaart, # De afbeelding om te tekenen
+        0, # De x van de linkerbovenhoek
+        0, # De y van de linker bovenhoek
+        width, # De breedte van de afbeelding
+        height # De hoogte van de afbeelding
     )
-    draw_data()
+    teken_gegevens()
 
 
-def draw_pin(x, y, colour):
+def teken_speld(x, y, kleur):
     no_stroke()
-    fill(colour)
+    fill(kleur)
     triangle(x-10, y-5, x, y+10, x+10, y-5)
     triangle(x-10, y+5, x, y-10, x+10, y+5)
 
 
-def draw_data():
-    red_value = 255  # Set a starting value for red
-    blue_value = 0
-    green_value = 255
-    for region in region_list:
-        region_name = region['region']  # Get the name of the region
-        # Use the name to get coordinates
-        region_coords = get_region_coords(region_name)
-        region_x = region_coords['x']  # Get the x coordinate
-        region_y = region_coords['y']  # Get the y coordinate
-        # print(region_name, region_x, region_y)
-        # Use the red value in the colour
-        region_colour = Color(red_value, green_value, blue_value)
-        colours[region_colour.hex] = region
-        draw_pin(region_x, region_y, region_colour)  # Draw the pin
-        red_value -= 1  # Change the red value
-        green_value += 1  # Change the green value
-        blue_value -= 1  # Change the blue value
+def teken_gegevens():
+    rood_waarde =255 # Stel een startwaarde voor rood in
+    blauw_waarde = 0
+    groen_waarde = 255
+    for regio in regio_lijst:
+        regio_naam = regio['regio'] # Haal de naam op van de regio
+        # Gebruik de naam om coördinaten te krijgen
+        regio_coördinaten = haal_regio_coördinaten(regio_naam)
+        regio_x = regio_coördinaten['x'] # Haal de x-coördinaat op
+        regio_y = regio_coördinaten['y'] # Haal de y-coördinaat op
+        # print(regio_naam, regio_x, regio_y)
+        # Gebruik de rood waarde in de kleur
+        regio_kleur = Color(rood_waarde, groen_waarde, blauw_waarde)
+        kleuren[regio_kleur.hex] = regio
+        teken_speld(regio_x, regio_y, region_kleur) # Teken de speld
+        rood_waarde -= 1 # Wijzig de roodwaarde
+        groen_waarde += 1 # De groenwaarde wijzigen
+        blauw_waarde -=1 #De blauwwaarde wijzigen
 
 
-# Put code to run when the mouse is pressed here
+# Zet code hier die moet worden uitgevoerd wanneer de muis wordt ingedrukt
 def mouse_pressed():
-    # Put code to run when the mouse is pressed here
-    pixel_colour = Color(get(mouse_x, mouse_y)).hex
-    if pixel_colour in colours:
-        facts = colours[pixel_colour]
-        print(facts['region'])
-        print(facts['total carbon'])
-        print(facts['carbon per person'])
+    # Zet code hier die moet worden uitgevoerd wanneer de muis wordt ingedrukt
+    pixel_kleur = Color(get(mouse_x, mouse_y)).hex
+    if pixel_kleur in kleuren:
+        feiten = kleuren[pixel_kleur]
+        print(feiten['regio'])
+        print(feiten['totale koolstof'])
+        print(feiten['koolstof per persoon'])
     else:
-        print('Region not detected')
+        print('Regio niet gedetecteerd')
 
 
-def load_data(file_name):
+def laad_gegevens(file_name):
     with open(file_name) as f:
         for line in f:
             # print(line)
             info = line.split(',')
-            region_dict = {
-                'region': info[0],
-                'total carbon': info[1],
-                'carbon per person': info[2]
+            regio_dict = {
+                'regio': info[0],
+                'totale koolstof': info[1],
+                'koolstof per persoon': info[2]
             }
-            region_list.append(region_dict)
+            regio_lijst.append(regio_dict)
 
 
 run()
