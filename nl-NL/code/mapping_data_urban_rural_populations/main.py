@@ -1,93 +1,93 @@
 #!/bin/python3
 from p5 import *
-from regions import get_region_coords
+from regions import haal_regio_coördinaten
 
-def load_data(file_name):
-    global region_list
-    region_list = []
+def laad_gegevens(file_name):
+    wereld regio_lijst
+    regio_lijst = []
 
     with open(file_name) as f:
         for line in f:
             #print(line)
             info = line.split(',')
-            # Change the dictionary to match the data you're using
-            region_dict = {
-                'region': info[0],
-                'population': int(info[1]),
-                'population density': float(info[2]),
-                'median age': float(info[3]),
-                'percentage urban': float(info[4])
+            # Wijzig de dictionary zodat deze overeenkomt met de gegevens die je gebruikt
+            regio_dict = {
+                'regio': info[0],
+                'bevolking': int(info[1]),
+                'bevolkingsdichtheid': float(info[2]),
+                'gemiddelde leeftijd': float(info[3]),
+                'percentage stedelijk': float(info[4])
             }
-            #print(region_dict)
-            region_list.append(region_dict)
+            #print(regio_dict)
+            regio_lijst.append(regio_dict)
 
-def draw_pin(x, y, colour):
+def teken_speld(x, y, kleur):
     no_stroke()
-    fill(colour)
+    fill(kleur)
     rect(x, y, 7, 7)
 
 
-def draw_data():
-    global colours
-    colours = {}
-    red_value = 255
-    for region in region_list:
-        if answer == 'u' and region['percentage urban'] >= 50.0:
-            region_name = region['region']
-            region_coords = get_region_coords(region_name)
-            region_x = region_coords['x']
-            region_y = region_coords['y']
-            region_colour = Color(red_value, 255, 0)
-            draw_pin(region_x, region_y, region_colour)
-            colours[region_colour.hex] = region
-            red_value -= 1
-        elif answer == 'r' and region['percentage urban'] < 50.0:
-            region_name = region['region']
-            region_coords = get_region_coords(region_name)
-            region_x = region_coords['x']
-            region_y = region_coords['y']
-            region_colour = Color(red_value, 255, 0)
-            draw_pin(region_x, region_y, region_colour)
-            colours[region_colour.hex] = region
-            red_value -= 1
+def teken_gegevens():
+    wereld kleuren
+    kleuren = {}
+    rood_waarde = 255
+    for regio in regio_lijst:
+        if answer == 'u' and regio['percentage stedelijk'] >= 50.0:
+            regio_naam = regio['naam']
+            regio_coördinaten = haal_regio_coördinaten(regio_naam)
+            regio_x = regio_coördinaten['x']
+            regio_y = regio_coördinaten['y']
+            regio_kleur = Color(rood_waarde, 255, 0)
+            teken_speld(regio_x, regio_y, regio_kleur)
+            kleuren[regio_kleur.hex] = regio
+            rood_waarde -= 1
+        elif answer == 'r' and regio['percentage stedelijk'] < 50.0:
+            regio_naam = regio['naam']
+            regio_coördinaten = haal_regio_coördinaten(regio_naam)
+            regio_x = regio_coördinaten['x']
+            regio_y = regio_coördinaten['y']
+            regio_kleur = Color(rood_waarde, 255, 0)
+            teken_speld(regio_x, regio_y, regio_kleur)
+            kleuren[regio_kleur.hex] = regio
+            rood_waarde -= 1
   
 
 def preload():
-    global map
-    map = load_image('mercator_bw.png')
+    wereldkaart
+    kaart = load_image('mercator_bw.png')
 
 
 def setup():
-    # Put code to run once here
+    # Zet de code om eenmalig uit te voeren hier onder
     size(991, 768)
-    load_data('pop.csv')
+    load_data ('pop.csv')
     image(
-        map,  # The image to draw
-        0,  # The x of the top-left corner
-        0,  # The y of the top-left corner
-        width,  # The width of the image
-        height  # The height of the image
+        kaart, # De afbeelding om te tekenen
+        0, # De x van de linkerbovenhoek
+        0, # De y van de linker bovenhoek
+        width, # De breedte van de afbeelding
+        height # De hoogte van de afbeelding
     )
     no_stroke()
-    draw_data()
+    teken_gegevens()
   
   
-def mouse_pressed():
-    # Put code to run when the mouse is pressed here
-    pixel_colour = Color(get(mouse_x, mouse_y)).hex
+def muis_ingedrukt():
+    # Zet code hier die moet worden uitgevoerd wanneer de muis wordt ingedrukt
+    pixel_kleur = Color(get(mouse_x, mouse_y)).hex
 
-    if pixel_colour in colours:
-        info = colours[pixel_colour]
-        print(info['region'])
-        print('Population: ', str(info['population']))
-        print('Population density: ', str(info['population density']))
-        print('Average age: ', str(info['median age']))
-        print('Percentage urban: ', str(info['percentage urban']))
+    if pixel_kleur in kleuren:
+        info = kleuren[pixel_kleur]
+        print(info['regio'])
+        print('Bevolking: ', str(info['bevolking']))
+        print('Bevolkingsdichtheid: ', str(info['bevolkingsdichtheid']))
+        print('Gemiddelde leeftijd: ', str(info['gemiddelde leeftijd']))
+        print('Percentage stedelijk: ', str(info['percentage stedelijk']))
 
 answer = None
 
 while answer not in ['u', 'r']:
-    answer = input('Please enter u to see places that are mostly urban, or r to see places that are mostly rural: ')
+    answer = input('Voer u in om plaatsen te zien die voornamelijk stedelijk zijn, of r om plaatsen te zien die voornamelijk landelijk zijn: ')
 
 
 run()
