@@ -19,7 +19,7 @@ Exécute cet exemple.
 
 Clique sur les épingles colorées pour imprimer les informations relatives à cette région. Réfléchis au type de données que tu aimerais afficher et à la manière dont tu pourrais concevoir une épingle de forme intéressante pour les afficher sur une carte.
 
-**Mesures du bonheur dans le monde:**:
+**Mesures du bonheur dans le monde :**
 <iframe src="https://editor.raspberrypi.org/fr-FR/embed/viewer/world-happiness-measures" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 Tu peux trouver le projet de mesures du bonheur dans le monde [ici](https://editor.raspberrypi.org/fr-FR/projects/world-happiness-measures){:target="_blank"}
