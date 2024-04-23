@@ -1,238 +1,238 @@
 Afghanistan,42
-Albania,130
-Algeria,135
-American Samoa,92
-Andorra,13
+Albanie,130
+Algérie,135
+Samoa américaines,92
+Andorre,13
 Angola,146
 Anguilla,52
-Antarctica,6
-Antigua and Barbuda,55
-Argentina,256
-Armenia,114
+Antarctique,6
+Antigua-et-Barbuda,55
+Argentine,256
+Arménie,114
 Aruba,32
-Australia,948
-Austria,118
-Azerbaijan,97
+Australie,948
+Autriche,118
+Azerbaïdjan,97
 Bahamas,86
-Bahrain,36
+Bahreïn,36
 Bangladesh,151
-Barbados,56
-Belarus,25
-Belgium,37
-Belize,117
-Benin,88
-Bermuda,72
-Bhutan,71
-Bolivia,231
-Bosnia and Herzegovina,91
+Barbade,56
+Biélorussie,25
+Belgique,37
+Bélize,117
+Bénin,88
+Bermudes,72
+Bhoutan,71
+Bolivie,231
+Bosnie-Herzégovine,91
 Botswana,28
-Bouvet Island,3
-Brazil,990
-British Indian Ocean Territory,85
-British Virgin Islands,67
-Brunei,193
-Bulgaria,104
+Île Bouvet,3
+Brésil,990
+Territoire britannique de l’océan Indien,85
+Îles Vierges britanniques,67
+Brunéi,193
+Bulgarie,104
 Burkina Faso,31
 Burundi,61
-Cape Verde,65
-Cambodia,255
-Cameroon,775
+Cap-Vert,65
+Cambodge,255
+Cameroun,775
 Canada,122
-Cayman Islands,74
-Central African Republic,60
-Chad,43
-Chile,197
-China,1080
+Îles Caïmans,74
+République centrafricaine,60
+Tchad,43
+Chili,197
+Chine,1080
 Hong Kong,64
-Macau,11
-Christmas Island,39
-Cocos (Keeling) Islands,33
-Colombia,835
-Comoros,114
-Congo (Republic),134
-Cook Islands,75
+Macao,11
+Île Christmas,39
+Îles Cocos (Keeling),33
+Colombie,835
+Comores,114
+Congo (République),134
+Îles Cook,75
 Costa Rica,340
 Côte d'Ivoire,249
-Croatia,176
+Croatie,176
 Cuba,339
 Curaçao,51
-Cyprus,72
-Czech Republic,53
-North Korea,78
-Congo (DRC),349
-Denmark,47
+Chypre,72
+République tchèque,53
+Corée du Nord,78
+Congo (RDC),349
+Danemark,47
 Djibouti,98
-Dominica,66
-Dominican Republic,184
-Ecuador,2358
-Egypt,156
-El Salvador,86
-Equatorial Guinea,177
-Eritrea,122
-Estonia,23
+Dominique,66
+République dominicaine,184
+Équateur,2358
+Égypte,156
+Salvador,86
+Guinée équatoriale,177
+Érythrée122
+Estonie,23
 Swaziland,34
-Ethiopia,148
-Falkland Islands (Islas Malvinas),23
-Faroe Islands,21
-Fiji,291
-Finland,36
+Éthiopie,148
+Îles Falkland (Islas Malvinas),23
+Îles Féroé,21
+Fidji,291
+Finlande,36
 France,278
-French Guiana,73
-French Polynesia,175
-French Southern Territories,25
+Guyane française,73
+Polynésie française,175
+Terres australes françaises,25
 Gabon,270
-Gambia,67
-Georgia,120
-Germany,116
+Gambie,67
+Géorgie,120
+Allemagne,116
 Ghana,238
 Gibraltar,31
-Greece,374
-Greenland,23
-Grenada,54
+Grèce,374
+Groenland,23
+Grenade,54
 Guadeloupe,73
 Guam,99
 Guatemala,290
-Guernsey,5
-Guinea,185
-Guinea-Bissau,77
-Guyana,94
-Haiti,205
-Vatican City,1
+Guernesey,5
+Guinée,185
+Guinée-Bissau,77
+Guyane,94
+Haïti,205
+Cité du Vatican,1
 Honduras,301
-Hungary,66
-Iceland,27
-India,1052
-Indonesia,1281
+Hongrie,66
+Islande,27
+Inde,1052
+Indonésie,1281
 Iran,134
-Iraq,72
-Ireland,50
-Isle of Man,3
-Israel,174
-Italy,359
-Jamaica,311
-Japan,404
-Jersey,6
-Jordan,113
+Irak,72
+Irlande,50
+Île de Man,3
+Israël,174
+Italie,359
+Jamaïque,311
+Japon,404
+Maillot,6
+Jordanie,113
 Kazakhstan,82
 Kenya,480
 Kiribati,104
-Kuwait,49
-Kyrgyzstan,44
+Koweït,49
+Kirghizistan,44
 Laos,209
-Latvia,30
-Lebanon,87
+Lettonie,30
+Liban,87
 Lesotho,18
-Liberia,172
-Libya,63
+Libéria,172
+Libye,63
 Liechtenstein,6
-Lithuania,26
+Lituanie,26
 Luxembourg,11
 Madagascar,1324
 Malawi,176
-Malaysia,1272
+Malaisie,1272
 Maldives,75
 Mali,42
-Malta,39
-Marshall Islands,101
+Malte,39
+Îles Marshall,101
 Martinique,48
-Mauritania,86
-Mauritius,257
+Mauritanie,86
+Maurice,257
 Mayotte,88
-Mexico,1162
-Micronesia,167
+Mexique,1162
+Micronésie,167
 Monaco,21
-Mongolia,41
-Montenegro,98
+Mongolie,41
+Monténégro,98
 Montserrat,55
-Morocco,207
+Maroc,207
 Mozambique,309
-Myanmar,321
-Namibia,115
+Birmanie,321
+Namibie,115
 Nauru,82
-Nepal,104
-Netherlands,40
-New Caledonia,526
-New Zealand,199
+Népal,104
+Pays-Bas,40
+Nouvelle-Calédonie,526
+Nouvelle-Zélande,199
 Nicaragua,144
 Niger,34
-Nigeria,361
-Niue,52
-Norfolk Island,44
-Northern Mariana Islands,102
-Norway,64
+Nigéria,361
+Nioué,52
+Île Norfolk,44
+Îles Mariannes du Nord,102
+Norvège,64
 Oman,99
 Pakistan,140
-Palau,182
+Palaos,182
 Panama,383
-Papua New Guinea,493
+Papouasie-Nouvelle-Guinée,493
 Paraguay,59
-Peru,685
+Pérou,685
 Philippines,783
-Poland,58
+Pologne,58
 Portugal,281
-Puerto Rico,126
+Porto Rico,126
 Qatar,39
-South Korea,111
-Moldova,35
+Corée du Sud,111
+Moldavie,35
 Réunion,130
-Romania,104
-Russia,235
+Roumanie,104
+Russie,235
 Rwanda,62
-St. Barthélemy,31
-St. Kitts and Nevis,52
-St. Lucia,62
-Saint Pierre and Miquelon,12
-Saint Vincent and the Grenadines,58
+Saint-Barthélemy,31
+Saint-Kitts-et-Nevis,52
+Sainte-Lucie,62
+Saint-Pierre-et-Miquelon,12
+Saint-Vincent-et-les Grenadines,58
 Samoa,93
-San Marino,1
-São Tomé and Príncipe,94
-Saudi Arabia,131
-Senegal,123
-Serbia,71
+Saint-Marin,1
+São Tomé et Príncipe,94
+Arabie Saoudite,131
+Sénégal,123
+Serbie,71
 Seychelles,439
 Sierra Leone,177
-Singapore,293
-Slovakia,54
-Slovenia,143
-Solomon Islands,245
-Somalia,175
-South Africa,581
-South Georgia and the South Sandwich Islands,9
-South Sudan,49
-Spain,617
+Singapour,293
+Slovaquie,54
+Slovénie,143
+Îles Salomon,245
+Somalie,175
+Afrique du Sud,581
+Géorgie du Sud et îles Sandwich du Sud,9
+Soudan du Sud,49
+Espagne,617
 Sri Lanka,587
 Palestine,31
-Sudan,133
-Suriname,83
-Sweden,54
-Switzerland,74
-Syria,132
-Tajikistan,45
-Thailand,611
+Soudan,133
+Surinam,83
+Suède,54
+Suisse,74
+Syrie,132
+Tadjikistan,45
+Thaïlande,611
 Timor-Leste,24
 Togo,80
-Tokelau,49
+Tokélaou,49
 Tonga,79
-Trinidad and Tobago,69
-Tunisia,96
-Turkey,388
-Turkmenistan,54
-Turks and Caicos Islands,60
+Trinité-et-Tobago,69
+Tunisie,96
+Turquie,388
+Turkménistan,54
+Îles Turques et Caïques,60
 Tuvalu,96
-Uganda,196
+Ouganda,196
 Ukraine,102
-United Arab Emirates,56
-United Kingdom,102
-Tanzania,1082
-United States,1513
-U.S. Virgin Islands,58
+Émirats arabes unis,56
+Royaume-Uni,102
+Tanzanie,1082
+États-Unis, 1513
+NOUS Îles Vierges des États-Unis,58
 Uruguay,106
-Uzbekistan,59
+Ouzbékistan,59
 Vanuatu,137
 Venezuela,328
-Vietnam,616
-Wallis and Futuna,89
-Western Sahara,49
-Yemen,298
-Zambia,88
+Viêt Nam,616
+Wallis et Futuna,89
+Sahara occidental,49
+Yémen,298
+Zambie,88
 Zimbabwe,89
