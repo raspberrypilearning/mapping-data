@@ -1,0 +1,207 @@
+Aruba,3056424581
+Afghanistan,18869945678
+Angola,1.22124E+11
+Albanie,13019693451
+Andorre,3000180750
+Émirats arabes unis,3.85606E+11
+Argentine,6.43629E+11
+Arménie,11527458566
+Samoa américaines,602000000
+Antigua-et-Barbuda,1467977778
+Australie,1.32919E+12
+Autriche,4.17238E+11
+Azerbaïdjan,40865558912
+Burundi,3172292379
+Belgique,5.02698E+11
+Bénin,12701656931
+Burkina Faso,14106956830
+Bangladesh,2.49711E+11
+Bulgarie,58971520599
+Bahreïn,35473776596
+Bahamas,12490700000
+Bosnie-Herzégovine,18080118128
+Biélorussie,54726595249
+Bélize,1836600000
+Bermudes,7142316000
+Bolivie,37508642165
+Brésil,2.06283E+12
+Barbade,4978000000
+Brunéi,12128104859
+Bhoutan,2450364928
+Botswana,17405588070
+République Centrafricaine,2072350151
+Canada,1.64988E+12
+Suisse,6.7995E+11
+Chili,2.77045E+11
+Chine,1.23104E+13
+Côte d'Ivoire,51588158718
+Cameroun,35009262788
+Congo (RDC),38019265626
+Congo (République),11198674674
+Colombie,3.11884E+11
+Comores,1077439663
+Costa Rica,58481858043
+Cuba,96851000000
+Îles Caïmans,5153091158
+Chypre,22729184365
+République tchèque,2.18629E+11
+Allemagne,3.6826E+12
+Djibouti,2751461056
+Dominique,519837037
+Danemark,3.32121E+11
+République Dominicaine,79997975623
+Algérie,1.70163E+11
+Équateur,1.04296E+11
+Egypte,2.35734E+11
+Érythrée,
+Espagne,1.31254E+12
+Estonie,26951648829
+Ethiopie,81770791971
+Finlande,2.55232E+11
+Fidji,5353404419
+France,2.59515E+12
+Îles Féroé,2905102304
+Micronésie,366666800
+Gabon,14929488771
+Royaume-Uni,2.66623E+12
+Géorgie,16242916916
+Ghana,58998132330
+Gibraltar,
+Guinée,10324668267
+Gambie,1504909753
+Guinée-Bissau,1350177128
+Guinée équatoriale,12200914930
+Grèce,2.03588E+11
+Grenade,1125685185
+Groenland,2826651926
+Guatemala,71612352645
+Guam,5851000000
+Guyane,4748174334
+Hong Kong,3.41244E+11
+Honduras,23136232230
+Croatie,55481644098
+Haïti,14213814583
+Hongrie,1.42962E+11
+Indonésie,1.01562E+12
+Île de Man,6979581725
+Inde,2.65275E+12
+Irlande,3.35663E+11
+Iran,4.45345E+11
+Irak,1.95473E+11
+Islande,24488176541
+Israël,3.53253E+11
+Italie,1.9618E+12
+Jamaïque,14806340821
+Jordanie,41408960787
+Japon,4.86686E+12
+Kazakhstan,1.66806E+11
+Kenya,78965004656
+Kirghizistan,7702934800
+Cambodge,22177200512
+Kiribati,187276210.9
+Saint-Kitts-et-Nevis,996944444.4
+Corée du Sud,1.6239E+12
+Koweït,1.20707E+11
+Laos,16853087485
+Liban,53140638269
+Libéria,3285455000
+Libye,37883243650
+Sainte-Lucie,1999090407
+Liechtenstein,6552858739
+Sri Lanka,87428125558
+Lesotho,2405289384
+Lituanie,47758736932
+Luxembourg,64181944723
+Lettonie,30458763246
+Macao,50751059058
+Maroc,1.09683E+11
+Monaco,6431314957
+Moldavie,9669759987
+Madagascar,13176313233
+Maldives,4754352301
+Mexique,1.15891E+12
+Îles Marshall,212881000
+Mali,15365627045
+Malte,13146963159
+Birmanie, 68945867478
+Monténégro,4844606146
+Mongolie,11425755280
+Îles Mariannes du Nord,1601000000
+Mozambique,13219084261
+Mauritanie,6758390729
+Maurice,13259351418
+Malawi,6303292264
+Malaisie,3.19112E+11
+Namibie,12741746524
+Nouvelle Calédonie,
+Niger,11189541083
+Nigéria,3.75746E+11
+Nicaragua,13785909906
+Pays-Bas,8.3387E+11
+Norvège,3.98394E+11
+Népal,25180583770
+Nauru,109585941.6
+Nouvelle-Zélande,2.05416E+11
+Oman,70598026283
+Pakistan,3.04567E+11
+Panamá,62219000000
+Pérou,2.11007E+11
+Philippines,3.28481E+11
+Palaos,286106800
+Papouasie-Nouvelle-Guinée,22742613549
+Pologne,5.26509E+11
+Porto Rico,1.03446E+11
+Corée du Nord,
+Portugal,2.21358E+11
+Paraguay,39008900332
+Polynésie française,
+Qatar,1.61099E+11
+Roumanie,2.11695E+11
+Russie,1.5742E+12
+Rwanda,9253098954
+Arabie Saoudite,6.88586E+11
+Soudan,45021077955
+Sénégal,20996564752
+Singapour,3.41863E+11
+Îles Salomon,1483758907
+Sierra Leone,3739577973
+Salvador,24979200000
+Saint-Marin,1528630707
+Somalie,
+Serbie,44179055280
+Soudan du Sud,
+Surinam,3216207914
+Slovaquie,95494424979
+Slovénie,48586603448
+Suède,5.41019E+11
+Swaziland,4402973000
+Seychelles,1524486800
+Syrie,
+Îles Turques et Caïques,1022365000
+Tchad,10000395242
+Togo,4819949975
+Thaïlande,4.56295E+11
+Tadjikistan,7157865188
+Turkménistan,37926285714
+Timor-Leste,1599338100
+Tonga,460379145
+Trinité-et-Tobago,22474828527
+Tunisie,39802430355
+Turquie,8.58989E+11
+Tuvalu,40619251.99
+Tanzanie,53320625959
+Ouganda,30756466548
+Ukraine,1.1219E+11
+Uruguay,59530088537
+États-Unis,1.95194E+13
+Ouzbékistan,59159945321
+Venezuela,
+Îles Vierges britanniques,
+Viêt Nam,2.2378E+11
+Vanuatu,880043553.7
+Samoa,832153612.6
+Kosovo,7245707185
+Yémen,26736139802
+Afrique du Sud,3.49554E+11
+Zambie,25868165345
+Zimbabwe,22040902300
