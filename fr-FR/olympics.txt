@@ -1,0 +1,21 @@
+États-Unis4,
+Royaume-Uni,3
+Grèce,3
+France,2
+Allemagne,2
+Australie,2
+Russie,1
+Italie,1
+Suède,1
+Chine,1
+Japon,2
+Finlande,1
+Canada1
+Pays-Bas,1
+Corée du Sud,1
+Belgique,1
+Espagne,1
+Brésil,1
+Suède,1
+Belgique,1
+Mexique,1 	
