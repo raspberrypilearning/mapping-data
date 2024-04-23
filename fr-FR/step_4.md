@@ -150,7 +150,7 @@ line_number_start:
 line_highlights: 2-4, 10, 12-14
 ---
 def dessine_donnees():
-    valeur_rouge = 255 # Set a starting value for red
+    valeur_rouge = 255 # Définir une valeur de départ pour le rouge
     valeur_bleu = 0
     valeur_vert = 255
     for region in liste_regions:
@@ -354,7 +354,7 @@ def mouse_pressed():
 title: Mes épingles n'apparaissent pas sur la carte
 ---
 
-If your pins are not appearing on the map, check that you are calling your `dessine_donnees()` function from your `setup()` function.
+Si tes épingles n'apparaissent pas sur la carte, vérifie que tu appelles bien ta fonction `dessine_donnees()` depuis ta fonction `setup()`.
 
 --- /collapse ---
 
