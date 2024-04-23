@@ -13,7 +13,7 @@ def charge_donnees(nom_fichier):
             # Modifie le dictionnaire pour qu'il corresponde aux données que tu utilises
             dico_regions = {
                 'nom': info[0],
-                'pays_hote' : int(info[1])
+                'pays_hote': int(info[1])
             }
             #print(dico_regions)
             liste_regions.append(dico_regions)
