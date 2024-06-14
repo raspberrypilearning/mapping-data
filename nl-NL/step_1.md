@@ -45,7 +45,7 @@ Bekijk deze voorbeeldprojecten om meer ideeën op te doen:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/world-carbon-data" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe> Je kunt het Wereld koolstof data project [hier vinden](https://editor.raspberrypi.org/en/projects/world-carbon-data){:target="_ blank"}
 
-**GDP**:
+**BBP:**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/mapping-data-gdp" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe> Je kunt het BBP-project [hier vinden](https://editor.raspberrypi.org/en/projects/mapping-data-gdp){:target="_blank"}
 
