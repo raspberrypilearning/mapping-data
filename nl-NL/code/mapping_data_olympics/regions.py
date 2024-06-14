@@ -1426,7 +1426,7 @@ regio's = {
   },
   'Ukraine': {
     'name': 'Ukraine',
-    'capital': 'Kyiv',
+    'hoofdstad': 'Kiev',
     'latitude': 50.4501,
     'longitude': 30.5234
   },
