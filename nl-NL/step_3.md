@@ -222,7 +222,7 @@ Controleer de bestandsnaam zorgvuldig - vergeet niet dat hoofdletters verschille
 
 --- collapse ---
 ---
-titel: Mijn kaart heeft het verkeerde formaat
+title: Mijn kaart heeft het verkeerde formaat
 ---
 
 Controleer de invoer die de breedte en hoogte van de afbeelding bepaalt:
