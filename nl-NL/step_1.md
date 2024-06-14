@@ -37,17 +37,17 @@ Je gaat enkele ontwerpbesluiten nemen over welke gegevens je wilt laten zien aan
 
 Bekijk deze voorbeeldprojecten om meer ideeën op te doen:
 
-**Ink wereld geluk:**:
+**Ink wereld geluk:**
 <iframe src="https://editor.raspberrypi.org/nl-NL/embed/viewer/ink-world-happiness" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
-Je kunt het Ink Wereld geluk-project[ hier vinden](https://editor.raspberrypi.org/nl-NL/projects/ink-world-happiness){:target="_blank"}
+Je kunt het Ink Wereld geluk-project [hier vinden](https://editor.raspberrypi.org/nl-NL/projects/ink-world-happiness){:target="_blank"}
 
-**Wereldkoolstofgegevens:**:
+**Wereldkoolstofgegevens:**
 <iframe src="https://editor.raspberrypi.org/nl-NL/embed/viewer/world-carbon-data" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 Je kunt het Wereld koolstof data project [hier vinden](https://editor.raspberrypi.org/nl-NL/projects/world-carbon-data){:target="_blank"}
 
-**BBP:**:
+**BBP:**
 <iframe src="https://editor.raspberrypi.org/nl-NL/embed/viewer/mapping-data-gdp" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 Je kunt het BBP-project [hier vinden](https://editor.raspberrypi.org/nl-NL/projects/mapping-data-gdp){:target="_blank"}
