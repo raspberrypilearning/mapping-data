@@ -102,7 +102,7 @@ Angola,18021.394,0.605
 
 --- collapse ---
 ---
-title: bedreigde soorten
+title: Bedreigde soorten
 ---
 
 **Bestandsnaam:** `species.csv`
@@ -354,7 +354,7 @@ line_highlights: 6
 from p5 import *
 from regions import haal_regio_coordinaten
 
-region_list = []
+regio_lijst = []
 --- /code ---
 
 Voeg in `laad_data()`al je dictionaries toe aan `regio_lijst` met behulp van `append`. Hiermee kun je in de rest van je programma werken met de gegevens.
