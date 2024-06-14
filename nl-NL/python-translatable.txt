@@ -42,7 +42,7 @@ ranking geluk
 
 geluksscore
 
-haal_regio_coördinaten
+haal_regio_coordinaten
 
 regio_lijst
 
@@ -64,7 +64,7 @@ teken_gegevens
 
 regio_naam
 
-regio_coördinaten
+regio_coordinaten
 
 regio_x
 
