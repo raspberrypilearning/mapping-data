@@ -1,0 +1,47 @@
+Zet code hier die moet worden uitgevoerd wanneer de muis wordt ingedrukt
+
+Wijzig de dictionary zodat deze overeenkomt met de gegevens die je gebruikt
+
+Zet de code om eenmalig uit te voeren hieronder
+
+Vervang door jouw afbeelding
+
+De afbeelding die wordt getekend
+
+De x van de linkerbovenhoek
+
+De y van de linkerbovenhoek
+
+De breedte van de afbeelding
+
+De hoogte van de afbeelding
+
+Plaats hier code om je speld te tekenen
+
+Haal de naam van de regio op
+
+Gebruik de naam om coördinaten te krijgen
+
+Verkrijg het x-coördinaat
+
+Verkrijg het y-coördinaat
+
+Stel de speld kleur in
+
+Teken de speld
+
+Stel een startwaarde voor rood in
+
+Gebruik de rode waarde in de kleur
+
+Wijzig de roodwaarde
+
+Wijzig de groenwaarde
+
+Wijzig de blauwwaarde
+
+Selecteer een willekeurige kleur
+
+Je eerste data feit
+
+Je tweede data feit
