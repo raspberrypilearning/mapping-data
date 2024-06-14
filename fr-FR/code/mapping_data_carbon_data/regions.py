@@ -1547,4 +1547,4 @@ def get_region_coords(region, largeur_carte=991, hauteur_carte=768):
             recherche['latitude'], recherche['longitude'], largeur_carte, hauteur_carte)
         return coords
     except KeyError:
-        print('Région non reconnue: ', region)
+        print('Région non reconnue : ', region)
