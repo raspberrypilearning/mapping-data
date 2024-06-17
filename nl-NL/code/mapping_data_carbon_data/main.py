@@ -7,7 +7,7 @@ kleuren = {}
 
 
 def preload():
-    wereldkaart
+    global kaart
     kaart = load_image('mercator_bw.png')
 
 # Zet de code om eenmalig uit te voeren hier onder
