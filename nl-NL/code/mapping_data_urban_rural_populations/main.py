@@ -1,9 +1,9 @@
 #!/bin/python3
 from p5 import *
-from regions import haal_regio_coördinaten
+from regions import haal_regio_coordinaten
 
 def laad_gegevens(file_name):
-    wereld regio_lijst
+    global regio_lijst
     regio_lijst = []
 
     with open(file_name) as f:
@@ -28,24 +28,24 @@ def teken_speld(x, y, kleur):
 
 
 def teken_gegevens():
-    wereld kleuren
+    global kleuren
     kleuren = {}
     rood_waarde = 255
     for regio in regio_lijst:
         if answer == 'u' and regio['percentage stedelijk'] >= 50.0:
-            regio_naam = regio['naam']
-            regio_coördinaten = haal_regio_coördinaten(regio_naam)
-            regio_x = regio_coördinaten['x']
-            regio_y = regio_coördinaten['y']
+            regio_naam = regio['regio']
+            regio_coordinaten = haal_regio_coordinaten(regio_naam)
+            regio_x = regio_coordinaten['x']
+            regio_y = regio_coordinaten['y']
             regio_kleur = Color(rood_waarde, 255, 0)
             teken_speld(regio_x, regio_y, regio_kleur)
             kleuren[regio_kleur.hex] = regio
             rood_waarde -= 1
         elif answer == 'r' and regio['percentage stedelijk'] < 50.0:
-            regio_naam = regio['naam']
-            regio_coördinaten = haal_regio_coördinaten(regio_naam)
-            regio_x = regio_coördinaten['x']
-            regio_y = regio_coördinaten['y']
+            regio_naam = regio['regio']
+            regio_coordinaten = haal_regio_coordinaten(regio_naam)
+            regio_x = regio_coordinaten['x']
+            regio_y = regio_coordinaten['y']
             regio_kleur = Color(rood_waarde, 255, 0)
             teken_speld(regio_x, regio_y, regio_kleur)
             kleuren[regio_kleur.hex] = regio
@@ -53,14 +53,14 @@ def teken_gegevens():
   
 
 def preload():
-    wereldkaart
+    global kaart
     kaart = load_image('mercator_bw.png')
 
 
 def setup():
     # Zet de code om eenmalig uit te voeren hier onder
     size(991, 768)
-    load_data ('pop.csv')
+    laad_gegevens('pop.csv')
     image(
         kaart, # De afbeelding om te tekenen
         0, # De x van de linkerbovenhoek
@@ -72,7 +72,7 @@ def setup():
     teken_gegevens()
   
   
-def muis_ingedrukt():
+def mouse_pressed():
     # Zet code hier die moet worden uitgevoerd wanneer de muis wordt ingedrukt
     pixel_kleur = Color(get(mouse_x, mouse_y)).hex
 

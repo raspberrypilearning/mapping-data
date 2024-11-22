@@ -1,1548 +1,1550 @@
 #!/bin/python3
 from math import radians, pi, log, tan
 
-regions = {
-  'Abkhazia': {
-    'name': 'Abkhazia',
-    'capital': 'Sukhumi',
-    'latitude': 43.001525,
-    'longitude': 41.023415
-  },
-  'Afghanistan': {
-    'name': 'Afghanistan',
-    'capital': 'Kabul',
-    'latitude': 34.575503,
-    'longitude': 69.240073
-  },
-  'Aland Islands': {
-    'name': 'Aland Islands',
-    'capital': 'Mariehamn',
-    'latitude': 60.1,
-    'longitude': 19.933333
-  },
-  'Albania': {
-    'name': 'Albania',
-    'capital': 'Tirana',
-    'latitude': 41.327546,
-    'longitude': 19.818698
-  },
-  'Algeria': {
-    'name': 'Algeria',
-    'capital': 'Algiers',
-    'latitude': 36.752887,
-    'longitude': 3.042048
-  },
-  'American Samoa': {
-    'name': 'American Samoa',
-    'capital': 'Pago Pago',
-    'latitude': -14.275632,
-    'longitude': -170.702036
-  },
-  'Andorra': {
-    'name': 'Andorra',
-    'capital': 'Andorra la Vella',
-    'latitude': 42.506317,
-    'longitude': 1.521835
-  },
-  'Angola': {
-    'name': 'Angola',
-    'capital': 'Luanda',
-    'latitude': -8.839988,
-    'longitude': 13.289437
-  },
-  'Anguilla': {
-    'name': 'Anguilla',
-    'capital': 'The Valley',
-    'latitude': 18.214813,
-    'longitude': -63.057441
-  },
-  'Antarctica': {
-    'name': 'Antarctica',
-    'capital': 'South Pole',
-    'latitude': -90.0,
-    'longitude': 0.0
-  },
-  'Antigua and Barbuda': {
-    'name': 'Antigua and Barbuda',
-    'capital': "St. John's",
-    'latitude': 17.12741,
-    'longitude': -61.846772
-  },
-  'Argentina': {
-    'name': 'Argentina',
-    'capital': 'Buenos Aires',
-    'latitude': -34.603684,
-    'longitude': -58.381559
-  },
-  'Armenia': {
-    'name': 'Armenia',
-    'capital': 'Yerevan',
-    'latitude': 40.179186,
-    'longitude': 44.499103
-  },
-  'Aruba': {
-    'name': 'Aruba',
-    'capital': 'Oranjestad',
-    'latitude': 12.509204,
-    'longitude': -70.008631
-  },
-  'Australia': {
-    'name': 'Australia',
-    'capital': 'Canberra',
-    'latitude': -35.282,
-    'longitude': 149.128684
-  },
-  'Austria': {
-    'name': 'Austria',
-    'capital': 'Vienna',
-    'latitude': 48.208174,
-    'longitude': 16.373819
-  },
-  'Azerbaijan': {
-    'name': 'Azerbaijan',
-    'capital': 'Baku',
-    'latitude': 40.409262,
-    'longitude': 49.867092
-  },
-  'Bahamas': {
-    'name': 'Bahamas',
-    'capital': 'Nassau',
-    'latitude': 25.047984,
-    'longitude': -77.355413
-  },
-  'Bahrain': {
-    'name': 'Bahrain',
-    'capital': 'Manama',
-    'latitude': 26.228516,
-    'longitude': 50.58605
-  },
-  'Bangladesh': {
-    'name': 'Bangladesh',
-    'capital': 'Dhaka',
-    'latitude': 23.810332,
-    'longitude': 90.412518
-  },
-  'Barbados': {
-    'name': 'Barbados',
-    'capital': 'Bridgetown',
-    'latitude': 13.113222,
-    'longitude': -59.598809
-  },
-  'Belarus': {
-    'name': 'Belarus',
-    'capital': 'Minsk',
-    'latitude': 53.90454,
-    'longitude': 27.561524
-  },
-  'Belgium': {
-    'name': 'Belgium',
-    'capital': 'Brussels',
-    'latitude': 50.85034,
-    'longitude': 4.35171
-  },
-  'Belize': {
-    'name': 'Belize',
-    'capital': 'Belmopan',
-    'latitude': 17.251011,
-    'longitude': -88.75902
-  },
-  'Benin': {
-    'name': 'Benin',
-    'capital': 'Porto-Novo',
-    'latitude': 6.496857,
-    'longitude': 2.628852
-  },
-  'Bermuda': {
-    'name': 'Bermuda',
-    'capital': 'Hamilton',
-    'latitude': 32.294816,
-    'longitude': -64.781375
-  },
-  'Bhutan': {
-    'name': 'Bhutan',
-    'capital': 'Thimphu',
-    'latitude': 27.472792,
-    'longitude': 89.639286
-  },
-  'Bolivia': {
-    'name': 'Bolivia',
-    'capital': 'La Paz',
-    'latitude': -16.489689,
-    'longitude': -68.119294
-  },
-  'Bosnia and Herzegovina': {
-    'name': 'Bosnia and Herzegovina',
-    'capital': 'Sarajevo',
-    'latitude': 43.856259,
-    'longitude': 18.413076
-  },
-  'Botswana': {
-    'name': 'Botswana',
-    'capital': 'Gaborone',
-    'latitude': -24.628208,
-    'longitude': 25.923147
-  },
-  'Bouvet Island': {
-    'name': 'Bouvet Island',
-    'capital': 'Bouvet Island',
-    'latitude': -54.43,
-    'longitude': 3.38
-  },
-  'Brazil': {
-    'name': 'Brazil',
-    'capital': 'Brasília',
-    'latitude': -15.794229,
-    'longitude': -47.882166
-  },
-  'British Indian Ocean Territory': {
-    'name': 'British Indian Ocean Territory',
-    'capital': 'Camp Justice',
-    'latitude': 21.3419,
-    'longitude': 55.4778
-  },
-  'British Virgin Islands': {
-    'name': 'British Virgin Islands',
-    'capital': 'Road Town',
-    'latitude': 18.428612,
-    'longitude': -64.618466
-  },
-  'Brunei': {
-    'name': 'Brunei',
-    'capital': 'Bandar Seri Begawan',
-    'latitude': 4.903052,
-    'longitude': 114.939821
-  },
-  'Bulgaria': {
-    'name': 'Bulgaria',
-    'capital': 'Sofia',
-    'latitude': 42.697708,
-    'longitude': 23.321868
-  },
-  'Burkina Faso': {
-    'name': 'Burkina Faso',
-    'capital': 'Ouagadougou',
-    'latitude': 12.371428,
-    'longitude': -1.51966
-  },
-  'Burundi': {
-    'name': 'Burundi',
-    'capital': 'Bujumbura',
-    'latitude': -3.361378,
-    'longitude': 29.359878
-  },
-  'Cambodia': {
-    'name': 'Cambodia',
-    'capital': 'Phnom Penh',
-    'latitude': 11.544873,
-    'longitude': 104.892167
-  },
-  'Cameroon': {
-    'name': 'Cameroon',
-    'capital': 'Yaoundé',
-    'latitude': 3.848033,
-    'longitude': 11.502075
-  },
-  'Canada': {
-    'name': 'Canada',
-    'capital': 'Ottawa',
-    'latitude': 45.42153,
-    'longitude': -75.697193
-  },
-  'Cape Verde': {
-    'name': 'Cape Verde',
-    'capital': 'Praia',
-    'latitude': 14.93305,
-    'longitude': -23.513327
-  },
-  'Cayman Islands': {
-    'name': 'Cayman Islands',
-    'capital': 'George Town',
-    'latitude': 19.286932,
-    'longitude': -81.367439
-  },
-  'Central African Republic': {
-    'name': 'Central African Republic',
-    'capital': 'Bangui',
-    'latitude': 4.394674,
-    'longitude': 18.55819
-  },
-  'Chad': {
-    'name': 'Chad',
-    'capital': "N'Djamena",
-    'latitude': 12.134846,
-    'longitude': 15.055742
-  },
-  'Chile': {
-    'name': 'Chile',
-    'capital': 'Santiago',
-    'latitude': -33.44889,
-    'longitude': -70.669265
-  },
-  'China': {
-    'name': 'China',
-    'capital': 'Beijing',
-    'latitude': 39.904211,
-    'longitude': 116.407395
-  },
-  'Christmas Island': {
-    'name': 'Christmas Island',
-    'capital': 'Flying Fish Cove',
-    'latitude': -10.420686,
-    'longitude': 105.679379
-  },
-  'Cocos (Keeling) Islands': {
-    'name': 'Cocos (Keeling) Islands',
-    'capital': 'West Island',
-    'latitude': -12.188834,
-    'longitude': 96.829316
-  },
-  'Colombia': {
-    'name': 'Colombia',
-    'capital': 'Bogotá',
-    'latitude': 4.710989,
-    'longitude': -74.072092
-  },
-  'Comoros': {
-    'name': 'Comoros',
-    'capital': 'Moroni',
-    'latitude': -11.717216,
-    'longitude': 43.247315
-  },
-  'Congo (DRC)': {
-    'name': 'Congo (DRC)',
-    'capital': 'Kinshasa',
-    'latitude': -4.441931,
-    'longitude': 15.266293
-  },
-  'Congo (Republic)': {
-    'name': 'Congo (Republic)',
-    'capital': 'Brazzaville',
-    'latitude': -4.26336,
-    'longitude': 15.242885
-  },
-  'Cook Islands': {
-    'name': 'Cook Islands',
-    'capital': 'Avarua',
-    'latitude': -21.212901,
-    'longitude': -159.782306
-  },
-  'Costa Rica': {
-    'name': 'Costa Rica',
-    'capital': 'San José',
-    'latitude': 9.928069,
-    'longitude': -84.090725
-  },
-  "Côte d'Ivoire": {
-    'name': "Côte d'Ivoire",
-    'capital': 'Yamoussoukro',
-    'latitude': 6.827623,
-    'longitude': -5.289343
-  },
-  'Croatia': {
-    'name': 'Croatia',
-    'capital': 'Zagreb ',
-    'latitude': 45.815011,
-    'longitude': 15.981919
-  },
-  'Cuba': {
-    'name': 'Cuba',
-    'capital': 'Havana',
-    'latitude': 23.05407,
-    'longitude': -82.345189
-  },
-  'Curaçao': {
-    'name': 'Curaçao',
-    'capital': 'Willemstad',
-    'latitude': 12.122422,
-    'longitude': -68.882423
-  },
-  'Cyprus': {
-    'name': 'Cyprus',
-    'capital': 'Nicosia',
-    'latitude': 35.185566,
-    'longitude': 33.382276
-  },
-  'Czech Republic': {
-    'name': 'Czech Republic',
-    'capital': 'Prague',
-    'latitude': 50.075538,
-    'longitude': 14.4378
-  },
-  'Denmark': {
-    'name': 'Denmark',
-    'capital': 'Copenhagen',
-    'latitude': 55.676097,
-    'longitude': 12.568337
-  },
-  'Djibouti': {
-    'name': 'Djibouti',
-    'capital': 'Djibouti',
-    'latitude': 11.572077,
-    'longitude': 43.145647
-  },
-  'Dominica': {
-    'name': 'Dominica',
-    'capital': 'Roseau',
-    'latitude': 15.309168,
-    'longitude': -61.379355
-  },
-  'Dominican Republic': {
-    'name': 'Dominican Republic',
-    'capital': 'Santo Domingo',
-    'latitude': 18.486058,
-    'longitude': -69.931212
-  },
-  'Ecuador': {
-    'name': 'Ecuador',
-    'capital': 'Quito',
-    'latitude': -0.180653,
-    'longitude': -78.467838
-  },
-  'Egypt': {
-    'name': 'Egypt',
-    'capital': 'Cairo',
-    'latitude': 30.04442,
-    'longitude': 31.235712
-  },
-  'El Salvador': {
-    'name': 'El Salvador',
-    'capital': 'San Salvador',
-    'latitude': 13.69294,
-    'longitude': -89.218191
-  },
-  'Equatorial Guinea': {
-    'name': 'Equatorial Guinea',
-    'capital': 'Malabo',
-    'latitude': 3.750412,
-    'longitude': 8.737104
-  },
-  'Eritrea': {
-    'name': 'Eritrea',
-    'capital': 'Asmara',
-    'latitude': 15.322877,
-    'longitude': 38.925052
-  },
-  'Estonia': {
-    'name': 'Estonia',
-    'capital': 'Tallinn',
-    'latitude': 59.436961,
-    'longitude': 24.753575
-  },
-  'Ethiopia': {
-    'name': 'Ethiopia',
-    'capital': 'Addis Ababa',
-    'latitude': 8.980603,
-    'longitude': 38.757761
-  },
-  'Falkland Islands (Islas Malvinas)': {
-    'name': 'Falkland Islands (Islas Malvinas)',
-    'capital': 'Stanley',
-    'latitude': -51.697713,
-    'longitude': -57.851663
-  },
-  'Faroe Islands': {
-    'name': 'Faroe Islands',
-    'capital': 'Tórshavn',
-    'latitude': 62.007864,
-    'longitude': -6.790982
-  },
-  'Fiji': {
-    'name': 'Fiji',
-    'capital': 'Suva',
-    'latitude': -18.124809,
-    'longitude': 178.450079
-  },
-  'Finland': {
-    'name': 'Finland',
-    'capital': 'Helsinki',
-    'latitude': 60.173324,
-    'longitude': 24.941025
-  },
-  'France': {
-    'name': 'France',
-    'capital': 'Paris',
-    'latitude': 48.856614,
-    'longitude': 2.352222
-  },
-  'French Guiana': {
-    'name': 'French Guiana',
-    'capital': 'Cayenne',
-    'latitude': 4.92242,
-    'longitude': -52.313453
-  },
-  'French Polynesia': {
-    'name': 'French Polynesia',
-    'capital': 'Papeete',
-    'latitude': -17.551625,
-    'longitude': -149.558476
-  },
-  'French Southern Territories': {
-    'name': 'French Southern Territories',
-    'capital': 'Saint-Pierre ',
-    'latitude': -21.3419,
-    'longitude': 55.4778
-  },
-  'Gabon': {
-    'name': 'Gabon',
-    'capital': 'Libreville',
-    'latitude': 0.416198,
-    'longitude': 9.467268
-  },
-  'Gambia': {
-    'name': 'Gambia',
-    'capital': 'Banjul',
-    'latitude': 13.454876,
-    'longitude': -16.579032
-  },
-  'Georgia': {
-    'name': 'Georgia',
-    'capital': 'Tbilisi',
-    'latitude': 41.715138,
-    'longitude': 44.827096
-  },
-  'Germany': {
-    'name': 'Germany',
-    'capital': 'Berlin',
-    'latitude': 52.520007,
-    'longitude': 13.404954
-  },
-  'Ghana': {
-    'name': 'Ghana',
-    'capital': 'Accra',
-    'latitude': 5.603717,
-    'longitude': -0.186964
-  },
-  'Gibraltar': {
-    'name': 'Gibraltar',
-    'capital': 'Gibraltar',
-    'latitude': 36.140773,
-    'longitude': -5.353599
-  },
-  'Greece': {
-    'name': 'Greece',
-    'capital': 'Athens',
-    'latitude': 37.983917,
-    'longitude': 23.72936
-  },
-  'Greenland': {
-    'name': 'Greenland',
-    'capital': 'Nuuk',
-    'latitude': 64.18141,
-    'longitude': -51.694138
-  },
-  'Grenada': {
-    'name': 'Grenada',
-    'capital': "St. George's",
-    'latitude': 12.056098,
-    'longitude': -61.7488
-  },
-  'Guadeloupe': {
-    'name': 'Guadeloupe',
-    'capital': 'Basse-Terre',
-    'latitude': 16.014453,
-    'longitude': -61.706411
-  },
-  'Guam': {
-    'name': 'Guam',
-    'capital': 'Hagåtña',
-    'latitude': 13.470891,
-    'longitude': 144.751278
-  },
-  'Guatemala': {
-    'name': 'Guatemala',
-    'capital': 'Guatemala City',
-    'latitude': 14.634915,
-    'longitude': -90.506882
-  },
-  'Guernsey': {
-    'name': 'Guernsey',
-    'capital': 'St. Peter Port',
-    'latitude': 49.455443,
-    'longitude': -2.536871
-  },
-  'Guinea': {
-    'name': 'Guinea',
-    'capital': 'Conakry',
-    'latitude': 9.641185,
-    'longitude': -13.578401
-  },
-  'Guinea-Bissau': {
-    'name': 'Guinea-Bissau',
-    'capital': 'Bissau',
-    'latitude': 11.881655,
-    'longitude': -15.617794
-  },
-  'Guyana': {
-    'name': 'Guyana',
-    'capital': 'Georgetown',
-    'latitude': 6.801279,
-    'longitude': -58.155125
-  },
-  'Haiti': {
-    'name': 'Haiti',
-    'capital': 'Port-au-Prince',
-    'latitude': 18.594395,
-    'longitude': -72.307433
-  },
-  'Honduras': {
-    'name': 'Honduras',
-    'capital': 'Tegucigalpa',
-    'latitude': 14.072275,
-    'longitude': -87.192136
-  },
-  'Hong Kong': {
-    'name': 'Hong Kong',
-    'capital': 'Hong Kong',
-    'latitude': 22.396428,
-    'longitude': 114.109497
-  },
-  'Hungary': {
-    'name': 'Hungary',
-    'capital': 'Budapest',
-    'latitude': 47.497912,
-    'longitude': 19.040235
-  },
-  'Iceland': {
-    'name': 'Iceland',
-    'capital': 'Reykjavík',
-    'latitude': 64.126521,
-    'longitude': -21.817439
-  },
-  'India': {
-    'name': 'India',
-    'capital': 'New Delhi',
-    'latitude': 28.613939,
-    'longitude': 77.209021
-  },
-  'Indonesia': {
-    'name': 'Indonesia',
-    'capital': 'Jakarta',
-    'latitude': -6.208763,
-    'longitude': 106.845599
-  },
-  'Iran': {
-    'name': 'Iran',
-    'capital': 'Tehran',
-    'latitude': 35.689198,
-    'longitude': 51.388974
-  },
-  'Iraq': {
-    'name': 'Iraq',
-    'capital': 'Baghdad',
-    'latitude': 33.312806,
-    'longitude': 44.361488
-  },
-  'Ireland': {
-    'name': 'Ireland',
-    'capital': 'Dublin',
-    'latitude': 53.349805,
-    'longitude': -6.26031
-  },
-  'Isle of Man': {
-    'name': 'Isle of Man',
-    'capital': 'Douglas',
-    'latitude': 54.152337,
-    'longitude': -4.486123
-  },
-  'Israel': {
-    'name': 'Israel',
-    'capital': 'Tel Aviv',
-    'latitude': 32.0853,
-    'longitude': 34.781768
-  },
-  'Italy': {
-    'name': 'Italy',
-    'capital': 'Rome',
-    'latitude': 41.902784,
-    'longitude': 12.496366
-  },
-  'Jamaica': {
-    'name': 'Jamaica',
-    'capital': 'Kingston',
-    'latitude': 18.042327,
-    'longitude': -76.802893
-  },
-  'Japan': {
-    'name': 'Japan',
-    'capital': 'Tokyo',
-    'latitude': 35.709026,
-    'longitude': 139.731992
-  },
-  'Jersey': {
-    'name': 'Jersey',
-    'capital': 'St. Helier',
-    'latitude': 49.186823,
-    'longitude': -2.106568
-  },
-  'Jordan': {
-    'name': 'Jordan',
-    'capital': 'Amman',
-    'latitude': 31.956578,
-    'longitude': 35.945695
-  },
-  'Kazakhstan': {
-    'name': 'Kazakhstan',
-    'capital': 'Astana',
-    'latitude': 51.160523,
-    'longitude': 71.470356
-  },
-  'Kenya': {
-    'name': 'Kenya',
-    'capital': 'Nairobi',
-    'latitude': -1.292066,
-    'longitude': 36.821946
-  },
-  'Kiribati': {
-    'name': 'Kiribati',
-    'capital': 'Tarawa Atoll',
-    'latitude': 1.451817,
-    'longitude': 172.971662
-  },
-  'Kosovo': {
-    'name': 'Kosovo',
-    'capital': 'Pristina',
-    'latitude': 42.662914,
-    'longitude': 21.165503
-  },
-  'Kuwait': {
-    'name': 'Kuwait',
-    'capital': 'Kuwait City',
-    'latitude': 29.375859,
-    'longitude': 47.977405
-  },
-  'Kyrgyzstan': {
-    'name': 'Kyrgyzstan',
-    'capital': 'Bishkek',
-    'latitude': 42.874621,
-    'longitude': 74.569762
-  },
-  'Laos': {
-    'name': 'Laos',
-    'capital': 'Vientiane',
-    'latitude': 17.975706,
-    'longitude': 102.633104
-  },
-  'Latvia': {
-    'name': 'Latvia',
-    'capital': 'Riga',
-    'latitude': 56.949649,
-    'longitude': 24.105186
-  },
-  'Lebanon': {
-    'name': 'Lebanon',
-    'capital': 'Beirut',
-    'latitude': 33.888629,
-    'longitude': 35.495479
-  },
-  'Lesotho': {
-    'name': 'Lesotho',
-    'capital': 'Maseru',
-    'latitude': -29.363219,
-    'longitude': 27.51436
-  },
-  'Liberia': {
-    'name': 'Liberia',
-    'capital': 'Monrovia',
-    'latitude': 6.290743,
-    'longitude': -10.760524
-  },
-  'Libya': {
-    'name': 'Libya',
-    'capital': 'Tripoli',
-    'latitude': 32.887209,
-    'longitude': 13.191338
-  },
-  'Liechtenstein': {
-    'name': 'Liechtenstein',
-    'capital': 'Vaduz',
-    'latitude': 47.14103,
-    'longitude': 9.520928
-  },
-  'Lithuania': {
-    'name': 'Lithuania',
-    'capital': 'Vilnius',
-    'latitude': 54.687156,
-    'longitude': 25.279651
-  },
-  'Luxembourg': {
-    'name': 'Luxembourg',
-    'capital': 'Luxembourg',
-    'latitude': 49.611621,
-    'longitude': 6.131935
-  },
-  'Macau': {
-    'name': 'Macau',
-    'capital': 'Macau',
-    'latitude': 22.166667,
-    'longitude': 113.55
-  },
-  'Macedonia': {
-    'name': 'Macedonia',
-    'capital': 'Skopje',
-    'latitude': 41.997346,
-    'longitude': 21.427996
-  },
-  'Madagascar': {
-    'name': 'Madagascar',
-    'capital': 'Antananarivo',
-    'latitude': -18.87919,
-    'longitude': 47.507905
-  },
-  'Malawi': {
-    'name': 'Malawi',
-    'capital': 'Lilongwe',
-    'latitude': -13.962612,
-    'longitude': 33.774119
-  },
-  'Malaysia': {
-    'name': 'Malaysia',
-    'capital': 'Kuala Lumpur',
-    'latitude': 3.139003,
-    'longitude': 101.686855
-  },
-  'Maldives': {
-    'name': 'Maldives',
-    'capital': 'Malé',
-    'latitude': 4.175496,
-    'longitude': 73.509347
-  },
-  'Mali': {
-    'name': 'Mali',
-    'capital': 'Bamako',
-    'latitude': 12.639232,
-    'longitude': -8.002889
-  },
-  'Malta': {
-    'name': 'Malta',
-    'capital': 'Valletta',
-    'latitude': 35.898909,
-    'longitude': 14.514553
-  },
-  'Marshall Islands': {
-    'name': 'Marshall Islands',
-    'capital': 'Majuro',
-    'latitude': 7.116421,
-    'longitude': 171.185774
-  },
-  'Martinique': {
-    'name': 'Martinique',
-    'capital': 'Fort-de-France',
-    'latitude': 14.616065,
-    'longitude': -61.05878
-  },
-  'Mauritania': {
-    'name': 'Mauritania',
-    'capital': 'Nouakchott',
-    'latitude': 18.07353,
-    'longitude': -15.958237
-  },
-  'Mauritius': {
-    'name': 'Mauritius',
-    'capital': 'Port Louis',
-    'latitude': -20.166896,
-    'longitude': 57.502332
-  },
-  'Mayotte': {
-    'name': 'Mayotte',
-    'capital': 'Mamoudzou',
-    'latitude': -12.780949,
-    'longitude': 45.227872
-  },
-  'Mexico': {
-    'name': 'Mexico',
-    'capital': 'Mexico City',
-    'latitude': 19.432608,
-    'longitude': -99.133208
-  },
-  'Micronesia': {
-    'name': 'Micronesia',
-    'capital': 'Palikir',
-    'latitude': 6.914712,
-    'longitude': 158.161027
-  },
-  'Moldova': {
-    'name': 'Moldova',
-    'capital': 'Chisinau',
-    'latitude': 47.010453,
-    'longitude': 28.86381
-  },
-  'Monaco': {
-    'name': 'Monaco',
-    'capital': 'Monaco',
-    'latitude': 43.737411,
-    'longitude': 7.420816
-  },
-  'Mongolia': {
-    'name': 'Mongolia',
-    'capital': 'Ulaanbaatar',
-    'latitude': 47.886399,
-    'longitude': 106.905744
-  },
-  'Montenegro': {
-    'name': 'Montenegro',
-    'capital': 'Podgorica',
-    'latitude': 42.43042,
-    'longitude': 19.259364
-  },
-  'Montserrat': {
-    'name': 'Montserrat',
-    'capital': 'Plymouth',
-    'latitude': 16.706523,
-    'longitude': -62.215738
-  },
-  'Morocco': {
-    'name': 'Morocco',
-    'capital': 'Rabat',
-    'latitude': 33.97159,
-    'longitude': -6.849813
-  },
-  'Mozambique': {
-    'name': 'Mozambique',
-    'capital': 'Maputo',
-    'latitude': -25.891968,
-    'longitude': 32.605135
-  },
-  'Myanmar': {
-    'name': 'Myanmar',
-    'capital': 'Naypyidaw',
-    'latitude': 19.763306,
-    'longitude': 96.07851
-  },
-  'Nagorno-Karabakh Republic': {
-    'name': 'Nagorno-Karabakh Republic',
-    'capital': 'Stepanakert',
-    'latitude': 39.826385,
-    'longitude': 46.763595
-  },
-  'Namibia': {
-    'name': 'Namibia',
-    'capital': 'Windhoek',
-    'latitude': -22.560881,
-    'longitude': 17.065755
-  },
-  'Nauru': {
-    'name': 'Nauru',
-    'capital': 'Yaren',
-    'latitude': -0.546686,
-    'longitude': 166.921091
-  },
-  'Nepal': {
-    'name': 'Nepal',
-    'capital': 'Kathmandu',
-    'latitude': 27.717245,
-    'longitude': 85.323961
-  },
-  'Netherlands': {
-    'name': 'Netherlands',
-    'capital': 'Amsterdam',
-    'latitude': 52.370216,
-    'longitude': 4.895168
-  },
-  'Netherlands Antilles': {
-    'name': 'Netherlands Antilles',
-    'capital': 'Willemstad ',
-    'latitude': 12.1091242,
-    'longitude': -68.9316546
-  },
-  'New Caledonia': {
-    'name': 'New Caledonia',
-    'capital': 'Nouméa',
-    'latitude': -22.255823,
-    'longitude': 166.450524
-  },
-  'New Zealand': {
-    'name': 'New Zealand',
-    'capital': 'Wellington',
-    'latitude': -41.28646,
-    'longitude': 174.776236
-  },
-  'Nicaragua': {
-    'name': 'Nicaragua',
-    'capital': 'Managua',
-    'latitude': 12.114993,
-    'longitude': -86.236174
-  },
-  'Niger': {
-    'name': 'Niger',
-    'capital': 'Niamey',
-    'latitude': 13.511596,
-    'longitude': 2.125385
-  },
-  'Nigeria': {
-    'name': 'Nigeria',
-    'capital': 'Abuja',
-    'latitude': 9.076479,
-    'longitude': 7.398574
-  },
-  'Niue': {
-    'name': 'Niue',
-    'capital': 'Alofi',
-    'latitude': -19.055371,
-    'longitude': -169.917871
-  },
-  'Norfolk Island': {
-    'name': 'Norfolk Island',
-    'capital': 'Kingston',
-    'latitude': -29.056394,
-    'longitude': 167.959588
-  },
-  'North Korea': {
-    'name': 'North Korea',
-    'capital': 'Pyongyang',
-    'latitude': 39.039219,
-    'longitude': 125.762524
-  },
-  'Northern Cyprus': {
-    'name': 'Northern Cyprus',
-    'capital': 'Nicosia',
-    'latitude': 35.185566,
-    'longitude': 33.382276
-  },
-  'Northern Mariana Islands': {
-    'name': 'Northern Mariana Islands',
-    'capital': 'Saipan',
-    'latitude': 15.177801,
-    'longitude': 145.750967
-  },
-  'Norway': {
-    'name': 'Norway',
-    'capital': 'Oslo',
-    'latitude': 59.913869,
-    'longitude': 10.752245
-  },
-  'Oman': {
-    'name': 'Oman',
-    'capital': 'Muscat',
-    'latitude': 23.58589,
-    'longitude': 58.405923
-  },
-  'Pakistan': {
-    'name': 'Pakistan',
-    'capital': 'Islamabad',
-    'latitude': 33.729388,
-    'longitude': 73.093146
-  },
-  'Palau': {
-    'name': 'Palau',
-    'capital': 'Ngerulmud',
-    'latitude': 7.500384,
-    'longitude': 134.624289
-  },
-  'Palestine': {
-    'name': 'Palestine',
-    'capital': 'Ramallah',
-    'latitude': 31.9073509,
-    'longitude': 35.5354719
-  },
-  'Panama': {
-    'name': 'Panama',
-    'capital': 'Panama City',
-    'latitude': 9.101179,
-    'longitude': -79.402864
-  },
-  'Papua New Guinea': {
-    'name': 'Papua New Guinea',
-    'capital': 'Port Moresby',
-    'latitude': -9.4438,
-    'longitude': 147.180267
-  },
-  'Paraguay': {
-    'name': 'Paraguay',
-    'capital': 'Asuncion',
-    'latitude': -25.26374,
-    'longitude': -57.575926
-  },
-  'Peru': {
-    'name': 'Peru',
-    'capital': 'Lima',
-    'latitude': -12.046374,
-    'longitude': -77.042793
-  },
-  'Philippines': {
-    'name': 'Philippines',
-    'capital': 'Manila',
-    'latitude': 14.599512,
-    'longitude': 120.98422
-  },
-  'Pitcairn Islands': {
-    'name': 'Pitcairn Islands',
-    'capital': 'Adamstown',
-    'latitude': -25.06629,
-    'longitude': -130.100464
-  },
-  'Poland': {
-    'name': 'Poland',
-    'capital': 'Warsaw',
-    'latitude': 52.229676,
-    'longitude': 21.012229
-  },
-  'Portugal': {
-    'name': 'Portugal',
-    'capital': 'Lisbon',
-    'latitude': 38.722252,
-    'longitude': -9.139337
-  },
-  'Puerto Rico': {
-    'name': 'Puerto Rico',
-    'capital': 'San Juan',
-    'latitude': 18.466334,
-    'longitude': -66.105722
-  },
-  'Qatar': {
-    'name': 'Qatar',
-    'capital': 'Doha',
-    'latitude': 25.285447,
-    'longitude': 51.53104
-  },
-  'Réunion': {
-    'name': 'Réunion',
-    'capital': 'Saint-Denis',
-    'latitude': -20.882057,
-    'longitude': 55.450675
-  },
-  'Romania': {
-    'name': 'Romania',
-    'capital': 'Bucharest',
-    'latitude': 44.426767,
-    'longitude': 26.102538
-  },
-  'Russia': {
-    'name': 'Russia',
-    'capital': 'Moscow',
-    'latitude': 55.755826,
-    'longitude': 37.6173
-  },
-  'Rwanda': {
-    'name': 'Rwanda',
-    'capital': 'Kigali',
-    'latitude': -1.957875,
-    'longitude': 30.112735
-  },
-  'Saint Pierre and Miquelon': {
-    'name': 'Saint Pierre and Miquelon',
-    'capital': 'St. Pierre',
-    'latitude': 46.775846,
-    'longitude': -56.180636
-  },
-  'Saint Vincent and the Grenadines': {
-    'name': 'Saint Vincent and the Grenadines',
-    'capital': 'Kingstown',
-    'latitude': 13.160025,
-    'longitude': -61.224816
-  },
-  'Samoa': {
-    'name': 'Samoa',
-    'capital': 'Apia',
-    'latitude': -13.850696,
-    'longitude': -171.751355
-  },
-  'San Marino': {
-    'name': 'San Marino',
-    'capital': 'San Marino',
-    'latitude': 43.935591,
-    'longitude': 12.447281
-  },
-  'São Tomé and Príncipe': {
-    'name': 'São Tomé and Príncipe',
-    'capital': 'São Tomé',
-    'latitude': 0.330192,
-    'longitude': 6.733343
-  },
-  'Saudi Arabia': {
-    'name': 'Saudi Arabia',
-    'capital': 'Riyadh',
-    'latitude': 24.749403,
-    'longitude': 46.902838
-  },
-  'Senegal': {
-    'name': 'Senegal',
-    'capital': 'Dakar',
-    'latitude': 14.764504,
-    'longitude': -17.366029
-  },
-  'Serbia': {
-    'name': 'Serbia',
-    'capital': 'Belgrade',
-    'latitude': 44.786568,
-    'longitude': 20.448922
-  },
-  'Seychelles': {
-    'name': 'Seychelles',
-    'capital': 'Victoria',
-    'latitude': -4.619143,
-    'longitude': 55.451315
-  },
-  'Sierra Leone': {
-    'name': 'Sierra Leone',
-    'capital': 'Freetown',
-    'latitude': 8.465677,
-    'longitude': -13.231722
-  },
-  'Singapore': {
-    'name': 'Singapore',
-    'capital': 'Singapore',
-    'latitude': 1.280095,
-    'longitude': 103.850949
-  },
-  'Slovakia': {
-    'name': 'Slovakia',
-    'capital': 'Bratislava',
-    'latitude': 48.145892,
-    'longitude': 17.107137
-  },
-  'Slovenia': {
-    'name': 'Slovenia',
-    'capital': 'Ljubljana',
-    'latitude': 46.056947,
-    'longitude': 14.505751
-  },
-  'Solomon Islands': {
-    'name': 'Solomon Islands',
-    'capital': 'Honiara',
-    'latitude': -9.445638,
-    'longitude': 159.9729
-  },
-  'Somalia': {
-    'name': 'Somalia',
-    'capital': 'Mogadishu',
-    'latitude': 2.046934,
-    'longitude': 45.318162
-  },
-  'South Africa': {
-    'name': 'South Africa',
-    'capital': 'Pretoria',
-    'latitude': -25.747868,
-    'longitude': 28.229271
-  },
-  'South Georgia and the South Sandwich Islands': {
-    'name': 'South Georgia and the South Sandwich Islands',
-    'capital': 'King Edward Point',
-    'latitude': -54.28325,
-    'longitude': -36.493735
-  },
-  'South Korea': {
-    'name': 'South Korea',
-    'capital': 'Seoul',
-    'latitude': 37.566535,
-    'longitude': 126.977969
-  },
-  'South Ossetia': {
-    'name': 'South Ossetia',
-    'capital': 'Tskhinvali',
-    'latitude': 42.22146,
-    'longitude': 43.964405
-  },
-  'South Sudan': {
-    'name': 'South Sudan',
-    'capital': 'Juba',
-    'latitude': 4.859363,
-    'longitude': 31.57125
-  },
-  'Spain': {
-    'name': 'Spain',
-    'capital': 'Madrid',
-    'latitude': 40.416775,
-    'longitude': -3.70379
-  },
-  'Sri Lanka': {
-    'name': 'Sri Lanka',
-    'capital': 'Sri Jayawardenepura Kotte',
-    'latitude': 6.89407,
-    'longitude': 79.902478
-  },
-  'St. Barthélemy': {
-    'name': 'St. Barthélemy',
-    'capital': 'Gustavia',
-    'latitude': 17.896435,
-    'longitude': -62.852201
-  },
-  'St. Kitts and Nevis': {
-    'name': 'St. Kitts and Nevis',
-    'capital': 'Basseterre',
-    'latitude': 17.302606,
-    'longitude': -62.717692
-  },
-  'St. Lucia': {
-    'name': 'St. Lucia',
-    'capital': 'Castries',
-    'latitude': 14.010109,
-    'longitude': -60.987469
-  },
-  'St. Martin': {
-    'name': 'St. Martin',
-    'capital': 'Marigot',
-    'latitude': 18.067519,
-    'longitude': -63.082466
-  },
-  'Sudan': {
-    'name': 'Sudan',
-    'capital': 'Khartoum',
-    'latitude': 15.500654,
-    'longitude': 32.559899
-  },
-  'Suriname': {
-    'name': 'Suriname',
-    'capital': 'Paramaribo',
-    'latitude': 5.852036,
-    'longitude': -55.203828
-  },
-  'Svalbard and Jan Mayen': {
-    'name': 'Svalbard and Jan Mayen',
-    'capital': 'Longyearbyen ',
-    'latitude': 78.062,
-    'longitude': 22.055
-  },
-  'Swaziland': {
-    'name': 'Swaziland',
-    'capital': 'Mbabane',
-    'latitude': -26.305448,
-    'longitude': 31.136672
-  },
-  'Sweden': {
-    'name': 'Sweden',
-    'capital': 'Stockholm',
-    'latitude': 59.329323,
-    'longitude': 18.068581
-  },
-  'Switzerland': {
-    'name': 'Switzerland',
-    'capital': 'Bern',
-    'latitude': 46.947974,
-    'longitude': 7.447447
-  },
-  'Syria': {
-    'name': 'Syria',
-    'capital': 'Damascus',
-    'latitude': 33.513807,
-    'longitude': 36.276528
-  },
-  'Taiwan': {
-    'name': 'Taiwan',
-    'capital': 'Taipei',
-    'latitude': 25.032969,
-    'longitude': 121.565418
-  },
-  'Tajikistan': {
-    'name': 'Tajikistan',
-    'capital': 'Dushanbe',
-    'latitude': 38.559772,
-    'longitude': 68.787038
-  },
-  'Tanzania': {
-    'name': 'Tanzania',
-    'capital': 'Dodoma',
-    'latitude': -6.162959,
-    'longitude': 35.751607
-  },
-  'Thailand': {
-    'name': 'Thailand',
-    'capital': 'Bangkok',
-    'latitude': 13.756331,
-    'longitude': 100.501765
-  },
-  'Timor-Leste': {
-    'name': 'Timor-Leste',
-    'capital': 'Dili',
-    'latitude': -8.556856,
-    'longitude': 125.560314
-  },
-  'Togo': {
-    'name': 'Togo',
-    'capital': 'Lomé',
-    'latitude': 6.172497,
-    'longitude': 1.231362
-  },
-  'Tokelau': {
-    'name': 'Tokelau',
-    'capital': 'Nukunonu',
-    'latitude': -9.2005,
-    'longitude': -171.848
-  },
-  'Tonga': {
-    'name': 'Tonga',
-    'capital': 'Nukuʻalofa',
-    'latitude': -21.139342,
-    'longitude': -175.204947
-  },
-  'Transnistria': {
-    'name': 'Transnistria',
-    'capital': 'Tiraspol',
-    'latitude': 46.848185,
-    'longitude': 29.596805
-  },
-  'Trinidad and Tobago': {
-    'name': 'Trinidad and Tobago',
-    'capital': 'Port of Spain',
-    'latitude': 10.654901,
-    'longitude': -61.501926
-  },
-  'Tristan da Cunha': {
-    'name': 'Tristan da Cunha',
-    'capital': 'Edinburgh of the Seven Seas',
-    'latitude': -37.068042,
-    'longitude': -12.311315
-  },
-  'Tunisia': {
-    'name': 'Tunisia',
-    'capital': 'Tunis',
-    'latitude': 36.806495,
-    'longitude': 10.181532
-  },
-  'Turkey': {
-    'name': 'Turkey',
-    'capital': 'Ankara',
-    'latitude': 39.933364,
-    'longitude': 32.859742
-  },
-  'Turkmenistan': {
-    'name': 'Turkmenistan',
-    'capital': 'Ashgabat',
-    'latitude': 37.960077,
-    'longitude': 58.326063
-  },
-  'Turks and Caicos Islands': {
-    'name': 'Turks and Caicos Islands',
-    'capital': 'Cockburn Town',
-    'latitude': 21.467458,
-    'longitude': -71.13891
-  },
-  'Tuvalu': {
-    'name': 'Tuvalu',
-    'capital': 'Funafuti',
-    'latitude': -8.520066,
-    'longitude': 179.198128
-  },
-  'U.S. Virgin Islands': {
-    'name': 'U.S. Virgin Islands',
-    'capital': 'Charlotte Amalie',
-    'latitude': 18.3419,
-    'longitude': -64.930701
-  },
-  'Uganda': {
-    'name': 'Uganda',
-    'capital': 'Kampala',
-    'latitude': 0.347596,
-    'longitude': 32.58252
-  },
-  'Ukraine': {
-    'name': 'Ukraine',
-    'capital': 'Kyiv',
-    'latitude': 50.4501,
-    'longitude': 30.5234
-  },
-  'United Arab Emirates': {
-    'name': 'United Arab Emirates',
-    'capital': 'Abu Dhabi',
-    'latitude': 24.299174,
-    'longitude': 54.697277
-  },
-  'United Kingdom': {
-    'name': 'United Kingdom',
-    'capital': 'London',
-    'latitude': 51.507351,
-    'longitude': -0.127758
-  },
-  'United States': {
-    'name': 'United States',
-    'capital': 'Washington',
-    'latitude': 38.907192,
-    'longitude': -77.036871
-  },
-  'Uruguay': {
-    'name': 'Uruguay',
-    'capital': 'Montevideo',
-    'latitude': -34.901113,
-    'longitude': -56.164531
-  },
-  'Uzbekistan': {
-    'name': 'Uzbekistan',
-    'capital': 'Tashkent',
-    'latitude': 41.299496,
-    'longitude': 69.240073
-  },
-  'Vanuatu': {
-    'name': 'Vanuatu',
-    'capital': 'Port Vila',
-    'latitude': -17.733251,
-    'longitude': 168.327325
-  },
-  'Vatican City': {
-    'name': 'Vatican City',
-    'capital': 'Vatican City',
-    'latitude': 41.902179,
-    'longitude': 12.453601
-  },
-  'Venezuela': {
-    'name': 'Venezuela',
-    'capital': 'Caracas',
-    'latitude': 10.480594,
-    'longitude': -66.903606
-  },
-  'Vietnam': {
-    'name': 'Vietnam',
-    'capital': 'Hanoi',
-    'latitude': 21.027764,
-    'longitude': 105.83416
-  },
-  'Wallis and Futuna': {
-    'name': 'Wallis and Futuna',
-    'capital': 'Mata-Utu',
-    'latitude': -13.282509,
-    'longitude': -176.176447
-  },
-  'Western Sahara': {
-    'name': 'Western Sahara',
-    'capital': 'El Aaiún',
-    'latitude': 27.125287,
-    'longitude': -13.1625
-  },
-  'Yemen': {
-    'name': 'Yemen',
-    'capital': "Sana'a",
-    'latitude': 15.369445,
-    'longitude': 44.191007
-  },
-  'Zambia': {
-    'name': 'Zambia',
-    'capital': 'Lusaka',
-    'latitude': -15.387526,
-    'longitude': 28.322817
-  },
-  'Zimbabwe': {
-    'name': 'Zimbabwe',
-    'capital': 'Harare',
-    'latitude': -17.825166,
-    'longitude': 31.03351
-  }
+regios = {
+    'Abkhazia': {
+        'name': 'Abkhazia',
+        'capital': 'Sukhumi',
+        'breedtegraad': 43.001525,
+        'lengtegraad': 41.023415
+    },
+    'Afghanistan': {
+        'name': 'Afghanistan',
+        'capital': 'Kabul',
+        'breedtegraad': 34.575503,
+        'lengtegraad': 69.240073
+    },
+    'Aland Islands': {
+        'name': 'Aland Islands',
+        'capital': 'Mariehamn',
+        'breedtegraad': 60.1,
+        'lengtegraad': 19.933333
+    },
+    'Albania': {
+        'name': 'Albania',
+        'capital': 'Tirana',
+        'breedtegraad': 41.327546,
+        'lengtegraad': 19.818698
+    },
+    'Algeria': {
+        'name': 'Algeria',
+        'capital': 'Algiers',
+        'breedtegraad': 36.752887,
+        'lengtegraad': 3.042048
+    },
+    'American Samoa': {
+        'name': 'American Samoa',
+        'capital': 'Pago Pago',
+        'breedtegraad': -14.275632,
+        'lengtegraad': -170.702036
+    },
+    'Andorra': {
+        'name': 'Andorra',
+        'capital': 'Andorra la Vella',
+        'breedtegraad': 42.506317,
+        'lengtegraad': 1.521835
+    },
+    'Angola': {
+        'name': 'Angola',
+        'capital': 'Luanda',
+        'breedtegraad': -8.839988,
+        'lengtegraad': 13.289437
+    },
+    'Anguilla': {
+        'name': 'Anguilla',
+        'capital': 'The Valley',
+        'breedtegraad': 18.214813,
+        'lengtegraad': -63.057441
+    },
+    'Antarctica': {
+        'name': 'Antarctica',
+        'capital': 'South Pole',
+        'breedtegraad': -90.0,
+        'lengtegraad': 0.0
+    },
+    'Antigua and Barbuda': {
+        'name': 'Antigua and Barbuda',
+        'capital': "St. John's",
+        'breedtegraad': 17.12741,
+        'lengtegraad': -61.846772
+    },
+    'Argentina': {
+        'name': 'Argentina',
+        'capital': 'Buenos Aires',
+        'breedtegraad': -34.603684,
+        'lengtegraad': -58.381559
+    },
+    'Armenia': {
+        'name': 'Armenia',
+        'capital': 'Yerevan',
+        'breedtegraad': 40.179186,
+        'lengtegraad': 44.499103
+    },
+    'Aruba': {
+        'name': 'Aruba',
+        'capital': 'Oranjestad',
+        'breedtegraad': 12.509204,
+        'lengtegraad': -70.008631
+    },
+    'Australia': {
+        'name': 'Australia',
+        'capital': 'Canberra',
+        'breedtegraad': -35.282,
+        'lengtegraad': 149.128684
+    },
+    'Austria': {
+        'name': 'Austria',
+        'capital': 'Vienna',
+        'breedtegraad': 48.208174,
+        'lengtegraad': 16.373819
+    },
+    'Azerbaijan': {
+        'name': 'Azerbaijan',
+        'capital': 'Baku',
+        'breedtegraad': 40.409262,
+        'lengtegraad': 49.867092
+    },
+    'Bahamas': {
+        'name': 'Bahamas',
+        'capital': 'Nassau',
+        'breedtegraad': 25.047984,
+        'lengtegraad': -77.355413
+    },
+    'Bahrain': {
+        'name': 'Bahrain',
+        'capital': 'Manama',
+        'breedtegraad': 26.228516,
+        'lengtegraad': 50.58605
+    },
+    'Bangladesh': {
+        'name': 'Bangladesh',
+        'capital': 'Dhaka',
+        'breedtegraad': 23.810332,
+        'lengtegraad': 90.412518
+    },
+    'Barbados': {
+        'name': 'Barbados',
+        'capital': 'Bridgetown',
+        'breedtegraad': 13.113222,
+        'lengtegraad': -59.598809
+    },
+    'Belarus': {
+        'name': 'Belarus',
+        'capital': 'Minsk',
+        'breedtegraad': 53.90454,
+        'lengtegraad': 27.561524
+    },
+    'Belgium': {
+        'name': 'Belgium',
+        'capital': 'Brussels',
+        'breedtegraad': 50.85034,
+        'lengtegraad': 4.35171
+    },
+    'Belize': {
+        'name': 'Belize',
+        'capital': 'Belmopan',
+        'breedtegraad': 17.251011,
+        'lengtegraad': -88.75902
+    },
+    'Benin': {
+        'name': 'Benin',
+        'capital': 'Porto-Novo',
+        'breedtegraad': 6.496857,
+        'lengtegraad': 2.628852
+    },
+    'Bermuda': {
+        'name': 'Bermuda',
+        'capital': 'Hamilton',
+        'breedtegraad': 32.294816,
+        'lengtegraad': -64.781375
+    },
+    'Bhutan': {
+        'name': 'Bhutan',
+        'capital': 'Thimphu',
+        'breedtegraad': 27.472792,
+        'lengtegraad': 89.639286
+    },
+    'Bolivia': {
+        'name': 'Bolivia',
+        'capital': 'La Paz',
+        'breedtegraad': -16.489689,
+        'lengtegraad': -68.119294
+    },
+    'Bosnia and Herzegovina': {
+        'name': 'Bosnia and Herzegovina',
+        'capital': 'Sarajevo',
+        'breedtegraad': 43.856259,
+        'lengtegraad': 18.413076
+    },
+    'Botswana': {
+        'name': 'Botswana',
+        'capital': 'Gaborone',
+        'breedtegraad': -24.628208,
+        'lengtegraad': 25.923147
+    },
+    'Bouvet Island': {
+        'name': 'Bouvet Island',
+        'capital': 'Bouvet Island',
+        'breedtegraad': -54.43,
+        'lengtegraad': 3.38
+    },
+    'Brazil': {
+        'name': 'Brazil',
+        'capital': 'Brasília',
+        'breedtegraad': -15.794229,
+        'lengtegraad': -47.882166
+    },
+    'British Indian Ocean Territory': {
+        'name': 'British Indian Ocean Territory',
+        'capital': 'Camp Justice',
+        'breedtegraad': 21.3419,
+        'lengtegraad': 55.4778
+    },
+    'British Virgin Islands': {
+        'name': 'British Virgin Islands',
+        'capital': 'Road Town',
+        'breedtegraad': 18.428612,
+        'lengtegraad': -64.618466
+    },
+    'Brunei': {
+        'name': 'Brunei',
+        'capital': 'Bandar Seri Begawan',
+        'breedtegraad': 4.903052,
+        'lengtegraad': 114.939821
+    },
+    'Bulgaria': {
+        'name': 'Bulgaria',
+        'capital': 'Sofia',
+        'breedtegraad': 42.697708,
+        'lengtegraad': 23.321868
+    },
+    'Burkina Faso': {
+        'name': 'Burkina Faso',
+        'capital': 'Ouagadougou',
+        'breedtegraad': 12.371428,
+        'lengtegraad': -1.51966
+    },
+    'Burundi': {
+        'name': 'Burundi',
+        'capital': 'Bujumbura',
+        'breedtegraad': -3.361378,
+        'lengtegraad': 29.359878
+    },
+    'Cambodia': {
+        'name': 'Cambodia',
+        'capital': 'Phnom Penh',
+        'breedtegraad': 11.544873,
+        'lengtegraad': 104.892167
+    },
+    'Cameroon': {
+        'name': 'Cameroon',
+        'capital': 'Yaoundé',
+        'breedtegraad': 3.848033,
+        'lengtegraad': 11.502075
+    },
+    'Canada': {
+        'name': 'Canada',
+        'capital': 'Ottawa',
+        'breedtegraad': 45.42153,
+        'lengtegraad': -75.697193
+    },
+    'Cape Verde': {
+        'name': 'Cape Verde',
+        'capital': 'Praia',
+        'breedtegraad': 14.93305,
+        'lengtegraad': -23.513327
+    },
+    'Cayman Islands': {
+        'name': 'Cayman Islands',
+        'capital': 'George Town',
+        'breedtegraad': 19.286932,
+        'lengtegraad': -81.367439
+    },
+    'Central African Republic': {
+        'name': 'Central African Republic',
+        'capital': 'Bangui',
+        'breedtegraad': 4.394674,
+        'lengtegraad': 18.55819
+    },
+    'Chad': {
+        'name': 'Chad',
+        'capital': "N'Djamena",
+        'breedtegraad': 12.134846,
+        'lengtegraad': 15.055742
+    },
+    'Chile': {
+        'name': 'Chile',
+        'capital': 'Santiago',
+        'breedtegraad': -33.44889,
+        'lengtegraad': -70.669265
+    },
+    'China': {
+        'name': 'China',
+        'capital': 'Beijing',
+        'breedtegraad': 39.904211,
+        'lengtegraad': 116.407395
+    },
+    'Christmas Island': {
+        'name': 'Christmas Island',
+        'capital': 'Flying Fish Cove',
+        'breedtegraad': -10.420686,
+        'lengtegraad': 105.679379
+    },
+    'Cocos (Keeling) Islands': {
+        'name': 'Cocos (Keeling) Islands',
+        'capital': 'West Island',
+        'breedtegraad': -12.188834,
+        'lengtegraad': 96.829316
+    },
+    'Colombia': {
+        'name': 'Colombia',
+        'capital': 'Bogotá',
+        'breedtegraad': 4.710989,
+        'lengtegraad': -74.072092
+    },
+    'Comoros': {
+        'name': 'Comoros',
+        'capital': 'Moroni',
+        'breedtegraad': -11.717216,
+        'lengtegraad': 43.247315
+    },
+    'Congo (DRC)': {
+        'name': 'Congo (DRC)',
+        'capital': 'Kinshasa',
+        'breedtegraad': -4.441931,
+        'lengtegraad': 15.266293
+    },
+    'Congo (Republic)': {
+        'name': 'Congo (Republic)',
+        'capital': 'Brazzaville',
+        'breedtegraad': -4.26336,
+        'lengtegraad': 15.242885
+    },
+    'Cook Islands': {
+        'name': 'Cook Islands',
+        'capital': 'Avarua',
+        'breedtegraad': -21.212901,
+        'lengtegraad': -159.782306
+    },
+    'Costa Rica': {
+        'name': 'Costa Rica',
+        'capital': 'San José',
+        'breedtegraad': 9.928069,
+        'lengtegraad': -84.090725
+    },
+    "Côte d'Ivoire": {
+        'name': "Côte d'Ivoire",
+        'capital': 'Yamoussoukro',
+        'breedtegraad': 6.827623,
+        'lengtegraad': -5.289343
+    },
+    'Croatia': {
+        'name': 'Croatia',
+        'capital': 'Zagreb ',
+        'breedtegraad': 45.815011,
+        'lengtegraad': 15.981919
+    },
+    'Cuba': {
+        'name': 'Cuba',
+        'capital': 'Havana',
+        'breedtegraad': 23.05407,
+        'lengtegraad': -82.345189
+    },
+    'Curaçao': {
+        'name': 'Curaçao',
+        'capital': 'Willemstad',
+        'breedtegraad': 12.122422,
+        'lengtegraad': -68.882423
+    },
+    'Cyprus': {
+        'name': 'Cyprus',
+        'capital': 'Nicosia',
+        'breedtegraad': 35.185566,
+        'lengtegraad': 33.382276
+    },
+    'Czech Republic': {
+        'name': 'Czech Republic',
+        'capital': 'Prague',
+        'breedtegraad': 50.075538,
+        'lengtegraad': 14.4378
+    },
+    'Denmark': {
+        'name': 'Denmark',
+        'capital': 'Copenhagen',
+        'breedtegraad': 55.676097,
+        'lengtegraad': 12.568337
+    },
+    'Djibouti': {
+        'name': 'Djibouti',
+        'capital': 'Djibouti',
+        'breedtegraad': 11.572077,
+        'lengtegraad': 43.145647
+    },
+    'Dominica': {
+        'name': 'Dominica',
+        'capital': 'Roseau',
+        'breedtegraad': 15.309168,
+        'lengtegraad': -61.379355
+    },
+    'Dominican Republic': {
+        'name': 'Dominican Republic',
+        'capital': 'Santo Domingo',
+        'breedtegraad': 18.486058,
+        'lengtegraad': -69.931212
+    },
+    'Ecuador': {
+        'name': 'Ecuador',
+        'capital': 'Quito',
+        'breedtegraad': -0.180653,
+        'lengtegraad': -78.467838
+    },
+    'Egypt': {
+        'name': 'Egypt',
+        'capital': 'Cairo',
+        'breedtegraad': 30.04442,
+        'lengtegraad': 31.235712
+    },
+    'El Salvador': {
+        'name': 'El Salvador',
+        'capital': 'San Salvador',
+        'breedtegraad': 13.69294,
+        'lengtegraad': -89.218191
+    },
+    'Equatorial Guinea': {
+        'name': 'Equatorial Guinea',
+        'capital': 'Malabo',
+        'breedtegraad': 3.750412,
+        'lengtegraad': 8.737104
+    },
+    'Eritrea': {
+        'name': 'Eritrea',
+        'capital': 'Asmara',
+        'breedtegraad': 15.322877,
+        'lengtegraad': 38.925052
+    },
+    'Estonia': {
+        'name': 'Estonia',
+        'capital': 'Tallinn',
+        'breedtegraad': 59.436961,
+        'lengtegraad': 24.753575
+    },
+    'Ethiopia': {
+        'name': 'Ethiopia',
+        'capital': 'Addis Ababa',
+        'breedtegraad': 8.980603,
+        'lengtegraad': 38.757761
+    },
+    'Falkland Islands (Islas Malvinas)': {
+        'name': 'Falkland Islands (Islas Malvinas)',
+        'capital': 'Stanley',
+        'breedtegraad': -51.697713,
+        'lengtegraad': -57.851663
+    },
+    'Faroe Islands': {
+        'name': 'Faroe Islands',
+        'capital': 'Tórshavn',
+        'breedtegraad': 62.007864,
+        'lengtegraad': -6.790982
+    },
+    'Fiji': {
+        'name': 'Fiji',
+        'capital': 'Suva',
+        'breedtegraad': -18.124809,
+        'lengtegraad': 178.450079
+    },
+    'Finland': {
+        'name': 'Finland',
+        'capital': 'Helsinki',
+        'breedtegraad': 60.173324,
+        'lengtegraad': 24.941025
+    },
+    'France': {
+        'name': 'France',
+        'capital': 'Paris',
+        'breedtegraad': 48.856614,
+        'lengtegraad': 2.352222
+    },
+    'French Guiana': {
+        'name': 'French Guiana',
+        'capital': 'Cayenne',
+        'breedtegraad': 4.92242,
+        'lengtegraad': -52.313453
+    },
+    'French Polynesia': {
+        'name': 'French Polynesia',
+        'capital': 'Papeete',
+        'breedtegraad': -17.551625,
+        'lengtegraad': -149.558476
+    },
+    'French Southern Territories': {
+        'name': 'French Southern Territories',
+        'capital': 'Saint-Pierre ',
+        'breedtegraad': -21.3419,
+        'lengtegraad': 55.4778
+    },
+    'Gabon': {
+        'name': 'Gabon',
+        'capital': 'Libreville',
+        'breedtegraad': 0.416198,
+        'lengtegraad': 9.467268
+    },
+    'Gambia': {
+        'name': 'Gambia',
+        'capital': 'Banjul',
+        'breedtegraad': 13.454876,
+        'lengtegraad': -16.579032
+    },
+    'Georgia': {
+        'name': 'Georgia',
+        'capital': 'Tbilisi',
+        'breedtegraad': 41.715138,
+        'lengtegraad': 44.827096
+    },
+    'Germany': {
+        'name': 'Germany',
+        'capital': 'Berlin',
+        'breedtegraad': 52.520007,
+        'lengtegraad': 13.404954
+    },
+    'Ghana': {
+        'name': 'Ghana',
+        'capital': 'Accra',
+        'breedtegraad': 5.603717,
+        'lengtegraad': -0.186964
+    },
+    'Gibraltar': {
+        'name': 'Gibraltar',
+        'capital': 'Gibraltar',
+        'breedtegraad': 36.140773,
+        'lengtegraad': -5.353599
+    },
+    'Greece': {
+        'name': 'Greece',
+        'capital': 'Athens',
+        'breedtegraad': 37.983917,
+        'lengtegraad': 23.72936
+    },
+    'Greenland': {
+        'name': 'Greenland',
+        'capital': 'Nuuk',
+        'breedtegraad': 64.18141,
+        'lengtegraad': -51.694138
+    },
+    'Grenada': {
+        'name': 'Grenada',
+        'capital': "St. George's",
+        'breedtegraad': 12.056098,
+        'lengtegraad': -61.7488
+    },
+    'Guadeloupe': {
+        'name': 'Guadeloupe',
+        'capital': 'Basse-Terre',
+        'breedtegraad': 16.014453,
+        'lengtegraad': -61.706411
+    },
+    'Guam': {
+        'name': 'Guam',
+        'capital': 'Hagåtña',
+        'breedtegraad': 13.470891,
+        'lengtegraad': 144.751278
+    },
+    'Guatemala': {
+        'name': 'Guatemala',
+        'capital': 'Guatemala City',
+        'breedtegraad': 14.634915,
+        'lengtegraad': -90.506882
+    },
+    'Guernsey': {
+        'name': 'Guernsey',
+        'capital': 'St. Peter Port',
+        'breedtegraad': 49.455443,
+        'lengtegraad': -2.536871
+    },
+    'Guinea': {
+        'name': 'Guinea',
+        'capital': 'Conakry',
+        'breedtegraad': 9.641185,
+        'lengtegraad': -13.578401
+    },
+    'Guinea-Bissau': {
+        'name': 'Guinea-Bissau',
+        'capital': 'Bissau',
+        'breedtegraad': 11.881655,
+        'lengtegraad': -15.617794
+    },
+    'Guyana': {
+        'name': 'Guyana',
+        'capital': 'Georgetown',
+        'breedtegraad': 6.801279,
+        'lengtegraad': -58.155125
+    },
+    'Haiti': {
+        'name': 'Haiti',
+        'capital': 'Port-au-Prince',
+        'breedtegraad': 18.594395,
+        'lengtegraad': -72.307433
+    },
+    'Honduras': {
+        'name': 'Honduras',
+        'capital': 'Tegucigalpa',
+        'breedtegraad': 14.072275,
+        'lengtegraad': -87.192136
+    },
+    'Hong Kong': {
+        'name': 'Hong Kong',
+        'capital': 'Hong Kong',
+        'breedtegraad': 22.396428,
+        'lengtegraad': 114.109497
+    },
+    'Hungary': {
+        'name': 'Hungary',
+        'capital': 'Budapest',
+        'breedtegraad': 47.497912,
+        'lengtegraad': 19.040235
+    },
+    'Iceland': {
+        'name': 'Iceland',
+        'capital': 'Reykjavík',
+        'breedtegraad': 64.126521,
+        'lengtegraad': -21.817439
+    },
+    'India': {
+        'name': 'India',
+        'capital': 'New Delhi',
+        'breedtegraad': 28.613939,
+        'lengtegraad': 77.209021
+    },
+    'Indonesia': {
+        'name': 'Indonesia',
+        'capital': 'Jakarta',
+        'breedtegraad': -6.208763,
+        'lengtegraad': 106.845599
+    },
+    'Iran': {
+        'name': 'Iran',
+        'capital': 'Tehran',
+        'breedtegraad': 35.689198,
+        'lengtegraad': 51.388974
+    },
+    'Iraq': {
+        'name': 'Iraq',
+        'capital': 'Baghdad',
+        'breedtegraad': 33.312806,
+        'lengtegraad': 44.361488
+    },
+    'Ireland': {
+        'name': 'Ireland',
+        'capital': 'Dublin',
+        'breedtegraad': 53.349805,
+        'lengtegraad': -6.26031
+    },
+    'Isle of Man': {
+        'name': 'Isle of Man',
+        'capital': 'Douglas',
+        'breedtegraad': 54.152337,
+        'lengtegraad': -4.486123
+    },
+    'Israel': {
+        'name': 'Israel',
+        'capital': 'Tel Aviv',
+        'breedtegraad': 32.0853,
+        'lengtegraad': 34.781768
+    },
+    'Italy': {
+        'name': 'Italy',
+        'capital': 'Rome',
+        'breedtegraad': 41.902784,
+        'lengtegraad': 12.496366
+    },
+    'Jamaica': {
+        'name': 'Jamaica',
+        'capital': 'Kingston',
+        'breedtegraad': 18.042327,
+        'lengtegraad': -76.802893
+    },
+    'Japan': {
+        'name': 'Japan',
+        'capital': 'Tokyo',
+        'breedtegraad': 35.709026,
+        'lengtegraad': 139.731992
+    },
+    'Jersey': {
+        'name': 'Jersey',
+        'capital': 'St. Helier',
+        'breedtegraad': 49.186823,
+        'lengtegraad': -2.106568
+    },
+    'Jordan': {
+        'name': 'Jordan',
+        'capital': 'Amman',
+        'breedtegraad': 31.956578,
+        'lengtegraad': 35.945695
+    },
+    'Kazakhstan': {
+        'name': 'Kazakhstan',
+        'capital': 'Astana',
+        'breedtegraad': 51.160523,
+        'lengtegraad': 71.470356
+    },
+    'Kenya': {
+        'name': 'Kenya',
+        'capital': 'Nairobi',
+        'breedtegraad': -1.292066,
+        'lengtegraad': 36.821946
+    },
+    'Kiribati': {
+        'name': 'Kiribati',
+        'capital': 'Tarawa Atoll',
+        'breedtegraad': 1.451817,
+        'lengtegraad': 172.971662
+    },
+    'Kosovo': {
+        'name': 'Kosovo',
+        'capital': 'Pristina',
+        'breedtegraad': 42.662914,
+        'lengtegraad': 21.165503
+    },
+    'Kuwait': {
+        'name': 'Kuwait',
+        'capital': 'Kuwait City',
+        'breedtegraad': 29.375859,
+        'lengtegraad': 47.977405
+    },
+    'Kyrgyzstan': {
+        'name': 'Kyrgyzstan',
+        'capital': 'Bishkek',
+        'breedtegraad': 42.874621,
+        'lengtegraad': 74.569762
+    },
+    'Laos': {
+        'name': 'Laos',
+        'capital': 'Vientiane',
+        'breedtegraad': 17.975706,
+        'lengtegraad': 102.633104
+    },
+    'Latvia': {
+        'name': 'Latvia',
+        'capital': 'Riga',
+        'breedtegraad': 56.949649,
+        'lengtegraad': 24.105186
+    },
+    'Lebanon': {
+        'name': 'Lebanon',
+        'capital': 'Beirut',
+        'breedtegraad': 33.888629,
+        'lengtegraad': 35.495479
+    },
+    'Lesotho': {
+        'name': 'Lesotho',
+        'capital': 'Maseru',
+        'breedtegraad': -29.363219,
+        'lengtegraad': 27.51436
+    },
+    'Liberia': {
+        'name': 'Liberia',
+        'capital': 'Monrovia',
+        'breedtegraad': 6.290743,
+        'lengtegraad': -10.760524
+    },
+    'Libya': {
+        'name': 'Libya',
+        'capital': 'Tripoli',
+        'breedtegraad': 32.887209,
+        'lengtegraad': 13.191338
+    },
+    'Liechtenstein': {
+        'name': 'Liechtenstein',
+        'capital': 'Vaduz',
+        'breedtegraad': 47.14103,
+        'lengtegraad': 9.520928
+    },
+    'Lithuania': {
+        'name': 'Lithuania',
+        'capital': 'Vilnius',
+        'breedtegraad': 54.687156,
+        'lengtegraad': 25.279651
+    },
+    'Luxembourg': {
+        'name': 'Luxembourg',
+        'capital': 'Luxembourg',
+        'breedtegraad': 49.611621,
+        'lengtegraad': 6.131935
+    },
+    'Macau': {
+        'name': 'Macau',
+        'capital': 'Macau',
+        'breedtegraad': 22.166667,
+        'lengtegraad': 113.55
+    },
+    'Macedonia': {
+        'name': 'Macedonia',
+        'capital': 'Skopje',
+        'breedtegraad': 41.997346,
+        'lengtegraad': 21.427996
+    },
+    'Madagascar': {
+        'name': 'Madagascar',
+        'capital': 'Antananarivo',
+        'breedtegraad': -18.87919,
+        'lengtegraad': 47.507905
+    },
+    'Malawi': {
+        'name': 'Malawi',
+        'capital': 'Lilongwe',
+        'breedtegraad': -13.962612,
+        'lengtegraad': 33.774119
+    },
+    'Malaysia': {
+        'name': 'Malaysia',
+        'capital': 'Kuala Lumpur',
+        'breedtegraad': 3.139003,
+        'lengtegraad': 101.686855
+    },
+    'Maldives': {
+        'name': 'Maldives',
+        'capital': 'Malé',
+        'breedtegraad': 4.175496,
+        'lengtegraad': 73.509347
+    },
+    'Mali': {
+        'name': 'Mali',
+        'capital': 'Bamako',
+        'breedtegraad': 12.639232,
+        'lengtegraad': -8.002889
+    },
+    'Malta': {
+        'name': 'Malta',
+        'capital': 'Valletta',
+        'breedtegraad': 35.898909,
+        'lengtegraad': 14.514553
+    },
+    'Marshall Islands': {
+        'name': 'Marshall Islands',
+        'capital': 'Majuro',
+        'breedtegraad': 7.116421,
+        'lengtegraad': 171.185774
+    },
+    'Martinique': {
+        'name': 'Martinique',
+        'capital': 'Fort-de-France',
+        'breedtegraad': 14.616065,
+        'lengtegraad': -61.05878
+    },
+    'Mauritania': {
+        'name': 'Mauritania',
+        'capital': 'Nouakchott',
+        'breedtegraad': 18.07353,
+        'lengtegraad': -15.958237
+    },
+    'Mauritius': {
+        'name': 'Mauritius',
+        'capital': 'Port Louis',
+        'breedtegraad': -20.166896,
+        'lengtegraad': 57.502332
+    },
+    'Mayotte': {
+        'name': 'Mayotte',
+        'capital': 'Mamoudzou',
+        'breedtegraad': -12.780949,
+        'lengtegraad': 45.227872
+    },
+    'Mexico': {
+        'name': 'Mexico',
+        'capital': 'Mexico City',
+        'breedtegraad': 19.432608,
+        'lengtegraad': -99.133208
+    },
+    'Micronesia': {
+        'name': 'Micronesia',
+        'capital': 'Palikir',
+        'breedtegraad': 6.914712,
+        'lengtegraad': 158.161027
+    },
+    'Moldova': {
+        'name': 'Moldova',
+        'capital': 'Chisinau',
+        'breedtegraad': 47.010453,
+        'lengtegraad': 28.86381
+    },
+    'Monaco': {
+        'name': 'Monaco',
+        'capital': 'Monaco',
+        'breedtegraad': 43.737411,
+        'lengtegraad': 7.420816
+    },
+    'Mongolia': {
+        'name': 'Mongolia',
+        'capital': 'Ulaanbaatar',
+        'breedtegraad': 47.886399,
+        'lengtegraad': 106.905744
+    },
+    'Montenegro': {
+        'name': 'Montenegro',
+        'capital': 'Podgorica',
+        'breedtegraad': 42.43042,
+        'lengtegraad': 19.259364
+    },
+    'Montserrat': {
+        'name': 'Montserrat',
+        'capital': 'Plymouth',
+        'breedtegraad': 16.706523,
+        'lengtegraad': -62.215738
+    },
+    'Morocco': {
+        'name': 'Morocco',
+        'capital': 'Rabat',
+        'breedtegraad': 33.97159,
+        'lengtegraad': -6.849813
+    },
+    'Mozambique': {
+        'name': 'Mozambique',
+        'capital': 'Maputo',
+        'breedtegraad': -25.891968,
+        'lengtegraad': 32.605135
+    },
+    'Myanmar': {
+        'name': 'Myanmar',
+        'capital': 'Naypyidaw',
+        'breedtegraad': 19.763306,
+        'lengtegraad': 96.07851
+    },
+    'Nagorno-Karabakh Republic': {
+        'name': 'Nagorno-Karabakh Republic',
+        'capital': 'Stepanakert',
+        'breedtegraad': 39.826385,
+        'lengtegraad': 46.763595
+    },
+    'Namibia': {
+        'name': 'Namibia',
+        'capital': 'Windhoek',
+        'breedtegraad': -22.560881,
+        'lengtegraad': 17.065755
+    },
+    'Nauru': {
+        'name': 'Nauru',
+        'capital': 'Yaren',
+        'breedtegraad': -0.546686,
+        'lengtegraad': 166.921091
+    },
+    'Nepal': {
+        'name': 'Nepal',
+        'capital': 'Kathmandu',
+        'breedtegraad': 27.717245,
+        'lengtegraad': 85.323961
+    },
+    'Netherlands': {
+        'name': 'Netherlands',
+        'capital': 'Amsterdam',
+        'breedtegraad': 52.370216,
+        'lengtegraad': 4.895168
+    },
+    'Netherlands Antilles': {
+        'name': 'Netherlands Antilles',
+        'capital': 'Willemstad ',
+        'breedtegraad': 12.1091242,
+        'lengtegraad': -68.9316546
+    },
+    'New Caledonia': {
+        'name': 'New Caledonia',
+        'capital': 'Nouméa',
+        'breedtegraad': -22.255823,
+        'lengtegraad': 166.450524
+    },
+    'New Zealand': {
+        'name': 'New Zealand',
+        'capital': 'Wellington',
+        'breedtegraad': -41.28646,
+        'lengtegraad': 174.776236
+    },
+    'Nicaragua': {
+        'name': 'Nicaragua',
+        'capital': 'Managua',
+        'breedtegraad': 12.114993,
+        'lengtegraad': -86.236174
+    },
+    'Niger': {
+        'name': 'Niger',
+        'capital': 'Niamey',
+        'breedtegraad': 13.511596,
+        'lengtegraad': 2.125385
+    },
+    'Nigeria': {
+        'name': 'Nigeria',
+        'capital': 'Abuja',
+        'breedtegraad': 9.076479,
+        'lengtegraad': 7.398574
+    },
+    'Niue': {
+        'name': 'Niue',
+        'capital': 'Alofi',
+        'breedtegraad': -19.055371,
+        'lengtegraad': -169.917871
+    },
+    'Norfolk Island': {
+        'name': 'Norfolk Island',
+        'capital': 'Kingston',
+        'breedtegraad': -29.056394,
+        'lengtegraad': 167.959588
+    },
+    'North Korea': {
+        'name': 'North Korea',
+        'capital': 'Pyongyang',
+        'breedtegraad': 39.039219,
+        'lengtegraad': 125.762524
+    },
+    'Northern Cyprus': {
+        'name': 'Northern Cyprus',
+        'capital': 'Nicosia',
+        'breedtegraad': 35.185566,
+        'lengtegraad': 33.382276
+    },
+    'Northern Mariana Islands': {
+        'name': 'Northern Mariana Islands',
+        'capital': 'Saipan',
+        'breedtegraad': 15.177801,
+        'lengtegraad': 145.750967
+    },
+    'Norway': {
+        'name': 'Norway',
+        'capital': 'Oslo',
+        'breedtegraad': 59.913869,
+        'lengtegraad': 10.752245
+    },
+    'Oman': {
+        'name': 'Oman',
+        'capital': 'Muscat',
+        'breedtegraad': 23.58589,
+        'lengtegraad': 58.405923
+    },
+    'Pakistan': {
+        'name': 'Pakistan',
+        'capital': 'Islamabad',
+        'breedtegraad': 33.729388,
+        'lengtegraad': 73.093146
+    },
+    'Palau': {
+        'name': 'Palau',
+        'capital': 'Ngerulmud',
+        'breedtegraad': 7.500384,
+        'lengtegraad': 134.624289
+    },
+    'Palestine': {
+        'name': 'Palestine',
+        'capital': 'Ramallah',
+        'breedtegraad': 31.9073509,
+        'lengtegraad': 35.5354719
+    },
+    'Panama': {
+        'name': 'Panama',
+        'capital': 'Panama City',
+        'breedtegraad': 9.101179,
+        'lengtegraad': -79.402864
+    },
+    'Papua New Guinea': {
+        'name': 'Papua New Guinea',
+        'capital': 'Port Moresby',
+        'breedtegraad': -9.4438,
+        'lengtegraad': 147.180267
+    },
+    'Paraguay': {
+        'name': 'Paraguay',
+        'capital': 'Asuncion',
+        'breedtegraad': -25.26374,
+        'lengtegraad': -57.575926
+    },
+    'Peru': {
+        'name': 'Peru',
+        'capital': 'Lima',
+        'breedtegraad': -12.046374,
+        'lengtegraad': -77.042793
+    },
+    'Philippines': {
+        'name': 'Philippines',
+        'capital': 'Manila',
+        'breedtegraad': 14.599512,
+        'lengtegraad': 120.98422
+    },
+    'Pitcairn Islands': {
+        'name': 'Pitcairn Islands',
+        'capital': 'Adamstown',
+        'breedtegraad': -25.06629,
+        'lengtegraad': -130.100464
+    },
+    'Poland': {
+        'name': 'Poland',
+        'capital': 'Warsaw',
+        'breedtegraad': 52.229676,
+        'lengtegraad': 21.012229
+    },
+    'Portugal': {
+        'name': 'Portugal',
+        'capital': 'Lisbon',
+        'breedtegraad': 38.722252,
+        'lengtegraad': -9.139337
+    },
+    'Puerto Rico': {
+        'name': 'Puerto Rico',
+        'capital': 'San Juan',
+        'breedtegraad': 18.466334,
+        'lengtegraad': -66.105722
+    },
+    'Qatar': {
+        'name': 'Qatar',
+        'capital': 'Doha',
+        'breedtegraad': 25.285447,
+        'lengtegraad': 51.53104
+    },
+    'Réunion': {
+        'name': 'Réunion',
+        'capital': 'Saint-Denis',
+        'breedtegraad': -20.882057,
+        'lengtegraad': 55.450675
+    },
+    'Romania': {
+        'name': 'Romania',
+        'capital': 'Bucharest',
+        'breedtegraad': 44.426767,
+        'lengtegraad': 26.102538
+    },
+    'Russia': {
+        'name': 'Russia',
+        'capital': 'Moscow',
+        'breedtegraad': 55.755826,
+        'lengtegraad': 37.6173
+    },
+    'Rwanda': {
+        'name': 'Rwanda',
+        'capital': 'Kigali',
+        'breedtegraad': -1.957875,
+        'lengtegraad': 30.112735
+    },
+    'Saint Pierre and Miquelon': {
+        'name': 'Saint Pierre and Miquelon',
+        'capital': 'St. Pierre',
+        'breedtegraad': 46.775846,
+        'lengtegraad': -56.180636
+    },
+    'Saint Vincent and the Grenadines': {
+        'name': 'Saint Vincent and the Grenadines',
+        'capital': 'Kingstown',
+        'breedtegraad': 13.160025,
+        'lengtegraad': -61.224816
+    },
+    'Samoa': {
+        'name': 'Samoa',
+        'capital': 'Apia',
+        'breedtegraad': -13.850696,
+        'lengtegraad': -171.751355
+    },
+    'San Marino': {
+        'name': 'San Marino',
+        'capital': 'San Marino',
+        'breedtegraad': 43.935591,
+        'lengtegraad': 12.447281
+    },
+    'São Tomé and Príncipe': {
+        'name': 'São Tomé and Príncipe',
+        'capital': 'São Tomé',
+        'breedtegraad': 0.330192,
+        'lengtegraad': 6.733343
+    },
+    'Saudi Arabia': {
+        'name': 'Saudi Arabia',
+        'capital': 'Riyadh',
+        'breedtegraad': 24.749403,
+        'lengtegraad': 46.902838
+    },
+    'Senegal': {
+        'name': 'Senegal',
+        'capital': 'Dakar',
+        'breedtegraad': 14.764504,
+        'lengtegraad': -17.366029
+    },
+    'Serbia': {
+        'name': 'Serbia',
+        'capital': 'Belgrade',
+        'breedtegraad': 44.786568,
+        'lengtegraad': 20.448922
+    },
+    'Seychelles': {
+        'name': 'Seychelles',
+        'capital': 'Victoria',
+        'breedtegraad': -4.619143,
+        'lengtegraad': 55.451315
+    },
+    'Sierra Leone': {
+        'name': 'Sierra Leone',
+        'capital': 'Freetown',
+        'breedtegraad': 8.465677,
+        'lengtegraad': -13.231722
+    },
+    'Singapore': {
+        'name': 'Singapore',
+        'capital': 'Singapore',
+        'breedtegraad': 1.280095,
+        'lengtegraad': 103.850949
+    },
+    'Slovakia': {
+        'name': 'Slovakia',
+        'capital': 'Bratislava',
+        'breedtegraad': 48.145892,
+        'lengtegraad': 17.107137
+    },
+    'Slovenia': {
+        'name': 'Slovenia',
+        'capital': 'Ljubljana',
+        'breedtegraad': 46.056947,
+        'lengtegraad': 14.505751
+    },
+    'Solomon Islands': {
+        'name': 'Solomon Islands',
+        'capital': 'Honiara',
+        'breedtegraad': -9.445638,
+        'lengtegraad': 159.9729
+    },
+    'Somalia': {
+        'name': 'Somalia',
+        'capital': 'Mogadishu',
+        'breedtegraad': 2.046934,
+        'lengtegraad': 45.318162
+    },
+    'South Africa': {
+        'name': 'South Africa',
+        'capital': 'Pretoria',
+        'breedtegraad': -25.747868,
+        'lengtegraad': 28.229271
+    },
+    'South Georgia and the South Sandwich Islands': {
+        'name': 'South Georgia and the South Sandwich Islands',
+        'capital': 'King Edward Point',
+        'breedtegraad': -54.28325,
+        'lengtegraad': -36.493735
+    },
+    'South Korea': {
+        'name': 'South Korea',
+        'capital': 'Seoul',
+        'breedtegraad': 37.566535,
+        'lengtegraad': 126.977969
+    },
+    'South Ossetia': {
+        'name': 'South Ossetia',
+        'capital': 'Tskhinvali',
+        'breedtegraad': 42.22146,
+        'lengtegraad': 43.964405
+    },
+    'South Sudan': {
+        'name': 'South Sudan',
+        'capital': 'Juba',
+        'breedtegraad': 4.859363,
+        'lengtegraad': 31.57125
+    },
+    'Spain': {
+        'name': 'Spain',
+        'capital': 'Madrid',
+        'breedtegraad': 40.416775,
+        'lengtegraad': -3.70379
+    },
+    'Sri Lanka': {
+        'name': 'Sri Lanka',
+        'capital': 'Sri Jayawardenepura Kotte',
+        'breedtegraad': 6.89407,
+        'lengtegraad': 79.902478
+    },
+    'St. Barthélemy': {
+        'name': 'St. Barthélemy',
+        'capital': 'Gustavia',
+        'breedtegraad': 17.896435,
+        'lengtegraad': -62.852201
+    },
+    'St. Kitts and Nevis': {
+        'name': 'St. Kitts and Nevis',
+        'capital': 'Basseterre',
+        'breedtegraad': 17.302606,
+        'lengtegraad': -62.717692
+    },
+    'St. Lucia': {
+        'name': 'St. Lucia',
+        'capital': 'Castries',
+        'breedtegraad': 14.010109,
+        'lengtegraad': -60.987469
+    },
+    'St. Martin': {
+        'name': 'St. Martin',
+        'capital': 'Marigot',
+        'breedtegraad': 18.067519,
+        'lengtegraad': -63.082466
+    },
+    'Sudan': {
+        'name': 'Sudan',
+        'capital': 'Khartoum',
+        'breedtegraad': 15.500654,
+        'lengtegraad': 32.559899
+    },
+    'Suriname': {
+        'name': 'Suriname',
+        'capital': 'Paramaribo',
+        'breedtegraad': 5.852036,
+        'lengtegraad': -55.203828
+    },
+    'Svalbard and Jan Mayen': {
+        'name': 'Svalbard and Jan Mayen',
+        'capital': 'Longyearbyen ',
+        'breedtegraad': 78.062,
+        'lengtegraad': 22.055
+    },
+    'Swaziland': {
+        'name': 'Swaziland',
+        'capital': 'Mbabane',
+        'breedtegraad': -26.305448,
+        'lengtegraad': 31.136672
+    },
+    'Sweden': {
+        'name': 'Sweden',
+        'capital': 'Stockholm',
+        'breedtegraad': 59.329323,
+        'lengtegraad': 18.068581
+    },
+    'Switzerland': {
+        'name': 'Switzerland',
+        'capital': 'Bern',
+        'breedtegraad': 46.947974,
+        'lengtegraad': 7.447447
+    },
+    'Syria': {
+        'name': 'Syria',
+        'capital': 'Damascus',
+        'breedtegraad': 33.513807,
+        'lengtegraad': 36.276528
+    },
+    'Taiwan': {
+        'name': 'Taiwan',
+        'capital': 'Taipei',
+        'breedtegraad': 25.032969,
+        'lengtegraad': 121.565418
+    },
+    'Tajikistan': {
+        'name': 'Tajikistan',
+        'capital': 'Dushanbe',
+        'breedtegraad': 38.559772,
+        'lengtegraad': 68.787038
+    },
+    'Tanzania': {
+        'name': 'Tanzania',
+        'capital': 'Dodoma',
+        'breedtegraad': -6.162959,
+        'lengtegraad': 35.751607
+    },
+    'Thailand': {
+        'name': 'Thailand',
+        'capital': 'Bangkok',
+        'breedtegraad': 13.756331,
+        'lengtegraad': 100.501765
+    },
+    'Timor-Leste': {
+        'name': 'Timor-Leste',
+        'capital': 'Dili',
+        'breedtegraad': -8.556856,
+        'lengtegraad': 125.560314
+    },
+    'Togo': {
+        'name': 'Togo',
+        'capital': 'Lomé',
+        'breedtegraad': 6.172497,
+        'lengtegraad': 1.231362
+    },
+    'Tokelau': {
+        'name': 'Tokelau',
+        'capital': 'Nukunonu',
+        'breedtegraad': -9.2005,
+        'lengtegraad': -171.848
+    },
+    'Tonga': {
+        'name': 'Tonga',
+        'capital': 'Nukuʻalofa',
+        'breedtegraad': -21.139342,
+        'lengtegraad': -175.204947
+    },
+    'Transnistria': {
+        'name': 'Transnistria',
+        'capital': 'Tiraspol',
+        'breedtegraad': 46.848185,
+        'lengtegraad': 29.596805
+    },
+    'Trinidad and Tobago': {
+        'name': 'Trinidad and Tobago',
+        'capital': 'Port of Spain',
+        'breedtegraad': 10.654901,
+        'lengtegraad': -61.501926
+    },
+    'Tristan da Cunha': {
+        'name': 'Tristan da Cunha',
+        'capital': 'Edinburgh of the Seven Seas',
+        'breedtegraad': -37.068042,
+        'lengtegraad': -12.311315
+    },
+    'Tunisia': {
+        'name': 'Tunisia',
+        'capital': 'Tunis',
+        'breedtegraad': 36.806495,
+        'lengtegraad': 10.181532
+    },
+    'Turkey': {
+        'name': 'Turkey',
+        'capital': 'Ankara',
+        'breedtegraad': 39.933364,
+        'lengtegraad': 32.859742
+    },
+    'Turkmenistan': {
+        'name': 'Turkmenistan',
+        'capital': 'Ashgabat',
+        'breedtegraad': 37.960077,
+        'lengtegraad': 58.326063
+    },
+    'Turks and Caicos Islands': {
+        'name': 'Turks and Caicos Islands',
+        'capital': 'Cockburn Town',
+        'breedtegraad': 21.467458,
+        'lengtegraad': -71.13891
+    },
+    'Tuvalu': {
+        'name': 'Tuvalu',
+        'capital': 'Funafuti',
+        'breedtegraad': -8.520066,
+        'lengtegraad': 179.198128
+    },
+    'U.S. Virgin Islands': {
+        'name': 'U.S. Virgin Islands',
+        'capital': 'Charlotte Amalie',
+        'breedtegraad': 18.3419,
+        'lengtegraad': -64.930701
+    },
+    'Uganda': {
+        'name': 'Uganda',
+        'capital': 'Kampala',
+        'breedtegraad': 0.347596,
+        'lengtegraad': 32.58252
+    },
+    'Ukraine': {
+        'name': 'Ukraine',
+        'capital': 'Kyiv',
+        'breedtegraad': 50.4501,
+        'lengtegraad': 30.5234
+    },
+    'United Arab Emirates': {
+        'name': 'United Arab Emirates',
+        'capital': 'Abu Dhabi',
+        'breedtegraad': 24.299174,
+        'lengtegraad': 54.697277
+    },
+    'United Kingdom': {
+        'name': 'United Kingdom',
+        'capital': 'London',
+        'breedtegraad': 51.507351,
+        'lengtegraad': -0.127758
+    },
+    'United States': {
+        'name': 'United States',
+        'capital': 'Washington',
+        'breedtegraad': 38.907192,
+        'lengtegraad': -77.036871
+    },
+    'Uruguay': {
+        'name': 'Uruguay',
+        'capital': 'Montevideo',
+        'breedtegraad': -34.901113,
+        'lengtegraad': -56.164531
+    },
+    'Uzbekistan': {
+        'name': 'Uzbekistan',
+        'capital': 'Tashkent',
+        'breedtegraad': 41.299496,
+        'lengtegraad': 69.240073
+    },
+    'Vanuatu': {
+        'name': 'Vanuatu',
+        'capital': 'Port Vila',
+        'breedtegraad': -17.733251,
+        'lengtegraad': 168.327325
+    },
+    'Vatican City': {
+        'name': 'Vatican City',
+        'capital': 'Vatican City',
+        'breedtegraad': 41.902179,
+        'lengtegraad': 12.453601
+    },
+    'Venezuela': {
+        'name': 'Venezuela',
+        'capital': 'Caracas',
+        'breedtegraad': 10.480594,
+        'lengtegraad': -66.903606
+    },
+    'Vietnam': {
+        'name': 'Vietnam',
+        'capital': 'Hanoi',
+        'breedtegraad': 21.027764,
+        'lengtegraad': 105.83416
+    },
+    'Wallis and Futuna': {
+        'name': 'Wallis and Futuna',
+        'capital': 'Mata-Utu',
+        'breedtegraad': -13.282509,
+        'lengtegraad': -176.176447
+    },
+    'Western Sahara': {
+        'name': 'Western Sahara',
+        'capital': 'El Aaiún',
+        'breedtegraad': 27.125287,
+        'lengtegraad': -13.1625
+    },
+    'Yemen': {
+        'name': 'Yemen',
+        'capital': "Sana'a",
+        'breedtegraad': 15.369445,
+        'lengtegraad': 44.191007
+    },
+    'Zambia': {
+        'name': 'Zambia',
+        'capital': 'Lusaka',
+        'breedtegraad': -15.387526,
+        'lengtegraad': 28.322817
+    },
+    'Zimbabwe': {
+        'name': 'Zimbabwe',
+        'capital': 'Harare',
+        'breedtegraad': -17.825166,
+        'lengtegraad': 31.03351
+    }
 }
 
-def convert_lat_long(latitude, longitude, map_width, map_height):
-  
-  false_easting = 180
-  radius = map_width / (2 * pi)
-  latitude = radians(latitude)
-  longitude = radians(longitude + false_easting)
-  
-  x_coord = longitude * radius
-  
-  y_dist_from_equator = radius * log(tan(pi / 4 + latitude / 2))
-  y_coord = map_height / 2 - y_dist_from_equator
-  
-  coords = {'x': x_coord, 'y': y_coord}
-  
-  return coords
+
+def convert_bre_leng(breedtegraad, lengtegraad, kaart_breedte, kaart_hoogte):
+
+    false_easting = 180
+    straal = kaart_breedte / (2 * pi)
+    breedtegraad = radians(breedtegraad)
+    lengtegraad = radians(lengtegraad + false_easting)
+
+    x_coord = lengtegraad * straal
+
+    y_afst_van_evenaar = straal * log(tan(pi / 4 + breedtegraad / 2))
+    y_coord = kaart_hoogte / 2 - y_afst_van_evenaar
+
+    coordinaten = {'x': x_coord, 'y': y_coord}
+
+    return coordinaten
 
 
 def get_available_regions():
-  return regions.keys()
+    return regios.keys()
 
 
-def get_region_coords(region, map_width=991, map_height=768):
-  coords = None
-  
-  try:
-    lookup = regions[region]
-    coords = convert_lat_long(lookup['latitude'], lookup['longitude'], map_width, map_height)
-    return coords
-  except KeyError:
-    print('Region not recognised: ', region)
+def haal_regio_coordinaten(regio, kaart_breedte=991, kaart_hoogte=768):
+    coordinaten = None
+
+    try:
+        lookup = regios[regio]
+        coordinaten = convert_bre_leng(
+            lookup['breedtegraad'], lookup['lengtegraad'], kaart_breedte, kaart_hoogte)
+        return coordinaten
+    except KeyError:
+        print('Regio niet herkend: ', regio)

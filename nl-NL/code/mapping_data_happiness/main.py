@@ -1,6 +1,6 @@
 #!/bin/python3
 from p5 import *
-from regions import haal_regio_coördinaten
+from regions import haal_regio_coordinaten
 from random import randint
 
 regio_lijst = []
@@ -8,14 +8,14 @@ kleuren = {}
 
 
 def preload():
-    wereldkaart
+    global kaart
     kaart = load_image('tech_map.jpg')
 
 
 def setup():
     # Zet de code om eenmalig uit te voeren hier onder
     size(991, 768)
-    load_data ('happy.csv')
+    laad_gegevens('happy.csv')
 
     image(
         kaart, # De afbeelding om te tekenen
@@ -27,7 +27,7 @@ def setup():
     teken_gegevens()
 
 
-def muis_ingedrukt():
+def mouse_pressed():
     # Zet code hier die moet worden uitgevoerd wanneer de muis wordt ingedrukt
     pixel_kleur = Color(get(mouse_x, mouse_y)).hex
     if pixel_kleur in kleuren:
@@ -63,9 +63,9 @@ def teken_gegevens():
     for regio in regio_lijst:
         regio_naam = regio['naam'] # Haal de naam op van de regio
         # Gebruik de naam om coördinaten te krijgen
-        regio_coördinaten = haal_regio_coördinaten(regio_naam)
-        regio_x = regio_coördinaten['x'] # Haal de x-coördinaat op
-        regio_y = regio_coördinaten['y'] # Haal de y-coördinaat op
+        regio_coordinaten = haal_regio_coordinaten(regio_naam)
+        regio_x = regio_coordinaten['x'] # Haal de x-coördinaat op
+        regio_y = regio_coordinaten['y'] # Haal de y-coördinaat op
         regio_kleur = Color(rood_waarde, 100, 0) # Stel de speldkleur in
         kleuren[regio_kleur.hex] = regio
         teken_speld(regio_x, regio_y, regio_kleur)
