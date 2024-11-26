@@ -16,7 +16,7 @@ def preload():
 def setup():
     size(991, 768)
     laad_gegevens('carbon.csv')
-    print(regio_lijst)
+    #print(regio_lijst)
     image(
         kaart, # De afbeelding om te tekenen
         0, # De x van de linkerbovenhoek

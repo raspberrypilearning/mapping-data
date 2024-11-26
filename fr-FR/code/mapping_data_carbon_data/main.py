@@ -16,7 +16,7 @@ def preload():
 def setup():
     size(991, 768)
     charge_donnees('carbon.csv')
-    print(liste_regions)
+    #print(liste_regions)
     image(
         carte,  # L'image à dessiner
         0,  # Le x du coin supérieur gauche
