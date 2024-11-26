@@ -1,13 +1,13 @@
 #!/bin/python3
 from p5 import *
-from regions import haal_regio_coördinaten
+from regions import haal_regio_coordinaten
 
 regio_lijst = []
 kleuren = {}
 
 
 def preload():
-    wereldkaart
+    global kaart
     kaart = load_image('old-map.jpg') # Vervang door je afbeelding
 
 
@@ -18,18 +18,17 @@ def teken_speld(x, y, kleur):
 
 def teken_gegevens():
 
-    rood_waarde =255 #Stel een startwaarde voor rood in
+    rood_waarde = 255 #Stel een startwaarde voor rood in
 
     for regio in regio_lijst:
         regio_naam = regio['regio'] # Haal de naam op van de regio
-        # Gebruik de naam om coördinaten te krijgen
-        regio_coördinaten = haal_regio_coördinaten(regio_naam)
-        regio_x = regio_coördinaten['x'] # Haal de x-coördinaat op
-        regio_y = regio_coördinaten['y'] # Haal de y-coördinaat op
+        regio_coordinaten = haal_regio_coordinaten(regio_naam) # Gebruik de naam om coördinaten te krijgen
+        regio_x = regio_coordinaten['x'] # Haal de x-coördinaat op
+        regio_y = regio_coordinaten['y'] # Haal de y-coördinaat op
         # print(regio_naam, regio_x, regio_y)
         regio_kleur = Color(rood_waarde, 0, 0) # Stel de speldkleur in
         kleuren[regio_kleur.hex] = regio
-        teken_speld(regio_x, regio_y, region_kleur) # Teken de speld
+        teken_speld(regio_x, regio_y, regio_kleur) # Teken de speld
         rood_waarde -= 1 # Wijzig de roodwaarde
 
 # Zet de code om eenmalig uit te voeren hier onder
@@ -37,7 +36,7 @@ def teken_gegevens():
 
 def setup():
     size(991, 768)
-    load_data ('gdp.csv')
+    laad_gegevens('gdp.csv')
     image(
         kaart, # De afbeelding om te tekenen
         0, # De x van de linkerbovenhoek
@@ -45,12 +44,12 @@ def setup():
         width, # De breedte van de afbeelding
         height # De hoogte van de afbeelding
     )
-    teken_speld(300,300, Color(255,0,0))
+    teken_speld(300, 300, Color(255, 0, 0))
     teken_gegevens()
 
 
 # Zet code hier die moet worden uitgevoerd wanneer de muis wordt ingedrukt
-def muis_ingedrukt():
+def mouse_pressed():
     pixel_kleur = Color(get(mouse_x, mouse_y)).hex
     if pixel_kleur in kleuren:
         feiten = kleuren[pixel_kleur]

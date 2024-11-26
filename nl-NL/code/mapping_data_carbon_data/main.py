@@ -1,13 +1,13 @@
 #!/bin/python3
 from p5 import *
-from regions import haal_regio_coördinaten
+from regions import haal_regio_coordinaten
 
 regio_lijst = []
 kleuren = {}
 
 
 def preload():
-    wereldkaart
+    global kaart
     kaart = load_image('mercator_bw.png')
 
 # Zet de code om eenmalig uit te voeren hier onder
@@ -15,7 +15,7 @@ def preload():
 
 def setup():
     size(991, 768)
-    load_data ('carbon.csv')
+    laad_gegevens('carbon.csv')
     print(regio_lijst)
     image(
         kaart, # De afbeelding om te tekenen
@@ -41,14 +41,14 @@ def teken_gegevens():
     for regio in regio_lijst:
         regio_naam = regio['regio'] # Haal de naam op van de regio
         # Gebruik de naam om coördinaten te krijgen
-        regio_coördinaten = haal_regio_coördinaten(regio_naam)
-        regio_x = regio_coördinaten['x'] # Haal de x-coördinaat op
-        regio_y = regio_coördinaten['y'] # Haal de y-coördinaat op
+        regio_coordinaten = haal_regio_coordinaten(regio_naam)
+        regio_x = regio_coordinaten['x'] # Haal de x-coördinaat op
+        regio_y = regio_coordinaten['y'] # Haal de y-coördinaat op
         # print(regio_naam, regio_x, regio_y)
         # Gebruik de rood waarde in de kleur
         regio_kleur = Color(rood_waarde, groen_waarde, blauw_waarde)
         kleuren[regio_kleur.hex] = regio
-        teken_speld(regio_x, regio_y, region_kleur) # Teken de speld
+        teken_speld(regio_x, regio_y, regio_kleur) # Teken de speld
         rood_waarde -= 1 # Wijzig de roodwaarde
         groen_waarde += 1 # De groenwaarde wijzigen
         blauw_waarde -=1 #De blauwwaarde wijzigen

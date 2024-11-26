@@ -1,6 +1,6 @@
 #!/bin/python3
 from p5 import *
-from regions import haal_regio_coördinaten
+from regions import haal_regio_coordinaten
 
 def laad_gegevens(file_name):
     global regio_lijst
@@ -20,7 +20,7 @@ def laad_gegevens(file_name):
 
 
 def preload():
-    wereldkaart
+    global kaart
     kaart = load_image('mercator.jpeg')
 
 
@@ -32,15 +32,15 @@ def teken_speld(x, y, kleur, organisator_aantal):
 
 
 def teken_gegevens():
-    wereld kleuren
+    global kleuren
     kleuren = {}
     blauw_waarde = 255
 
     for regio in regio_lijst:
-        regionaam = regio['naam']
-        regio_coördinaten = haal_regio_coördinaten(regio_naam)
-        regio_x = regio_coördinaten['x']
-        regio_y = regio_coördinaten['y']
+        regio_naam = regio['naam']
+        regio_coordinaten = haal_regio_coordinaten(regio_naam)
+        regio_x = regio_coordinaten['x']
+        regio_y = regio_coordinaten['y']
         organisator_aantal = regio['organisator_aantal']
         regio_kleur = Color(0, 0, blauw_waarde)
         teken_speld(regio_x, regio_y, regio_kleur, organisator_aantal)
@@ -51,7 +51,7 @@ def teken_gegevens():
 def setup():
     # Zet de code om eenmalig uit te voeren hier onder
     size(991, 768)
-    load_data ('olympics.csv')
+    laad_gegevens('olympics.csv')
     image(
         kaart, # De afbeelding om te tekenen
         0, # De x van de linkerbovenhoek
@@ -63,7 +63,7 @@ def setup():
     teken_gegevens()
 
   
-def muis_ingedrukt():
+def mouse_pressed():
     # Zet code hier die moet worden uitgevoerd wanneer de muis wordt ingedrukt
     pixel_kleur = Color(get(mouse_x, mouse_y)).hex
 
@@ -73,6 +73,6 @@ def muis_ingedrukt():
         if info['organisator_aantal'] == 1:
             print('Heeft de Spelen één keer georganiseerd.')
         else:
-            print('Heeft de games '+str(info['organisator_aantal'])+ ' keer georganiseerd.')
+            print('Heeft de Spelen '+str(info['organisator_aantal'])+ ' keer georganiseerd.')
 
 run()
