@@ -16,7 +16,7 @@ def preload():
 def setup():
     size(991, 768)
     load_data('carbon.csv')
-    print(region_list)
+    #print(region_list)
     image(
         map,  # The image to draw
         0,  # The x of the top-left corner
