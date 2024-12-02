@@ -69,7 +69,7 @@ def mouse_pressed():
 
     if pixel_colour in colours:
         info = colours[pixel_colour]
-        print(info['region'])
+        print(info['name'])
         if info['host_count'] == 1:
             print('Hosted the games once.')
         else:

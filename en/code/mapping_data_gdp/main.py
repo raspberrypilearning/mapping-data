@@ -54,7 +54,7 @@ def mouse_pressed():
     pixel_colour = Color(get(mouse_x, mouse_y)).hex
     if pixel_colour in colours:
         facts = colours[pixel_colour]
-        print(facts['region'])
+        print(facts['name'])
         print(facts['gdp'])
     else:
         print('Region not detected')

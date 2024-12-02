@@ -61,7 +61,7 @@ def mouse_pressed():
     
     if pixel_colour in colours:
         facts = colours[pixel_colour]
-        print('Name: ', facts['region'])
+        print('Name: ', facts['name'])
         print('Population: ', facts['population'])
         print('Population density', facts['population density'])
     else:
