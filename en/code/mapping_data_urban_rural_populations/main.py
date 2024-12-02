@@ -78,7 +78,7 @@ def mouse_pressed():
 
     if pixel_colour in colours:
         info = colours[pixel_colour]
-        print(info['region'])
+        print(info['name'])
         print('Population: ', str(info['population']))
         print('Population density: ', str(info['population density']))
         print('Average age: ', str(info['median age']))

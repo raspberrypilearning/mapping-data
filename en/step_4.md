@@ -26,7 +26,7 @@ filename: main.py — draw_data()
 ---
 def draw_data():
     for region in region_list:
-        region_name = region['region'] # Get the name of the region
+        region_name = region['name'] # Get the name of the region
         region_coords = get_region_coords(region_name) # Use the name to get coordinates
         region_x = region_coords['x'] # Get the x coordinate
         region_y = region_coords['y'] # Get the y coordinate
@@ -79,7 +79,7 @@ line_highlights: 7-9
 ---
 def draw_data():
     for region in region_list:
-        region_name = region['region'] # Get the name of the region
+        region_name = region['name'] # Get the name of the region
         region_coords = get_region_coords(region_name) # Use the name to get coordinates
         region_x = region_coords['x'] # Get the x coordinate
         region_y = region_coords['y'] # Get the y coordinate
@@ -154,7 +154,7 @@ def draw_data():
     blue_value = 0
     green_value = 255
     for region in region_list:
-        region_name = region['region']
+        region_name = region['name']
         region_coords = get_region_coords(region_name)
         region_x = region_coords['x']
         region_y = region_coords['y']
@@ -250,7 +250,7 @@ line_highlights: 9
 def draw_data():
     red_value = 255
     for region in region_list:
-        region_name = region['region'] # Get the name of the region
+        region_name = region['name'] # Get the name of the region
         region_coords = get_region_coords(region_name) # Use the name to get coordinates
         region_x = region_coords['x'] # Get the x coordinate
         region_y = region_coords['y'] # Get the y coordinate
@@ -336,7 +336,7 @@ def mouse_pressed():
     pixel_colour = Color(get(mouse_x, mouse_y)).hex
     if pixel_colour in colours:
         facts = colours[pixel_colour]
-        print(facts['region'])
+        print(facts['name'])
         print(facts['happiness_rank'])  # Your first data fact
         print(facts['happiness_score'])  # Your second data fact
     else:
