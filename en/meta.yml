@@ -7,7 +7,7 @@ description:
 meta_title: Python coding projects for kids and teens | Mapping data
 meta_description: Learn Python with the Raspberry Pi Foundation's coding projects for kids and teens. Use Python to make a map and learn interesting facts about the world.
 version: 4
-listed: true
+listed: false
 copyedit: true
 last_tested: "2021-03-26"
 steps:
